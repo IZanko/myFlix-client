@@ -1,0 +1,19 @@
+{
+  "name": "myflix-client",
+  "version": "1.0.0",
+  "description": "client side of myFlix",
+  "main": "src/index.html",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/IZanko/myFlix-client.git"
+  },
+  "author": "Ivan Z",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/IZanko/myFlix-client/issues"
+  },
+  "homepage": "https://github.com/IZanko/myFlix-client#readme"
+}
