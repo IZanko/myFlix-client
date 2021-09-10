@@ -1,6 +1,9 @@
 import React from "react";
 import { MovieCard } from "../movie-card/movie-card";
 import { MovieView } from "../movie-view/movie-view";
+import inceptionImg from "../../public/images/inception.jpg";
+import shawShankImg from "../../public/images/theshawshankredemption.jpg";
+import gladiatorImg from "../../public/images/gladiator.jpg";
 
 export class MainView extends React.Component {
 
@@ -8,9 +11,24 @@ export class MainView extends React.Component {
     super();
     this.state = {
       movies: [
-        { _id: 1, Title: 'Inception', Description: 'A thief who steals corporate secrets through the use of dream-sharing technology is given the inverse task of planting an idea into the mind of a C.E.O.', ImagePath: '../../images/inception.jpg' },
-        { _id: 2, Title: 'The Shawshank Redemption', Description: 'Two imprisoned men bond over a number of years, finding solace and eventual redemption through acts of common decency.', ImagePath: '../../images/theshawshankredemption.jpg' },
-        { _id: 3, Title: 'Gladiator', Description: 'A former Roman General sets out to exact vengeance against the corrupt emperor who murdered his family and sent him into slavery.', ImagePath: '../../images/gladiator.jpg' }
+        {
+          _id: 1,
+          Title: 'Inception',
+          Description: 'A thief who steals corporate secrets through the use of dream-sharing technology is given the inverse task of planting an idea into the mind of a C.E.O.',
+          ImagePath: inceptionImg,
+        },
+        {
+          _id: 2,
+          Title: 'The Shawshank Redemption',
+          Description: 'Two imprisoned men bond over a number of years, finding solace and eventual redemption through acts of common decency.',
+          ImagePath: shawShankImg,
+        },
+        {
+          _id: 3,
+          Title: 'Gladiator',
+          Description: 'A former Roman General sets out to exact vengeance against the corrupt emperor who murdered his family and sent him into slavery.',
+          ImagePath: gladiatorImg,
+        }
       ], selectedMovie: null
     };
   }
