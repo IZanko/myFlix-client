@@ -23747,23 +23747,14 @@ var _reactDefault = parcelHelpers.interopDefault(_react);
 var _propTypes = require("prop-types");
 var _propTypesDefault = parcelHelpers.interopDefault(_propTypes);
 var _inceptionJpg = require("../../public/images/inception.jpg");
-var _inceptionJpgDefault = parcelHelpers.interopDefault(_inceptionJpg);
 var _thedarkknightJpg = require("../../public/images/thedarkknight.jpg");
-var _thedarkknightJpgDefault = parcelHelpers.interopDefault(_thedarkknightJpg);
 var _girlsJpg = require("../../public/images/girls.jpg");
-var _girlsJpgDefault = parcelHelpers.interopDefault(_girlsJpg);
 var _interstellarJpg = require("../../public/images/interstellar.jpg");
-var _interstellarJpgDefault = parcelHelpers.interopDefault(_interstellarJpg);
 var _silenceofthelambsJpg = require("../../public/images/silenceofthelambs.jpg");
-var _silenceofthelambsJpgDefault = parcelHelpers.interopDefault(_silenceofthelambsJpg);
 var _theprestigeJpg = require("../../public/images/theprestige.jpg");
-var _theprestigeJpgDefault = parcelHelpers.interopDefault(_theprestigeJpg);
 var _knockedupJpg = require("../../public/images/knockedup.jpg");
-var _knockedupJpgDefault = parcelHelpers.interopDefault(_knockedupJpg);
 var _blackwidowJpg = require("../../public/images/blackwidow.jpg");
-var _blackwidowJpgDefault = parcelHelpers.interopDefault(_blackwidowJpg);
 var _rachelgettingmarriedJpg = require("../../public/images/rachelgettingmarried.jpg");
-var _rachelgettingmarriedJpgDefault = parcelHelpers.interopDefault(_rachelgettingmarriedJpg);
 class MovieView extends _reactDefault.default.Component {
     render() {
         const { movie , onBackClick  } = this.props;
@@ -23879,7 +23870,7 @@ MovieView.proptypes = {
   window.$RefreshReg$ = prevRefreshReg;
   window.$RefreshSig$ = prevRefreshSig;
 }
-},{"react/jsx-runtime":"8xIwr","react":"6TuXu","@parcel/transformer-js/src/esmodule-helpers.js":"4lSow","@parcel/transformer-react-refresh-wrap/lib/helpers/helpers.js":"75nOH","prop-types":"1tgq3","../../public/images/inception.jpg":"froc0","../../public/images/girls.jpg":"4OmYJ","../../public/images/thedarkknight.jpg":"0qjzu","../../public/images/interstellar.jpg":"4qWDS","../../public/images/silenceofthelambs.jpg":"WdJtt","../../public/images/theprestige.jpg":"7oACN","../../public/images/knockedup.jpg":"8QHjt","../../public/images/blackwidow.jpg":"dpFPL","../../public/images/rachelgettingmarried.jpg":"lnXgl"}],"froc0":[function(require,module,exports) {
+},{"react/jsx-runtime":"8xIwr","react":"6TuXu","@parcel/transformer-js/src/esmodule-helpers.js":"4lSow","@parcel/transformer-react-refresh-wrap/lib/helpers/helpers.js":"75nOH","prop-types":"1tgq3","../../public/images/inception.jpg":"froc0","../../public/images/thedarkknight.jpg":"0qjzu","../../public/images/girls.jpg":"4OmYJ","../../public/images/interstellar.jpg":"4qWDS","../../public/images/silenceofthelambs.jpg":"WdJtt","../../public/images/theprestige.jpg":"7oACN","../../public/images/knockedup.jpg":"8QHjt","../../public/images/blackwidow.jpg":"dpFPL","../../public/images/rachelgettingmarried.jpg":"lnXgl"}],"froc0":[function(require,module,exports) {
 module.exports = require('./helpers/bundle-url').getBundleURL('3VpAv') + "inception.bd178984.jpg";
 
 },{"./helpers/bundle-url":"awrOK"}],"awrOK":[function(require,module,exports) {
@@ -23917,11 +23908,11 @@ exports.getBundleURL = getBundleURLCached;
 exports.getBaseURL = getBaseURL;
 exports.getOrigin = getOrigin;
 
-},{}],"4OmYJ":[function(require,module,exports) {
-module.exports = require('./helpers/bundle-url').getBundleURL('3VpAv') + "girls.832504d7.jpg";
-
-},{"./helpers/bundle-url":"awrOK"}],"0qjzu":[function(require,module,exports) {
+},{}],"0qjzu":[function(require,module,exports) {
 module.exports = require('./helpers/bundle-url').getBundleURL('3VpAv') + "thedarkknight.6865c054.jpg";
+
+},{"./helpers/bundle-url":"awrOK"}],"4OmYJ":[function(require,module,exports) {
+module.exports = require('./helpers/bundle-url').getBundleURL('3VpAv') + "girls.832504d7.jpg";
 
 },{"./helpers/bundle-url":"awrOK"}],"4qWDS":[function(require,module,exports) {
 module.exports = require('./helpers/bundle-url').getBundleURL('3VpAv') + "interstellar.34782da6.jpg";

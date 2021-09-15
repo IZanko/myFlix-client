@@ -1,14 +1,14 @@
 import React from "react";
 import PropTypes from "prop-types";
-import inceptionImg from "../../public/images/inception.jpg";
-import darkknightImg from "../../public/images/thedarkknight.jpg";
-import girlsImg from "../../public/images/girls.jpg";
-import interstellarImg from "../../public/images/interstellar.jpg";
-import silenceoftheLambsImg from "../../public/images/silenceofthelambs.jpg";
-import theprestigeImg from "../../public/images/theprestige.jpg";
-import knockedupImg from "../../public/images/knockedup.jpg";
-import blackwidowImg from "../../public/images/blackwidow.jpg";
-import rachelgettingmarriedImg from "../../public/images/rachelgettingmarried.jpg";
+import "../../public/images/inception.jpg";
+import "../../public/images/thedarkknight.jpg";
+import "../../public/images/girls.jpg";
+import "../../public/images/interstellar.jpg";
+import "../../public/images/silenceofthelambs.jpg";
+import "../../public/images/theprestige.jpg";
+import "../../public/images/knockedup.jpg";
+import "../../public/images/blackwidow.jpg";
+import "../../public/images/rachelgettingmarried.jpg";
 
 export class MovieView extends React.Component {
 
