@@ -23748,14 +23748,31 @@ var _propTypes = require("prop-types");
 var _propTypesDefault = parcelHelpers.interopDefault(_propTypes);
 var _inceptionJpg = require("../../public/images/inception.jpg");
 var _inceptionJpgDefault = parcelHelpers.interopDefault(_inceptionJpg);
+var _thedarkknightJpg = require("../../public/images/thedarkknight.jpg");
+var _thedarkknightJpgDefault = parcelHelpers.interopDefault(_thedarkknightJpg);
+var _girlsJpg = require("../../public/images/girls.jpg");
+var _girlsJpgDefault = parcelHelpers.interopDefault(_girlsJpg);
+var _interstellarJpg = require("../../public/images/interstellar.jpg");
+var _interstellarJpgDefault = parcelHelpers.interopDefault(_interstellarJpg);
+var _silenceofthelambsJpg = require("../../public/images/silenceofthelambs.jpg");
+var _silenceofthelambsJpgDefault = parcelHelpers.interopDefault(_silenceofthelambsJpg);
+var _theprestigeJpg = require("../../public/images/theprestige.jpg");
+var _theprestigeJpgDefault = parcelHelpers.interopDefault(_theprestigeJpg);
+var _knockedupJpg = require("../../public/images/knockedup.jpg");
+var _knockedupJpgDefault = parcelHelpers.interopDefault(_knockedupJpg);
+var _blackwidowJpg = require("../../public/images/blackwidow.jpg");
+var _blackwidowJpgDefault = parcelHelpers.interopDefault(_blackwidowJpg);
+var _rachelgettingmarriedJpg = require("../../public/images/rachelgettingmarried.jpg");
+var _rachelgettingmarriedJpgDefault = parcelHelpers.interopDefault(_rachelgettingmarriedJpg);
 class MovieView extends _reactDefault.default.Component {
     render() {
         const { movie , onBackClick  } = this.props;
+        const imageUrl = require('../../public/images/' + movie.ImagePath);
         return(/*#__PURE__*/ _jsxRuntime.jsxs("div", {
             className: "movie-view",
             __source: {
                 fileName: "src/components/movie-view/movie-view.jsx",
-                lineNumber: 13
+                lineNumber: 21
             },
             __self: this,
             children: [
@@ -23763,76 +23780,20 @@ class MovieView extends _reactDefault.default.Component {
                     className: "movie-poster",
                     __source: {
                         fileName: "src/components/movie-view/movie-view.jsx",
-                        lineNumber: 14
+                        lineNumber: 22
                     },
                     __self: this,
                     children: /*#__PURE__*/ _jsxRuntime.jsx("img", {
-                        src: movie.ImagePath,
+                        src: imageUrl,
                         __source: {
                             fileName: "src/components/movie-view/movie-view.jsx",
-                            lineNumber: 15
+                            lineNumber: 23
                         },
                         __self: this
                     })
                 }),
                 /*#__PURE__*/ _jsxRuntime.jsxs("div", {
                     className: "movie-title",
-                    __source: {
-                        fileName: "src/components/movie-view/movie-view.jsx",
-                        lineNumber: 17
-                    },
-                    __self: this,
-                    children: [
-                        /*#__PURE__*/ _jsxRuntime.jsx("span", {
-                            className: "label",
-                            __source: {
-                                fileName: "src/components/movie-view/movie-view.jsx",
-                                lineNumber: 18
-                            },
-                            __self: this,
-                            children: "Title: "
-                        }),
-                        /*#__PURE__*/ _jsxRuntime.jsx("span", {
-                            className: "value",
-                            __source: {
-                                fileName: "src/components/movie-view/movie-view.jsx",
-                                lineNumber: 19
-                            },
-                            __self: this,
-                            children: movie.Title
-                        })
-                    ]
-                }),
-                /*#__PURE__*/ _jsxRuntime.jsxs("div", {
-                    className: "movie-description",
-                    __source: {
-                        fileName: "src/components/movie-view/movie-view.jsx",
-                        lineNumber: 21
-                    },
-                    __self: this,
-                    children: [
-                        /*#__PURE__*/ _jsxRuntime.jsx("span", {
-                            className: "label",
-                            __source: {
-                                fileName: "src/components/movie-view/movie-view.jsx",
-                                lineNumber: 22
-                            },
-                            __self: this,
-                            children: "Description: "
-                        }),
-                        /*#__PURE__*/ _jsxRuntime.jsx("span", {
-                            className: "value",
-                            __source: {
-                                fileName: "src/components/movie-view/movie-view.jsx",
-                                lineNumber: 23
-                            },
-                            __self: this,
-                            children: movie.Description
-                        })
-                    ]
-                }),
-                /*#__PURE__*/ _jsxRuntime.jsxs("div", {
-                    className: "image-path",
                     __source: {
                         fileName: "src/components/movie-view/movie-view.jsx",
                         lineNumber: 25
@@ -23846,7 +23807,7 @@ class MovieView extends _reactDefault.default.Component {
                                 lineNumber: 26
                             },
                             __self: this,
-                            children: "Image-URL: "
+                            children: "Title: "
                         }),
                         /*#__PURE__*/ _jsxRuntime.jsx("span", {
                             className: "value",
@@ -23855,7 +23816,35 @@ class MovieView extends _reactDefault.default.Component {
                                 lineNumber: 27
                             },
                             __self: this,
-                            children: movie.ImagePath
+                            children: movie.Title
+                        })
+                    ]
+                }),
+                /*#__PURE__*/ _jsxRuntime.jsxs("div", {
+                    className: "movie-description",
+                    __source: {
+                        fileName: "src/components/movie-view/movie-view.jsx",
+                        lineNumber: 29
+                    },
+                    __self: this,
+                    children: [
+                        /*#__PURE__*/ _jsxRuntime.jsx("span", {
+                            className: "label",
+                            __source: {
+                                fileName: "src/components/movie-view/movie-view.jsx",
+                                lineNumber: 30
+                            },
+                            __self: this,
+                            children: "Description: "
+                        }),
+                        /*#__PURE__*/ _jsxRuntime.jsx("span", {
+                            className: "value",
+                            __source: {
+                                fileName: "src/components/movie-view/movie-view.jsx",
+                                lineNumber: 31
+                            },
+                            __self: this,
+                            children: movie.Description
                         })
                     ]
                 }),
@@ -23865,7 +23854,7 @@ class MovieView extends _reactDefault.default.Component {
                     },
                     __source: {
                         fileName: "src/components/movie-view/movie-view.jsx",
-                        lineNumber: 29
+                        lineNumber: 33
                     },
                     __self: this,
                     children: "Back"
@@ -23890,7 +23879,7 @@ MovieView.proptypes = {
   window.$RefreshReg$ = prevRefreshReg;
   window.$RefreshSig$ = prevRefreshSig;
 }
-},{"react/jsx-runtime":"8xIwr","react":"6TuXu","@parcel/transformer-js/src/esmodule-helpers.js":"4lSow","@parcel/transformer-react-refresh-wrap/lib/helpers/helpers.js":"75nOH","prop-types":"1tgq3","../../public/images/inception.jpg":"froc0"}],"froc0":[function(require,module,exports) {
+},{"react/jsx-runtime":"8xIwr","react":"6TuXu","@parcel/transformer-js/src/esmodule-helpers.js":"4lSow","@parcel/transformer-react-refresh-wrap/lib/helpers/helpers.js":"75nOH","prop-types":"1tgq3","../../public/images/inception.jpg":"froc0","../../public/images/girls.jpg":"4OmYJ","../../public/images/thedarkknight.jpg":"0qjzu","../../public/images/interstellar.jpg":"4qWDS","../../public/images/silenceofthelambs.jpg":"WdJtt","../../public/images/theprestige.jpg":"7oACN","../../public/images/knockedup.jpg":"8QHjt","../../public/images/blackwidow.jpg":"dpFPL","../../public/images/rachelgettingmarried.jpg":"lnXgl"}],"froc0":[function(require,module,exports) {
 module.exports = require('./helpers/bundle-url').getBundleURL('3VpAv') + "inception.bd178984.jpg";
 
 },{"./helpers/bundle-url":"awrOK"}],"awrOK":[function(require,module,exports) {
@@ -23928,7 +23917,31 @@ exports.getBundleURL = getBundleURLCached;
 exports.getBaseURL = getBaseURL;
 exports.getOrigin = getOrigin;
 
-},{}],"iYoWk":[function(require,module,exports) {
+},{}],"4OmYJ":[function(require,module,exports) {
+module.exports = require('./helpers/bundle-url').getBundleURL('3VpAv') + "girls.832504d7.jpg";
+
+},{"./helpers/bundle-url":"awrOK"}],"0qjzu":[function(require,module,exports) {
+module.exports = require('./helpers/bundle-url').getBundleURL('3VpAv') + "thedarkknight.6865c054.jpg";
+
+},{"./helpers/bundle-url":"awrOK"}],"4qWDS":[function(require,module,exports) {
+module.exports = require('./helpers/bundle-url').getBundleURL('3VpAv') + "interstellar.34782da6.jpg";
+
+},{"./helpers/bundle-url":"awrOK"}],"WdJtt":[function(require,module,exports) {
+module.exports = require('./helpers/bundle-url').getBundleURL('3VpAv') + "silenceofthelambs.8cb995ac.jpg";
+
+},{"./helpers/bundle-url":"awrOK"}],"7oACN":[function(require,module,exports) {
+module.exports = require('./helpers/bundle-url').getBundleURL('3VpAv') + "theprestige.74ac05c1.jpg";
+
+},{"./helpers/bundle-url":"awrOK"}],"8QHjt":[function(require,module,exports) {
+module.exports = require('./helpers/bundle-url').getBundleURL('3VpAv') + "knockedup.2a6644ba.jpg";
+
+},{"./helpers/bundle-url":"awrOK"}],"dpFPL":[function(require,module,exports) {
+module.exports = require('./helpers/bundle-url').getBundleURL('3VpAv') + "blackwidow.4d3a7ad0.jpg";
+
+},{"./helpers/bundle-url":"awrOK"}],"lnXgl":[function(require,module,exports) {
+module.exports = require('./helpers/bundle-url').getBundleURL('3VpAv') + "rachelgettingmarried.82bc2a71.jpg";
+
+},{"./helpers/bundle-url":"awrOK"}],"iYoWk":[function(require,module,exports) {
 module.exports = require('./lib/axios');
 
 },{"./lib/axios":"3QmO2"}],"3QmO2":[function(require,module,exports) {
@@ -25552,7 +25565,7 @@ $RefreshReg$(_c, "LoginView");
   window.$RefreshReg$ = prevRefreshReg;
   window.$RefreshSig$ = prevRefreshSig;
 }
-},{"react/jsx-runtime":"8xIwr","react":"6TuXu","prop-types":"1tgq3","@parcel/transformer-js/src/esmodule-helpers.js":"4lSow","@parcel/transformer-react-refresh-wrap/lib/helpers/helpers.js":"75nOH"}],"aP2YV":[function(require,module,exports) {
+},{"react/jsx-runtime":"8xIwr","react":"6TuXu","@parcel/transformer-js/src/esmodule-helpers.js":"4lSow","@parcel/transformer-react-refresh-wrap/lib/helpers/helpers.js":"75nOH","prop-types":"1tgq3"}],"aP2YV":[function(require,module,exports) {
 var $parcel$ReactRefreshHelpers$8dd4 = require("@parcel/transformer-react-refresh-wrap/lib/helpers/helpers.js");
 var prevRefreshReg = window.$RefreshReg$;
 var prevRefreshSig = window.$RefreshSig$;
