@@ -1,6 +1,7 @@
 import React from "react";
 import PropTypes from "prop-types";
 import Card from 'react-bootstrap/Card';
+import Button from 'react-bootstrap/Button';
 
 import "../../public/images/inception.jpg";
 import "../../public/images/thedarkknight.jpg";
@@ -19,7 +20,7 @@ export class MovieCard extends React.Component {
 
   render() {
     const { movie, onMovieClick } = this.props;
-    var cardImageUrl = require('../../public/images/' + movie.ImagePath);
+    let cardImageUrl = require('../../public/images/' + movie.ImagePath);
 
     return (
       <Card >

@@ -2,6 +2,7 @@ import React, { useState } from "react";
 import PropTypes from "prop-types";
 import Form from "react-bootstrap/Form";
 import Button from "react-bootstrap/Button";
+import axios from 'axios';
 import "./log-in-view.scss"
 
 export function LoginView(props) {
@@ -12,9 +13,20 @@ export function LoginView(props) {
     e.preventDefault();
     console.log(username, password);
     /* Send a request to the server for authentication */
-    /* then call props.onLoggedIn(username) */
-    props.onLoggedIn(username);
+    axios.post('https://zanko-my-flix.herokuapp.com/users/login', {
+      Username: username,
+      Password: password
+    })
+      .then(response => {
+        const data = response.data;
+        props.onLoggedIn(data);
+      })
+      .catch(e => {
+        console.log('no such user')
+      });
   };
+  /* then call props.onLoggedIn(username) */
+
 
   return (
     <div className="form-container">
@@ -27,8 +39,7 @@ export function LoginView(props) {
           <Form.Label className="label">Password:</Form.Label>
           <Form.Control type="password" onChange={e => setPassword(e.target.value)} />
         </Form.Group>
-
-        <Button className="submit-button" variant="primary" type="submit" onClick={handleSubmit}>Submit
+        <Button className="submit-button" variant="primary" type="submit" onClick={handleSubmit}>Log In
         </Button>
 
       </Form>

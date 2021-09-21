@@ -20,7 +20,7 @@ export class MovieView extends React.Component {
 
   render() {
     const { movie, onBackClick } = this.props;
-    var imageUrl = require('../../public/images/' + movie.ImagePath);
+    let imageUrl = require('../../public/images/' + movie.ImagePath);
 
 
     return (

@@ -1,4 +1,156 @@
-body {
-  background-color: #565fc5;
+.app-container {
+  background-color: #414896;
+}
+.image-styles {
+  width: 300px;
+  height: 400px;
+  object-fit: cover;
+  box-shadow: 15px 15px 10px #333155;
+}
+
+.image-styles:hover {
+  cursor: pointer;
+  box-shadow: 5px 5px 2px #333155;
+  transition: 0.5s;
+  opacity: 0.9;
+}
+
+@media screen and (max-width: 768px) {
+  .image-styles {
+    height: 300px;
+  }
+}
+@media screen and (max-width: 400px) {
+  .image-styles {
+    height: 200px;
+  }
+}
+span.label {
+  font-weight: 700;
+}
+
+.value, .label {
+  color: #272461;
+  font-size: 20px;
+}
+
+.movie-info {
+  background-color: #ffffff;
+  padding: 15px;
+  width: fit-content;
+}
+
+.back-button {
+  background-color: #ffffff;
+  /* white */
+  border: none;
+  color: #414896;
+  padding: 15px 32px;
+  text-align: center;
+  text-decoration: none;
+  display: inline-block;
+  font-size: 20px;
+  font-weight: bold;
+}
+
+div.movie-poster-container {
+  padding: 20px 0px;
+}
+
+.button-container {
+  padding-top: 20px;
+}
+
+.movie-poster, .back-button, .movie-info {
+  box-shadow: 15px 15px 10px #333155;
+  border-radius: 15px;
+}
+
+.movie-poster {
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.back-button:hover {
+  cursor: pointer;
+  box-shadow: 5px 5px 2px #333155;
+  background-color: #cacaca;
+  /* white */
+  transition: 0.5s;
+}
+
+@media all and (min-width: 1000px) {
+  .movie-poster {
+    display: block;
+    margin-left: 0px;
+    margin-right: auto;
+  }
+}
+form {
+  display: flex;
+  flex-direction: column;
+  align-content: center;
+  justify-self: center;
+}
+
+.form-container {
+  display: grid;
+  align-self: center;
+  padding-top: 15%;
+}
+
+button.submit-button {
+  box-shadow: 10px 10px 10px #333155;
+  font-size: 20px;
+}
+
+.submit-button:hover {
+  cursor: pointer;
+  box-shadow: 5px 5px 2px #333155;
+  transition: 0.5s;
+}
+Form {
+  display: flex;
+  flex-direction: column;
+  align-content: center;
+  justify-self: center;
+  width: 80%;
+}
+
+.form-container {
+  display: grid;
+  align-self: center;
+  padding-top: 15%;
+}
+
+button.register-button {
+  box-shadow: 10px 10px 10px #333155;
+  font-size: 20px;
+}
+
+label.form-label {
+  color: white;
+  font-size: 35px;
+}
+
+.register-button:hover {
+  cursor: pointer;
+  box-shadow: 5px 5px 2px #333155;
+  transition: 0.5s;
+}
+
+@media screen and (min-width: 800px) {
+  Form {
+    width: 300px;
+  }
+
+  label.form-label {
+    font-size: 25px;
+  }
+}
+.movie-card-column {
+  padding: 10px;
+  text-align: center;
 }
 /*# sourceMappingURL=index.caa67093.css.map */
