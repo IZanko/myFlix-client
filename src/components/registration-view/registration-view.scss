@@ -11,6 +11,10 @@ Form {
   padding-top:15%;
 }
 
+.error {
+  color: orange;
+}
+
 button.register-button {
   box-shadow: 10px 10px 10px rgb(51, 49, 85);
   font-size: 20px;
@@ -24,6 +28,15 @@ label.form-label {
   box-shadow: 5px 5px 2px rgb(51, 49, 85);
   transition: .5s;
 }
+.login-instead{
+color: white;
+padding-top: 15px;
+font-size: 18px;
+}
+.login-instead:hover {
+  text-decoration: underline;
+}
+
 
 @media screen and (min-width: 800px) {
   Form {

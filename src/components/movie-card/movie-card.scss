@@ -11,6 +11,10 @@
   opacity: .90;
 }
 
+button.btn.btn-link {
+  padding: 0px;
+}
+
 @media screen and (max-width: 768px){
   .image-styles {
     height: 300px;

@@ -15,6 +15,10 @@
   opacity: 0.9;
 }
 
+button.btn.btn-link {
+  padding: 0px;
+}
+
 @media screen and (max-width: 768px) {
   .image-styles {
     height: 300px;
@@ -25,22 +29,30 @@
     height: 200px;
   }
 }
+/*Title and Description bolded*/
 span.label {
   font-weight: 700;
 }
 
-.value, .label {
-  color: #272461;
+/*text size set to 20px*/
+.value, .label, .btn.btn-link {
   font-size: 20px;
 }
 
+/*add inline block between genre and director links*/
+.spacer {
+  display: inline-block;
+  width: 10px;
+}
+
+/*movie info background visuals*/
 .movie-info {
   background-color: #ffffff;
   padding: 15px;
   width: fit-content;
 }
 
-.back-button {
+.back-button, .nav-button {
   background-color: #ffffff;
   /* white */
   border: none;
@@ -53,31 +65,65 @@ span.label {
   font-weight: bold;
 }
 
+.nav-button {
+  background-color: #007bfe;
+  color: white;
+}
+
 div.movie-poster-container {
-  padding: 20px 0px;
+  padding-top: 20px;
+  padding-bottom: 10px;
 }
 
 .button-container {
   padding-top: 20px;
+  display: flex;
+  gap: 30px;
 }
 
-.movie-poster, .back-button, .movie-info {
+.movie-poster, .back-button, .movie-info, .nav-button, .favorites-button {
   box-shadow: 15px 15px 10px #333155;
   border-radius: 15px;
 }
 
 .movie-poster {
+  width: 30%;
   display: block;
   margin-left: auto;
   margin-right: auto;
 }
 
-.back-button:hover {
+.back-button:hover, .nav-button:hover, .favorites-button:hover {
   cursor: pointer;
   box-shadow: 5px 5px 2px #333155;
-  background-color: #cacaca;
-  /* white */
+  opacity: 0.7;
   transition: 0.5s;
+}
+
+.favorites-button:focus {
+  outline: none;
+  opacity: 1;
+}
+
+.favorites-button-container {
+  padding-bottom: 20px;
+  width: 30%;
+  display: flex;
+  justify-content: center;
+}
+
+.favorites-button {
+  background-color: #007bfe;
+  border-radius: 20px;
+  width: 90%;
+  padding: 6px 6px;
+  font-size: 100%;
+  font-weight: 500;
+  color: white;
+}
+
+.remove-from-favorites-button {
+  background-color: #fe6100;
 }
 
 @media all and (min-width: 1000px) {
@@ -103,12 +149,23 @@ form {
 button.submit-button {
   box-shadow: 10px 10px 10px #333155;
   font-size: 20px;
+  padding: 6px 20px;
 }
 
 .submit-button:hover {
   cursor: pointer;
   box-shadow: 5px 5px 2px #333155;
   transition: 0.5s;
+}
+
+.register-instead {
+  color: white;
+  padding-top: 15px;
+  font-size: 18px;
+}
+
+.register-instead:hover {
+  text-decoration: underline;
 }
 Form {
   display: flex;
@@ -122,6 +179,10 @@ Form {
   display: grid;
   align-self: center;
   padding-top: 15%;
+}
+
+.error {
+  color: orange;
 }
 
 button.register-button {
@@ -140,6 +201,16 @@ label.form-label {
   transition: 0.5s;
 }
 
+.login-instead {
+  color: white;
+  padding-top: 15px;
+  font-size: 18px;
+}
+
+.login-instead:hover {
+  text-decoration: underline;
+}
+
 @media screen and (min-width: 800px) {
   Form {
     width: 300px;
@@ -152,5 +223,36 @@ label.form-label {
 .movie-card-column {
   padding: 10px;
   text-align: center;
+}
+
+.col-md-3 {
+  padding: 10px;
+}
+.genre-info {
+  font-size: 20px;
+  background-color: #ffffff;
+  padding: 15px;
+  border-radius: 15px;
+  width: fit-content;
+  box-shadow: 15px 15px 10px #333155;
+}
+
+.genre-info-container {
+  padding: 20px 0px 0px 0px;
+}
+.director-info {
+  font-size: 20px;
+  background-color: #ffffff;
+  padding: 15px;
+  border-radius: 15px;
+  width: fit-content;
+  box-shadow: 15px 15px 10px #333155;
+}
+
+.director-info-container {
+  padding: 20px 0px 0px 0px;
+}
+.error {
+  color: orange;
 }
 /*# sourceMappingURL=index.caa67093.css.map */
