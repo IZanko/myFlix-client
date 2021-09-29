@@ -10,6 +10,7 @@ import { GenresView } from "../genres-view/genres-view";
 import { DirectorView } from "../director-view/director-view";
 import { LoginView } from "../log-in-view/log-in-view";
 import { RegistrationView } from "../registration-view/registration-view";
+import { UpdateProfileView } from "../update-profile-view/update-profile-view";
 import { ProfileView } from "../profile-view/profile-view";
 
 import Row from 'react-bootstrap/Row';
@@ -91,24 +92,26 @@ export class MainView extends React.Component {
   onDeregister(email) {
     let accessToken = localStorage.getItem('token');
     let username = localStorage.getItem('user');
-    axios.delete(`https://zanko-my-flix.herokuapp.com/users/${username}`, {
-      headers: { Authorization: `Bearer ${accessToken}` }
-    }, {
-      "username": username,
-      "email": email,
-    })
-      .then(response => {
-        // Assign the result to the state
-        console.log(response.data);
-        this.setState({
-          user: null
-        });
+    if (window.confirm('Are you sure you wish to delete this account?')) {
+      axios.delete(`https://zanko-my-flix.herokuapp.com/users/${username}`, {
+        headers: { Authorization: `Bearer ${accessToken}` }
+      }, {
+        "username": username,
+        "email": email,
       })
-      .catch(function (error) {
-        console.log(error);
-      });
-    localStorage.removeItem('token');
-    localStorage.removeItem('user');
+        .then(response => {
+          // Assign the result to the state
+          console.log(response.data);
+          this.setState({
+            user: null
+          });
+        })
+        .catch(function (error) {
+          console.log(error);
+        });
+      localStorage.removeItem('token');
+      localStorage.removeItem('user');
+    }
   }
 
 
@@ -124,7 +127,7 @@ export class MainView extends React.Component {
               <LoginView onLoggedIn={user => this.onLoggedIn(user)} />
             </Col>
             return movies.map(m => (
-              < Col md={3} key={m._id} >
+              < Col xs={6} sm={4} md={3} key={m._id} >
                 <MovieCard movie={m} />
               </Col>
             ))
@@ -139,7 +142,7 @@ export class MainView extends React.Component {
             if (!user) return <Col>
               <LoginView onLoggedIn={user => this.onLoggedIn(user)} />
             </Col>
-            return <Col md={8}>
+            return <Col >
               <MovieView movie={movies.find(m => m._id === match.params.movieId)} onBackClick={() => history.goBack()} />
             </Col>
           }} />
@@ -163,7 +166,19 @@ export class MainView extends React.Component {
             </Col>
           }
           } />
-          <Route path="/users/:Username" render={({ history }) => {
+          <Route path="/users/:Username/update" render={({ history }) => {
+            {/* if(!user) return <Redirect to="/" /> */ }
+            if (movies.length === 0) return <div className="main-view" />
+            if (!user) return <Redirect to="/" />
+
+            return (
+              <Col>
+                <UpdateProfileView user={user} onBackClick={() => history.goBack()} onLoggedOut={() => { this.onLoggedOut() }} />
+              </Col>
+            )
+          }
+          } />
+          <Route exact path="/users/:Username" render={({ history }) => {
             {/* if(!user) return <Redirect to="/" /> */ }
             if (movies.length === 0) return <div className="main-view" />
             if (!user) return <Redirect to="/" />
@@ -175,6 +190,7 @@ export class MainView extends React.Component {
             )
           }
           } />
+
         </Row >
       </Router >
     );

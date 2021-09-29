@@ -29,7 +29,7 @@ export function RegistrationView(props) {
         .then(response => {
           const data = response.data;
           console.log(data);
-          alert("user " + username + " has been registered.");
+          alert("You have registered an account with the username: " + username);
           setValidation(false);
           window.open('/', '_self'); // the second argument '_self' is necessary so that the page will open in the current tab
         })
@@ -93,7 +93,7 @@ export function RegistrationView(props) {
         <Button className="register-button" variant="primary" type="submit" onClick={handleSubmit}>Register
         </Button>
         <Link to={`/`}>
-          <p className="login-instead" variant="link">Login Instead</p>
+          <p className="login-instead" variant="link">Login instead</p>
         </Link>
       </Form>
     </div>

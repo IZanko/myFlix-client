@@ -43,7 +43,7 @@ export function LoginView(props) {
         <Button className="submit-button" variant="primary" type="submit" onClick={handleSubmit}>Log In
         </Button>
         <Link to={`/register`}>
-          <p className="register-instead" >Register Instead</p>
+          <p className="register-instead" >Register instead</p>
         </Link>
 
       </Form>

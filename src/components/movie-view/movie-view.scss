@@ -12,6 +12,9 @@ span.label {
   display: inline-block;
   width: 10px;
 }
+.movie-info-container {
+  padding-top: 10px;
+}
 /*movie info background visuals*/
 .movie-info {
   background-color: #ffffff;
@@ -37,6 +40,7 @@ span.label {
 div.movie-poster-container {
   padding-top: 20px;
   padding-bottom: 10px;
+  width: 260px;
 }
 .button-container {
   padding-top: 20px;
@@ -48,10 +52,13 @@ div.movie-poster-container {
   border-radius: 15px;
 }
 .movie-poster {
-  width: 30%;
-  display: block;
-  margin-left: auto;
-  margin-right: auto;
+  width: 100%;
+}
+
+.movie-view {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
 }
 
 .back-button:hover, .nav-button:hover, .favorites-button:hover {
@@ -64,18 +71,12 @@ div.movie-poster-container {
   outline: none;
   opacity: 1;
 }
-.favorites-button-container {
-  padding-bottom: 20px;
-  width: 30%;
-  display: flex;
-  justify-content: center;
-}
 .favorites-button {
   background-color: #007bfe;
   border-radius: 20px;
-  width: 90%;
+  width: 100%;
   padding: 6px 6px;
-  font-size: 100%;
+  font-size: 18px;
   font-weight: 500;
   color: white;
 }
@@ -83,10 +84,8 @@ div.movie-poster-container {
   background-color: #fe6100;
 }
 
-@media all and (min-width: 1000px) {
-  .movie-poster {
-    display: block;
-    margin-left: 0px;
-    margin-right: auto;
+@media screen and ( max-width: 425px) {
+  div.movie-poster-container {
+    width: 200px;
   }
 }

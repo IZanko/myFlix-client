@@ -92,33 +92,35 @@ export class MovieView extends React.Component {
 
     return (
       <div className="movie-view">
-        <div className="movie-poster-container">
-          <img className="movie-poster" src={imageUrl} />
-        </div>
-        <div className="favorites-button-container">
+        <div className="poster-and-button-container">
+          <div className="movie-poster-container">
+            <img className="movie-poster" src={imageUrl} />
+          </div>
           {this.state.Favorites.includes(movie._id) ? (
             <button className="favorites-button remove-from-favorites-button" onClick={() => { this.removeFromFavorites(movie._id) }} >Remove from Favorites</button>
           ) : (
             <button className="favorites-button" onClick={() => { this.addToFavorites(movie._id) }} >Add to Favorites</button>
           )}
         </div>
-        <div className="movie-info">
-          <div className="movie-title">
-            <span className="label">Title: </span>
-            <span className="value">{movie.Title}</span>
-          </div>
-          <div className="movie-description">
-            <span className="label">Description: </span>
-            <span className="value">{movie.Description}</span>
-          </div>
-          <div className="link-container">
-            <Link to={`/genres/${movie.Genre.Name}`}>
-              <Button variant="link">Genre</Button>
-            </Link>
-            <div className="spacer" ></div>
-            <Link to={`/directors/${movie.Director.Name}`}>
-              <Button variant="link">Director</Button>
-            </Link>
+        <div className="movie-info-container">
+          <div className="movie-info">
+            <div className="movie-title">
+              <span className="label">Title: </span>
+              <span className="value">{movie.Title}</span>
+            </div>
+            <div className="movie-description">
+              <span className="label">Description: </span>
+              <span className="value">{movie.Description}</span>
+            </div>
+            <div className="link-container">
+              <Link to={`/genres/${movie.Genre.Name}`}>
+                <Button variant="link">Genre</Button>
+              </Link>
+              <div className="spacer" ></div>
+              <Link to={`/directors/${movie.Director.Name}`}>
+                <Button variant="link">Director</Button>
+              </Link>
+            </div>
           </div>
         </div>
         <div className="button-container">

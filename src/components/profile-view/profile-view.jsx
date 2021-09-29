@@ -13,11 +13,10 @@ export class ProfileView extends React.Component {
     this.state = {
       Username: "",
       Password: "",
+      Favorites: [],
+      FavoritesTitle: [],
       Email: "",
       Birthday: "",
-      PasswordError: "",
-      EmailError: "",
-      BirthdayError: "",
     }
   }
 
@@ -36,132 +35,73 @@ export class ProfileView extends React.Component {
         this.setState({
           Username: response.data.Username,
           Password: "",
+          Favorites: response.data.FavoriteMovies,
           Email: response.data.Email,
-          Birthday: "",
+          Birthday: response.data.Birthday,
         });
+        this.getMovieTitle();
       })
       .catch(function (error) {
         alert(error.response.data);
       });
   }
 
-  /* Handle form update */
-  handleUpdate(e) {
-    let accessToken = localStorage.getItem("token");
-    let user = localStorage.getItem("user");
-    let validated = this.formValidation();
-    if (validated) {
-      axios.put(`https://zanko-my-flix.herokuapp.com/users/${user}`,
-        {
-          Username: user,
-          Password: this.state.Password,
-          Email: this.state.Email,
-          Birthday: this.state.Birthday
+  /*take the movie id's from Favorites array and create a new array with movie titles instead*/
+  getMovieTitle() {
+    const token = localStorage.getItem("token");
+    this.state.Favorites.map((movieID) => {
+      axios.get(`https://zanko-my-flix.herokuapp.com/movies/${movieID}`, {
+        headers: {
+          Authorization: `Bearer ${token}`
         },
-        { headers: { Authorization: `Bearer ${accessToken}` } }
-      )
+      })
         .then((response) => {
-          const data = response.data;
-          alert(user + " profile has been updated.");
-          window.open('{`/users/${this.props.user}`}', '_self');
+          this.setState({
+            FavoritesTitle: this.state.FavoritesTitle.concat(response.data.Title)
+          })
         })
         .catch(function (error) {
           alert(error.response.data);
         });
-    }
+    });
+
   }
-
-  /* Form Validation Start */
-
-  formValidation() {
-    let PasswordError = {};
-    let EmailError = {};
-    let BirthdayError = {};
-    let isValid = true;
-    if (this.state.Password.trim().length < 5 || this.state.Password === '') {
-      PasswordError.passwordMissing = "You must enter a password at least 6 characters long";
-      isValid = false;
-    }
-    if (!(this.state.Email && this.state.Email.includes(".") && this.state.Email.includes("@"))) {
-      EmailError.emailNotEmail = "You must enter a valid email";
-      isValid = false;
-    }
-    console.log(this.state.Birthday);
-    if (this.state.Birthday === '' || !this.state.Birthday) {
-      BirthdayError.BirthdayEmpty = "You must enter your date of birth";
-      isValid = false;
-    }
-    this.setState({
-      PasswordError: PasswordError,
-      EmailError: EmailError,
-      BirthdayError: BirthdayError,
-    })
-    return isValid;
-  };
-
-  setField(e) {
-    let { name, value } = e.target;
-    this.setState({
-      [name]: value
-    })
-  }
-
 
 
 
   render() {
-    const { onBackClick, onLoggedOut, onDeregister } = this.props;
-    const { PasswordError, EmailError, BirthdayError } = this.state;
-    return (
-      <Container className="profile-wrapper text-light">
-        <Row className="ml-1">
-          <h4>Update info for: {`${this.props.user}`}</h4>
-        </Row>
-        <Form>
-          <Form.Group controlId="updateEmail">
-            <Form.Label>Email</Form.Label>
-            <Form.Control type="email" name="Email" placeholder={`${this.state.Email}`} onChange={(e) => this.setField(e)} required ></Form.Control>
-            {Object.keys(EmailError).map((key) => {
-              return (
-                <div className="error" key={key}>
-                  {EmailError[key]}
-                </div>
-              );
-            })}
-          </Form.Group>
-          <Form.Group controlId="updateBirthday">
-            <Form.Label>Birthdate</Form.Label>
-            <Form.Control type="date" name="Birthday" placeholder={`${this.state.Birthday}`} onChange={(e) => this.setField(e)} required></Form.Control>
-            {Object.keys(BirthdayError).map((key) => {
-              return (
-                <div className="error" key={key}>
-                  {BirthdayError[key]}
-                </div>
-              );
-            })}
-          </Form.Group>
-          <Form.Group controlId="updatePassword">
-            <Form.Label>New Password</Form.Label>
-            <Form.Control type="password" name="Password" placeholder="" onChange={(e) => this.setField(e)} required ></Form.Control>
-            {Object.keys(PasswordError).map((key) => {
-              return (
-                <div className="error" key={key}>
-                  {PasswordError[key]}
-                </div>
-              );
-            })}
-          </Form.Group>
-        </Form>
-        <Row>
-          <div className="button-container">
-            <button className="back-button" onClick={() => { onBackClick(null) }}>Back</button>
-            <button type="submit" className="nav-button" onClick={() => this.handleUpdate()} >Submit</button>
-            <button className="nav-button" onClick={() => { onLoggedOut() }}>Logout</button>
-            <button className="nav-button" type="danger" onClick={() => { onDeregister(this.state.Email) }}>Delete Account</button>
+    const { onBackClick, onLoggedOut } = this.props;
 
+
+    return (
+      <div className="profile-parent-container">
+        <div className="profile-container">
+          <div className="profile-info">
+            <p className="label-profile">Your Profile Information</p>
+            <p className="label-profile">Username: <span className="value-profile">{this.state.Username}</span></p>
+            <p className="label-profile">Date of Birth: <span className="value-profile">{this.state.Birthday.toString().slice(0, 10)}</span></p>
+            <p className="label-profile">Email: <span className="value-profile">{this.state.Email}</span></p>
+            <p className="label-profile">Favorite Movies:</p>
+            <div>
+              <p className="value">{this.state.FavoritesTitle.map((movie_title) => <li key={movie_title} >{movie_title}</li>)}</p>
+            </div>
+            <div className="update-button-container">
+              <Link to={'/users/' + this.state.Username + '/update'}>
+                <button className="nav-button update-button" >Update Profile</button>
+              </Link>
+            </div>
           </div>
-        </Row>
-      </Container>
+
+          <Container className="">
+            <Row>
+              <div className="button-container">
+                <button className="back-button" onClick={() => { onBackClick(null) }}>Back</button>
+                <button className="nav-button" onClick={() => { onLoggedOut() }}>Logout</button>
+              </div>
+            </Row>
+          </Container>
+        </div>
+      </div>
     );
   }
 }
