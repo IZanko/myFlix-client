@@ -28613,7 +28613,7 @@ function LoginView(props) {
             console.log(username + " has logged in!");
             props.onLoggedIn(data);
         }).catch((e1)=>{
-            console.log('user and password do not match');
+            console.log('user and password do not match ' + e1);
         });
     };
     /* then call props.onLoggedIn(username) */ return(/*#__PURE__*/ _jsxRuntime.jsx("div", {
