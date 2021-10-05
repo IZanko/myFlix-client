@@ -1,39 +1,6 @@
 .app-container {
   background-color: #414896;
 }
-.image-styles {
-  width: 300px;
-  height: 400px;
-  object-fit: cover;
-  box-shadow: 15px 15px 10px #333155;
-}
-
-.image-styles:hover {
-  cursor: pointer;
-  box-shadow: 5px 5px 2px #333155;
-  transition: 0.5s;
-  opacity: 0.9;
-}
-
-button.btn.btn-link {
-  padding: 0px;
-}
-
-@media screen and (max-width: 1200px) {
-  .image-styles {
-    height: 305px;
-  }
-}
-@media screen and (max-width: 1000px) {
-  .image-styles {
-    height: 225px;
-  }
-}
-@media screen and (max-width: 768px) {
-  .image-styles {
-    height: fit-content;
-  }
-}
 /*Title and Description bolded*/
 span.label {
   font-weight: 700;
@@ -383,6 +350,39 @@ label.form-label {
 
   .nav-button, .delete-button, .back-button {
     padding: 10px 20px;
+  }
+}
+.image-styles {
+  width: 300px;
+  height: 400px;
+  object-fit: cover;
+  box-shadow: 15px 15px 10px #333155;
+}
+
+.image-styles:hover {
+  cursor: pointer;
+  box-shadow: 5px 5px 2px #333155;
+  transition: 0.5s;
+  opacity: 0.9;
+}
+
+button.btn.btn-link {
+  padding: 0px;
+}
+
+@media screen and (max-width: 1200px) {
+  .image-styles {
+    height: 305px;
+  }
+}
+@media screen and (max-width: 1000px) {
+  .image-styles {
+    height: 225px;
+  }
+}
+@media screen and (max-width: 768px) {
+  .image-styles {
+    height: fit-content;
   }
 }
 /*# sourceMappingURL=index.caa67093.css.map */
