@@ -1,0 +1,30 @@
+form {
+  display: flex;
+  flex-direction: column;
+  align-content: center;
+  justify-self: center;
+}
+.form-container {
+  display: grid;
+  align-self: center;
+  padding-top:15%;
+}
+button.submit-button {
+  box-shadow: 10px 10px 10px rgb(51, 49, 85);
+  font-size: 20px;
+  padding: 6px 20px;
+
+}
+.submit-button:hover {
+  cursor: pointer;
+  box-shadow: 5px 5px 2px rgb(51, 49, 85);
+  transition: .5s;
+}
+.register-instead{
+  color: white;
+  padding-top: 15px;
+  font-size: 18px;
+  }
+.register-instead:hover {
+  text-decoration: underline;
+}
