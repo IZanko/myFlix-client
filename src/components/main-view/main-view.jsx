@@ -5,9 +5,9 @@ import { BrowserRouter as Router, Route, Redirect } from "react-router-dom";
 
 import { connect } from 'react-redux';
 
-
-import { setMovies, setUser } from '../../actions/actions';
-
+// #0
+import { setMovies } from '../../actions/actions';
+// we haven't written this one yet
 import MoviesList from '../movies-list/movies-list';
 
 
@@ -30,12 +30,22 @@ import "./main-view.scss";
 
 class MainView extends React.Component {
 
+  constructor() {
+    super();
+    // Initial state is set to null
+    this.state = {
+      selectedMovie: null,
+      user: null,
+    };
+  }
 
 
   componentDidMount() {
     let accessToken = localStorage.getItem('token');
     if (accessToken !== null) {
-      this.props.setUser(localStorage.getItem('user'));
+      this.setState({
+        user: localStorage.getItem('user')
+      });
       this.getMovies(accessToken);
     }
   }
@@ -66,7 +76,10 @@ class MainView extends React.Component {
 
   /* When a user successfully logs in, this function updates the `user` property in state to that *particular user*/
   onLoggedIn(authData) {
-    this.props.setUser(authData.user);
+    this.setState({
+      user: authData.user.Username
+    });
+
     localStorage.setItem('token', authData.token);
     localStorage.setItem('user', authData.user.Username);
     this.getMovies(authData.token);
@@ -76,7 +89,9 @@ class MainView extends React.Component {
     console.log(localStorage.user + " has been logged out!");
     localStorage.removeItem('token');
     localStorage.removeItem('user');
-    this.props.setUser(null);
+    this.setState({
+      user: null
+    });
   }
 
   /**to log out, remove token and user information from local storage*/
@@ -93,7 +108,9 @@ class MainView extends React.Component {
         .then(response => {
           // Assign the result to the state
           console.log(response.data);
-          this.props.setUser(null);
+          this.setState({
+            user: null
+          });
         })
         .catch(function (error) {
           console.log(error);
@@ -105,7 +122,8 @@ class MainView extends React.Component {
 
 
   render() {
-    let { movies, user } = this.props;
+    let { movies } = this.props;
+    let { user } = this.state;
 
     return (
 
@@ -183,9 +201,6 @@ class MainView extends React.Component {
   }
 }
 let mapStateToProps = state => {
-  return {
-    movies: state.movies,
-    user: state.user
-  }
+  return { movies: state.movies }
 }
-export default connect(mapStateToProps, { setMovies, setUser })(MainView);
+export default connect(mapStateToProps, { setMovies })(MainView);
