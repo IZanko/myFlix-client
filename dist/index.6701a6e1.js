@@ -42544,8 +42544,6 @@ parcelHelpers.export(exports, "setMovies", ()=>setMovies
 );
 parcelHelpers.export(exports, "setFilter", ()=>setFilter
 );
-parcelHelpers.export(exports, "setUser", ()=>setUser
-);
 const SET_MOVIES = 'SET_MOVIES';
 const SET_FILTER = 'SET_FILTER';
 const SET_USER = 'SET_USER';
@@ -42558,12 +42556,6 @@ function setMovies(value) {
 function setFilter(value) {
     return {
         type: SET_FILTER,
-        value
-    };
-}
-function setUser(value) {
-    return {
-        type: SET_USER,
         value
     };
 }
@@ -43352,18 +43344,9 @@ function movies(state = [], action) {
             return state;
     }
 }
-function user(state = [], action) {
-    switch(action.type){
-        case _actions.SET_USER:
-            return action.value;
-        default:
-            return state;
-    }
-}
 const moviesApp = _redux.combineReducers({
     visibilityFilter,
-    movies,
-    user
+    movies
 });
 exports.default = moviesApp;
 
