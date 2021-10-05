@@ -22936,20 +22936,34 @@ var _updateProfileView = require("../update-profile-view/update-profile-view");
 var _profileView = require("../profile-view/profile-view");
 var _mainViewScss = require("./main-view.scss");
 class MainView extends _reactDefault.default.Component {
+    constructor(){
+        super();
+        // Initial state is set to null
+        this.state = {
+            selectedMovie: null,
+            user: null
+        };
+    }
     componentDidMount() {
         let accessToken = localStorage.getItem('token');
         if (accessToken !== null) {
-            this.props.setUser(localStorage.getItem('user'));
+            this.setState({
+                user: localStorage.getItem('user')
+            });
             this.getMovies(accessToken);
         }
     }
-    /*
-    onRegistration(registerUser) {
-      this.setState({
-        registerUser,
-      });
+    /*When a movie is clicked, this function is invoked and updates the state of the `selectedMovie` *property to that movie*/ setSelectedMovie(newSelectedMovie) {
+        this.setState({
+            selectedMovie: newSelectedMovie
+        });
     }
-  */ getMovies(token) {
+    onRegistration(registerUser) {
+        this.setState({
+            registerUser
+        });
+    }
+    getMovies(token) {
         _axiosDefault.default.get('https://zanko-my-flix.herokuapp.com/movies', {
             headers: {
                 Authorization: `Bearer ${token}`
@@ -22962,7 +22976,9 @@ class MainView extends _reactDefault.default.Component {
         });
     }
     /* When a user successfully logs in, this function updates the `user` property in state to that *particular user*/ onLoggedIn(authData) {
-        this.props.setUser(authData.user);
+        this.setState({
+            user: authData.user.Username
+        });
         localStorage.setItem('token', authData.token);
         localStorage.setItem('user', authData.user.Username);
         this.getMovies(authData.token);
@@ -22971,7 +22987,9 @@ class MainView extends _reactDefault.default.Component {
         console.log(localStorage.user + " has been logged out!");
         localStorage.removeItem('token');
         localStorage.removeItem('user');
-        this.props.setUser([]);
+        this.setState({
+            user: null
+        });
     }
     /**to log out, remove token and user information from local storage*/ onDeregister(email) {
         let accessToken = localStorage.getItem('token');
@@ -22987,7 +23005,8 @@ class MainView extends _reactDefault.default.Component {
             }).then((response)=>{
                 // Assign the result to the state
                 console.log(response.data);
-                this.props.setUser({
+                this.setState({
+                    user: null
                 });
             }).catch(function(error) {
                 console.log(error);
@@ -22997,18 +23016,19 @@ class MainView extends _reactDefault.default.Component {
         }
     }
     render() {
-        let { movies , user  } = this.props;
+        let { movies  } = this.props;
+        let { user  } = this.state;
         return(/*#__PURE__*/ _jsxRuntime.jsx(_reactRouterDom.BrowserRouter, {
             __source: {
                 fileName: "src/components/main-view/main-view.jsx",
-                lineNumber: 106
+                lineNumber: 130
             },
             __self: this,
             children: /*#__PURE__*/ _jsxRuntime.jsxs(_rowDefault.default, {
                 className: "main-view justify-content-md-center",
                 __source: {
                     fileName: "src/components/main-view/main-view.jsx",
-                    lineNumber: 107
+                    lineNumber: 131
                 },
                 __self: this,
                 children: [
@@ -23030,7 +23050,7 @@ class MainView extends _reactDefault.default.Component {
                         },
                         __source: {
                             fileName: "src/components/main-view/main-view.jsx",
-                            lineNumber: 108
+                            lineNumber: 132
                         },
                         __self: this
                     }),
@@ -23048,7 +23068,7 @@ class MainView extends _reactDefault.default.Component {
                         },
                         __source: {
                             fileName: "src/components/main-view/main-view.jsx",
-                            lineNumber: 115
+                            lineNumber: 139
                         },
                         __self: this
                     }),
@@ -23070,7 +23090,7 @@ class MainView extends _reactDefault.default.Component {
                         },
                         __source: {
                             fileName: "src/components/main-view/main-view.jsx",
-                            lineNumber: 121
+                            lineNumber: 145
                         },
                         __self: this
                     }),
@@ -23096,7 +23116,7 @@ class MainView extends _reactDefault.default.Component {
                         },
                         __source: {
                             fileName: "src/components/main-view/main-view.jsx",
-                            lineNumber: 129
+                            lineNumber: 153
                         },
                         __self: this
                     }),
@@ -23122,7 +23142,7 @@ class MainView extends _reactDefault.default.Component {
                         },
                         __source: {
                             fileName: "src/components/main-view/main-view.jsx",
-                            lineNumber: 139
+                            lineNumber: 163
                         },
                         __self: this
                     }),
@@ -23140,15 +23160,13 @@ class MainView extends _reactDefault.default.Component {
                                     user: user,
                                     onBackClick: ()=>history.goBack()
                                     ,
-                                    onLoggedOut: ()=>{
-                                        this.onLoggedOut();
-                                    }
+                                    onDeregister: (email)=>this.onDeregister(email)
                                 })
                             }));
                         },
                         __source: {
                             fileName: "src/components/main-view/main-view.jsx",
-                            lineNumber: 149
+                            lineNumber: 173
                         },
                         __self: this
                     }),
@@ -23168,8 +23186,6 @@ class MainView extends _reactDefault.default.Component {
                                     movies: movies,
                                     onBackClick: ()=>history.goBack()
                                     ,
-                                    onDeregister: (email)=>this.onDeregister(email)
-                                    ,
                                     onLoggedOut: ()=>{
                                         this.onLoggedOut();
                                     }
@@ -23178,7 +23194,7 @@ class MainView extends _reactDefault.default.Component {
                         },
                         __source: {
                             fileName: "src/components/main-view/main-view.jsx",
-                            lineNumber: 161
+                            lineNumber: 185
                         },
                         __self: this
                     })
@@ -23189,13 +23205,11 @@ class MainView extends _reactDefault.default.Component {
 }
 let mapStateToProps = (state)=>{
     return {
-        movies: state.movies,
-        user: state.user
+        movies: state.movies
     };
 };
 exports.default = _reactRedux.connect(mapStateToProps, {
-    setMovies: _actions.setMovies,
-    setUser: _actions.setUser
+    setMovies: _actions.setMovies
 })(MainView);
 
   $parcel$ReactRefreshHelpers$35bf.postlude(module);
@@ -28613,7 +28627,7 @@ function LoginView(props) {
             console.log(username + " has logged in!");
             props.onLoggedIn(data);
         }).catch((e1)=>{
-            console.log('user and password do not match ' + e1);
+            console.log('user and password do not match');
         });
     };
     /* then call props.onLoggedIn(username) */ return(/*#__PURE__*/ _jsxRuntime.jsx("div", {
@@ -43350,7 +43364,7 @@ const moviesApp = _redux.combineReducers({
 });
 exports.default = moviesApp;
 
-},{"../actions/actions":"1Ttfj","redux":"4d0QS","@parcel/transformer-js/src/esmodule-helpers.js":"4lSow"}],"8GWVf":[function(require,module,exports) {
+},{"redux":"4d0QS","../actions/actions":"1Ttfj","@parcel/transformer-js/src/esmodule-helpers.js":"4lSow"}],"8GWVf":[function(require,module,exports) {
 'use strict';
 var compose = require('redux').compose;
 exports.__esModule = true;
