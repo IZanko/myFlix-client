@@ -177,7 +177,7 @@ class MainView extends React.Component {
 
             return (
               <Col>
-                <UpdateProfileView user={user} onBackClick={() => history.goBack()} onLoggedOut={() => { this.onLoggedOut() }} />
+                <UpdateProfileView user={user} onBackClick={() => history.goBack()} onDeregister={(email) => this.onDeregister(email)} />
               </Col>
             )
           }
@@ -189,7 +189,7 @@ class MainView extends React.Component {
 
             return (
               <Col>
-                <ProfileView user={user} movies={movies} onBackClick={() => history.goBack()} onDeregister={(email) => this.onDeregister(email)} onLoggedOut={() => { this.onLoggedOut() }} />
+                <ProfileView user={user} movies={movies} onBackClick={() => history.goBack()} onLoggedOut={() => { this.onLoggedOut() }} />
               </Col>
             )
           }
