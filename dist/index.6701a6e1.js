@@ -994,7 +994,7 @@ _reactDomDefault.default.render(/*#__PURE__*/ _reactDefault.default.createElemen
   window.$RefreshReg$ = prevRefreshReg;
   window.$RefreshSig$ = prevRefreshSig;
 }
-},{"react/jsx-runtime":"8xIwr","react":"6TuXu","react-bootstrap/Container":"2PRIq","react-dom":"gkWJK","redux":"4d0QS","react-redux":"2L0if","./reducers/reducers":"btgQW","redux-devtools-extension":"8GWVf","./components/main-view/main-view":"2zHas","./index.scss":"jUTZ8","@parcel/transformer-js/src/esmodule-helpers.js":"JacNc","@parcel/transformer-react-refresh-wrap/lib/helpers/helpers.js":"5V79J"}],"8xIwr":[function(require,module,exports) {
+},{"react/jsx-runtime":"8xIwr","react":"6TuXu","react-dom":"gkWJK","./index.scss":"jUTZ8","@parcel/transformer-js/src/esmodule-helpers.js":"JacNc","@parcel/transformer-react-refresh-wrap/lib/helpers/helpers.js":"5V79J","./components/main-view/main-view":"2zHas","react-bootstrap/Container":"2PRIq","redux":"4d0QS","react-redux":"2L0if","./reducers/reducers":"btgQW","redux-devtools-extension":"8GWVf"}],"8xIwr":[function(require,module,exports) {
 'use strict';
 module.exports = require('./cjs/react-jsx-runtime.development.js');
 
@@ -3462,195 +3462,7 @@ module.exports = shouldUseNative() ? Object.assign : function(target, source) {
     return to;
 };
 
-},{}],"2PRIq":[function(require,module,exports) {
-var parcelHelpers = require("@parcel/transformer-js/src/esmodule-helpers.js");
-parcelHelpers.defineInteropFlag(exports);
-var _extends = require("@babel/runtime/helpers/esm/extends");
-var _extendsDefault = parcelHelpers.interopDefault(_extends);
-var _objectWithoutPropertiesLoose = require("@babel/runtime/helpers/esm/objectWithoutPropertiesLoose");
-var _objectWithoutPropertiesLooseDefault = parcelHelpers.interopDefault(_objectWithoutPropertiesLoose);
-var _classnames = require("classnames");
-var _classnamesDefault = parcelHelpers.interopDefault(_classnames);
-var _react = require("react");
-var _reactDefault = parcelHelpers.interopDefault(_react);
-var _themeProvider = require("./ThemeProvider");
-var _excluded = [
-    "bsPrefix",
-    "fluid",
-    "as",
-    "className"
-];
-var defaultProps = {
-    fluid: false
-};
-var Container = /*#__PURE__*/ _reactDefault.default.forwardRef(function(_ref, ref) {
-    var bsPrefix = _ref.bsPrefix, fluid = _ref.fluid, _ref$as = _ref.as, Component = _ref$as === void 0 ? 'div' : _ref$as, className = _ref.className, props = _objectWithoutPropertiesLooseDefault.default(_ref, _excluded);
-    var prefix = _themeProvider.useBootstrapPrefix(bsPrefix, 'container');
-    var suffix = typeof fluid === 'string' ? "-" + fluid : '-fluid';
-    return(/*#__PURE__*/ _reactDefault.default.createElement(Component, _extendsDefault.default({
-        ref: ref
-    }, props, {
-        className: _classnamesDefault.default(className, fluid ? "" + prefix + suffix : prefix)
-    })));
-});
-Container.displayName = 'Container';
-Container.defaultProps = defaultProps;
-exports.default = Container;
-
-},{"@babel/runtime/helpers/esm/extends":"bKAu6","@babel/runtime/helpers/esm/objectWithoutPropertiesLoose":"3Rubg","classnames":"bOXOh","react":"6TuXu","./ThemeProvider":"eeqfi","@parcel/transformer-js/src/esmodule-helpers.js":"JacNc"}],"bKAu6":[function(require,module,exports) {
-var parcelHelpers = require("@parcel/transformer-js/src/esmodule-helpers.js");
-parcelHelpers.defineInteropFlag(exports);
-function _extends() {
-    _extends = Object.assign || function(target) {
-        for(var i = 1; i < arguments.length; i++){
-            var source = arguments[i];
-            for(var key in source)if (Object.prototype.hasOwnProperty.call(source, key)) target[key] = source[key];
-        }
-        return target;
-    };
-    return _extends.apply(this, arguments);
-}
-exports.default = _extends;
-
-},{"@parcel/transformer-js/src/esmodule-helpers.js":"JacNc"}],"JacNc":[function(require,module,exports) {
-exports.interopDefault = function(a) {
-    return a && a.__esModule ? a : {
-        default: a
-    };
-};
-exports.defineInteropFlag = function(a) {
-    Object.defineProperty(a, '__esModule', {
-        value: true
-    });
-};
-exports.exportAll = function(source, dest) {
-    Object.keys(source).forEach(function(key) {
-        if (key === 'default' || key === '__esModule') return;
-        // Skip duplicate re-exports when they have the same value.
-        if (key in dest && dest[key] === source[key]) return;
-        Object.defineProperty(dest, key, {
-            enumerable: true,
-            get: function() {
-                return source[key];
-            }
-        });
-    });
-    return dest;
-};
-exports.export = function(dest, destName, get) {
-    Object.defineProperty(dest, destName, {
-        enumerable: true,
-        get: get
-    });
-};
-
-},{}],"3Rubg":[function(require,module,exports) {
-var parcelHelpers = require("@parcel/transformer-js/src/esmodule-helpers.js");
-parcelHelpers.defineInteropFlag(exports);
-function _objectWithoutPropertiesLoose(source, excluded) {
-    if (source == null) return {
-    };
-    var target = {
-    };
-    var sourceKeys = Object.keys(source);
-    var key, i;
-    for(i = 0; i < sourceKeys.length; i++){
-        key = sourceKeys[i];
-        if (excluded.indexOf(key) >= 0) continue;
-        target[key] = source[key];
-    }
-    return target;
-}
-exports.default = _objectWithoutPropertiesLoose;
-
-},{"@parcel/transformer-js/src/esmodule-helpers.js":"JacNc"}],"bOXOh":[function(require,module,exports) {
-(function() {
-    var hasOwn = {
-    }.hasOwnProperty;
-    function classNames() {
-        var classes = [];
-        for(var i = 0; i < arguments.length; i++){
-            var arg = arguments[i];
-            if (!arg) continue;
-            var argType = typeof arg;
-            if (argType === 'string' || argType === 'number') classes.push(arg);
-            else if (Array.isArray(arg)) {
-                if (arg.length) {
-                    var inner = classNames.apply(null, arg);
-                    if (inner) classes.push(inner);
-                }
-            } else if (argType === 'object') {
-                if (arg.toString === Object.prototype.toString) {
-                    for(var key in arg)if (hasOwn.call(arg, key) && arg[key]) classes.push(key);
-                } else classes.push(arg.toString());
-            }
-        }
-        return classes.join(' ');
-    }
-    if (typeof module !== 'undefined' && module.exports) {
-        classNames.default = classNames;
-        module.exports = classNames;
-    } else if (typeof define === 'function' && typeof define.amd === 'object' && define.amd) // register as 'classnames', consistent with npm package name
-    define('classnames', [], function() {
-        return classNames;
-    });
-    else window.classNames = classNames;
-})();
-
-},{}],"eeqfi":[function(require,module,exports) {
-var parcelHelpers = require("@parcel/transformer-js/src/esmodule-helpers.js");
-parcelHelpers.defineInteropFlag(exports);
-parcelHelpers.export(exports, "useBootstrapPrefix", ()=>useBootstrapPrefix
-);
-parcelHelpers.export(exports, "createBootstrapComponent", ()=>createBootstrapComponent
-);
-parcelHelpers.export(exports, "ThemeConsumer", ()=>Consumer
-);
-var _extends = require("@babel/runtime/helpers/esm/extends");
-var _extendsDefault = parcelHelpers.interopDefault(_extends);
-var _react = require("react");
-var _reactDefault = parcelHelpers.interopDefault(_react);
-var ThemeContext = /*#__PURE__*/ _reactDefault.default.createContext({
-});
-var Consumer = ThemeContext.Consumer, Provider = ThemeContext.Provider;
-function ThemeProvider(_ref) {
-    var prefixes = _ref.prefixes, children = _ref.children;
-    var copiedPrefixes = _react.useMemo(function() {
-        return _extendsDefault.default({
-        }, prefixes);
-    }, [
-        prefixes
-    ]);
-    return(/*#__PURE__*/ _reactDefault.default.createElement(Provider, {
-        value: copiedPrefixes
-    }, children));
-}
-function useBootstrapPrefix(prefix, defaultPrefix) {
-    var prefixes = _react.useContext(ThemeContext);
-    return prefix || prefixes[defaultPrefix] || defaultPrefix;
-}
-function createBootstrapComponent(Component, opts) {
-    if (typeof opts === 'string') opts = {
-        prefix: opts
-    };
-    var isClassy = Component.prototype && Component.prototype.isReactComponent; // If it's a functional component make sure we don't break it with a ref
-    var _opts = opts, prefix = _opts.prefix, _opts$forwardRefAs = _opts.forwardRefAs, forwardRefAs = _opts$forwardRefAs === void 0 ? isClassy ? 'ref' : 'innerRef' : _opts$forwardRefAs;
-    var Wrapped = /*#__PURE__*/ _reactDefault.default.forwardRef(function(_ref2, ref) {
-        var props = _extendsDefault.default({
-        }, _ref2);
-        props[forwardRefAs] = ref;
-        var bsPrefix = useBootstrapPrefix(props.bsPrefix, prefix);
-        return(/*#__PURE__*/ _reactDefault.default.createElement(Component, _extendsDefault.default({
-        }, props, {
-            bsPrefix: bsPrefix
-        })));
-    });
-    Wrapped.displayName = "Bootstrap(" + (Component.displayName || Component.name) + ")";
-    return Wrapped;
-}
-exports.default = ThemeProvider;
-
-},{"@babel/runtime/helpers/esm/extends":"bKAu6","react":"6TuXu","@parcel/transformer-js/src/esmodule-helpers.js":"JacNc"}],"gkWJK":[function(require,module,exports) {
+},{}],"gkWJK":[function(require,module,exports) {
 'use strict';
 function checkDCE() {
     /* global __REACT_DEVTOOLS_GLOBAL_HOOK__ */ if (typeof __REACT_DEVTOOLS_GLOBAL_HOOK__ === 'undefined' || typeof __REACT_DEVTOOLS_GLOBAL_HOOK__.checkDCE !== 'function') return;
@@ -22940,661 +22752,788 @@ module.exports = require('./cjs/scheduler-tracing.development.js');
     exports.unstable_wrap = unstable_wrap;
 })();
 
-},{}],"4d0QS":[function(require,module,exports) {
-var parcelHelpers = require("@parcel/transformer-js/src/esmodule-helpers.js");
-parcelHelpers.defineInteropFlag(exports);
-parcelHelpers.export(exports, "__DO_NOT_USE__ActionTypes", ()=>ActionTypes
-);
-parcelHelpers.export(exports, "applyMiddleware", ()=>applyMiddleware
-);
-parcelHelpers.export(exports, "bindActionCreators", ()=>bindActionCreators
-);
-parcelHelpers.export(exports, "combineReducers", ()=>combineReducers
-);
-parcelHelpers.export(exports, "compose", ()=>compose
-);
-parcelHelpers.export(exports, "createStore", ()=>createStore
-);
-var _objectSpread2 = require("@babel/runtime/helpers/esm/objectSpread2");
-var _objectSpread2Default = parcelHelpers.interopDefault(_objectSpread2);
-/**
- * Adapted from React: https://github.com/facebook/react/blob/master/packages/shared/formatProdErrorMessage.js
- *
- * Do not require this module directly! Use normal throw error calls. These messages will be replaced with error codes
- * during build.
- * @param {number} code
- */ function formatProdErrorMessage(code) {
-    return "Minified Redux error #" + code + "; visit https://redux.js.org/Errors?code=" + code + " for the full message or " + 'use the non-minified dev environment for full errors. ';
-}
-// Inlined version of the `symbol-observable` polyfill
-var $$observable = function() {
-    return typeof Symbol === 'function' && Symbol.observable || '@@observable';
-}();
-/**
- * These are private action types reserved by Redux.
- * For any unknown actions, you must return the current state.
- * If the current state is undefined, you must return the initial state.
- * Do not reference these action types directly in your code.
- */ var randomString = function randomString1() {
-    return Math.random().toString(36).substring(7).split('').join('.');
+},{}],"jUTZ8":[function() {},{}],"JacNc":[function(require,module,exports) {
+exports.interopDefault = function(a) {
+    return a && a.__esModule ? a : {
+        default: a
+    };
 };
-var ActionTypes = {
-    INIT: "@@redux/INIT" + randomString(),
-    REPLACE: "@@redux/REPLACE" + randomString(),
-    PROBE_UNKNOWN_ACTION: function PROBE_UNKNOWN_ACTION() {
-        return "@@redux/PROBE_UNKNOWN_ACTION" + randomString();
-    }
+exports.defineInteropFlag = function(a) {
+    Object.defineProperty(a, '__esModule', {
+        value: true
+    });
 };
-/**
- * @param {any} obj The object to inspect.
- * @returns {boolean} True if the argument appears to be a plain object.
- */ function isPlainObject(obj) {
-    if (typeof obj !== 'object' || obj === null) return false;
-    var proto = obj;
-    while(Object.getPrototypeOf(proto) !== null)proto = Object.getPrototypeOf(proto);
-    return Object.getPrototypeOf(obj) === proto;
-}
-// Inlined / shortened version of `kindOf` from https://github.com/jonschlinkert/kind-of
-function miniKindOf(val) {
-    if (val === void 0) return 'undefined';
-    if (val === null) return 'null';
-    var type = typeof val;
-    switch(type){
-        case 'boolean':
-        case 'string':
-        case 'number':
-        case 'symbol':
-        case 'function':
-            return type;
-    }
-    if (Array.isArray(val)) return 'array';
-    if (isDate(val)) return 'date';
-    if (isError(val)) return 'error';
-    var constructorName = ctorName(val);
-    switch(constructorName){
-        case 'Symbol':
-        case 'Promise':
-        case 'WeakMap':
-        case 'WeakSet':
-        case 'Map':
-        case 'Set':
-            return constructorName;
-    } // other
-    return type.slice(8, -1).toLowerCase().replace(/\s/g, '');
-}
-function ctorName(val) {
-    return typeof val.constructor === 'function' ? val.constructor.name : null;
-}
-function isError(val) {
-    return val instanceof Error || typeof val.message === 'string' && val.constructor && typeof val.constructor.stackTraceLimit === 'number';
-}
-function isDate(val) {
-    if (val instanceof Date) return true;
-    return typeof val.toDateString === 'function' && typeof val.getDate === 'function' && typeof val.setDate === 'function';
-}
-function kindOf(val) {
-    var typeOfVal = typeof val;
-    typeOfVal = miniKindOf(val);
-    return typeOfVal;
-}
-/**
- * Creates a Redux store that holds the state tree.
- * The only way to change the data in the store is to call `dispatch()` on it.
- *
- * There should only be a single store in your app. To specify how different
- * parts of the state tree respond to actions, you may combine several reducers
- * into a single reducer function by using `combineReducers`.
- *
- * @param {Function} reducer A function that returns the next state tree, given
- * the current state tree and the action to handle.
- *
- * @param {any} [preloadedState] The initial state. You may optionally specify it
- * to hydrate the state from the server in universal apps, or to restore a
- * previously serialized user session.
- * If you use `combineReducers` to produce the root reducer function, this must be
- * an object with the same shape as `combineReducers` keys.
- *
- * @param {Function} [enhancer] The store enhancer. You may optionally specify it
- * to enhance the store with third-party capabilities such as middleware,
- * time travel, persistence, etc. The only store enhancer that ships with Redux
- * is `applyMiddleware()`.
- *
- * @returns {Store} A Redux store that lets you read the state, dispatch actions
- * and subscribe to changes.
- */ function createStore(reducer, preloadedState, enhancer) {
-    var _ref2;
-    if (typeof preloadedState === 'function' && typeof enhancer === 'function' || typeof enhancer === 'function' && typeof arguments[3] === 'function') throw new Error("It looks like you are passing several store enhancers to createStore(). This is not supported. Instead, compose them together to a single function. See https://redux.js.org/tutorials/fundamentals/part-4-store#creating-a-store-with-enhancers for an example.");
-    if (typeof preloadedState === 'function' && typeof enhancer === 'undefined') {
-        enhancer = preloadedState;
-        preloadedState = undefined;
-    }
-    if (typeof enhancer !== 'undefined') {
-        if (typeof enhancer !== 'function') throw new Error("Expected the enhancer to be a function. Instead, received: '" + kindOf(enhancer) + "'");
-        return enhancer(createStore)(reducer, preloadedState);
-    }
-    if (typeof reducer !== 'function') throw new Error("Expected the root reducer to be a function. Instead, received: '" + kindOf(reducer) + "'");
-    var currentReducer = reducer;
-    var currentState = preloadedState;
-    var currentListeners = [];
-    var nextListeners = currentListeners;
-    var isDispatching = false;
-    /**
-   * This makes a shallow copy of currentListeners so we can use
-   * nextListeners as a temporary list while dispatching.
-   *
-   * This prevents any bugs around consumers calling
-   * subscribe/unsubscribe in the middle of a dispatch.
-   */ function ensureCanMutateNextListeners() {
-        if (nextListeners === currentListeners) nextListeners = currentListeners.slice();
-    }
-    /**
-   * Reads the state tree managed by the store.
-   *
-   * @returns {any} The current state tree of your application.
-   */ function getState() {
-        if (isDispatching) throw new Error("You may not call store.getState() while the reducer is executing. The reducer has already received the state as an argument. Pass it down from the top reducer instead of reading it from the store.");
-        return currentState;
-    }
-    /**
-   * Adds a change listener. It will be called any time an action is dispatched,
-   * and some part of the state tree may potentially have changed. You may then
-   * call `getState()` to read the current state tree inside the callback.
-   *
-   * You may call `dispatch()` from a change listener, with the following
-   * caveats:
-   *
-   * 1. The subscriptions are snapshotted just before every `dispatch()` call.
-   * If you subscribe or unsubscribe while the listeners are being invoked, this
-   * will not have any effect on the `dispatch()` that is currently in progress.
-   * However, the next `dispatch()` call, whether nested or not, will use a more
-   * recent snapshot of the subscription list.
-   *
-   * 2. The listener should not expect to see all state changes, as the state
-   * might have been updated multiple times during a nested `dispatch()` before
-   * the listener is called. It is, however, guaranteed that all subscribers
-   * registered before the `dispatch()` started will be called with the latest
-   * state by the time it exits.
-   *
-   * @param {Function} listener A callback to be invoked on every dispatch.
-   * @returns {Function} A function to remove this change listener.
-   */ function subscribe(listener) {
-        if (typeof listener !== 'function') throw new Error("Expected the listener to be a function. Instead, received: '" + kindOf(listener) + "'");
-        if (isDispatching) throw new Error("You may not call store.subscribe() while the reducer is executing. If you would like to be notified after the store has been updated, subscribe from a component and invoke store.getState() in the callback to access the latest state. See https://redux.js.org/api/store#subscribelistener for more details.");
-        var isSubscribed = true;
-        ensureCanMutateNextListeners();
-        nextListeners.push(listener);
-        return function unsubscribe() {
-            if (!isSubscribed) return;
-            if (isDispatching) throw new Error("You may not unsubscribe from a store listener while the reducer is executing. See https://redux.js.org/api/store#subscribelistener for more details.");
-            isSubscribed = false;
-            ensureCanMutateNextListeners();
-            var index = nextListeners.indexOf(listener);
-            nextListeners.splice(index, 1);
-            currentListeners = null;
-        };
-    }
-    /**
-   * Dispatches an action. It is the only way to trigger a state change.
-   *
-   * The `reducer` function, used to create the store, will be called with the
-   * current state tree and the given `action`. Its return value will
-   * be considered the **next** state of the tree, and the change listeners
-   * will be notified.
-   *
-   * The base implementation only supports plain object actions. If you want to
-   * dispatch a Promise, an Observable, a thunk, or something else, you need to
-   * wrap your store creating function into the corresponding middleware. For
-   * example, see the documentation for the `redux-thunk` package. Even the
-   * middleware will eventually dispatch plain object actions using this method.
-   *
-   * @param {Object} action A plain object representing “what changed”. It is
-   * a good idea to keep actions serializable so you can record and replay user
-   * sessions, or use the time travelling `redux-devtools`. An action must have
-   * a `type` property which may not be `undefined`. It is a good idea to use
-   * string constants for action types.
-   *
-   * @returns {Object} For convenience, the same action object you dispatched.
-   *
-   * Note that, if you use a custom middleware, it may wrap `dispatch()` to
-   * return something else (for example, a Promise you can await).
-   */ function dispatch(action) {
-        if (!isPlainObject(action)) throw new Error("Actions must be plain objects. Instead, the actual type was: '" + kindOf(action) + "'. You may need to add middleware to your store setup to handle dispatching other values, such as 'redux-thunk' to handle dispatching functions. See https://redux.js.org/tutorials/fundamentals/part-4-store#middleware and https://redux.js.org/tutorials/fundamentals/part-6-async-logic#using-the-redux-thunk-middleware for examples.");
-        if (typeof action.type === 'undefined') throw new Error('Actions may not have an undefined "type" property. You may have misspelled an action type string constant.');
-        if (isDispatching) throw new Error('Reducers may not dispatch actions.');
-        try {
-            isDispatching = true;
-            currentState = currentReducer(currentState, action);
-        } finally{
-            isDispatching = false;
-        }
-        var listeners = currentListeners = nextListeners;
-        for(var i = 0; i < listeners.length; i++){
-            var listener = listeners[i];
-            listener();
-        }
-        return action;
-    }
-    /**
-   * Replaces the reducer currently used by the store to calculate the state.
-   *
-   * You might need this if your app implements code splitting and you want to
-   * load some of the reducers dynamically. You might also need this if you
-   * implement a hot reloading mechanism for Redux.
-   *
-   * @param {Function} nextReducer The reducer for the store to use instead.
-   * @returns {void}
-   */ function replaceReducer(nextReducer) {
-        if (typeof nextReducer !== 'function') throw new Error("Expected the nextReducer to be a function. Instead, received: '" + kindOf(nextReducer));
-        currentReducer = nextReducer; // This action has a similiar effect to ActionTypes.INIT.
-        // Any reducers that existed in both the new and old rootReducer
-        // will receive the previous state. This effectively populates
-        // the new state tree with any relevant data from the old one.
-        dispatch({
-            type: ActionTypes.REPLACE
-        });
-    }
-    /**
-   * Interoperability point for observable/reactive libraries.
-   * @returns {observable} A minimal observable of state changes.
-   * For more information, see the observable proposal:
-   * https://github.com/tc39/proposal-observable
-   */ function observable() {
-        var _ref;
-        var outerSubscribe = subscribe;
-        return _ref = {
-            /**
-       * The minimal observable subscription method.
-       * @param {Object} observer Any object that can be used as an observer.
-       * The observer object should have a `next` method.
-       * @returns {subscription} An object with an `unsubscribe` method that can
-       * be used to unsubscribe the observable from the store, and prevent further
-       * emission of values from the observable.
-       */ subscribe: function subscribe1(observer) {
-                if (typeof observer !== 'object' || observer === null) throw new Error("Expected the observer to be an object. Instead, received: '" + kindOf(observer) + "'");
-                function observeState() {
-                    if (observer.next) observer.next(getState());
-                }
-                observeState();
-                var unsubscribe = outerSubscribe(observeState);
-                return {
-                    unsubscribe: unsubscribe
-                };
+exports.exportAll = function(source, dest) {
+    Object.keys(source).forEach(function(key) {
+        if (key === 'default' || key === '__esModule') return;
+        // Skip duplicate re-exports when they have the same value.
+        if (key in dest && dest[key] === source[key]) return;
+        Object.defineProperty(dest, key, {
+            enumerable: true,
+            get: function() {
+                return source[key];
             }
-        }, _ref[$$observable] = function() {
-            return this;
-        }, _ref;
-    } // When a store is created, an "INIT" action is dispatched so that every
-    // reducer returns their initial state. This effectively populates
-    // the initial state tree.
-    dispatch({
-        type: ActionTypes.INIT
-    });
-    return _ref2 = {
-        dispatch: dispatch,
-        subscribe: subscribe,
-        getState: getState,
-        replaceReducer: replaceReducer
-    }, _ref2[$$observable] = observable, _ref2;
-}
-/**
- * Prints a warning in the console if it exists.
- *
- * @param {String} message The warning message.
- * @returns {void}
- */ function warning(message) {
-    /* eslint-disable no-console */ if (typeof console !== 'undefined' && typeof console.error === 'function') console.error(message);
-    /* eslint-enable no-console */ try {
-        // This error was thrown as a convenience so that if you enable
-        // "break on all exceptions" in your console,
-        // it would pause the execution at this line.
-        throw new Error(message);
-    } catch (e) {
-    } // eslint-disable-line no-empty
-}
-function getUnexpectedStateShapeWarningMessage(inputState, reducers, action, unexpectedKeyCache) {
-    var reducerKeys = Object.keys(reducers);
-    var argumentName = action && action.type === ActionTypes.INIT ? 'preloadedState argument passed to createStore' : 'previous state received by the reducer';
-    if (reducerKeys.length === 0) return "Store does not have a valid reducer. Make sure the argument passed to combineReducers is an object whose values are reducers.";
-    if (!isPlainObject(inputState)) return "The " + argumentName + " has unexpected type of \"" + kindOf(inputState) + "\". Expected argument to be an object with the following " + ("keys: \"" + reducerKeys.join('", "') + "\"");
-    var unexpectedKeys = Object.keys(inputState).filter(function(key) {
-        return !reducers.hasOwnProperty(key) && !unexpectedKeyCache[key];
-    });
-    unexpectedKeys.forEach(function(key) {
-        unexpectedKeyCache[key] = true;
-    });
-    if (action && action.type === ActionTypes.REPLACE) return;
-    if (unexpectedKeys.length > 0) return "Unexpected " + (unexpectedKeys.length > 1 ? 'keys' : 'key') + " " + ("\"" + unexpectedKeys.join('", "') + "\" found in " + argumentName + ". ") + "Expected to find one of the known reducer keys instead: " + ("\"" + reducerKeys.join('", "') + "\". Unexpected keys will be ignored.");
-}
-function assertReducerShape(reducers) {
-    Object.keys(reducers).forEach(function(key) {
-        var reducer = reducers[key];
-        var initialState = reducer(undefined, {
-            type: ActionTypes.INIT
         });
-        if (typeof initialState === 'undefined') throw new Error("The slice reducer for key \"" + key + "\" returned undefined during initialization. " + "If the state passed to the reducer is undefined, you must " + "explicitly return the initial state. The initial state may " + "not be undefined. If you don't want to set a value for this reducer, " + "you can use null instead of undefined.");
-        if (typeof reducer(undefined, {
-            type: ActionTypes.PROBE_UNKNOWN_ACTION()
-        }) === 'undefined') throw new Error("The slice reducer for key \"" + key + "\" returned undefined when probed with a random type. " + ("Don't try to handle '" + ActionTypes.INIT + "' or other actions in \"redux/*\" ") + "namespace. They are considered private. Instead, you must return the " + "current state for any unknown actions, unless it is undefined, " + "in which case you must return the initial state, regardless of the " + "action type. The initial state may not be undefined, but can be null.");
     });
-}
-/**
- * Turns an object whose values are different reducer functions, into a single
- * reducer function. It will call every child reducer, and gather their results
- * into a single state object, whose keys correspond to the keys of the passed
- * reducer functions.
- *
- * @param {Object} reducers An object whose values correspond to different
- * reducer functions that need to be combined into one. One handy way to obtain
- * it is to use ES6 `import * as reducers` syntax. The reducers may never return
- * undefined for any action. Instead, they should return their initial state
- * if the state passed to them was undefined, and the current state for any
- * unrecognized action.
- *
- * @returns {Function} A reducer function that invokes every reducer inside the
- * passed object, and builds a state object with the same shape.
- */ function combineReducers(reducers) {
-    var reducerKeys = Object.keys(reducers);
-    var finalReducers = {
-    };
-    for(var i = 0; i < reducerKeys.length; i++){
-        var key = reducerKeys[i];
-        if (typeof reducers[key] === 'undefined') warning("No reducer provided for key \"" + key + "\"");
-        if (typeof reducers[key] === 'function') finalReducers[key] = reducers[key];
-    }
-    var finalReducerKeys = Object.keys(finalReducers); // This is used to make sure we don't warn about the same
-    // keys multiple times.
-    var unexpectedKeyCache;
-    unexpectedKeyCache = {
-    };
-    var shapeAssertionError;
-    try {
-        assertReducerShape(finalReducers);
-    } catch (e) {
-        shapeAssertionError = e;
-    }
-    return function combination(state, action) {
-        if (state === void 0) state = {
-        };
-        if (shapeAssertionError) throw shapeAssertionError;
-        var warningMessage = getUnexpectedStateShapeWarningMessage(state, finalReducers, action, unexpectedKeyCache);
-        if (warningMessage) warning(warningMessage);
-        var hasChanged = false;
-        var nextState = {
-        };
-        for(var _i = 0; _i < finalReducerKeys.length; _i++){
-            var _key = finalReducerKeys[_i];
-            var reducer = finalReducers[_key];
-            var previousStateForKey = state[_key];
-            var nextStateForKey = reducer(previousStateForKey, action);
-            if (typeof nextStateForKey === 'undefined') {
-                var actionType = action && action.type;
-                throw new Error("When called with an action of type " + (actionType ? "\"" + String(actionType) + "\"" : '(unknown type)') + ", the slice reducer for key \"" + _key + "\" returned undefined. " + "To ignore an action, you must explicitly return the previous state. " + "If you want this reducer to hold no value, you can return null instead of undefined.");
-            }
-            nextState[_key] = nextStateForKey;
-            hasChanged = hasChanged || nextStateForKey !== previousStateForKey;
-        }
-        hasChanged = hasChanged || finalReducerKeys.length !== Object.keys(state).length;
-        return hasChanged ? nextState : state;
-    };
-}
-function bindActionCreator(actionCreator, dispatch) {
-    return function() {
-        return dispatch(actionCreator.apply(this, arguments));
-    };
-}
-/**
- * Turns an object whose values are action creators, into an object with the
- * same keys, but with every function wrapped into a `dispatch` call so they
- * may be invoked directly. This is just a convenience method, as you can call
- * `store.dispatch(MyActionCreators.doSomething())` yourself just fine.
- *
- * For convenience, you can also pass an action creator as the first argument,
- * and get a dispatch wrapped function in return.
- *
- * @param {Function|Object} actionCreators An object whose values are action
- * creator functions. One handy way to obtain it is to use ES6 `import * as`
- * syntax. You may also pass a single function.
- *
- * @param {Function} dispatch The `dispatch` function available on your Redux
- * store.
- *
- * @returns {Function|Object} The object mimicking the original object, but with
- * every action creator wrapped into the `dispatch` call. If you passed a
- * function as `actionCreators`, the return value will also be a single
- * function.
- */ function bindActionCreators(actionCreators, dispatch) {
-    if (typeof actionCreators === 'function') return bindActionCreator(actionCreators, dispatch);
-    if (typeof actionCreators !== 'object' || actionCreators === null) throw new Error("bindActionCreators expected an object or a function, but instead received: '" + kindOf(actionCreators) + "'. " + "Did you write \"import ActionCreators from\" instead of \"import * as ActionCreators from\"?");
-    var boundActionCreators = {
-    };
-    for(var key in actionCreators){
-        var actionCreator = actionCreators[key];
-        if (typeof actionCreator === 'function') boundActionCreators[key] = bindActionCreator(actionCreator, dispatch);
-    }
-    return boundActionCreators;
-}
-/**
- * Composes single-argument functions from right to left. The rightmost
- * function can take multiple arguments as it provides the signature for
- * the resulting composite function.
- *
- * @param {...Function} funcs The functions to compose.
- * @returns {Function} A function obtained by composing the argument functions
- * from right to left. For example, compose(f, g, h) is identical to doing
- * (...args) => f(g(h(...args))).
- */ function compose() {
-    for(var _len = arguments.length, funcs = new Array(_len), _key = 0; _key < _len; _key++)funcs[_key] = arguments[_key];
-    if (funcs.length === 0) return function(arg) {
-        return arg;
-    };
-    if (funcs.length === 1) return funcs[0];
-    return funcs.reduce(function(a, b) {
-        return function() {
-            return a(b.apply(void 0, arguments));
-        };
-    });
-}
-/**
- * Creates a store enhancer that applies middleware to the dispatch method
- * of the Redux store. This is handy for a variety of tasks, such as expressing
- * asynchronous actions in a concise manner, or logging every action payload.
- *
- * See `redux-thunk` package as an example of the Redux middleware.
- *
- * Because middleware is potentially asynchronous, this should be the first
- * store enhancer in the composition chain.
- *
- * Note that each middleware will be given the `dispatch` and `getState` functions
- * as named arguments.
- *
- * @param {...Function} middlewares The middleware chain to be applied.
- * @returns {Function} A store enhancer applying the middleware.
- */ function applyMiddleware() {
-    for(var _len = arguments.length, middlewares = new Array(_len), _key = 0; _key < _len; _key++)middlewares[_key] = arguments[_key];
-    return function(createStore1) {
-        return function() {
-            var store = createStore1.apply(void 0, arguments);
-            var _dispatch = function dispatch() {
-                throw new Error("Dispatching while constructing your middleware is not allowed. Other middleware would not be applied to this dispatch.");
-            };
-            var middlewareAPI = {
-                getState: store.getState,
-                dispatch: function dispatch1() {
-                    return _dispatch.apply(void 0, arguments);
-                }
-            };
-            var chain = middlewares.map(function(middleware) {
-                return middleware(middlewareAPI);
-            });
-            _dispatch = compose.apply(void 0, chain)(store.dispatch);
-            return _objectSpread2Default.default(_objectSpread2Default.default({
-            }, store), {
-            }, {
-                dispatch: _dispatch
-            });
-        };
-    };
-}
-/*
- * This is a dummy function to check if the function name has been altered by minification.
- * If the function has been minified and NODE_ENV !== 'production', warn the user.
- */ function isCrushed() {
-}
-if (typeof isCrushed.name === 'string' && isCrushed.name !== 'isCrushed') warning("You are currently using minified code outside of NODE_ENV === \"production\". This means that you are running a slower development build of Redux. You can use loose-envify (https://github.com/zertosh/loose-envify) for browserify or setting mode to production in webpack (https://webpack.js.org/concepts/mode/) to ensure you have the correct code for your production build.");
-
-},{"@babel/runtime/helpers/esm/objectSpread2":"bSD1u","@parcel/transformer-js/src/esmodule-helpers.js":"JacNc"}],"bSD1u":[function(require,module,exports) {
-var parcelHelpers = require("@parcel/transformer-js/src/esmodule-helpers.js");
-parcelHelpers.defineInteropFlag(exports);
-var _definePropertyJs = require("./defineProperty.js");
-var _definePropertyJsDefault = parcelHelpers.interopDefault(_definePropertyJs);
-function ownKeys(object, enumerableOnly) {
-    var keys = Object.keys(object);
-    if (Object.getOwnPropertySymbols) {
-        var symbols = Object.getOwnPropertySymbols(object);
-        if (enumerableOnly) symbols = symbols.filter(function(sym) {
-            return Object.getOwnPropertyDescriptor(object, sym).enumerable;
-        });
-        keys.push.apply(keys, symbols);
-    }
-    return keys;
-}
-function _objectSpread2(target) {
-    for(var i = 1; i < arguments.length; i++){
-        var source = arguments[i] != null ? arguments[i] : {
-        };
-        if (i % 2) ownKeys(Object(source), true).forEach(function(key) {
-            _definePropertyJsDefault.default(target, key, source[key]);
-        });
-        else if (Object.getOwnPropertyDescriptors) Object.defineProperties(target, Object.getOwnPropertyDescriptors(source));
-        else ownKeys(Object(source)).forEach(function(key) {
-            Object.defineProperty(target, key, Object.getOwnPropertyDescriptor(source, key));
-        });
-    }
-    return target;
-}
-exports.default = _objectSpread2;
-
-},{"./defineProperty.js":"7s3FO","@parcel/transformer-js/src/esmodule-helpers.js":"JacNc"}],"7s3FO":[function(require,module,exports) {
-var parcelHelpers = require("@parcel/transformer-js/src/esmodule-helpers.js");
-parcelHelpers.defineInteropFlag(exports);
-function _defineProperty(obj, key, value) {
-    if (key in obj) Object.defineProperty(obj, key, {
-        value: value,
+    return dest;
+};
+exports.export = function(dest, destName, get) {
+    Object.defineProperty(dest, destName, {
         enumerable: true,
-        configurable: true,
-        writable: true
+        get: get
     });
-    else obj[key] = value;
-    return obj;
+};
+
+},{}],"5V79J":[function(require,module,exports) {
+"use strict";
+var Refresh = require('react-refresh/runtime');
+function debounce(func, delay) {
+    var args;
+    var timeout = undefined;
+    return function(args1) {
+        clearTimeout(timeout);
+        timeout = setTimeout(function() {
+            timeout = undefined;
+            func.call(null, args1);
+        }, delay);
+    };
 }
-exports.default = _defineProperty;
+var enqueueUpdate = debounce(function() {
+    Refresh.performReactRefresh();
+}, 30); // Everthing below is either adapted or copied from
+// https://github.com/facebook/metro/blob/61de16bd1edd7e738dd0311c89555a644023ab2d/packages/metro/src/lib/polyfills/require.js
+// MIT License - Copyright (c) Facebook, Inc. and its affiliates.
+module.exports.prelude = function(module) {
+    window.$RefreshReg$ = function(type, id) {
+        Refresh.register(type, module.id + ' ' + id);
+    };
+    window.$RefreshSig$ = Refresh.createSignatureFunctionForTransform;
+};
+module.exports.postlude = function(module) {
+    if (isReactRefreshBoundary(module.exports)) {
+        registerExportsForReactRefresh(module);
+        if (module.hot) {
+            module.hot.dispose(function(data) {
+                if (Refresh.hasUnrecoverableErrors()) window.location.reload();
+                data.prevExports = module.exports;
+            });
+            module.hot.accept(function(getParents) {
+                var prevExports = module.hot.data.prevExports;
+                var nextExports = module.exports; // Since we just executed the code for it, it's possible
+                // that the new exports make it ineligible for being a boundary.
+                var isNoLongerABoundary = !isReactRefreshBoundary(nextExports); // It can also become ineligible if its exports are incompatible
+                // with the previous exports.
+                // For example, if you add/remove/change exports, we'll want
+                // to re-execute the importing modules, and force those components
+                // to re-render. Similarly, if you convert a class component
+                // to a function, we want to invalidate the boundary.
+                var didInvalidate = shouldInvalidateReactRefreshBoundary(prevExports, nextExports);
+                if (isNoLongerABoundary || didInvalidate) {
+                    // We'll be conservative. The only case in which we won't do a full
+                    // reload is if all parent modules are also refresh boundaries.
+                    // In that case we'll add them to the current queue.
+                    var parents = getParents();
+                    if (parents.length === 0) {
+                        // Looks like we bubbled to the root. Can't recover from that.
+                        window.location.reload();
+                        return;
+                    }
+                    return parents;
+                }
+                enqueueUpdate();
+            });
+        }
+    }
+};
+function isReactRefreshBoundary(exports) {
+    if (Refresh.isLikelyComponentType(exports)) return true;
+    if (exports == null || typeof exports !== 'object') // Exit if we can't iterate over exports.
+    return false;
+    var hasExports = false;
+    var areAllExportsComponents = true;
+    let isESM = '__esModule' in exports;
+    for(var key in exports){
+        hasExports = true;
+        if (key === '__esModule') continue;
+        var desc = Object.getOwnPropertyDescriptor(exports, key);
+        if (desc && desc.get && !isESM) // Don't invoke getters for CJS as they may have side effects.
+        return false;
+        var exportValue = exports[key];
+        if (!Refresh.isLikelyComponentType(exportValue)) areAllExportsComponents = false;
+    }
+    return hasExports && areAllExportsComponents;
+}
+function shouldInvalidateReactRefreshBoundary(prevExports, nextExports) {
+    var prevSignature = getRefreshBoundarySignature(prevExports);
+    var nextSignature = getRefreshBoundarySignature(nextExports);
+    if (prevSignature.length !== nextSignature.length) return true;
+    for(var i = 0; i < nextSignature.length; i++){
+        if (prevSignature[i] !== nextSignature[i]) return true;
+    }
+    return false;
+} // When this signature changes, it's unsafe to stop at this refresh boundary.
+function getRefreshBoundarySignature(exports) {
+    var signature = [];
+    signature.push(Refresh.getFamilyByType(exports));
+    if (exports == null || typeof exports !== 'object') // Exit if we can't iterate over exports.
+    // (This is important for legacy environments.)
+    return signature;
+    let isESM = '__esModule' in exports;
+    for(var key in exports){
+        if (key === '__esModule') continue;
+        var desc = Object.getOwnPropertyDescriptor(exports, key);
+        if (desc && desc.get && !isESM) continue;
+        var exportValue = exports[key];
+        signature.push(key);
+        signature.push(Refresh.getFamilyByType(exportValue));
+    }
+    return signature;
+}
+function registerExportsForReactRefresh(module) {
+    var exports = module.exports, id = module.id;
+    Refresh.register(exports, id + ' %exports%');
+    if (exports == null || typeof exports !== 'object') // Exit if we can't iterate over exports.
+    // (This is important for legacy environments.)
+    return;
+    let isESM = '__esModule' in exports;
+    for(var key in exports){
+        var desc = Object.getOwnPropertyDescriptor(exports, key);
+        if (desc && desc.get && !isESM) continue;
+        var exportValue = exports[key];
+        Refresh.register(exportValue, id + ' %exports% ' + key);
+    }
+}
 
-},{"@parcel/transformer-js/src/esmodule-helpers.js":"JacNc"}],"2L0if":[function(require,module,exports) {
+},{"react-refresh/runtime":"fNmB3"}],"2zHas":[function(require,module,exports) {
+var $parcel$ReactRefreshHelpers$35bf = require("@parcel/transformer-react-refresh-wrap/lib/helpers/helpers.js");
+var prevRefreshReg = window.$RefreshReg$;
+var prevRefreshSig = window.$RefreshSig$;
+$parcel$ReactRefreshHelpers$35bf.prelude(module);
+
+try {
 var parcelHelpers = require("@parcel/transformer-js/src/esmodule-helpers.js");
 parcelHelpers.defineInteropFlag(exports);
-parcelHelpers.export(exports, "batch", ()=>_reactBatchedUpdates.unstable_batchedUpdates
-);
-var _reactBatchedUpdates = require("./utils/reactBatchedUpdates");
-var _batch = require("./utils/batch"); // Enable batched updates in our subscriptions for use
-var _exports = require("./exports");
-parcelHelpers.exportAll(_exports, exports);
-// with standard React renderers (ReactDOM, React Native)
-_batch.setBatch(_reactBatchedUpdates.unstable_batchedUpdates);
+var _jsxRuntime = require("react/jsx-runtime");
+var _react = require("react");
+var _reactDefault = parcelHelpers.interopDefault(_react);
+var _axios = require("axios");
+var _axiosDefault = parcelHelpers.interopDefault(_axios);
+var _reactRouterDom = require("react-router-dom");
+var _reactRedux = require("react-redux");
+var _actions = require("../../actions/actions");
+var _moviesList = require("../movies-list/movies-list");
+var _moviesListDefault = parcelHelpers.interopDefault(_moviesList);
+var _row = require("react-bootstrap/Row");
+var _rowDefault = parcelHelpers.interopDefault(_row);
+var _col = require("react-bootstrap/Col");
+var _colDefault = parcelHelpers.interopDefault(_col);
+var _movieView = require("../movie-view/movie-view");
+var _genresView = require("../genres-view/genres-view");
+var _directorView = require("../director-view/director-view");
+var _logInView = require("../log-in-view/log-in-view");
+var _registrationView = require("../registration-view/registration-view");
+var _updateProfileView = require("../update-profile-view/update-profile-view");
+var _profileView = require("../profile-view/profile-view");
+var _mainViewScss = require("./main-view.scss");
+class MainView extends _reactDefault.default.Component {
+    componentDidMount() {
+        let accessToken = localStorage.getItem('token');
+        if (accessToken !== null) {
+            this.props.setUser(localStorage.getItem('user'));
+            this.getMovies(accessToken);
+        }
+    }
+    /*When a movie is clicked, this function is invoked and updates the state of the `selectedMovie` *property to that movie*/ setSelectedMovie(newSelectedMovie) {
+        this.setState({
+            selectedMovie: newSelectedMovie
+        });
+    }
+    getMovies(token) {
+        _axiosDefault.default.get('https://zanko-my-flix.herokuapp.com/movies', {
+            headers: {
+                Authorization: `Bearer ${token}`
+            }
+        }).then((response)=>{
+            // Assign the result to the state
+            this.props.setMovies(response.data);
+        }).catch(function(error) {
+            console.log(error);
+        });
+    }
+    /* When a user successfully logs in, this function updates the `user` property in state to that *particular user*/ onLoggedIn(authData) {
+        this.props.setUser(authData.user.Username);
+        localStorage.setItem('token', authData.token);
+        localStorage.setItem('user', authData.user.Username);
+        this.getMovies(authData.token);
+    }
+    /**to log out, remove token and user information from local storage*/ onLoggedOut() {
+        console.log(localStorage.user + " has been logged out!");
+        localStorage.removeItem('token');
+        localStorage.removeItem('user');
+        this.props.setUser(null);
+    }
+    /**to log out, remove token and user information from local storage*/ onDeregister(email) {
+        let accessToken = localStorage.getItem('token');
+        let username = localStorage.getItem('user');
+        if (window.confirm('Are you sure you wish to delete this account?')) {
+            _axiosDefault.default.delete(`https://zanko-my-flix.herokuapp.com/users/${username}`, {
+                headers: {
+                    Authorization: `Bearer ${accessToken}`
+                }
+            }, {
+                "username": username,
+                "email": email
+            }).then((response)=>{
+                // Assign the result to the state
+                console.log(response.data);
+                this.props.setUser(null);
+            }).catch(function(error) {
+                console.log(error);
+            });
+            localStorage.removeItem('token');
+            localStorage.removeItem('user');
+        }
+    }
+    render() {
+        let { movies , user  } = this.props;
+        return(/*#__PURE__*/ _jsxRuntime.jsx(_reactRouterDom.BrowserRouter, {
+            __source: {
+                fileName: "src/components/main-view/main-view.jsx",
+                lineNumber: 104
+            },
+            __self: this,
+            children: /*#__PURE__*/ _jsxRuntime.jsxs(_rowDefault.default, {
+                className: "main-view justify-content-md-center",
+                __source: {
+                    fileName: "src/components/main-view/main-view.jsx",
+                    lineNumber: 105
+                },
+                __self: this,
+                children: [
+                    /*#__PURE__*/ _jsxRuntime.jsx(_reactRouterDom.Route, {
+                        exact: true,
+                        path: "/",
+                        render: ()=>{
+                            if (!user) return(/*#__PURE__*/ _jsxRuntime.jsx(_colDefault.default, {
+                                children: /*#__PURE__*/ _jsxRuntime.jsx(_logInView.LoginView, {
+                                    onLoggedIn: (user1)=>this.onLoggedIn(user1)
+                                })
+                            }));
+                            return(/*#__PURE__*/ _jsxRuntime.jsx(_moviesListDefault.default, {
+                                movies: movies
+                            }));
+                        },
+                        __source: {
+                            fileName: "src/components/main-view/main-view.jsx",
+                            lineNumber: 106
+                        },
+                        __self: this
+                    }),
+                    /*#__PURE__*/ _jsxRuntime.jsx(_reactRouterDom.Route, {
+                        path: "/register",
+                        render: ()=>{
+                            if (user) return(/*#__PURE__*/ _jsxRuntime.jsx(_reactRouterDom.Redirect, {
+                                to: "/"
+                            }));
+                            return(/*#__PURE__*/ _jsxRuntime.jsx(_colDefault.default, {
+                                children: /*#__PURE__*/ _jsxRuntime.jsx(_registrationView.RegistrationView, {
+                                    onRegistration: (username)=>this.onRegistration(username)
+                                })
+                            }));
+                        },
+                        __source: {
+                            fileName: "src/components/main-view/main-view.jsx",
+                            lineNumber: 112
+                        },
+                        __self: this
+                    }),
+                    /*#__PURE__*/ _jsxRuntime.jsx(_reactRouterDom.Route, {
+                        path: "/movies/:movieId",
+                        render: ({ match , history  })=>{
+                            if (!user) return(/*#__PURE__*/ _jsxRuntime.jsx(_colDefault.default, {
+                                children: /*#__PURE__*/ _jsxRuntime.jsx(_logInView.LoginView, {
+                                    onLoggedIn: (user1)=>this.onLoggedIn(user1)
+                                })
+                            }));
+                            return(/*#__PURE__*/ _jsxRuntime.jsx(_colDefault.default, {
+                                children: /*#__PURE__*/ _jsxRuntime.jsx(_movieView.MovieView, {
+                                    movie: movies.find((m)=>m._id === match.params.movieId
+                                    ),
+                                    onBackClick: ()=>history.goBack()
+                                })
+                            }));
+                        },
+                        __source: {
+                            fileName: "src/components/main-view/main-view.jsx",
+                            lineNumber: 118
+                        },
+                        __self: this
+                    }),
+                    /*#__PURE__*/ _jsxRuntime.jsx(_reactRouterDom.Route, {
+                        path: "/genres/:name",
+                        render: ({ match , history  })=>{
+                            if (!user) return(/*#__PURE__*/ _jsxRuntime.jsx(_colDefault.default, {
+                                children: /*#__PURE__*/ _jsxRuntime.jsx(_logInView.LoginView, {
+                                    onLoggedIn: (user1)=>this.onLoggedIn(user1)
+                                })
+                            }));
+                            if (movies.length === 0) return(/*#__PURE__*/ _jsxRuntime.jsx("div", {
+                                className: "main-view"
+                            }));
+                            return(/*#__PURE__*/ _jsxRuntime.jsx(_colDefault.default, {
+                                md: 8,
+                                children: /*#__PURE__*/ _jsxRuntime.jsx(_genresView.GenresView, {
+                                    genre: movies.find((m)=>m.Genre.Name === match.params.name
+                                    ).Genre,
+                                    onBackClick: ()=>history.goBack()
+                                })
+                            }));
+                        },
+                        __source: {
+                            fileName: "src/components/main-view/main-view.jsx",
+                            lineNumber: 126
+                        },
+                        __self: this
+                    }),
+                    /*#__PURE__*/ _jsxRuntime.jsx(_reactRouterDom.Route, {
+                        path: "/directors/:name",
+                        render: ({ match , history  })=>{
+                            if (!user) return(/*#__PURE__*/ _jsxRuntime.jsx(_colDefault.default, {
+                                children: /*#__PURE__*/ _jsxRuntime.jsx(_logInView.LoginView, {
+                                    onLoggedIn: (user1)=>this.onLoggedIn(user1)
+                                })
+                            }));
+                            if (movies.length === 0) return(/*#__PURE__*/ _jsxRuntime.jsx("div", {
+                                className: "main-view"
+                            }));
+                            return(/*#__PURE__*/ _jsxRuntime.jsx(_colDefault.default, {
+                                md: 8,
+                                children: /*#__PURE__*/ _jsxRuntime.jsx(_directorView.DirectorView, {
+                                    director: movies.find((m)=>m.Director.Name === match.params.name
+                                    ).Director,
+                                    onBackClick: ()=>history.goBack()
+                                })
+                            }));
+                        },
+                        __source: {
+                            fileName: "src/components/main-view/main-view.jsx",
+                            lineNumber: 136
+                        },
+                        __self: this
+                    }),
+                    /*#__PURE__*/ _jsxRuntime.jsx(_reactRouterDom.Route, {
+                        path: "/users/:Username/update",
+                        render: ({ history  })=>{
+                            if (movies.length === 0) return(/*#__PURE__*/ _jsxRuntime.jsx("div", {
+                                className: "main-view"
+                            }));
+                            if (!user) return(/*#__PURE__*/ _jsxRuntime.jsx(_reactRouterDom.Redirect, {
+                                to: "/"
+                            }));
+                            return(/*#__PURE__*/ _jsxRuntime.jsx(_colDefault.default, {
+                                children: /*#__PURE__*/ _jsxRuntime.jsx(_updateProfileView.UpdateProfileView, {
+                                    user: user,
+                                    onBackClick: ()=>history.goBack()
+                                    ,
+                                    onDeregister: (email)=>this.onDeregister(email)
+                                })
+                            }));
+                        },
+                        __source: {
+                            fileName: "src/components/main-view/main-view.jsx",
+                            lineNumber: 146
+                        },
+                        __self: this
+                    }),
+                    /*#__PURE__*/ _jsxRuntime.jsx(_reactRouterDom.Route, {
+                        exact: true,
+                        path: "/users/:Username",
+                        render: ({ history  })=>{
+                            if (movies.length === 0) return(/*#__PURE__*/ _jsxRuntime.jsx("div", {
+                                className: "main-view"
+                            }));
+                            if (!user) return(/*#__PURE__*/ _jsxRuntime.jsx(_reactRouterDom.Redirect, {
+                                to: "/"
+                            }));
+                            return(/*#__PURE__*/ _jsxRuntime.jsx(_colDefault.default, {
+                                children: /*#__PURE__*/ _jsxRuntime.jsx(_profileView.ProfileView, {
+                                    user: user,
+                                    movies: movies,
+                                    onBackClick: ()=>history.goBack()
+                                    ,
+                                    onLoggedOut: ()=>{
+                                        this.onLoggedOut();
+                                    }
+                                })
+                            }));
+                        },
+                        __source: {
+                            fileName: "src/components/main-view/main-view.jsx",
+                            lineNumber: 158
+                        },
+                        __self: this
+                    })
+                ]
+            })
+        }));
+    }
+}
+let mapStateToProps = (state)=>{
+    return {
+        movies: state.movies,
+        user: state.user
+    };
+};
+exports.default = _reactRedux.connect(mapStateToProps, {
+    setMovies: _actions.setMovies,
+    setUser: _actions.setUser
+})(MainView);
 
-},{"./exports":"amFLd","./utils/reactBatchedUpdates":"kaP8a","./utils/batch":"2g3ZY","@parcel/transformer-js/src/esmodule-helpers.js":"JacNc"}],"amFLd":[function(require,module,exports) {
+  $parcel$ReactRefreshHelpers$35bf.postlude(module);
+} finally {
+  window.$RefreshReg$ = prevRefreshReg;
+  window.$RefreshSig$ = prevRefreshSig;
+}
+},{"react/jsx-runtime":"8xIwr","react":"6TuXu","@parcel/transformer-js/src/esmodule-helpers.js":"JacNc","@parcel/transformer-react-refresh-wrap/lib/helpers/helpers.js":"5V79J","../movie-view/movie-view":"ikZdr","axios":"iYoWk","../log-in-view/log-in-view":"jk91c","../registration-view/registration-view":"aP2YV","react-bootstrap/Row":"c0x1x","react-bootstrap/Col":"fbam0","./main-view.scss":"jyMAr","react-router-dom":"cpyQW","../genres-view/genres-view":"LHlOn","../director-view/director-view":"ck15y","../update-profile-view/update-profile-view":"2LCM5","../profile-view/profile-view":"2E7Aw","react-redux":"2L0if","../../actions/actions":"1Ttfj","../movies-list/movies-list":"1kGQ5"}],"ikZdr":[function(require,module,exports) {
+var $parcel$ReactRefreshHelpers$3741 = require("@parcel/transformer-react-refresh-wrap/lib/helpers/helpers.js");
+var prevRefreshReg = window.$RefreshReg$;
+var prevRefreshSig = window.$RefreshSig$;
+$parcel$ReactRefreshHelpers$3741.prelude(module);
+
+try {
 var parcelHelpers = require("@parcel/transformer-js/src/esmodule-helpers.js");
 parcelHelpers.defineInteropFlag(exports);
-parcelHelpers.export(exports, "Provider", ()=>_providerDefault.default
+parcelHelpers.export(exports, "MovieView", ()=>MovieView
 );
-parcelHelpers.export(exports, "connectAdvanced", ()=>_connectAdvancedDefault.default
-);
-parcelHelpers.export(exports, "ReactReduxContext", ()=>_context.ReactReduxContext
-);
-parcelHelpers.export(exports, "connect", ()=>_connectDefault.default
-);
-parcelHelpers.export(exports, "useDispatch", ()=>_useDispatch.useDispatch
-);
-parcelHelpers.export(exports, "createDispatchHook", ()=>_useDispatch.createDispatchHook
-);
-parcelHelpers.export(exports, "useSelector", ()=>_useSelector.useSelector
-);
-parcelHelpers.export(exports, "createSelectorHook", ()=>_useSelector.createSelectorHook
-);
-parcelHelpers.export(exports, "useStore", ()=>_useStore.useStore
-);
-parcelHelpers.export(exports, "createStoreHook", ()=>_useStore.createStoreHook
-);
-parcelHelpers.export(exports, "shallowEqual", ()=>_shallowEqualDefault.default
-);
-var _provider = require("./components/Provider");
-var _providerDefault = parcelHelpers.interopDefault(_provider);
-var _connectAdvanced = require("./components/connectAdvanced");
-var _connectAdvancedDefault = parcelHelpers.interopDefault(_connectAdvanced);
-var _context = require("./components/Context");
-var _connect = require("./connect/connect");
-var _connectDefault = parcelHelpers.interopDefault(_connect);
-var _useDispatch = require("./hooks/useDispatch");
-var _useSelector = require("./hooks/useSelector");
-var _useStore = require("./hooks/useStore");
-var _shallowEqual = require("./utils/shallowEqual");
-var _shallowEqualDefault = parcelHelpers.interopDefault(_shallowEqual);
-
-},{"./components/Provider":"efEZ1","./components/connectAdvanced":"5cRBV","./components/Context":"gT1Jg","./connect/connect":"9zpXe","./hooks/useDispatch":"2CDvn","./hooks/useSelector":"27k1i","./hooks/useStore":"fDPAT","./utils/shallowEqual":"leLul","@parcel/transformer-js/src/esmodule-helpers.js":"JacNc"}],"efEZ1":[function(require,module,exports) {
-var parcelHelpers = require("@parcel/transformer-js/src/esmodule-helpers.js");
-parcelHelpers.defineInteropFlag(exports);
+var _jsxRuntime = require("react/jsx-runtime");
 var _react = require("react");
 var _reactDefault = parcelHelpers.interopDefault(_react);
 var _propTypes = require("prop-types");
 var _propTypesDefault = parcelHelpers.interopDefault(_propTypes);
-var _context = require("./Context");
-var _subscription = require("../utils/Subscription");
-var _useIsomorphicLayoutEffect = require("../utils/useIsomorphicLayoutEffect");
-function Provider(_ref) {
-    var store = _ref.store, context = _ref.context, children = _ref.children;
-    var contextValue = _react.useMemo(function() {
-        var subscription = _subscription.createSubscription(store);
-        subscription.onStateChange = subscription.notifyNestedSubs;
-        return {
-            store: store,
-            subscription: subscription
+var _button = require("react-bootstrap/Button");
+var _buttonDefault = parcelHelpers.interopDefault(_button);
+var _card = require("react-bootstrap/Card");
+var _cardDefault = parcelHelpers.interopDefault(_card);
+var _axios = require("axios");
+var _axiosDefault = parcelHelpers.interopDefault(_axios);
+var _reactRouterDom = require("react-router-dom");
+var _inceptionJpg = require("../../public/images/inception.jpg");
+var _thedarkknightJpg = require("../../public/images/thedarkknight.jpg");
+var _girlsJpg = require("../../public/images/girls.jpg");
+var _interstellarJpg = require("../../public/images/interstellar.jpg");
+var _silenceofthelambsJpg = require("../../public/images/silenceofthelambs.jpg");
+var _theprestigeJpg = require("../../public/images/theprestige.jpg");
+var _knockedupJpg = require("../../public/images/knockedup.jpg");
+var _blackwidowJpg = require("../../public/images/blackwidow.jpg");
+var _rachelgettingmarriedJpg = require("../../public/images/rachelgettingmarried.jpg");
+var _movieViewScss = require("./movie-view.scss");
+class MovieView extends _reactDefault.default.Component {
+    constructor(){
+        super();
+        this.state = {
+            Username: "",
+            Favorites: []
         };
-    }, [
-        store
-    ]);
-    var previousState = _react.useMemo(function() {
-        return store.getState();
-    }, [
-        store
-    ]);
-    _useIsomorphicLayoutEffect.useIsomorphicLayoutEffect(function() {
-        var subscription = contextValue.subscription;
-        subscription.trySubscribe();
-        if (previousState !== store.getState()) subscription.notifyNestedSubs();
-        return function() {
-            subscription.tryUnsubscribe();
-            subscription.onStateChange = null;
-        };
-    }, [
-        contextValue,
-        previousState
-    ]);
-    var Context = context || _context.ReactReduxContext;
-    return(/*#__PURE__*/ _reactDefault.default.createElement(Context.Provider, {
-        value: contextValue
-    }, children));
+    }
+    componentDidMount() {
+        let accessToken = localStorage.getItem("token");
+        this.setState({
+            Username: localStorage.getItem("user")
+        });
+        this.getUsersFavorites(accessToken);
+    }
+    getUsersFavorites(accessToken) {
+        const user = localStorage.getItem("user");
+        _axiosDefault.default.get(`https://zanko-my-flix.herokuapp.com/users/${user}/favorites`, {
+            headers: {
+                Authorization: `Bearer ${accessToken}`
+            }
+        }).then((response)=>{
+            this.setState({
+                Favorites: response.data
+            });
+        }).catch(function(error) {
+            alert(error.response.data);
+        });
+    }
+    addToFavorites(movieID) {
+        const token = localStorage.getItem("token");
+        const user = localStorage.getItem("user");
+        _axiosDefault.default.post(`https://zanko-my-flix.herokuapp.com/users/${user}/movies/${movieID}`, {
+        }, {
+            headers: {
+                Authorization: `Bearer ${token}`
+            }
+        }).then((response)=>{
+            this.setState({
+                Favorites: response.data.FavoriteMovies
+            });
+        }).catch(function(error) {
+            alert(error.response.data);
+        });
+    }
+    removeFromFavorites(movieID) {
+        const token = localStorage.getItem("token");
+        const user = localStorage.getItem("user");
+        _axiosDefault.default.delete(`https://zanko-my-flix.herokuapp.com/users/${user}/movies/${movieID}`, {
+            headers: {
+                Authorization: `Bearer ${token}`
+            }
+        }).then((response)=>{
+            this.setState({
+                Favorites: response.data.FavoriteMovies
+            });
+        }).catch(function(error) {
+            alert(error.response.data);
+        });
+    }
+    render() {
+        const { movie , onBackClick  } = this.props;
+        let imageUrl = require('../../public/images/' + movie.ImagePath);
+        return(/*#__PURE__*/ _jsxRuntime.jsxs("div", {
+            className: "movie-view",
+            __source: {
+                fileName: "src/components/movie-view/movie-view.jsx",
+                lineNumber: 94
+            },
+            __self: this,
+            children: [
+                /*#__PURE__*/ _jsxRuntime.jsxs("div", {
+                    className: "poster-and-button-container",
+                    __source: {
+                        fileName: "src/components/movie-view/movie-view.jsx",
+                        lineNumber: 95
+                    },
+                    __self: this,
+                    children: [
+                        /*#__PURE__*/ _jsxRuntime.jsx("div", {
+                            className: "movie-poster-container",
+                            __source: {
+                                fileName: "src/components/movie-view/movie-view.jsx",
+                                lineNumber: 96
+                            },
+                            __self: this,
+                            children: /*#__PURE__*/ _jsxRuntime.jsx("img", {
+                                className: "movie-poster",
+                                src: imageUrl,
+                                __source: {
+                                    fileName: "src/components/movie-view/movie-view.jsx",
+                                    lineNumber: 97
+                                },
+                                __self: this
+                            })
+                        }),
+                        this.state.Favorites.includes(movie._id) ? /*#__PURE__*/ _jsxRuntime.jsx("button", {
+                            className: "favorites-button remove-from-favorites-button",
+                            onClick: ()=>{
+                                this.removeFromFavorites(movie._id);
+                            },
+                            __source: {
+                                fileName: "src/components/movie-view/movie-view.jsx",
+                                lineNumber: 100
+                            },
+                            __self: this,
+                            children: "Remove from Favorites"
+                        }) : /*#__PURE__*/ _jsxRuntime.jsx("button", {
+                            className: "favorites-button",
+                            onClick: ()=>{
+                                this.addToFavorites(movie._id);
+                            },
+                            __source: {
+                                fileName: "src/components/movie-view/movie-view.jsx",
+                                lineNumber: 102
+                            },
+                            __self: this,
+                            children: "Add to Favorites"
+                        })
+                    ]
+                }),
+                /*#__PURE__*/ _jsxRuntime.jsx("div", {
+                    className: "movie-info-container",
+                    __source: {
+                        fileName: "src/components/movie-view/movie-view.jsx",
+                        lineNumber: 105
+                    },
+                    __self: this,
+                    children: /*#__PURE__*/ _jsxRuntime.jsxs("div", {
+                        className: "movie-info",
+                        __source: {
+                            fileName: "src/components/movie-view/movie-view.jsx",
+                            lineNumber: 106
+                        },
+                        __self: this,
+                        children: [
+                            /*#__PURE__*/ _jsxRuntime.jsxs("div", {
+                                className: "movie-title",
+                                __source: {
+                                    fileName: "src/components/movie-view/movie-view.jsx",
+                                    lineNumber: 107
+                                },
+                                __self: this,
+                                children: [
+                                    /*#__PURE__*/ _jsxRuntime.jsx("span", {
+                                        className: "label",
+                                        __source: {
+                                            fileName: "src/components/movie-view/movie-view.jsx",
+                                            lineNumber: 108
+                                        },
+                                        __self: this,
+                                        children: "Title: "
+                                    }),
+                                    /*#__PURE__*/ _jsxRuntime.jsx("span", {
+                                        className: "value",
+                                        __source: {
+                                            fileName: "src/components/movie-view/movie-view.jsx",
+                                            lineNumber: 109
+                                        },
+                                        __self: this,
+                                        children: movie.Title
+                                    })
+                                ]
+                            }),
+                            /*#__PURE__*/ _jsxRuntime.jsxs("div", {
+                                className: "movie-description",
+                                __source: {
+                                    fileName: "src/components/movie-view/movie-view.jsx",
+                                    lineNumber: 111
+                                },
+                                __self: this,
+                                children: [
+                                    /*#__PURE__*/ _jsxRuntime.jsx("span", {
+                                        className: "label",
+                                        __source: {
+                                            fileName: "src/components/movie-view/movie-view.jsx",
+                                            lineNumber: 112
+                                        },
+                                        __self: this,
+                                        children: "Description: "
+                                    }),
+                                    /*#__PURE__*/ _jsxRuntime.jsx("span", {
+                                        className: "value",
+                                        __source: {
+                                            fileName: "src/components/movie-view/movie-view.jsx",
+                                            lineNumber: 113
+                                        },
+                                        __self: this,
+                                        children: movie.Description
+                                    })
+                                ]
+                            }),
+                            /*#__PURE__*/ _jsxRuntime.jsxs("div", {
+                                className: "link-container",
+                                __source: {
+                                    fileName: "src/components/movie-view/movie-view.jsx",
+                                    lineNumber: 115
+                                },
+                                __self: this,
+                                children: [
+                                    /*#__PURE__*/ _jsxRuntime.jsx(_reactRouterDom.Link, {
+                                        to: `/genres/${movie.Genre.Name}`,
+                                        __source: {
+                                            fileName: "src/components/movie-view/movie-view.jsx",
+                                            lineNumber: 116
+                                        },
+                                        __self: this,
+                                        children: /*#__PURE__*/ _jsxRuntime.jsx(_buttonDefault.default, {
+                                            variant: "link",
+                                            __source: {
+                                                fileName: "src/components/movie-view/movie-view.jsx",
+                                                lineNumber: 117
+                                            },
+                                            __self: this,
+                                            children: "Genre"
+                                        })
+                                    }),
+                                    /*#__PURE__*/ _jsxRuntime.jsx("div", {
+                                        className: "spacer",
+                                        __source: {
+                                            fileName: "src/components/movie-view/movie-view.jsx",
+                                            lineNumber: 119
+                                        },
+                                        __self: this
+                                    }),
+                                    /*#__PURE__*/ _jsxRuntime.jsx(_reactRouterDom.Link, {
+                                        to: `/directors/${movie.Director.Name}`,
+                                        __source: {
+                                            fileName: "src/components/movie-view/movie-view.jsx",
+                                            lineNumber: 120
+                                        },
+                                        __self: this,
+                                        children: /*#__PURE__*/ _jsxRuntime.jsx(_buttonDefault.default, {
+                                            variant: "link",
+                                            __source: {
+                                                fileName: "src/components/movie-view/movie-view.jsx",
+                                                lineNumber: 121
+                                            },
+                                            __self: this,
+                                            children: "Director"
+                                        })
+                                    })
+                                ]
+                            })
+                        ]
+                    })
+                }),
+                /*#__PURE__*/ _jsxRuntime.jsxs("div", {
+                    className: "button-container",
+                    __source: {
+                        fileName: "src/components/movie-view/movie-view.jsx",
+                        lineNumber: 126
+                    },
+                    __self: this,
+                    children: [
+                        /*#__PURE__*/ _jsxRuntime.jsx("button", {
+                            className: "back-button",
+                            onClick: ()=>{
+                                onBackClick(null);
+                            },
+                            __source: {
+                                fileName: "src/components/movie-view/movie-view.jsx",
+                                lineNumber: 127
+                            },
+                            __self: this,
+                            children: "Back"
+                        }),
+                        /*#__PURE__*/ _jsxRuntime.jsx(_reactRouterDom.Link, {
+                            to: '/users/' + this.state.Username,
+                            __source: {
+                                fileName: "src/components/movie-view/movie-view.jsx",
+                                lineNumber: 128
+                            },
+                            __self: this,
+                            children: /*#__PURE__*/ _jsxRuntime.jsx("button", {
+                                className: "nav-button",
+                                __source: {
+                                    fileName: "src/components/movie-view/movie-view.jsx",
+                                    lineNumber: 129
+                                },
+                                __self: this,
+                                children: "Profile"
+                            })
+                        })
+                    ]
+                })
+            ]
+        }));
+    }
 }
-Provider.propTypes = {
-    store: _propTypesDefault.default.shape({
-        subscribe: _propTypesDefault.default.func.isRequired,
-        dispatch: _propTypesDefault.default.func.isRequired,
-        getState: _propTypesDefault.default.func.isRequired
-    }),
-    context: _propTypesDefault.default.object,
-    children: _propTypesDefault.default.any
+MovieView.proptypes = {
+    movie: _propTypesDefault.default.shape({
+        Title: _propTypesDefault.default.string.isRequired,
+        Description: _propTypesDefault.default.string.isRequired,
+        Genre: _propTypesDefault.default.string.isRequired,
+        Director: _propTypesDefault.default.string.isRequired,
+        ImagePath: _propTypesDefault.default.string.isRequired
+    }).isRequired,
+    onBackClick: _propTypesDefault.default.func.isRequired
 };
-exports.default = Provider;
 
-},{"react":"6TuXu","prop-types":"1tgq3","./Context":"gT1Jg","../utils/Subscription":"6rtcC","../utils/useIsomorphicLayoutEffect":"2TWoQ","@parcel/transformer-js/src/esmodule-helpers.js":"JacNc"}],"1tgq3":[function(require,module,exports) {
+  $parcel$ReactRefreshHelpers$3741.postlude(module);
+} finally {
+  window.$RefreshReg$ = prevRefreshReg;
+  window.$RefreshSig$ = prevRefreshSig;
+}
+},{"react/jsx-runtime":"8xIwr","react":"6TuXu","@parcel/transformer-js/src/esmodule-helpers.js":"JacNc","@parcel/transformer-react-refresh-wrap/lib/helpers/helpers.js":"5V79J","prop-types":"1tgq3","../../public/images/inception.jpg":"l6bud","../../public/images/thedarkknight.jpg":"hVWAT","../../public/images/girls.jpg":"aGUtc","../../public/images/interstellar.jpg":"hiWMW","../../public/images/silenceofthelambs.jpg":"giTk3","../../public/images/theprestige.jpg":"87wS2","../../public/images/knockedup.jpg":"5gLy6","../../public/images/rachelgettingmarried.jpg":"lbbeE","../../public/images/blackwidow.jpg":"t0Nlf","react-bootstrap/Button":"9CzHT","react-bootstrap/Card":"MoOk8","./movie-view.scss":"kvL93","react-router-dom":"cpyQW","axios":"iYoWk"}],"1tgq3":[function(require,module,exports) {
 var ReactIs = require('react-is');
 // By explicitly using `prop-types` you are opting into new development behavior.
 // http://fb.me/prop-types-in-prod
@@ -24273,3105 +24212,525 @@ printWarning = function(text) {
 };
 module.exports = checkPropTypes;
 
-},{"./lib/ReactPropTypesSecret":"lYuBM"}],"gT1Jg":[function(require,module,exports) {
-var parcelHelpers = require("@parcel/transformer-js/src/esmodule-helpers.js");
-parcelHelpers.defineInteropFlag(exports);
-parcelHelpers.export(exports, "ReactReduxContext", ()=>ReactReduxContext
-);
-var _react = require("react");
-var _reactDefault = parcelHelpers.interopDefault(_react);
-var ReactReduxContext = /*#__PURE__*/ _reactDefault.default.createContext(null);
-ReactReduxContext.displayName = 'ReactRedux';
-exports.default = ReactReduxContext;
+},{"./lib/ReactPropTypesSecret":"lYuBM"}],"l6bud":[function(require,module,exports) {
+module.exports = require('./helpers/bundle-url').getBundleURL('3VpAv') + "inception.bd178984.jpg";
 
-},{"react":"6TuXu","@parcel/transformer-js/src/esmodule-helpers.js":"JacNc"}],"6rtcC":[function(require,module,exports) {
-var parcelHelpers = require("@parcel/transformer-js/src/esmodule-helpers.js");
-parcelHelpers.defineInteropFlag(exports);
-parcelHelpers.export(exports, "createSubscription", ()=>createSubscription
-);
-var _batch = require("./batch"); // encapsulates the subscription logic for connecting a component to the redux store, as
-// well as nesting subscriptions of descendant components, so that we can ensure the
-// ancestor components re-render before descendants
-function createListenerCollection() {
-    var batch = _batch.getBatch();
-    var first = null;
-    var last = null;
-    return {
-        clear: function clear() {
-            first = null;
-            last = null;
-        },
-        notify: function notify() {
-            batch(function() {
-                var listener = first;
-                while(listener){
-                    listener.callback();
-                    listener = listener.next;
-                }
-            });
-        },
-        get: function get() {
-            var listeners = [];
-            var listener = first;
-            while(listener){
-                listeners.push(listener);
-                listener = listener.next;
-            }
-            return listeners;
-        },
-        subscribe: function subscribe(callback) {
-            var isSubscribed = true;
-            var listener = last = {
-                callback: callback,
-                next: null,
-                prev: last
-            };
-            if (listener.prev) listener.prev.next = listener;
-            else first = listener;
-            return function unsubscribe() {
-                if (!isSubscribed || first === null) return;
-                isSubscribed = false;
-                if (listener.next) listener.next.prev = listener.prev;
-                else last = listener.prev;
-                if (listener.prev) listener.prev.next = listener.next;
-                else first = listener.next;
-            };
-        }
-    };
-}
-var nullListeners = {
-    notify: function notify() {
-    },
-    get: function get() {
-        return [];
-    }
+},{"./helpers/bundle-url":"8YnfL"}],"8YnfL":[function(require,module,exports) {
+"use strict";
+var bundleURL = {
 };
-function createSubscription(store, parentSub) {
-    var unsubscribe;
-    var listeners = nullListeners;
-    function addNestedSub(listener) {
-        trySubscribe();
-        return listeners.subscribe(listener);
+function getBundleURLCached(id) {
+    var value = bundleURL[id];
+    if (!value) {
+        value = getBundleURL();
+        bundleURL[id] = value;
     }
-    function notifyNestedSubs() {
-        listeners.notify();
-    }
-    function handleChangeWrapper() {
-        if (subscription.onStateChange) subscription.onStateChange();
-    }
-    function isSubscribed() {
-        return Boolean(unsubscribe);
-    }
-    function trySubscribe() {
-        if (!unsubscribe) {
-            unsubscribe = parentSub ? parentSub.addNestedSub(handleChangeWrapper) : store.subscribe(handleChangeWrapper);
-            listeners = createListenerCollection();
-        }
-    }
-    function tryUnsubscribe() {
-        if (unsubscribe) {
-            unsubscribe();
-            unsubscribe = undefined;
-            listeners.clear();
-            listeners = nullListeners;
-        }
-    }
-    var subscription = {
-        addNestedSub: addNestedSub,
-        notifyNestedSubs: notifyNestedSubs,
-        handleChangeWrapper: handleChangeWrapper,
-        isSubscribed: isSubscribed,
-        trySubscribe: trySubscribe,
-        tryUnsubscribe: tryUnsubscribe,
-        getListeners: function getListeners() {
-            return listeners;
-        }
-    };
-    return subscription;
+    return value;
 }
-
-},{"./batch":"2g3ZY","@parcel/transformer-js/src/esmodule-helpers.js":"JacNc"}],"2g3ZY":[function(require,module,exports) {
-var parcelHelpers = require("@parcel/transformer-js/src/esmodule-helpers.js");
-parcelHelpers.defineInteropFlag(exports);
-parcelHelpers.export(exports, "setBatch", ()=>setBatch
-);
-parcelHelpers.export(exports, "getBatch", ()=>getBatch
-);
-// Default to a dummy "batch" implementation that just runs the callback
-function defaultNoopBatch(callback) {
-    callback();
-}
-var batch = defaultNoopBatch; // Allow injecting another batching function later
-var setBatch = function setBatch1(newBatch) {
-    return batch = newBatch;
-}; // Supply a getter just to skip dealing with ESM bindings
-var getBatch = function getBatch1() {
-    return batch;
-};
-
-},{"@parcel/transformer-js/src/esmodule-helpers.js":"JacNc"}],"2TWoQ":[function(require,module,exports) {
-var parcelHelpers = require("@parcel/transformer-js/src/esmodule-helpers.js");
-parcelHelpers.defineInteropFlag(exports);
-parcelHelpers.export(exports, "useIsomorphicLayoutEffect", ()=>useIsomorphicLayoutEffect
-);
-var _react = require("react"); // React currently throws a warning when using useLayoutEffect on the server.
-var useIsomorphicLayoutEffect = typeof window !== 'undefined' && typeof window.document !== 'undefined' && typeof window.document.createElement !== 'undefined' ? _react.useLayoutEffect : _react.useEffect;
-
-},{"react":"6TuXu","@parcel/transformer-js/src/esmodule-helpers.js":"JacNc"}],"5cRBV":[function(require,module,exports) {
-var parcelHelpers = require("@parcel/transformer-js/src/esmodule-helpers.js");
-parcelHelpers.defineInteropFlag(exports);
-var _extends = require("@babel/runtime/helpers/esm/extends");
-var _extendsDefault = parcelHelpers.interopDefault(_extends);
-var _objectWithoutPropertiesLoose = require("@babel/runtime/helpers/esm/objectWithoutPropertiesLoose");
-var _objectWithoutPropertiesLooseDefault = parcelHelpers.interopDefault(_objectWithoutPropertiesLoose);
-var _hoistNonReactStatics = require("hoist-non-react-statics");
-var _hoistNonReactStaticsDefault = parcelHelpers.interopDefault(_hoistNonReactStatics);
-var _react = require("react");
-var _reactDefault = parcelHelpers.interopDefault(_react);
-var _reactIs = require("react-is");
-var _subscription = require("../utils/Subscription");
-var _useIsomorphicLayoutEffect = require("../utils/useIsomorphicLayoutEffect");
-var _context = require("./Context"); // Define some constant arrays just to avoid re-creating these
-var _excluded = [
-    "getDisplayName",
-    "methodName",
-    "renderCountProp",
-    "shouldHandleStateChanges",
-    "storeKey",
-    "withRef",
-    "forwardRef",
-    "context"
-], _excluded2 = [
-    "reactReduxForwardedRef"
-];
-var EMPTY_ARRAY = [];
-var NO_SUBSCRIPTION_ARRAY = [
-    null,
-    null
-];
-var stringifyComponent = function stringifyComponent1(Comp) {
+function getBundleURL() {
     try {
-        return JSON.stringify(Comp);
+        throw new Error();
     } catch (err) {
-        return String(Comp);
+        var matches = ('' + err.stack).match(/(https?|file|ftp):\/\/[^)\n]+/g);
+        if (matches) // The first two stack frames will be this function and getBundleURLCached.
+        // Use the 3rd one, which will be a runtime in the original bundle.
+        return getBaseURL(matches[2]);
     }
-};
-function storeStateUpdatesReducer(state, action) {
-    var updateCount = state[1];
-    return [
-        action.payload,
-        updateCount + 1
-    ];
-}
-function useIsomorphicLayoutEffectWithArgs(effectFunc, effectArgs, dependencies) {
-    _useIsomorphicLayoutEffect.useIsomorphicLayoutEffect(function() {
-        return effectFunc.apply(void 0, effectArgs);
-    }, dependencies);
-}
-function captureWrapperProps(lastWrapperProps, lastChildProps, renderIsScheduled, wrapperProps, actualChildProps, childPropsFromStoreUpdate, notifyNestedSubs) {
-    // We want to capture the wrapper props and child props we used for later comparisons
-    lastWrapperProps.current = wrapperProps;
-    lastChildProps.current = actualChildProps;
-    renderIsScheduled.current = false; // If the render was from a store update, clear out that reference and cascade the subscriber update
-    if (childPropsFromStoreUpdate.current) {
-        childPropsFromStoreUpdate.current = null;
-        notifyNestedSubs();
-    }
-}
-function subscribeUpdates(shouldHandleStateChanges, store, subscription, childPropsSelector, lastWrapperProps, lastChildProps, renderIsScheduled, childPropsFromStoreUpdate, notifyNestedSubs, forceComponentUpdateDispatch) {
-    // If we're not subscribed to the store, nothing to do here
-    if (!shouldHandleStateChanges) return; // Capture values for checking if and when this component unmounts
-    var didUnsubscribe = false;
-    var lastThrownError = null; // We'll run this callback every time a store subscription update propagates to this component
-    var checkForUpdates = function checkForUpdates1() {
-        if (didUnsubscribe) // Don't run stale listeners.
-        // Redux doesn't guarantee unsubscriptions happen until next dispatch.
-        return;
-        var latestStoreState = store.getState();
-        var newChildProps, error;
-        try {
-            // Actually run the selector with the most recent store state and wrapper props
-            // to determine what the child props should be
-            newChildProps = childPropsSelector(latestStoreState, lastWrapperProps.current);
-        } catch (e) {
-            error = e;
-            lastThrownError = e;
-        }
-        if (!error) lastThrownError = null;
-         // If the child props haven't changed, nothing to do here - cascade the subscription update
-        if (newChildProps === lastChildProps.current) {
-            if (!renderIsScheduled.current) notifyNestedSubs();
-        } else {
-            // Save references to the new child props.  Note that we track the "child props from store update"
-            // as a ref instead of a useState/useReducer because we need a way to determine if that value has
-            // been processed.  If this went into useState/useReducer, we couldn't clear out the value without
-            // forcing another re-render, which we don't want.
-            lastChildProps.current = newChildProps;
-            childPropsFromStoreUpdate.current = newChildProps;
-            renderIsScheduled.current = true; // If the child props _did_ change (or we caught an error), this wrapper component needs to re-render
-            forceComponentUpdateDispatch({
-                type: 'STORE_UPDATED',
-                payload: {
-                    error: error
-                }
-            });
-        }
-    }; // Actually subscribe to the nearest connected ancestor (or store)
-    subscription.onStateChange = checkForUpdates;
-    subscription.trySubscribe(); // Pull data from the store after first render in case the store has
-    // changed since we began.
-    checkForUpdates();
-    var unsubscribeWrapper = function unsubscribeWrapper1() {
-        didUnsubscribe = true;
-        subscription.tryUnsubscribe();
-        subscription.onStateChange = null;
-        if (lastThrownError) // It's possible that we caught an error due to a bad mapState function, but the
-        // parent re-rendered without this component and we're about to unmount.
-        // This shouldn't happen as long as we do top-down subscriptions correctly, but
-        // if we ever do those wrong, this throw will surface the error in our tests.
-        // In that case, throw the error from here so it doesn't get lost.
-        throw lastThrownError;
-    };
-    return unsubscribeWrapper;
-}
-var initStateUpdates = function initStateUpdates1() {
-    return [
-        null,
-        0
-    ];
-};
-function connectAdvanced(/*
-  selectorFactory is a func that is responsible for returning the selector function used to
-  compute new props from state, props, and dispatch. For example:
-      export default connectAdvanced((dispatch, options) => (state, props) => ({
-      thing: state.things[props.thingId],
-      saveThing: fields => dispatch(actionCreators.saveThing(props.thingId, fields)),
-    }))(YourComponent)
-    Access to dispatch is provided to the factory so selectorFactories can bind actionCreators
-  outside of their selector as an optimization. Options passed to connectAdvanced are passed to
-  the selectorFactory, along with displayName and WrappedComponent, as the second argument.
-    Note that selectorFactory is responsible for all caching/memoization of inbound and outbound
-  props. Do not use connectAdvanced directly without memoizing results between calls to your
-  selector, otherwise the Connect component will re-render on every state or props change.
-*/ selectorFactory, _ref) {
-    if (_ref === void 0) _ref = {
-    };
-    var _ref2 = _ref, _ref2$getDisplayName = _ref2.getDisplayName, getDisplayName = _ref2$getDisplayName === void 0 ? function(name) {
-        return "ConnectAdvanced(" + name + ")";
-    } : _ref2$getDisplayName, _ref2$methodName = _ref2.methodName, methodName = _ref2$methodName === void 0 ? 'connectAdvanced' : _ref2$methodName, _ref2$renderCountProp = _ref2.renderCountProp, renderCountProp = _ref2$renderCountProp === void 0 ? undefined : _ref2$renderCountProp, _ref2$shouldHandleSta = _ref2.shouldHandleStateChanges, shouldHandleStateChanges = _ref2$shouldHandleSta === void 0 ? true : _ref2$shouldHandleSta, _ref2$storeKey = _ref2.storeKey, storeKey = _ref2$storeKey === void 0 ? 'store' : _ref2$storeKey, _ref2$withRef = _ref2.withRef, withRef = _ref2$withRef === void 0 ? false : _ref2$withRef, _ref2$forwardRef = _ref2.forwardRef, forwardRef = _ref2$forwardRef === void 0 ? false : _ref2$forwardRef, _ref2$context = _ref2.context, context = _ref2$context === void 0 ? _context.ReactReduxContext : _ref2$context, connectOptions = _objectWithoutPropertiesLooseDefault.default(_ref2, _excluded);
-    if (renderCountProp !== undefined) throw new Error("renderCountProp is removed. render counting is built into the latest React Dev Tools profiling extension");
-    if (withRef) throw new Error('withRef is removed. To access the wrapped instance, use a ref on the connected component');
-    var customStoreWarningMessage = "To use a custom Redux store for specific components, create a custom React context with React.createContext(), and pass the context object to React Redux's Provider and specific components like: <Provider context={MyContext}><ConnectedComponent context={MyContext} /></Provider>. You may also pass a {context : MyContext} option to connect";
-    if (storeKey !== 'store') throw new Error('storeKey has been removed and does not do anything. ' + customStoreWarningMessage);
-    var Context = context;
-    return function wrapWithConnect(WrappedComponent) {
-        if (!_reactIs.isValidElementType(WrappedComponent)) throw new Error("You must pass a component to the function returned by " + (methodName + ". Instead received " + stringifyComponent(WrappedComponent)));
-        var wrappedComponentName = WrappedComponent.displayName || WrappedComponent.name || 'Component';
-        var displayName = getDisplayName(wrappedComponentName);
-        var selectorFactoryOptions = _extendsDefault.default({
-        }, connectOptions, {
-            getDisplayName: getDisplayName,
-            methodName: methodName,
-            renderCountProp: renderCountProp,
-            shouldHandleStateChanges: shouldHandleStateChanges,
-            storeKey: storeKey,
-            displayName: displayName,
-            wrappedComponentName: wrappedComponentName,
-            WrappedComponent: WrappedComponent
-        });
-        var pure = connectOptions.pure;
-        function createChildSelector(store) {
-            return selectorFactory(store.dispatch, selectorFactoryOptions);
-        } // If we aren't running in "pure" mode, we don't want to memoize values.
-        // To avoid conditionally calling hooks, we fall back to a tiny wrapper
-        // that just executes the given callback immediately.
-        var usePureOnlyMemo = pure ? _react.useMemo : function(callback) {
-            return callback();
-        };
-        function ConnectFunction(props) {
-            var _useMemo = _react.useMemo(function() {
-                // Distinguish between actual "data" props that were passed to the wrapper component,
-                // and values needed to control behavior (forwarded refs, alternate context instances).
-                // To maintain the wrapperProps object reference, memoize this destructuring.
-                var reactReduxForwardedRef = props.reactReduxForwardedRef, wrapperProps = _objectWithoutPropertiesLooseDefault.default(props, _excluded2);
-                return [
-                    props.context,
-                    reactReduxForwardedRef,
-                    wrapperProps
-                ];
-            }, [
-                props
-            ]), propsContext = _useMemo[0], reactReduxForwardedRef = _useMemo[1], wrapperProps = _useMemo[2];
-            var ContextToUse = _react.useMemo(function() {
-                // Users may optionally pass in a custom context instance to use instead of our ReactReduxContext.
-                // Memoize the check that determines which context instance we should use.
-                return propsContext && propsContext.Consumer && _reactIs.isContextConsumer(/*#__PURE__*/ _reactDefault.default.createElement(propsContext.Consumer, null)) ? propsContext : Context;
-            }, [
-                propsContext,
-                Context
-            ]); // Retrieve the store and ancestor subscription via context, if available
-            var contextValue = _react.useContext(ContextToUse); // The store _must_ exist as either a prop or in context.
-            // We'll check to see if it _looks_ like a Redux store first.
-            // This allows us to pass through a `store` prop that is just a plain value.
-            var didStoreComeFromProps = Boolean(props.store) && Boolean(props.store.getState) && Boolean(props.store.dispatch);
-            var didStoreComeFromContext = Boolean(contextValue) && Boolean(contextValue.store);
-            if (!didStoreComeFromProps && !didStoreComeFromContext) throw new Error("Could not find \"store\" in the context of " + ("\"" + displayName + "\". Either wrap the root component in a <Provider>, ") + "or pass a custom React context provider to <Provider> and the corresponding " + ("React context consumer to " + displayName + " in connect options."));
-             // Based on the previous check, one of these must be true
-            var store = didStoreComeFromProps ? props.store : contextValue.store;
-            var childPropsSelector = _react.useMemo(function() {
-                // The child props selector needs the store reference as an input.
-                // Re-create this selector whenever the store changes.
-                return createChildSelector(store);
-            }, [
-                store
-            ]);
-            var _useMemo2 = _react.useMemo(function() {
-                if (!shouldHandleStateChanges) return NO_SUBSCRIPTION_ARRAY; // This Subscription's source should match where store came from: props vs. context. A component
-                // connected to the store via props shouldn't use subscription from context, or vice versa.
-                // This Subscription's source should match where store came from: props vs. context. A component
-                // connected to the store via props shouldn't use subscription from context, or vice versa.
-                var subscription = _subscription.createSubscription(store, didStoreComeFromProps ? null : contextValue.subscription); // `notifyNestedSubs` is duplicated to handle the case where the component is unmounted in
-                // the middle of the notification loop, where `subscription` will then be null. This can
-                // probably be avoided if Subscription's listeners logic is changed to not call listeners
-                // that have been unsubscribed in the  middle of the notification loop.
-                // `notifyNestedSubs` is duplicated to handle the case where the component is unmounted in
-                // the middle of the notification loop, where `subscription` will then be null. This can
-                // probably be avoided if Subscription's listeners logic is changed to not call listeners
-                // that have been unsubscribed in the  middle of the notification loop.
-                var notifyNestedSubs = subscription.notifyNestedSubs.bind(subscription);
-                return [
-                    subscription,
-                    notifyNestedSubs
-                ];
-            }, [
-                store,
-                didStoreComeFromProps,
-                contextValue
-            ]), subscription = _useMemo2[0], notifyNestedSubs = _useMemo2[1]; // Determine what {store, subscription} value should be put into nested context, if necessary,
-            // and memoize that value to avoid unnecessary context updates.
-            var overriddenContextValue = _react.useMemo(function() {
-                if (didStoreComeFromProps) // This component is directly subscribed to a store from props.
-                // We don't want descendants reading from this store - pass down whatever
-                // the existing context value is from the nearest connected ancestor.
-                return contextValue;
-                 // Otherwise, put this component's subscription instance into context, so that
-                // connected descendants won't update until after this component is done
-                return _extendsDefault.default({
-                }, contextValue, {
-                    subscription: subscription
-                });
-            }, [
-                didStoreComeFromProps,
-                contextValue,
-                subscription
-            ]); // We need to force this wrapper component to re-render whenever a Redux store update
-            // causes a change to the calculated child component props (or we caught an error in mapState)
-            var _useReducer = _react.useReducer(storeStateUpdatesReducer, EMPTY_ARRAY, initStateUpdates), _useReducer$ = _useReducer[0], previousStateUpdateResult = _useReducer$[0], forceComponentUpdateDispatch = _useReducer[1]; // Propagate any mapState/mapDispatch errors upwards
-            if (previousStateUpdateResult && previousStateUpdateResult.error) throw previousStateUpdateResult.error;
-             // Set up refs to coordinate values between the subscription effect and the render logic
-            var lastChildProps = _react.useRef();
-            var lastWrapperProps = _react.useRef(wrapperProps);
-            var childPropsFromStoreUpdate = _react.useRef();
-            var renderIsScheduled = _react.useRef(false);
-            var actualChildProps = usePureOnlyMemo(function() {
-                // Tricky logic here:
-                // - This render may have been triggered by a Redux store update that produced new child props
-                // - However, we may have gotten new wrapper props after that
-                // If we have new child props, and the same wrapper props, we know we should use the new child props as-is.
-                // But, if we have new wrapper props, those might change the child props, so we have to recalculate things.
-                // So, we'll use the child props from store update only if the wrapper props are the same as last time.
-                if (childPropsFromStoreUpdate.current && wrapperProps === lastWrapperProps.current) return childPropsFromStoreUpdate.current;
-                 // TODO We're reading the store directly in render() here. Bad idea?
-                // This will likely cause Bad Things (TM) to happen in Concurrent Mode.
-                // Note that we do this because on renders _not_ caused by store updates, we need the latest store state
-                // to determine what the child props should be.
-                return childPropsSelector(store.getState(), wrapperProps);
-            }, [
-                store,
-                previousStateUpdateResult,
-                wrapperProps
-            ]); // We need this to execute synchronously every time we re-render. However, React warns
-            // about useLayoutEffect in SSR, so we try to detect environment and fall back to
-            // just useEffect instead to avoid the warning, since neither will run anyway.
-            useIsomorphicLayoutEffectWithArgs(captureWrapperProps, [
-                lastWrapperProps,
-                lastChildProps,
-                renderIsScheduled,
-                wrapperProps,
-                actualChildProps,
-                childPropsFromStoreUpdate,
-                notifyNestedSubs
-            ]); // Our re-subscribe logic only runs when the store/subscription setup changes
-            useIsomorphicLayoutEffectWithArgs(subscribeUpdates, [
-                shouldHandleStateChanges,
-                store,
-                subscription,
-                childPropsSelector,
-                lastWrapperProps,
-                lastChildProps,
-                renderIsScheduled,
-                childPropsFromStoreUpdate,
-                notifyNestedSubs,
-                forceComponentUpdateDispatch
-            ], [
-                store,
-                subscription,
-                childPropsSelector
-            ]); // Now that all that's done, we can finally try to actually render the child component.
-            // We memoize the elements for the rendered child component as an optimization.
-            var renderedWrappedComponent = _react.useMemo(function() {
-                return(/*#__PURE__*/ _reactDefault.default.createElement(WrappedComponent, _extendsDefault.default({
-                }, actualChildProps, {
-                    ref: reactReduxForwardedRef
-                })));
-            }, [
-                reactReduxForwardedRef,
-                WrappedComponent,
-                actualChildProps
-            ]); // If React sees the exact same element reference as last time, it bails out of re-rendering
-            // that child, same as if it was wrapped in React.memo() or returned false from shouldComponentUpdate.
-            var renderedChild = _react.useMemo(function() {
-                if (shouldHandleStateChanges) // If this component is subscribed to store updates, we need to pass its own
-                // subscription instance down to our descendants. That means rendering the same
-                // Context instance, and putting a different value into the context.
-                return(/*#__PURE__*/ _reactDefault.default.createElement(ContextToUse.Provider, {
-                    value: overriddenContextValue
-                }, renderedWrappedComponent));
-                return renderedWrappedComponent;
-            }, [
-                ContextToUse,
-                renderedWrappedComponent,
-                overriddenContextValue
-            ]);
-            return renderedChild;
-        } // If we're in "pure" mode, ensure our wrapper component only re-renders when incoming props have changed.
-        var Connect = pure ? _reactDefault.default.memo(ConnectFunction) : ConnectFunction;
-        Connect.WrappedComponent = WrappedComponent;
-        Connect.displayName = ConnectFunction.displayName = displayName;
-        if (forwardRef) {
-            var forwarded = _reactDefault.default.forwardRef(function forwardConnectRef(props, ref) {
-                return(/*#__PURE__*/ _reactDefault.default.createElement(Connect, _extendsDefault.default({
-                }, props, {
-                    reactReduxForwardedRef: ref
-                })));
-            });
-            forwarded.displayName = displayName;
-            forwarded.WrappedComponent = WrappedComponent;
-            return _hoistNonReactStaticsDefault.default(forwarded, WrappedComponent);
-        }
-        return _hoistNonReactStaticsDefault.default(Connect, WrappedComponent);
-    };
-}
-exports.default = connectAdvanced;
-
-},{"@babel/runtime/helpers/esm/extends":"bKAu6","@babel/runtime/helpers/esm/objectWithoutPropertiesLoose":"3Rubg","hoist-non-react-statics":"jfzb6","react":"6TuXu","react-is":"5wFcP","../utils/Subscription":"6rtcC","../utils/useIsomorphicLayoutEffect":"2TWoQ","./Context":"gT1Jg","@parcel/transformer-js/src/esmodule-helpers.js":"JacNc"}],"jfzb6":[function(require,module,exports) {
-'use strict';
-var reactIs = require('react-is');
-/**
- * Copyright 2015, Yahoo! Inc.
- * Copyrights licensed under the New BSD License. See the accompanying LICENSE file for terms.
- */ var REACT_STATICS = {
-    childContextTypes: true,
-    contextType: true,
-    contextTypes: true,
-    defaultProps: true,
-    displayName: true,
-    getDefaultProps: true,
-    getDerivedStateFromError: true,
-    getDerivedStateFromProps: true,
-    mixins: true,
-    propTypes: true,
-    type: true
-};
-var KNOWN_STATICS = {
-    name: true,
-    length: true,
-    prototype: true,
-    caller: true,
-    callee: true,
-    arguments: true,
-    arity: true
-};
-var FORWARD_REF_STATICS = {
-    '$$typeof': true,
-    render: true,
-    defaultProps: true,
-    displayName: true,
-    propTypes: true
-};
-var MEMO_STATICS = {
-    '$$typeof': true,
-    compare: true,
-    defaultProps: true,
-    displayName: true,
-    propTypes: true,
-    type: true
-};
-var TYPE_STATICS = {
-};
-TYPE_STATICS[reactIs.ForwardRef] = FORWARD_REF_STATICS;
-TYPE_STATICS[reactIs.Memo] = MEMO_STATICS;
-function getStatics(component) {
-    // React v16.11 and below
-    if (reactIs.isMemo(component)) return MEMO_STATICS;
-     // React v16.12 and above
-    return TYPE_STATICS[component['$$typeof']] || REACT_STATICS;
-}
-var defineProperty = Object.defineProperty;
-var getOwnPropertyNames = Object.getOwnPropertyNames;
-var getOwnPropertySymbols = Object.getOwnPropertySymbols;
-var getOwnPropertyDescriptor = Object.getOwnPropertyDescriptor;
-var getPrototypeOf = Object.getPrototypeOf;
-var objectPrototype = Object.prototype;
-function hoistNonReactStatics(targetComponent, sourceComponent, blacklist) {
-    if (typeof sourceComponent !== 'string') {
-        // don't hoist over string (html) components
-        if (objectPrototype) {
-            var inheritedComponent = getPrototypeOf(sourceComponent);
-            if (inheritedComponent && inheritedComponent !== objectPrototype) hoistNonReactStatics(targetComponent, inheritedComponent, blacklist);
-        }
-        var keys = getOwnPropertyNames(sourceComponent);
-        if (getOwnPropertySymbols) keys = keys.concat(getOwnPropertySymbols(sourceComponent));
-        var targetStatics = getStatics(targetComponent);
-        var sourceStatics = getStatics(sourceComponent);
-        for(var i = 0; i < keys.length; ++i){
-            var key = keys[i];
-            if (!KNOWN_STATICS[key] && !(blacklist && blacklist[key]) && !(sourceStatics && sourceStatics[key]) && !(targetStatics && targetStatics[key])) {
-                var descriptor = getOwnPropertyDescriptor(sourceComponent, key);
-                try {
-                    // Avoid failures from read-only properties
-                    defineProperty(targetComponent, key, descriptor);
-                } catch (e) {
-                }
-            }
-        }
-    }
-    return targetComponent;
-}
-module.exports = hoistNonReactStatics;
-
-},{"react-is":"5wFcP"}],"9zpXe":[function(require,module,exports) {
-var parcelHelpers = require("@parcel/transformer-js/src/esmodule-helpers.js");
-parcelHelpers.defineInteropFlag(exports);
-// different options opens up some testing and extensibility scenarios
-parcelHelpers.export(exports, "createConnect", ()=>createConnect
-);
-var _extends = require("@babel/runtime/helpers/esm/extends");
-var _extendsDefault = parcelHelpers.interopDefault(_extends);
-var _objectWithoutPropertiesLoose = require("@babel/runtime/helpers/esm/objectWithoutPropertiesLoose");
-var _objectWithoutPropertiesLooseDefault = parcelHelpers.interopDefault(_objectWithoutPropertiesLoose);
-var _connectAdvanced = require("../components/connectAdvanced");
-var _connectAdvancedDefault = parcelHelpers.interopDefault(_connectAdvanced);
-var _shallowEqual = require("../utils/shallowEqual");
-var _shallowEqualDefault = parcelHelpers.interopDefault(_shallowEqual);
-var _mapDispatchToProps = require("./mapDispatchToProps");
-var _mapDispatchToPropsDefault = parcelHelpers.interopDefault(_mapDispatchToProps);
-var _mapStateToProps = require("./mapStateToProps");
-var _mapStateToPropsDefault = parcelHelpers.interopDefault(_mapStateToProps);
-var _mergeProps = require("./mergeProps");
-var _mergePropsDefault = parcelHelpers.interopDefault(_mergeProps);
-var _selectorFactory = require("./selectorFactory");
-var _selectorFactoryDefault = parcelHelpers.interopDefault(_selectorFactory);
-var _excluded = [
-    "pure",
-    "areStatesEqual",
-    "areOwnPropsEqual",
-    "areStatePropsEqual",
-    "areMergedPropsEqual"
-];
-/*
-  connect is a facade over connectAdvanced. It turns its args into a compatible
-  selectorFactory, which has the signature:
-
-    (dispatch, options) => (nextState, nextOwnProps) => nextFinalProps
-  
-  connect passes its args to connectAdvanced as options, which will in turn pass them to
-  selectorFactory each time a Connect component instance is instantiated or hot reloaded.
-
-  selectorFactory returns a final props selector from its mapStateToProps,
-  mapStateToPropsFactories, mapDispatchToProps, mapDispatchToPropsFactories, mergeProps,
-  mergePropsFactories, and pure args.
-
-  The resulting final props selector is called by the Connect component instance whenever
-  it receives new props or store state.
- */ function match(arg, factories, name) {
-    for(var i = factories.length - 1; i >= 0; i--){
-        var result = factories[i](arg);
-        if (result) return result;
-    }
-    return function(dispatch, options) {
-        throw new Error("Invalid value of type " + typeof arg + " for " + name + " argument when connecting component " + options.wrappedComponentName + ".");
-    };
-}
-function strictEqual(a, b) {
-    return a === b;
-} // createConnect with default args builds the 'official' connect behavior. Calling it with
-function createConnect(_temp) {
-    var _ref = _temp === void 0 ? {
-    } : _temp, _ref$connectHOC = _ref.connectHOC, connectHOC = _ref$connectHOC === void 0 ? _connectAdvancedDefault.default : _ref$connectHOC, _ref$mapStateToPropsF = _ref.mapStateToPropsFactories, mapStateToPropsFactories = _ref$mapStateToPropsF === void 0 ? _mapStateToPropsDefault.default : _ref$mapStateToPropsF, _ref$mapDispatchToPro = _ref.mapDispatchToPropsFactories, mapDispatchToPropsFactories = _ref$mapDispatchToPro === void 0 ? _mapDispatchToPropsDefault.default : _ref$mapDispatchToPro, _ref$mergePropsFactor = _ref.mergePropsFactories, mergePropsFactories = _ref$mergePropsFactor === void 0 ? _mergePropsDefault.default : _ref$mergePropsFactor, _ref$selectorFactory = _ref.selectorFactory, selectorFactory = _ref$selectorFactory === void 0 ? _selectorFactoryDefault.default : _ref$selectorFactory;
-    return function connect(mapStateToProps, mapDispatchToProps, mergeProps, _ref2) {
-        if (_ref2 === void 0) _ref2 = {
-        };
-        var _ref3 = _ref2, _ref3$pure = _ref3.pure, pure = _ref3$pure === void 0 ? true : _ref3$pure, _ref3$areStatesEqual = _ref3.areStatesEqual, areStatesEqual = _ref3$areStatesEqual === void 0 ? strictEqual : _ref3$areStatesEqual, _ref3$areOwnPropsEqua = _ref3.areOwnPropsEqual, areOwnPropsEqual = _ref3$areOwnPropsEqua === void 0 ? _shallowEqualDefault.default : _ref3$areOwnPropsEqua, _ref3$areStatePropsEq = _ref3.areStatePropsEqual, areStatePropsEqual = _ref3$areStatePropsEq === void 0 ? _shallowEqualDefault.default : _ref3$areStatePropsEq, _ref3$areMergedPropsE = _ref3.areMergedPropsEqual, areMergedPropsEqual = _ref3$areMergedPropsE === void 0 ? _shallowEqualDefault.default : _ref3$areMergedPropsE, extraOptions = _objectWithoutPropertiesLooseDefault.default(_ref3, _excluded);
-        var initMapStateToProps = match(mapStateToProps, mapStateToPropsFactories, 'mapStateToProps');
-        var initMapDispatchToProps = match(mapDispatchToProps, mapDispatchToPropsFactories, 'mapDispatchToProps');
-        var initMergeProps = match(mergeProps, mergePropsFactories, 'mergeProps');
-        return connectHOC(selectorFactory, _extendsDefault.default({
-            // used in error messages
-            methodName: 'connect',
-            // used to compute Connect's displayName from the wrapped component's displayName.
-            getDisplayName: function getDisplayName(name) {
-                return "Connect(" + name + ")";
-            },
-            // if mapStateToProps is falsy, the Connect component doesn't subscribe to store state changes
-            shouldHandleStateChanges: Boolean(mapStateToProps),
-            // passed through to selectorFactory
-            initMapStateToProps: initMapStateToProps,
-            initMapDispatchToProps: initMapDispatchToProps,
-            initMergeProps: initMergeProps,
-            pure: pure,
-            areStatesEqual: areStatesEqual,
-            areOwnPropsEqual: areOwnPropsEqual,
-            areStatePropsEqual: areStatePropsEqual,
-            areMergedPropsEqual: areMergedPropsEqual
-        }, extraOptions));
-    };
-}
-exports.default = /*#__PURE__*/ createConnect();
-
-},{"@babel/runtime/helpers/esm/extends":"bKAu6","@babel/runtime/helpers/esm/objectWithoutPropertiesLoose":"3Rubg","../components/connectAdvanced":"5cRBV","../utils/shallowEqual":"leLul","./mapDispatchToProps":"5WOJW","./mapStateToProps":"fi6QF","./mergeProps":"j48TE","./selectorFactory":"2XZ1a","@parcel/transformer-js/src/esmodule-helpers.js":"JacNc"}],"leLul":[function(require,module,exports) {
-var parcelHelpers = require("@parcel/transformer-js/src/esmodule-helpers.js");
-parcelHelpers.defineInteropFlag(exports);
-function is(x, y) {
-    if (x === y) return x !== 0 || y !== 0 || 1 / x === 1 / y;
-    else return x !== x && y !== y;
-}
-function shallowEqual(objA, objB) {
-    if (is(objA, objB)) return true;
-    if (typeof objA !== 'object' || objA === null || typeof objB !== 'object' || objB === null) return false;
-    var keysA = Object.keys(objA);
-    var keysB = Object.keys(objB);
-    if (keysA.length !== keysB.length) return false;
-    for(var i = 0; i < keysA.length; i++){
-        if (!Object.prototype.hasOwnProperty.call(objB, keysA[i]) || !is(objA[keysA[i]], objB[keysA[i]])) return false;
-    }
-    return true;
-}
-exports.default = shallowEqual;
-
-},{"@parcel/transformer-js/src/esmodule-helpers.js":"JacNc"}],"5WOJW":[function(require,module,exports) {
-var parcelHelpers = require("@parcel/transformer-js/src/esmodule-helpers.js");
-parcelHelpers.defineInteropFlag(exports);
-parcelHelpers.export(exports, "whenMapDispatchToPropsIsFunction", ()=>whenMapDispatchToPropsIsFunction
-);
-parcelHelpers.export(exports, "whenMapDispatchToPropsIsMissing", ()=>whenMapDispatchToPropsIsMissing
-);
-parcelHelpers.export(exports, "whenMapDispatchToPropsIsObject", ()=>whenMapDispatchToPropsIsObject
-);
-var _bindActionCreators = require("../utils/bindActionCreators");
-var _bindActionCreatorsDefault = parcelHelpers.interopDefault(_bindActionCreators);
-var _wrapMapToProps = require("./wrapMapToProps");
-function whenMapDispatchToPropsIsFunction(mapDispatchToProps) {
-    return typeof mapDispatchToProps === 'function' ? _wrapMapToProps.wrapMapToPropsFunc(mapDispatchToProps, 'mapDispatchToProps') : undefined;
-}
-function whenMapDispatchToPropsIsMissing(mapDispatchToProps) {
-    return !mapDispatchToProps ? _wrapMapToProps.wrapMapToPropsConstant(function(dispatch) {
-        return {
-            dispatch: dispatch
-        };
-    }) : undefined;
-}
-function whenMapDispatchToPropsIsObject(mapDispatchToProps) {
-    return mapDispatchToProps && typeof mapDispatchToProps === 'object' ? _wrapMapToProps.wrapMapToPropsConstant(function(dispatch) {
-        return _bindActionCreatorsDefault.default(mapDispatchToProps, dispatch);
-    }) : undefined;
-}
-exports.default = [
-    whenMapDispatchToPropsIsFunction,
-    whenMapDispatchToPropsIsMissing,
-    whenMapDispatchToPropsIsObject
-];
-
-},{"../utils/bindActionCreators":"dTgYQ","./wrapMapToProps":"cK0KG","@parcel/transformer-js/src/esmodule-helpers.js":"JacNc"}],"dTgYQ":[function(require,module,exports) {
-var parcelHelpers = require("@parcel/transformer-js/src/esmodule-helpers.js");
-parcelHelpers.defineInteropFlag(exports);
-function bindActionCreators(actionCreators, dispatch) {
-    var boundActionCreators = {
-    };
-    var _loop = function _loop1(key) {
-        var actionCreator = actionCreators[key];
-        if (typeof actionCreator === 'function') boundActionCreators[key] = function() {
-            return dispatch(actionCreator.apply(void 0, arguments));
-        };
-    };
-    for(var key in actionCreators)_loop(key);
-    return boundActionCreators;
-}
-exports.default = bindActionCreators;
-
-},{"@parcel/transformer-js/src/esmodule-helpers.js":"JacNc"}],"cK0KG":[function(require,module,exports) {
-var parcelHelpers = require("@parcel/transformer-js/src/esmodule-helpers.js");
-parcelHelpers.defineInteropFlag(exports);
-parcelHelpers.export(exports, "wrapMapToPropsConstant", ()=>wrapMapToPropsConstant
-) // dependsOnOwnProps is used by createMapToPropsProxy to determine whether to pass props as args
-;
-// to the mapToProps function being wrapped. It is also used by makePurePropsSelector to determine
-// whether mapToProps needs to be invoked when props have changed.
-//
-// A length of one signals that mapToProps does not depend on props from the parent component.
-// A length of zero is assumed to mean mapToProps is getting args via arguments or ...args and
-// therefore not reporting its length accurately..
-parcelHelpers.export(exports, "getDependsOnOwnProps", ()=>getDependsOnOwnProps
-) // Used by whenMapStateToPropsIsFunction and whenMapDispatchToPropsIsFunction,
-;
-// this function wraps mapToProps in a proxy function which does several things:
-//
-//  * Detects whether the mapToProps function being called depends on props, which
-//    is used by selectorFactory to decide if it should reinvoke on props changes.
-//
-//  * On first call, handles mapToProps if returns another function, and treats that
-//    new function as the true mapToProps for subsequent calls.
-//
-//  * On first call, verifies the first result is a plain object, in order to warn
-//    the developer that their mapToProps function is not returning a valid result.
-//
-parcelHelpers.export(exports, "wrapMapToPropsFunc", ()=>wrapMapToPropsFunc
-);
-var _verifyPlainObject = require("../utils/verifyPlainObject");
-var _verifyPlainObjectDefault = parcelHelpers.interopDefault(_verifyPlainObject);
-function wrapMapToPropsConstant(getConstant) {
-    return function initConstantSelector(dispatch, options) {
-        var constant = getConstant(dispatch, options);
-        function constantSelector() {
-            return constant;
-        }
-        constantSelector.dependsOnOwnProps = false;
-        return constantSelector;
-    };
-}
-function getDependsOnOwnProps(mapToProps) {
-    return mapToProps.dependsOnOwnProps !== null && mapToProps.dependsOnOwnProps !== undefined ? Boolean(mapToProps.dependsOnOwnProps) : mapToProps.length !== 1;
-}
-function wrapMapToPropsFunc(mapToProps, methodName) {
-    return function initProxySelector(dispatch, _ref) {
-        var displayName = _ref.displayName;
-        var proxy = function mapToPropsProxy(stateOrDispatch, ownProps) {
-            return proxy.dependsOnOwnProps ? proxy.mapToProps(stateOrDispatch, ownProps) : proxy.mapToProps(stateOrDispatch);
-        }; // allow detectFactoryAndVerify to get ownProps
-        proxy.dependsOnOwnProps = true;
-        proxy.mapToProps = function detectFactoryAndVerify(stateOrDispatch, ownProps) {
-            proxy.mapToProps = mapToProps;
-            proxy.dependsOnOwnProps = getDependsOnOwnProps(mapToProps);
-            var props = proxy(stateOrDispatch, ownProps);
-            if (typeof props === 'function') {
-                proxy.mapToProps = props;
-                proxy.dependsOnOwnProps = getDependsOnOwnProps(props);
-                props = proxy(stateOrDispatch, ownProps);
-            }
-            _verifyPlainObjectDefault.default(props, displayName, methodName);
-            return props;
-        };
-        return proxy;
-    };
-}
-
-},{"../utils/verifyPlainObject":"8txK0","@parcel/transformer-js/src/esmodule-helpers.js":"JacNc"}],"8txK0":[function(require,module,exports) {
-var parcelHelpers = require("@parcel/transformer-js/src/esmodule-helpers.js");
-parcelHelpers.defineInteropFlag(exports);
-var _isPlainObject = require("./isPlainObject");
-var _isPlainObjectDefault = parcelHelpers.interopDefault(_isPlainObject);
-var _warning = require("./warning");
-var _warningDefault = parcelHelpers.interopDefault(_warning);
-function verifyPlainObject(value, displayName, methodName) {
-    if (!_isPlainObjectDefault.default(value)) _warningDefault.default(methodName + "() in " + displayName + " must return a plain object. Instead received " + value + ".");
-}
-exports.default = verifyPlainObject;
-
-},{"./isPlainObject":"awooc","./warning":"fl0jd","@parcel/transformer-js/src/esmodule-helpers.js":"JacNc"}],"awooc":[function(require,module,exports) {
-var parcelHelpers = require("@parcel/transformer-js/src/esmodule-helpers.js");
-parcelHelpers.defineInteropFlag(exports);
-function isPlainObject(obj) {
-    if (typeof obj !== 'object' || obj === null) return false;
-    var proto = Object.getPrototypeOf(obj);
-    if (proto === null) return true;
-    var baseProto = proto;
-    while(Object.getPrototypeOf(baseProto) !== null)baseProto = Object.getPrototypeOf(baseProto);
-    return proto === baseProto;
-}
-exports.default = isPlainObject;
-
-},{"@parcel/transformer-js/src/esmodule-helpers.js":"JacNc"}],"fl0jd":[function(require,module,exports) {
-var parcelHelpers = require("@parcel/transformer-js/src/esmodule-helpers.js");
-parcelHelpers.defineInteropFlag(exports);
-function warning(message) {
-    /* eslint-disable no-console */ if (typeof console !== 'undefined' && typeof console.error === 'function') console.error(message);
-    /* eslint-enable no-console */ try {
-        // This error was thrown as a convenience so that if you enable
-        // "break on all exceptions" in your console,
-        // it would pause the execution at this line.
-        throw new Error(message);
-    /* eslint-disable no-empty */ } catch (e) {
-    }
-/* eslint-enable no-empty */ }
-exports.default = warning;
-
-},{"@parcel/transformer-js/src/esmodule-helpers.js":"JacNc"}],"fi6QF":[function(require,module,exports) {
-var parcelHelpers = require("@parcel/transformer-js/src/esmodule-helpers.js");
-parcelHelpers.defineInteropFlag(exports);
-parcelHelpers.export(exports, "whenMapStateToPropsIsFunction", ()=>whenMapStateToPropsIsFunction
-);
-parcelHelpers.export(exports, "whenMapStateToPropsIsMissing", ()=>whenMapStateToPropsIsMissing
-);
-var _wrapMapToProps = require("./wrapMapToProps");
-function whenMapStateToPropsIsFunction(mapStateToProps) {
-    return typeof mapStateToProps === 'function' ? _wrapMapToProps.wrapMapToPropsFunc(mapStateToProps, 'mapStateToProps') : undefined;
-}
-function whenMapStateToPropsIsMissing(mapStateToProps) {
-    return !mapStateToProps ? _wrapMapToProps.wrapMapToPropsConstant(function() {
-        return {
-        };
-    }) : undefined;
-}
-exports.default = [
-    whenMapStateToPropsIsFunction,
-    whenMapStateToPropsIsMissing
-];
-
-},{"./wrapMapToProps":"cK0KG","@parcel/transformer-js/src/esmodule-helpers.js":"JacNc"}],"j48TE":[function(require,module,exports) {
-var parcelHelpers = require("@parcel/transformer-js/src/esmodule-helpers.js");
-parcelHelpers.defineInteropFlag(exports);
-parcelHelpers.export(exports, "defaultMergeProps", ()=>defaultMergeProps
-);
-parcelHelpers.export(exports, "wrapMergePropsFunc", ()=>wrapMergePropsFunc
-);
-parcelHelpers.export(exports, "whenMergePropsIsFunction", ()=>whenMergePropsIsFunction
-);
-parcelHelpers.export(exports, "whenMergePropsIsOmitted", ()=>whenMergePropsIsOmitted
-);
-var _extends = require("@babel/runtime/helpers/esm/extends");
-var _extendsDefault = parcelHelpers.interopDefault(_extends);
-var _verifyPlainObject = require("../utils/verifyPlainObject");
-var _verifyPlainObjectDefault = parcelHelpers.interopDefault(_verifyPlainObject);
-function defaultMergeProps(stateProps, dispatchProps, ownProps) {
-    return _extendsDefault.default({
-    }, ownProps, stateProps, dispatchProps);
-}
-function wrapMergePropsFunc(mergeProps) {
-    return function initMergePropsProxy(dispatch, _ref) {
-        var displayName = _ref.displayName, pure = _ref.pure, areMergedPropsEqual = _ref.areMergedPropsEqual;
-        var hasRunOnce = false;
-        var mergedProps;
-        return function mergePropsProxy(stateProps, dispatchProps, ownProps) {
-            var nextMergedProps = mergeProps(stateProps, dispatchProps, ownProps);
-            if (hasRunOnce) {
-                if (!pure || !areMergedPropsEqual(nextMergedProps, mergedProps)) mergedProps = nextMergedProps;
-            } else {
-                hasRunOnce = true;
-                mergedProps = nextMergedProps;
-                _verifyPlainObjectDefault.default(mergedProps, displayName, 'mergeProps');
-            }
-            return mergedProps;
-        };
-    };
-}
-function whenMergePropsIsFunction(mergeProps) {
-    return typeof mergeProps === 'function' ? wrapMergePropsFunc(mergeProps) : undefined;
-}
-function whenMergePropsIsOmitted(mergeProps) {
-    return !mergeProps ? function() {
-        return defaultMergeProps;
-    } : undefined;
-}
-exports.default = [
-    whenMergePropsIsFunction,
-    whenMergePropsIsOmitted
-];
-
-},{"@babel/runtime/helpers/esm/extends":"bKAu6","../utils/verifyPlainObject":"8txK0","@parcel/transformer-js/src/esmodule-helpers.js":"JacNc"}],"2XZ1a":[function(require,module,exports) {
-var parcelHelpers = require("@parcel/transformer-js/src/esmodule-helpers.js");
-parcelHelpers.defineInteropFlag(exports);
-parcelHelpers.export(exports, "impureFinalPropsSelectorFactory", ()=>impureFinalPropsSelectorFactory
-);
-parcelHelpers.export(exports, "pureFinalPropsSelectorFactory", ()=>pureFinalPropsSelectorFactory
-) // TODO: Add more comments
-;
-var _objectWithoutPropertiesLoose = require("@babel/runtime/helpers/esm/objectWithoutPropertiesLoose");
-var _objectWithoutPropertiesLooseDefault = parcelHelpers.interopDefault(_objectWithoutPropertiesLoose);
-var _verifySubselectors = require("./verifySubselectors");
-var _verifySubselectorsDefault = parcelHelpers.interopDefault(_verifySubselectors);
-var _excluded = [
-    "initMapStateToProps",
-    "initMapDispatchToProps",
-    "initMergeProps"
-];
-function impureFinalPropsSelectorFactory(mapStateToProps, mapDispatchToProps, mergeProps, dispatch) {
-    return function impureFinalPropsSelector(state, ownProps) {
-        return mergeProps(mapStateToProps(state, ownProps), mapDispatchToProps(dispatch, ownProps), ownProps);
-    };
-}
-function pureFinalPropsSelectorFactory(mapStateToProps, mapDispatchToProps, mergeProps, dispatch, _ref) {
-    var areStatesEqual = _ref.areStatesEqual, areOwnPropsEqual = _ref.areOwnPropsEqual, areStatePropsEqual = _ref.areStatePropsEqual;
-    var hasRunAtLeastOnce = false;
-    var state;
-    var ownProps;
-    var stateProps;
-    var dispatchProps;
-    var mergedProps;
-    function handleFirstCall(firstState, firstOwnProps) {
-        state = firstState;
-        ownProps = firstOwnProps;
-        stateProps = mapStateToProps(state, ownProps);
-        dispatchProps = mapDispatchToProps(dispatch, ownProps);
-        mergedProps = mergeProps(stateProps, dispatchProps, ownProps);
-        hasRunAtLeastOnce = true;
-        return mergedProps;
-    }
-    function handleNewPropsAndNewState() {
-        stateProps = mapStateToProps(state, ownProps);
-        if (mapDispatchToProps.dependsOnOwnProps) dispatchProps = mapDispatchToProps(dispatch, ownProps);
-        mergedProps = mergeProps(stateProps, dispatchProps, ownProps);
-        return mergedProps;
-    }
-    function handleNewProps() {
-        if (mapStateToProps.dependsOnOwnProps) stateProps = mapStateToProps(state, ownProps);
-        if (mapDispatchToProps.dependsOnOwnProps) dispatchProps = mapDispatchToProps(dispatch, ownProps);
-        mergedProps = mergeProps(stateProps, dispatchProps, ownProps);
-        return mergedProps;
-    }
-    function handleNewState() {
-        var nextStateProps = mapStateToProps(state, ownProps);
-        var statePropsChanged = !areStatePropsEqual(nextStateProps, stateProps);
-        stateProps = nextStateProps;
-        if (statePropsChanged) mergedProps = mergeProps(stateProps, dispatchProps, ownProps);
-        return mergedProps;
-    }
-    function handleSubsequentCalls(nextState, nextOwnProps) {
-        var propsChanged = !areOwnPropsEqual(nextOwnProps, ownProps);
-        var stateChanged = !areStatesEqual(nextState, state);
-        state = nextState;
-        ownProps = nextOwnProps;
-        if (propsChanged && stateChanged) return handleNewPropsAndNewState();
-        if (propsChanged) return handleNewProps();
-        if (stateChanged) return handleNewState();
-        return mergedProps;
-    }
-    return function pureFinalPropsSelector(nextState, nextOwnProps) {
-        return hasRunAtLeastOnce ? handleSubsequentCalls(nextState, nextOwnProps) : handleFirstCall(nextState, nextOwnProps);
-    };
-}
-function finalPropsSelectorFactory(dispatch, _ref2) {
-    var initMapStateToProps = _ref2.initMapStateToProps, initMapDispatchToProps = _ref2.initMapDispatchToProps, initMergeProps = _ref2.initMergeProps, options = _objectWithoutPropertiesLooseDefault.default(_ref2, _excluded);
-    var mapStateToProps = initMapStateToProps(dispatch, options);
-    var mapDispatchToProps = initMapDispatchToProps(dispatch, options);
-    var mergeProps = initMergeProps(dispatch, options);
-    _verifySubselectorsDefault.default(mapStateToProps, mapDispatchToProps, mergeProps, options.displayName);
-    var selectorFactory = options.pure ? pureFinalPropsSelectorFactory : impureFinalPropsSelectorFactory;
-    return selectorFactory(mapStateToProps, mapDispatchToProps, mergeProps, dispatch, options);
-}
-exports.default = finalPropsSelectorFactory;
-
-},{"@babel/runtime/helpers/esm/objectWithoutPropertiesLoose":"3Rubg","./verifySubselectors":"lInRo","@parcel/transformer-js/src/esmodule-helpers.js":"JacNc"}],"lInRo":[function(require,module,exports) {
-var parcelHelpers = require("@parcel/transformer-js/src/esmodule-helpers.js");
-parcelHelpers.defineInteropFlag(exports);
-var _warning = require("../utils/warning");
-var _warningDefault = parcelHelpers.interopDefault(_warning);
-function verify(selector, methodName, displayName) {
-    if (!selector) throw new Error("Unexpected value for " + methodName + " in " + displayName + ".");
-    else if (methodName === 'mapStateToProps' || methodName === 'mapDispatchToProps') {
-        if (!Object.prototype.hasOwnProperty.call(selector, 'dependsOnOwnProps')) _warningDefault.default("The selector for " + methodName + " of " + displayName + " did not specify a value for dependsOnOwnProps.");
-    }
-}
-function verifySubselectors(mapStateToProps, mapDispatchToProps, mergeProps, displayName) {
-    verify(mapStateToProps, 'mapStateToProps', displayName);
-    verify(mapDispatchToProps, 'mapDispatchToProps', displayName);
-    verify(mergeProps, 'mergeProps', displayName);
-}
-exports.default = verifySubselectors;
-
-},{"../utils/warning":"fl0jd","@parcel/transformer-js/src/esmodule-helpers.js":"JacNc"}],"2CDvn":[function(require,module,exports) {
-var parcelHelpers = require("@parcel/transformer-js/src/esmodule-helpers.js");
-parcelHelpers.defineInteropFlag(exports);
-/**
- * Hook factory, which creates a `useDispatch` hook bound to a given context.
- *
- * @param {React.Context} [context=ReactReduxContext] Context passed to your `<Provider>`.
- * @returns {Function} A `useDispatch` hook bound to the specified context.
- */ parcelHelpers.export(exports, "createDispatchHook", ()=>createDispatchHook
-);
-parcelHelpers.export(exports, "useDispatch", ()=>useDispatch
-);
-var _context = require("../components/Context");
-var _useStore = require("./useStore");
-function createDispatchHook(context) {
-    if (context === void 0) context = _context.ReactReduxContext;
-    var useStore = context === _context.ReactReduxContext ? _useStore.useStore : _useStore.createStoreHook(context);
-    return function useDispatch() {
-        var store = useStore();
-        return store.dispatch;
-    };
-}
-var useDispatch = /*#__PURE__*/ createDispatchHook();
-
-},{"../components/Context":"gT1Jg","./useStore":"fDPAT","@parcel/transformer-js/src/esmodule-helpers.js":"JacNc"}],"fDPAT":[function(require,module,exports) {
-var parcelHelpers = require("@parcel/transformer-js/src/esmodule-helpers.js");
-parcelHelpers.defineInteropFlag(exports);
-/**
- * Hook factory, which creates a `useStore` hook bound to a given context.
- *
- * @param {React.Context} [context=ReactReduxContext] Context passed to your `<Provider>`.
- * @returns {Function} A `useStore` hook bound to the specified context.
- */ parcelHelpers.export(exports, "createStoreHook", ()=>createStoreHook
-);
-parcelHelpers.export(exports, "useStore", ()=>useStore
-);
-var _react = require("react");
-var _context = require("../components/Context");
-var _useReduxContext = require("./useReduxContext");
-function createStoreHook(context) {
-    if (context === void 0) context = _context.ReactReduxContext;
-    var useReduxContext = context === _context.ReactReduxContext ? _useReduxContext.useReduxContext : function() {
-        return _react.useContext(context);
-    };
-    return function useStore() {
-        var _useReduxContext1 = useReduxContext(), store = _useReduxContext1.store;
-        return store;
-    };
-}
-var useStore = /*#__PURE__*/ createStoreHook();
-
-},{"react":"6TuXu","../components/Context":"gT1Jg","./useReduxContext":"516XC","@parcel/transformer-js/src/esmodule-helpers.js":"JacNc"}],"516XC":[function(require,module,exports) {
-var parcelHelpers = require("@parcel/transformer-js/src/esmodule-helpers.js");
-parcelHelpers.defineInteropFlag(exports);
-/**
- * A hook to access the value of the `ReactReduxContext`. This is a low-level
- * hook that you should usually not need to call directly.
- *
- * @returns {any} the value of the `ReactReduxContext`
- *
- * @example
- *
- * import React from 'react'
- * import { useReduxContext } from 'react-redux'
- *
- * export const CounterComponent = ({ value }) => {
- *   const { store } = useReduxContext()
- *   return <div>{store.getState()}</div>
- * }
- */ parcelHelpers.export(exports, "useReduxContext", ()=>useReduxContext
-);
-var _react = require("react");
-var _context = require("../components/Context");
-function useReduxContext() {
-    var contextValue = _react.useContext(_context.ReactReduxContext);
-    if (!contextValue) throw new Error('could not find react-redux context value; please ensure the component is wrapped in a <Provider>');
-    return contextValue;
-}
-
-},{"react":"6TuXu","../components/Context":"gT1Jg","@parcel/transformer-js/src/esmodule-helpers.js":"JacNc"}],"27k1i":[function(require,module,exports) {
-var parcelHelpers = require("@parcel/transformer-js/src/esmodule-helpers.js");
-parcelHelpers.defineInteropFlag(exports);
-/**
- * Hook factory, which creates a `useSelector` hook bound to a given context.
- *
- * @param {React.Context} [context=ReactReduxContext] Context passed to your `<Provider>`.
- * @returns {Function} A `useSelector` hook bound to the specified context.
- */ parcelHelpers.export(exports, "createSelectorHook", ()=>createSelectorHook
-);
-parcelHelpers.export(exports, "useSelector", ()=>useSelector
-);
-var _react = require("react");
-var _useReduxContext = require("./useReduxContext");
-var _subscription = require("../utils/Subscription");
-var _useIsomorphicLayoutEffect = require("../utils/useIsomorphicLayoutEffect");
-var _context = require("../components/Context");
-var refEquality = function refEquality1(a, b) {
-    return a === b;
-};
-function useSelectorWithStoreAndSubscription(selector, equalityFn, store, contextSub) {
-    var _useReducer = _react.useReducer(function(s) {
-        return s + 1;
-    }, 0), forceRender = _useReducer[1];
-    var subscription = _react.useMemo(function() {
-        return _subscription.createSubscription(store, contextSub);
-    }, [
-        store,
-        contextSub
-    ]);
-    var latestSubscriptionCallbackError = _react.useRef();
-    var latestSelector = _react.useRef();
-    var latestStoreState = _react.useRef();
-    var latestSelectedState = _react.useRef();
-    var storeState = store.getState();
-    var selectedState;
-    try {
-        if (selector !== latestSelector.current || storeState !== latestStoreState.current || latestSubscriptionCallbackError.current) {
-            var newSelectedState = selector(storeState); // ensure latest selected state is reused so that a custom equality function can result in identical references
-            if (latestSelectedState.current === undefined || !equalityFn(newSelectedState, latestSelectedState.current)) selectedState = newSelectedState;
-            else selectedState = latestSelectedState.current;
-        } else selectedState = latestSelectedState.current;
-    } catch (err) {
-        if (latestSubscriptionCallbackError.current) err.message += "\nThe error may be correlated with this previous error:\n" + latestSubscriptionCallbackError.current.stack + "\n\n";
-        throw err;
-    }
-    _useIsomorphicLayoutEffect.useIsomorphicLayoutEffect(function() {
-        latestSelector.current = selector;
-        latestStoreState.current = storeState;
-        latestSelectedState.current = selectedState;
-        latestSubscriptionCallbackError.current = undefined;
-    });
-    _useIsomorphicLayoutEffect.useIsomorphicLayoutEffect(function() {
-        function checkForUpdates() {
-            try {
-                var newStoreState = store.getState(); // Avoid calling selector multiple times if the store's state has not changed
-                if (newStoreState === latestStoreState.current) return;
-                var _newSelectedState = latestSelector.current(newStoreState);
-                if (equalityFn(_newSelectedState, latestSelectedState.current)) return;
-                latestSelectedState.current = _newSelectedState;
-                latestStoreState.current = newStoreState;
-            } catch (err) {
-                // we ignore all errors here, since when the component
-                // is re-rendered, the selectors are called again, and
-                // will throw again, if neither props nor store state
-                // changed
-                latestSubscriptionCallbackError.current = err;
-            }
-            forceRender();
-        }
-        subscription.onStateChange = checkForUpdates;
-        subscription.trySubscribe();
-        checkForUpdates();
-        return function() {
-            return subscription.tryUnsubscribe();
-        };
-    }, [
-        store,
-        subscription
-    ]);
-    return selectedState;
-}
-function createSelectorHook(context) {
-    if (context === void 0) context = _context.ReactReduxContext;
-    var useReduxContext = context === _context.ReactReduxContext ? _useReduxContext.useReduxContext : function() {
-        return _react.useContext(context);
-    };
-    return function useSelector(selector, equalityFn) {
-        if (equalityFn === void 0) equalityFn = refEquality;
-        if (!selector) throw new Error("You must pass a selector to useSelector");
-        if (typeof selector !== 'function') throw new Error("You must pass a function as a selector to useSelector");
-        if (typeof equalityFn !== 'function') throw new Error("You must pass a function as an equality function to useSelector");
-        var _useReduxContext1 = useReduxContext(), store = _useReduxContext1.store, contextSub = _useReduxContext1.subscription;
-        var selectedState = useSelectorWithStoreAndSubscription(selector, equalityFn, store, contextSub);
-        _react.useDebugValue(selectedState);
-        return selectedState;
-    };
-}
-var useSelector = /*#__PURE__*/ createSelectorHook();
-
-},{"react":"6TuXu","./useReduxContext":"516XC","../utils/Subscription":"6rtcC","../utils/useIsomorphicLayoutEffect":"2TWoQ","../components/Context":"gT1Jg","@parcel/transformer-js/src/esmodule-helpers.js":"JacNc"}],"kaP8a":[function(require,module,exports) {
-var parcelHelpers = require("@parcel/transformer-js/src/esmodule-helpers.js");
-parcelHelpers.defineInteropFlag(exports);
-/* eslint-disable import/no-unresolved */ parcelHelpers.export(exports, "unstable_batchedUpdates", ()=>_reactDom.unstable_batchedUpdates
-);
-var _reactDom = require("react-dom");
-
-},{"react-dom":"gkWJK","@parcel/transformer-js/src/esmodule-helpers.js":"JacNc"}],"btgQW":[function(require,module,exports) {
-var parcelHelpers = require("@parcel/transformer-js/src/esmodule-helpers.js");
-parcelHelpers.defineInteropFlag(exports);
-var _redux = require("redux");
-var _actions = require("../actions/actions");
-function visibilityFilter(state = '', action) {
-    switch(action.type){
-        case _actions.SET_FILTER:
-            return action.value;
-        default:
-            return state;
-    }
-}
-function movies(state = [], action) {
-    switch(action.type){
-        case _actions.SET_MOVIES:
-            return action.value;
-        default:
-            return state;
-    }
-}
-function user(state = null, action) {
-    switch(action.type){
-        case _actions.SET_USER:
-            return action.value;
-        default:
-            return state;
-    }
-}
-const moviesApp = _redux.combineReducers({
-    visibilityFilter,
-    movies,
-    user
-});
-exports.default = moviesApp;
-
-},{"redux":"4d0QS","../actions/actions":"1Ttfj","@parcel/transformer-js/src/esmodule-helpers.js":"JacNc"}],"1Ttfj":[function(require,module,exports) {
-var parcelHelpers = require("@parcel/transformer-js/src/esmodule-helpers.js");
-parcelHelpers.defineInteropFlag(exports);
-parcelHelpers.export(exports, "SET_MOVIES", ()=>SET_MOVIES
-);
-parcelHelpers.export(exports, "SET_FILTER", ()=>SET_FILTER
-);
-parcelHelpers.export(exports, "SET_USER", ()=>SET_USER
-);
-parcelHelpers.export(exports, "setMovies", ()=>setMovies
-);
-parcelHelpers.export(exports, "setFilter", ()=>setFilter
-);
-parcelHelpers.export(exports, "setUser", ()=>setUser
-);
-const SET_MOVIES = 'SET_MOVIES';
-const SET_FILTER = 'SET_FILTER';
-const SET_USER = 'SET_USER';
-function setMovies(value) {
-    return {
-        type: SET_MOVIES,
-        value
-    };
-}
-function setFilter(value) {
-    return {
-        type: SET_FILTER,
-        value
-    };
-}
-function setUser(value) {
-    return {
-        type: SET_USER,
-        value
-    };
-}
-
-},{"@parcel/transformer-js/src/esmodule-helpers.js":"JacNc"}],"8GWVf":[function(require,module,exports) {
-'use strict';
-var compose = require('redux').compose;
-exports.__esModule = true;
-exports.composeWithDevTools = typeof window !== 'undefined' && window.__REDUX_DEVTOOLS_EXTENSION_COMPOSE__ ? window.__REDUX_DEVTOOLS_EXTENSION_COMPOSE__ : function() {
-    if (arguments.length === 0) return undefined;
-    if (typeof arguments[0] === 'object') return compose;
-    return compose.apply(null, arguments);
-};
-exports.devToolsEnhancer = typeof window !== 'undefined' && window.__REDUX_DEVTOOLS_EXTENSION__ ? window.__REDUX_DEVTOOLS_EXTENSION__ : function() {
-    return function(noop) {
-        return noop;
-    };
-};
-
-},{"redux":"4d0QS"}],"2zHas":[function(require,module,exports) {
-var $parcel$ReactRefreshHelpers$35bf = require("@parcel/transformer-react-refresh-wrap/lib/helpers/helpers.js");
-var prevRefreshReg = window.$RefreshReg$;
-var prevRefreshSig = window.$RefreshSig$;
-$parcel$ReactRefreshHelpers$35bf.prelude(module);
-
-try {
-var parcelHelpers = require("@parcel/transformer-js/src/esmodule-helpers.js");
-parcelHelpers.defineInteropFlag(exports);
-var _jsxRuntime = require("react/jsx-runtime");
-var _react = require("react");
-var _reactDefault = parcelHelpers.interopDefault(_react);
-var _axios = require("axios");
-var _axiosDefault = parcelHelpers.interopDefault(_axios);
-var _reactRouterDom = require("react-router-dom");
-var _reactRedux = require("react-redux");
-var _actions = require("../../actions/actions");
-var _moviesList = require("../movies-list/movies-list");
-var _moviesListDefault = parcelHelpers.interopDefault(_moviesList);
-var _row = require("react-bootstrap/Row");
-var _rowDefault = parcelHelpers.interopDefault(_row);
-var _col = require("react-bootstrap/Col");
-var _colDefault = parcelHelpers.interopDefault(_col);
-var _movieView = require("../movie-view/movie-view");
-var _genresView = require("../genres-view/genres-view");
-var _directorView = require("../director-view/director-view");
-var _logInView = require("../log-in-view/log-in-view");
-var _registrationView = require("../registration-view/registration-view");
-var _updateProfileView = require("../update-profile-view/update-profile-view");
-var _profileView = require("../profile-view/profile-view");
-var _mainViewScss = require("./main-view.scss");
-class MainView extends _reactDefault.default.Component {
-    componentDidMount() {
-        let accessToken = localStorage.getItem('token');
-        if (accessToken !== null) {
-            this.props.setUser(localStorage.getItem('user'));
-            this.getMovies(accessToken);
-        }
-    }
-    /*When a movie is clicked, this function is invoked and updates the state of the `selectedMovie` *property to that movie*/ setSelectedMovie(newSelectedMovie) {
-        this.setState({
-            selectedMovie: newSelectedMovie
-        });
-    }
-    getMovies(token) {
-        _axiosDefault.default.get('https://zanko-my-flix.herokuapp.com/movies', {
-            headers: {
-                Authorization: `Bearer ${token}`
-            }
-        }).then((response)=>{
-            // Assign the result to the state
-            this.props.setMovies(response.data);
-        }).catch(function(error) {
-            console.log(error);
-        });
-    }
-    /* When a user successfully logs in, this function updates the `user` property in state to that *particular user*/ onLoggedIn(authData) {
-        this.props.setUser(authData.user.Username);
-        localStorage.setItem('token', authData.token);
-        localStorage.setItem('user', authData.user.Username);
-        this.getMovies(authData.token);
-    }
-    /**to log out, remove token and user information from local storage*/ onLoggedOut() {
-        console.log(localStorage.user + " has been logged out!");
-        localStorage.removeItem('token');
-        localStorage.removeItem('user');
-        this.props.setUser(null);
-    }
-    /**to log out, remove token and user information from local storage*/ onDeregister(email) {
-        let accessToken = localStorage.getItem('token');
-        let username = localStorage.getItem('user');
-        if (window.confirm('Are you sure you wish to delete this account?')) {
-            _axiosDefault.default.delete(`https://zanko-my-flix.herokuapp.com/users/${username}`, {
-                headers: {
-                    Authorization: `Bearer ${accessToken}`
-                }
-            }, {
-                "username": username,
-                "email": email
-            }).then((response)=>{
-                // Assign the result to the state
-                console.log(response.data);
-                this.props.setUser(null);
-            }).catch(function(error) {
-                console.log(error);
-            });
-            localStorage.removeItem('token');
-            localStorage.removeItem('user');
-        }
-    }
-    render() {
-        let { movies , user  } = this.props;
-        return(/*#__PURE__*/ _jsxRuntime.jsx(_reactRouterDom.BrowserRouter, {
-            __source: {
-                fileName: "src/components/main-view/main-view.jsx",
-                lineNumber: 104
-            },
-            __self: this,
-            children: /*#__PURE__*/ _jsxRuntime.jsxs(_rowDefault.default, {
-                className: "main-view justify-content-md-center",
-                __source: {
-                    fileName: "src/components/main-view/main-view.jsx",
-                    lineNumber: 105
-                },
-                __self: this,
-                children: [
-                    /*#__PURE__*/ _jsxRuntime.jsx(_reactRouterDom.Route, {
-                        exact: true,
-                        path: "/",
-                        render: ()=>{
-                            if (!user) return(/*#__PURE__*/ _jsxRuntime.jsx(_colDefault.default, {
-                                children: /*#__PURE__*/ _jsxRuntime.jsx(_logInView.LoginView, {
-                                    onLoggedIn: (user1)=>this.onLoggedIn(user1)
-                                })
-                            }));
-                            return(/*#__PURE__*/ _jsxRuntime.jsx(_moviesListDefault.default, {
-                                movies: movies
-                            }));
-                        },
-                        __source: {
-                            fileName: "src/components/main-view/main-view.jsx",
-                            lineNumber: 106
-                        },
-                        __self: this
-                    }),
-                    /*#__PURE__*/ _jsxRuntime.jsx(_reactRouterDom.Route, {
-                        path: "/register",
-                        render: ()=>{
-                            if (user) return(/*#__PURE__*/ _jsxRuntime.jsx(_reactRouterDom.Redirect, {
-                                to: "/"
-                            }));
-                            return(/*#__PURE__*/ _jsxRuntime.jsx(_colDefault.default, {
-                                children: /*#__PURE__*/ _jsxRuntime.jsx(_registrationView.RegistrationView, {
-                                    onRegistration: (username)=>this.onRegistration(username)
-                                })
-                            }));
-                        },
-                        __source: {
-                            fileName: "src/components/main-view/main-view.jsx",
-                            lineNumber: 112
-                        },
-                        __self: this
-                    }),
-                    /*#__PURE__*/ _jsxRuntime.jsx(_reactRouterDom.Route, {
-                        path: "/movies/:movieId",
-                        render: ({ match , history  })=>{
-                            if (!user) return(/*#__PURE__*/ _jsxRuntime.jsx(_colDefault.default, {
-                                children: /*#__PURE__*/ _jsxRuntime.jsx(_logInView.LoginView, {
-                                    onLoggedIn: (user1)=>this.onLoggedIn(user1)
-                                })
-                            }));
-                            return(/*#__PURE__*/ _jsxRuntime.jsx(_colDefault.default, {
-                                children: /*#__PURE__*/ _jsxRuntime.jsx(_movieView.MovieView, {
-                                    movie: movies.find((m)=>m._id === match.params.movieId
-                                    ),
-                                    onBackClick: ()=>history.goBack()
-                                })
-                            }));
-                        },
-                        __source: {
-                            fileName: "src/components/main-view/main-view.jsx",
-                            lineNumber: 118
-                        },
-                        __self: this
-                    }),
-                    /*#__PURE__*/ _jsxRuntime.jsx(_reactRouterDom.Route, {
-                        path: "/genres/:name",
-                        render: ({ match , history  })=>{
-                            if (!user) return(/*#__PURE__*/ _jsxRuntime.jsx(_colDefault.default, {
-                                children: /*#__PURE__*/ _jsxRuntime.jsx(_logInView.LoginView, {
-                                    onLoggedIn: (user1)=>this.onLoggedIn(user1)
-                                })
-                            }));
-                            if (movies.length === 0) return(/*#__PURE__*/ _jsxRuntime.jsx("div", {
-                                className: "main-view"
-                            }));
-                            return(/*#__PURE__*/ _jsxRuntime.jsx(_colDefault.default, {
-                                md: 8,
-                                children: /*#__PURE__*/ _jsxRuntime.jsx(_genresView.GenresView, {
-                                    genre: movies.find((m)=>m.Genre.Name === match.params.name
-                                    ).Genre,
-                                    onBackClick: ()=>history.goBack()
-                                })
-                            }));
-                        },
-                        __source: {
-                            fileName: "src/components/main-view/main-view.jsx",
-                            lineNumber: 126
-                        },
-                        __self: this
-                    }),
-                    /*#__PURE__*/ _jsxRuntime.jsx(_reactRouterDom.Route, {
-                        path: "/directors/:name",
-                        render: ({ match , history  })=>{
-                            if (!user) return(/*#__PURE__*/ _jsxRuntime.jsx(_colDefault.default, {
-                                children: /*#__PURE__*/ _jsxRuntime.jsx(_logInView.LoginView, {
-                                    onLoggedIn: (user1)=>this.onLoggedIn(user1)
-                                })
-                            }));
-                            if (movies.length === 0) return(/*#__PURE__*/ _jsxRuntime.jsx("div", {
-                                className: "main-view"
-                            }));
-                            return(/*#__PURE__*/ _jsxRuntime.jsx(_colDefault.default, {
-                                md: 8,
-                                children: /*#__PURE__*/ _jsxRuntime.jsx(_directorView.DirectorView, {
-                                    director: movies.find((m)=>m.Director.Name === match.params.name
-                                    ).Director,
-                                    onBackClick: ()=>history.goBack()
-                                })
-                            }));
-                        },
-                        __source: {
-                            fileName: "src/components/main-view/main-view.jsx",
-                            lineNumber: 136
-                        },
-                        __self: this
-                    }),
-                    /*#__PURE__*/ _jsxRuntime.jsx(_reactRouterDom.Route, {
-                        path: "/users/:Username/update",
-                        render: ({ history  })=>{
-                            if (movies.length === 0) return(/*#__PURE__*/ _jsxRuntime.jsx("div", {
-                                className: "main-view"
-                            }));
-                            if (!user) return(/*#__PURE__*/ _jsxRuntime.jsx(_reactRouterDom.Redirect, {
-                                to: "/"
-                            }));
-                            return(/*#__PURE__*/ _jsxRuntime.jsx(_colDefault.default, {
-                                children: /*#__PURE__*/ _jsxRuntime.jsx(_updateProfileView.UpdateProfileView, {
-                                    user: user,
-                                    onBackClick: ()=>history.goBack()
-                                    ,
-                                    onDeregister: (email)=>this.onDeregister(email)
-                                })
-                            }));
-                        },
-                        __source: {
-                            fileName: "src/components/main-view/main-view.jsx",
-                            lineNumber: 146
-                        },
-                        __self: this
-                    }),
-                    /*#__PURE__*/ _jsxRuntime.jsx(_reactRouterDom.Route, {
-                        exact: true,
-                        path: "/users/:Username",
-                        render: ({ history  })=>{
-                            if (movies.length === 0) return(/*#__PURE__*/ _jsxRuntime.jsx("div", {
-                                className: "main-view"
-                            }));
-                            if (!user) return(/*#__PURE__*/ _jsxRuntime.jsx(_reactRouterDom.Redirect, {
-                                to: "/"
-                            }));
-                            return(/*#__PURE__*/ _jsxRuntime.jsx(_colDefault.default, {
-                                children: /*#__PURE__*/ _jsxRuntime.jsx(_profileView.ProfileView, {
-                                    user: user,
-                                    movies: movies,
-                                    onBackClick: ()=>history.goBack()
-                                    ,
-                                    onLoggedOut: ()=>{
-                                        this.onLoggedOut();
-                                    }
-                                })
-                            }));
-                        },
-                        __source: {
-                            fileName: "src/components/main-view/main-view.jsx",
-                            lineNumber: 158
-                        },
-                        __self: this
-                    })
-                ]
-            })
-        }));
-    }
-}
-let mapStateToProps = (state)=>{
-    return {
-        movies: state.movies,
-        user: state.user
-    };
-};
-exports.default = _reactRedux.connect(mapStateToProps, {
-    setMovies: _actions.setMovies,
-    setUser: _actions.setUser
-})(MainView);
-
-  $parcel$ReactRefreshHelpers$35bf.postlude(module);
-} finally {
-  window.$RefreshReg$ = prevRefreshReg;
-  window.$RefreshSig$ = prevRefreshSig;
-}
-},{"react/jsx-runtime":"8xIwr","react":"6TuXu","axios":"iYoWk","react-router-dom":"cpyQW","react-redux":"2L0if","../../actions/actions":"1Ttfj","../movies-list/movies-list":"1kGQ5","react-bootstrap/Row":"c0x1x","react-bootstrap/Col":"fbam0","../movie-view/movie-view":"ikZdr","../genres-view/genres-view":"LHlOn","../director-view/director-view":"ck15y","../log-in-view/log-in-view":"jk91c","../registration-view/registration-view":"aP2YV","../update-profile-view/update-profile-view":"2LCM5","../profile-view/profile-view":"2E7Aw","./main-view.scss":"jyMAr","@parcel/transformer-js/src/esmodule-helpers.js":"JacNc","@parcel/transformer-react-refresh-wrap/lib/helpers/helpers.js":"5V79J"}],"iYoWk":[function(require,module,exports) {
-module.exports = require('./lib/axios');
-
-},{"./lib/axios":"3QmO2"}],"3QmO2":[function(require,module,exports) {
-'use strict';
-var utils = require('./utils');
-var bind = require('./helpers/bind');
-var Axios = require('./core/Axios');
-var mergeConfig = require('./core/mergeConfig');
-var defaults = require('./defaults');
-/**
- * Create an instance of Axios
- *
- * @param {Object} defaultConfig The default config for the instance
- * @return {Axios} A new instance of Axios
- */ function createInstance(defaultConfig) {
-    var context = new Axios(defaultConfig);
-    var instance = bind(Axios.prototype.request, context);
-    // Copy axios.prototype to instance
-    utils.extend(instance, Axios.prototype, context);
-    // Copy context to instance
-    utils.extend(instance, context);
-    return instance;
-}
-// Create the default instance to be exported
-var axios = createInstance(defaults);
-// Expose Axios class to allow class inheritance
-axios.Axios = Axios;
-// Factory for creating new instances
-axios.create = function create(instanceConfig) {
-    return createInstance(mergeConfig(axios.defaults, instanceConfig));
-};
-// Expose Cancel & CancelToken
-axios.Cancel = require('./cancel/Cancel');
-axios.CancelToken = require('./cancel/CancelToken');
-axios.isCancel = require('./cancel/isCancel');
-// Expose all/spread
-axios.all = function all(promises) {
-    return Promise.all(promises);
-};
-axios.spread = require('./helpers/spread');
-// Expose isAxiosError
-axios.isAxiosError = require('./helpers/isAxiosError');
-module.exports = axios;
-// Allow use of default import syntax in TypeScript
-module.exports.default = axios;
-
-},{"./utils":"hOPY0","./helpers/bind":"4bHkG","./core/Axios":"KVzea","./core/mergeConfig":"8vb7m","./defaults":"g96L2","./cancel/Cancel":"iGO1D","./cancel/CancelToken":"6kJtU","./cancel/isCancel":"6KzET","./helpers/spread":"3fmMu","./helpers/isAxiosError":"1NqDP"}],"hOPY0":[function(require,module,exports) {
-'use strict';
-var bind = require('./helpers/bind');
-// utils is a library of generic helper functions non-specific to axios
-var toString = Object.prototype.toString;
-/**
- * Determine if a value is an Array
- *
- * @param {Object} val The value to test
- * @returns {boolean} True if value is an Array, otherwise false
- */ function isArray(val) {
-    return toString.call(val) === '[object Array]';
-}
-/**
- * Determine if a value is undefined
- *
- * @param {Object} val The value to test
- * @returns {boolean} True if the value is undefined, otherwise false
- */ function isUndefined(val) {
-    return typeof val === 'undefined';
-}
-/**
- * Determine if a value is a Buffer
- *
- * @param {Object} val The value to test
- * @returns {boolean} True if value is a Buffer, otherwise false
- */ function isBuffer(val) {
-    return val !== null && !isUndefined(val) && val.constructor !== null && !isUndefined(val.constructor) && typeof val.constructor.isBuffer === 'function' && val.constructor.isBuffer(val);
-}
-/**
- * Determine if a value is an ArrayBuffer
- *
- * @param {Object} val The value to test
- * @returns {boolean} True if value is an ArrayBuffer, otherwise false
- */ function isArrayBuffer(val) {
-    return toString.call(val) === '[object ArrayBuffer]';
-}
-/**
- * Determine if a value is a FormData
- *
- * @param {Object} val The value to test
- * @returns {boolean} True if value is an FormData, otherwise false
- */ function isFormData(val) {
-    return typeof FormData !== 'undefined' && val instanceof FormData;
-}
-/**
- * Determine if a value is a view on an ArrayBuffer
- *
- * @param {Object} val The value to test
- * @returns {boolean} True if value is a view on an ArrayBuffer, otherwise false
- */ function isArrayBufferView(val) {
-    var result;
-    if (typeof ArrayBuffer !== 'undefined' && ArrayBuffer.isView) result = ArrayBuffer.isView(val);
-    else result = val && val.buffer && val.buffer instanceof ArrayBuffer;
-    return result;
-}
-/**
- * Determine if a value is a String
- *
- * @param {Object} val The value to test
- * @returns {boolean} True if value is a String, otherwise false
- */ function isString(val) {
-    return typeof val === 'string';
-}
-/**
- * Determine if a value is a Number
- *
- * @param {Object} val The value to test
- * @returns {boolean} True if value is a Number, otherwise false
- */ function isNumber(val) {
-    return typeof val === 'number';
-}
-/**
- * Determine if a value is an Object
- *
- * @param {Object} val The value to test
- * @returns {boolean} True if value is an Object, otherwise false
- */ function isObject(val) {
-    return val !== null && typeof val === 'object';
-}
-/**
- * Determine if a value is a plain Object
- *
- * @param {Object} val The value to test
- * @return {boolean} True if value is a plain Object, otherwise false
- */ function isPlainObject(val) {
-    if (toString.call(val) !== '[object Object]') return false;
-    var prototype = Object.getPrototypeOf(val);
-    return prototype === null || prototype === Object.prototype;
-}
-/**
- * Determine if a value is a Date
- *
- * @param {Object} val The value to test
- * @returns {boolean} True if value is a Date, otherwise false
- */ function isDate(val) {
-    return toString.call(val) === '[object Date]';
-}
-/**
- * Determine if a value is a File
- *
- * @param {Object} val The value to test
- * @returns {boolean} True if value is a File, otherwise false
- */ function isFile(val) {
-    return toString.call(val) === '[object File]';
-}
-/**
- * Determine if a value is a Blob
- *
- * @param {Object} val The value to test
- * @returns {boolean} True if value is a Blob, otherwise false
- */ function isBlob(val) {
-    return toString.call(val) === '[object Blob]';
-}
-/**
- * Determine if a value is a Function
- *
- * @param {Object} val The value to test
- * @returns {boolean} True if value is a Function, otherwise false
- */ function isFunction(val) {
-    return toString.call(val) === '[object Function]';
-}
-/**
- * Determine if a value is a Stream
- *
- * @param {Object} val The value to test
- * @returns {boolean} True if value is a Stream, otherwise false
- */ function isStream(val) {
-    return isObject(val) && isFunction(val.pipe);
-}
-/**
- * Determine if a value is a URLSearchParams object
- *
- * @param {Object} val The value to test
- * @returns {boolean} True if value is a URLSearchParams object, otherwise false
- */ function isURLSearchParams(val) {
-    return typeof URLSearchParams !== 'undefined' && val instanceof URLSearchParams;
-}
-/**
- * Trim excess whitespace off the beginning and end of a string
- *
- * @param {String} str The String to trim
- * @returns {String} The String freed of excess whitespace
- */ function trim(str) {
-    return str.trim ? str.trim() : str.replace(/^\s+|\s+$/g, '');
-}
-/**
- * Determine if we're running in a standard browser environment
- *
- * This allows axios to run in a web worker, and react-native.
- * Both environments support XMLHttpRequest, but not fully standard globals.
- *
- * web workers:
- *  typeof window -> undefined
- *  typeof document -> undefined
- *
- * react-native:
- *  navigator.product -> 'ReactNative'
- * nativescript
- *  navigator.product -> 'NativeScript' or 'NS'
- */ function isStandardBrowserEnv() {
-    if (typeof navigator !== 'undefined' && (navigator.product === 'ReactNative' || navigator.product === 'NativeScript' || navigator.product === 'NS')) return false;
-    return typeof window !== 'undefined' && typeof document !== 'undefined';
-}
-/**
- * Iterate over an Array or an Object invoking a function for each item.
- *
- * If `obj` is an Array callback will be called passing
- * the value, index, and complete array for each item.
- *
- * If 'obj' is an Object callback will be called passing
- * the value, key, and complete object for each property.
- *
- * @param {Object|Array} obj The object to iterate
- * @param {Function} fn The callback to invoke for each item
- */ function forEach(obj, fn) {
-    // Don't bother if no value provided
-    if (obj === null || typeof obj === 'undefined') return;
-    // Force an array if not already something iterable
-    if (typeof obj !== 'object') /*eslint no-param-reassign:0*/ obj = [
-        obj
-    ];
-    if (isArray(obj)) // Iterate over array values
-    for(var i = 0, l = obj.length; i < l; i++)fn.call(null, obj[i], i, obj);
-    else {
-        // Iterate over object keys
-        for(var key in obj)if (Object.prototype.hasOwnProperty.call(obj, key)) fn.call(null, obj[key], key, obj);
-    }
-}
-/**
- * Accepts varargs expecting each argument to be an object, then
- * immutably merges the properties of each object and returns result.
- *
- * When multiple objects contain the same key the later object in
- * the arguments list will take precedence.
- *
- * Example:
- *
- * ```js
- * var result = merge({foo: 123}, {foo: 456});
- * console.log(result.foo); // outputs 456
- * ```
- *
- * @param {Object} obj1 Object to merge
- * @returns {Object} Result of all merge properties
- */ function merge() {
-    var result = {
-    };
-    function assignValue(val, key) {
-        if (isPlainObject(result[key]) && isPlainObject(val)) result[key] = merge(result[key], val);
-        else if (isPlainObject(val)) result[key] = merge({
-        }, val);
-        else if (isArray(val)) result[key] = val.slice();
-        else result[key] = val;
-    }
-    for(var i = 0, l = arguments.length; i < l; i++)forEach(arguments[i], assignValue);
-    return result;
-}
-/**
- * Extends object a by mutably adding to it the properties of object b.
- *
- * @param {Object} a The object to be extended
- * @param {Object} b The object to copy properties from
- * @param {Object} thisArg The object to bind function to
- * @return {Object} The resulting value of object a
- */ function extend(a, b, thisArg) {
-    forEach(b, function assignValue(val, key) {
-        if (thisArg && typeof val === 'function') a[key] = bind(val, thisArg);
-        else a[key] = val;
-    });
-    return a;
-}
-/**
- * Remove byte order marker. This catches EF BB BF (the UTF-8 BOM)
- *
- * @param {string} content with BOM
- * @return {string} content value without BOM
- */ function stripBOM(content) {
-    if (content.charCodeAt(0) === 65279) content = content.slice(1);
-    return content;
-}
-module.exports = {
-    isArray: isArray,
-    isArrayBuffer: isArrayBuffer,
-    isBuffer: isBuffer,
-    isFormData: isFormData,
-    isArrayBufferView: isArrayBufferView,
-    isString: isString,
-    isNumber: isNumber,
-    isObject: isObject,
-    isPlainObject: isPlainObject,
-    isUndefined: isUndefined,
-    isDate: isDate,
-    isFile: isFile,
-    isBlob: isBlob,
-    isFunction: isFunction,
-    isStream: isStream,
-    isURLSearchParams: isURLSearchParams,
-    isStandardBrowserEnv: isStandardBrowserEnv,
-    forEach: forEach,
-    merge: merge,
-    extend: extend,
-    trim: trim,
-    stripBOM: stripBOM
-};
-
-},{"./helpers/bind":"4bHkG"}],"4bHkG":[function(require,module,exports) {
-'use strict';
-module.exports = function bind(fn, thisArg) {
-    return function wrap() {
-        var args = new Array(arguments.length);
-        for(var i = 0; i < args.length; i++)args[i] = arguments[i];
-        return fn.apply(thisArg, args);
-    };
-};
-
-},{}],"KVzea":[function(require,module,exports) {
-'use strict';
-var utils = require('./../utils');
-var buildURL = require('../helpers/buildURL');
-var InterceptorManager = require('./InterceptorManager');
-var dispatchRequest = require('./dispatchRequest');
-var mergeConfig = require('./mergeConfig');
-var validator = require('../helpers/validator');
-var validators = validator.validators;
-/**
- * Create a new instance of Axios
- *
- * @param {Object} instanceConfig The default config for the instance
- */ function Axios(instanceConfig) {
-    this.defaults = instanceConfig;
-    this.interceptors = {
-        request: new InterceptorManager(),
-        response: new InterceptorManager()
-    };
-}
-/**
- * Dispatch a request
- *
- * @param {Object} config The config specific for this request (merged with this.defaults)
- */ Axios.prototype.request = function request(config) {
-    /*eslint no-param-reassign:0*/ // Allow for axios('example/url'[, config]) a la fetch API
-    if (typeof config === 'string') {
-        config = arguments[1] || {
-        };
-        config.url = arguments[0];
-    } else config = config || {
-    };
-    config = mergeConfig(this.defaults, config);
-    // Set config.method
-    if (config.method) config.method = config.method.toLowerCase();
-    else if (this.defaults.method) config.method = this.defaults.method.toLowerCase();
-    else config.method = 'get';
-    var transitional = config.transitional;
-    if (transitional !== undefined) validator.assertOptions(transitional, {
-        silentJSONParsing: validators.transitional(validators.boolean, '1.0.0'),
-        forcedJSONParsing: validators.transitional(validators.boolean, '1.0.0'),
-        clarifyTimeoutError: validators.transitional(validators.boolean, '1.0.0')
-    }, false);
-    // filter out skipped interceptors
-    var requestInterceptorChain = [];
-    var synchronousRequestInterceptors = true;
-    this.interceptors.request.forEach(function unshiftRequestInterceptors(interceptor) {
-        if (typeof interceptor.runWhen === 'function' && interceptor.runWhen(config) === false) return;
-        synchronousRequestInterceptors = synchronousRequestInterceptors && interceptor.synchronous;
-        requestInterceptorChain.unshift(interceptor.fulfilled, interceptor.rejected);
-    });
-    var responseInterceptorChain = [];
-    this.interceptors.response.forEach(function pushResponseInterceptors(interceptor) {
-        responseInterceptorChain.push(interceptor.fulfilled, interceptor.rejected);
-    });
-    var promise;
-    if (!synchronousRequestInterceptors) {
-        var chain = [
-            dispatchRequest,
-            undefined
-        ];
-        Array.prototype.unshift.apply(chain, requestInterceptorChain);
-        chain = chain.concat(responseInterceptorChain);
-        promise = Promise.resolve(config);
-        while(chain.length)promise = promise.then(chain.shift(), chain.shift());
-        return promise;
-    }
-    var newConfig = config;
-    while(requestInterceptorChain.length){
-        var onFulfilled = requestInterceptorChain.shift();
-        var onRejected = requestInterceptorChain.shift();
-        try {
-            newConfig = onFulfilled(newConfig);
-        } catch (error) {
-            onRejected(error);
-            break;
-        }
-    }
-    try {
-        promise = dispatchRequest(newConfig);
-    } catch (error) {
-        return Promise.reject(error);
-    }
-    while(responseInterceptorChain.length)promise = promise.then(responseInterceptorChain.shift(), responseInterceptorChain.shift());
-    return promise;
-};
-Axios.prototype.getUri = function getUri(config) {
-    config = mergeConfig(this.defaults, config);
-    return buildURL(config.url, config.params, config.paramsSerializer).replace(/^\?/, '');
-};
-// Provide aliases for supported request methods
-utils.forEach([
-    'delete',
-    'get',
-    'head',
-    'options'
-], function forEachMethodNoData(method) {
-    /*eslint func-names:0*/ Axios.prototype[method] = function(url, config) {
-        return this.request(mergeConfig(config || {
-        }, {
-            method: method,
-            url: url,
-            data: (config || {
-            }).data
-        }));
-    };
-});
-utils.forEach([
-    'post',
-    'put',
-    'patch'
-], function forEachMethodWithData(method) {
-    /*eslint func-names:0*/ Axios.prototype[method] = function(url, data, config) {
-        return this.request(mergeConfig(config || {
-        }, {
-            method: method,
-            url: url,
-            data: data
-        }));
-    };
-});
-module.exports = Axios;
-
-},{"./../utils":"hOPY0","../helpers/buildURL":"3Jodf","./InterceptorManager":"9kkIC","./dispatchRequest":"dmFav","./mergeConfig":"8vb7m","../helpers/validator":"4sigL"}],"3Jodf":[function(require,module,exports) {
-'use strict';
-var utils = require('./../utils');
-function encode(val) {
-    return encodeURIComponent(val).replace(/%3A/gi, ':').replace(/%24/g, '$').replace(/%2C/gi, ',').replace(/%20/g, '+').replace(/%5B/gi, '[').replace(/%5D/gi, ']');
-}
-/**
- * Build a URL by appending params to the end
- *
- * @param {string} url The base of the url (e.g., http://www.google.com)
- * @param {object} [params] The params to be appended
- * @returns {string} The formatted url
- */ module.exports = function buildURL(url, params, paramsSerializer) {
-    /*eslint no-param-reassign:0*/ if (!params) return url;
-    var serializedParams;
-    if (paramsSerializer) serializedParams = paramsSerializer(params);
-    else if (utils.isURLSearchParams(params)) serializedParams = params.toString();
-    else {
-        var parts = [];
-        utils.forEach(params, function serialize(val, key) {
-            if (val === null || typeof val === 'undefined') return;
-            if (utils.isArray(val)) key = key + '[]';
-            else val = [
-                val
-            ];
-            utils.forEach(val, function parseValue(v) {
-                if (utils.isDate(v)) v = v.toISOString();
-                else if (utils.isObject(v)) v = JSON.stringify(v);
-                parts.push(encode(key) + '=' + encode(v));
-            });
-        });
-        serializedParams = parts.join('&');
-    }
-    if (serializedParams) {
-        var hashmarkIndex = url.indexOf('#');
-        if (hashmarkIndex !== -1) url = url.slice(0, hashmarkIndex);
-        url += (url.indexOf('?') === -1 ? '?' : '&') + serializedParams;
-    }
-    return url;
-};
-
-},{"./../utils":"hOPY0"}],"9kkIC":[function(require,module,exports) {
-'use strict';
-var utils = require('./../utils');
-function InterceptorManager() {
-    this.handlers = [];
-}
-/**
- * Add a new interceptor to the stack
- *
- * @param {Function} fulfilled The function to handle `then` for a `Promise`
- * @param {Function} rejected The function to handle `reject` for a `Promise`
- *
- * @return {Number} An ID used to remove interceptor later
- */ InterceptorManager.prototype.use = function use(fulfilled, rejected, options) {
-    this.handlers.push({
-        fulfilled: fulfilled,
-        rejected: rejected,
-        synchronous: options ? options.synchronous : false,
-        runWhen: options ? options.runWhen : null
-    });
-    return this.handlers.length - 1;
-};
-/**
- * Remove an interceptor from the stack
- *
- * @param {Number} id The ID that was returned by `use`
- */ InterceptorManager.prototype.eject = function eject(id) {
-    if (this.handlers[id]) this.handlers[id] = null;
-};
-/**
- * Iterate over all the registered interceptors
- *
- * This method is particularly useful for skipping over any
- * interceptors that may have become `null` calling `eject`.
- *
- * @param {Function} fn The function to call for each interceptor
- */ InterceptorManager.prototype.forEach = function forEach(fn) {
-    utils.forEach(this.handlers, function forEachHandler(h) {
-        if (h !== null) fn(h);
-    });
-};
-module.exports = InterceptorManager;
-
-},{"./../utils":"hOPY0"}],"dmFav":[function(require,module,exports) {
-'use strict';
-var utils = require('./../utils');
-var transformData = require('./transformData');
-var isCancel = require('../cancel/isCancel');
-var defaults = require('../defaults');
-/**
- * Throws a `Cancel` if cancellation has been requested.
- */ function throwIfCancellationRequested(config) {
-    if (config.cancelToken) config.cancelToken.throwIfRequested();
-}
-/**
- * Dispatch a request to the server using the configured adapter.
- *
- * @param {object} config The config that is to be used for the request
- * @returns {Promise} The Promise to be fulfilled
- */ module.exports = function dispatchRequest(config) {
-    throwIfCancellationRequested(config);
-    // Ensure headers exist
-    config.headers = config.headers || {
-    };
-    // Transform request data
-    config.data = transformData.call(config, config.data, config.headers, config.transformRequest);
-    // Flatten headers
-    config.headers = utils.merge(config.headers.common || {
-    }, config.headers[config.method] || {
-    }, config.headers);
-    utils.forEach([
-        'delete',
-        'get',
-        'head',
-        'post',
-        'put',
-        'patch',
-        'common'
-    ], function cleanHeaderConfig(method) {
-        delete config.headers[method];
-    });
-    var adapter = config.adapter || defaults.adapter;
-    return adapter(config).then(function onAdapterResolution(response) {
-        throwIfCancellationRequested(config);
-        // Transform response data
-        response.data = transformData.call(config, response.data, response.headers, config.transformResponse);
-        return response;
-    }, function onAdapterRejection(reason) {
-        if (!isCancel(reason)) {
-            throwIfCancellationRequested(config);
-            // Transform response data
-            if (reason && reason.response) reason.response.data = transformData.call(config, reason.response.data, reason.response.headers, config.transformResponse);
-        }
-        return Promise.reject(reason);
-    });
-};
-
-},{"./../utils":"hOPY0","./transformData":"57wgh","../cancel/isCancel":"6KzET","../defaults":"g96L2"}],"57wgh":[function(require,module,exports) {
-'use strict';
-var utils = require('./../utils');
-var defaults = require('./../defaults');
-/**
- * Transform the data for a request or a response
- *
- * @param {Object|String} data The data to be transformed
- * @param {Array} headers The headers for the request or response
- * @param {Array|Function} fns A single function or Array of functions
- * @returns {*} The resulting transformed data
- */ module.exports = function transformData(data, headers, fns) {
-    var context = this || defaults;
-    /*eslint no-param-reassign:0*/ utils.forEach(fns, function transform(fn) {
-        data = fn.call(context, data, headers);
-    });
-    return data;
-};
-
-},{"./../utils":"hOPY0","./../defaults":"g96L2"}],"g96L2":[function(require,module,exports) {
-var process = require("process");
-'use strict';
-var utils = require('./utils');
-var normalizeHeaderName = require('./helpers/normalizeHeaderName');
-var enhanceError = require('./core/enhanceError');
-var DEFAULT_CONTENT_TYPE = {
-    'Content-Type': 'application/x-www-form-urlencoded'
-};
-function setContentTypeIfUnset(headers, value) {
-    if (!utils.isUndefined(headers) && utils.isUndefined(headers['Content-Type'])) headers['Content-Type'] = value;
-}
-function getDefaultAdapter() {
-    var adapter;
-    if (typeof XMLHttpRequest !== 'undefined') // For browsers use XHR adapter
-    adapter = require('./adapters/xhr');
-    else if (typeof process !== 'undefined' && Object.prototype.toString.call(process) === '[object process]') // For node use HTTP adapter
-    adapter = require('./adapters/http');
-    return adapter;
-}
-function stringifySafely(rawValue, parser, encoder) {
-    if (utils.isString(rawValue)) try {
-        (parser || JSON.parse)(rawValue);
-        return utils.trim(rawValue);
-    } catch (e) {
-        if (e.name !== 'SyntaxError') throw e;
-    }
-    return (encoder || JSON.stringify)(rawValue);
-}
-var defaults = {
-    transitional: {
-        silentJSONParsing: true,
-        forcedJSONParsing: true,
-        clarifyTimeoutError: false
-    },
-    adapter: getDefaultAdapter(),
-    transformRequest: [
-        function transformRequest(data, headers) {
-            normalizeHeaderName(headers, 'Accept');
-            normalizeHeaderName(headers, 'Content-Type');
-            if (utils.isFormData(data) || utils.isArrayBuffer(data) || utils.isBuffer(data) || utils.isStream(data) || utils.isFile(data) || utils.isBlob(data)) return data;
-            if (utils.isArrayBufferView(data)) return data.buffer;
-            if (utils.isURLSearchParams(data)) {
-                setContentTypeIfUnset(headers, 'application/x-www-form-urlencoded;charset=utf-8');
-                return data.toString();
-            }
-            if (utils.isObject(data) || headers && headers['Content-Type'] === 'application/json') {
-                setContentTypeIfUnset(headers, 'application/json');
-                return stringifySafely(data);
-            }
-            return data;
-        }
-    ],
-    transformResponse: [
-        function transformResponse(data) {
-            var transitional = this.transitional;
-            var silentJSONParsing = transitional && transitional.silentJSONParsing;
-            var forcedJSONParsing = transitional && transitional.forcedJSONParsing;
-            var strictJSONParsing = !silentJSONParsing && this.responseType === 'json';
-            if (strictJSONParsing || forcedJSONParsing && utils.isString(data) && data.length) try {
-                return JSON.parse(data);
-            } catch (e) {
-                if (strictJSONParsing) {
-                    if (e.name === 'SyntaxError') throw enhanceError(e, this, 'E_JSON_PARSE');
-                    throw e;
-                }
-            }
-            return data;
-        }
-    ],
-    /**
-   * A timeout in milliseconds to abort a request. If set to 0 (default) a
-   * timeout is not created.
-   */ timeout: 0,
-    xsrfCookieName: 'XSRF-TOKEN',
-    xsrfHeaderName: 'X-XSRF-TOKEN',
-    maxContentLength: -1,
-    maxBodyLength: -1,
-    validateStatus: function validateStatus(status) {
-        return status >= 200 && status < 300;
-    }
-};
-defaults.headers = {
-    common: {
-        'Accept': 'application/json, text/plain, */*'
-    }
-};
-utils.forEach([
-    'delete',
-    'get',
-    'head'
-], function forEachMethodNoData(method) {
-    defaults.headers[method] = {
-    };
-});
-utils.forEach([
-    'post',
-    'put',
-    'patch'
-], function forEachMethodWithData(method) {
-    defaults.headers[method] = utils.merge(DEFAULT_CONTENT_TYPE);
-});
-module.exports = defaults;
-
-},{"process":"6Upk8","./utils":"hOPY0","./helpers/normalizeHeaderName":"6GUF5","./core/enhanceError":"3f4N4","./adapters/xhr":"4uZQD","./adapters/http":"4uZQD"}],"6Upk8":[function(require,module,exports) {
-// shim for using process in browser
-var process = module.exports = {
-};
-// cached from whatever global is present so that test runners that stub it
-// don't break things.  But we need to wrap it in a try catch in case it is
-// wrapped in strict mode code which doesn't define any globals.  It's inside a
-// function because try/catches deoptimize in certain engines.
-var cachedSetTimeout;
-var cachedClearTimeout;
-function defaultSetTimout() {
-    throw new Error('setTimeout has not been defined');
-}
-function defaultClearTimeout() {
-    throw new Error('clearTimeout has not been defined');
-}
-(function() {
-    try {
-        if (typeof setTimeout === 'function') cachedSetTimeout = setTimeout;
-        else cachedSetTimeout = defaultSetTimout;
-    } catch (e) {
-        cachedSetTimeout = defaultSetTimout;
-    }
-    try {
-        if (typeof clearTimeout === 'function') cachedClearTimeout = clearTimeout;
-        else cachedClearTimeout = defaultClearTimeout;
-    } catch (e) {
-        cachedClearTimeout = defaultClearTimeout;
-    }
-})();
-function runTimeout(fun) {
-    if (cachedSetTimeout === setTimeout) //normal enviroments in sane situations
-    return setTimeout(fun, 0);
-    // if setTimeout wasn't available but was latter defined
-    if ((cachedSetTimeout === defaultSetTimout || !cachedSetTimeout) && setTimeout) {
-        cachedSetTimeout = setTimeout;
-        return setTimeout(fun, 0);
-    }
-    try {
-        // when when somebody has screwed with setTimeout but no I.E. maddness
-        return cachedSetTimeout(fun, 0);
-    } catch (e) {
-        try {
-            // When we are in I.E. but the script has been evaled so I.E. doesn't trust the global object when called normally
-            return cachedSetTimeout.call(null, fun, 0);
-        } catch (e1) {
-            // same as above but when it's a version of I.E. that must have the global object for 'this', hopfully our context correct otherwise it will throw a global error
-            return cachedSetTimeout.call(this, fun, 0);
-        }
-    }
-}
-function runClearTimeout(marker) {
-    if (cachedClearTimeout === clearTimeout) //normal enviroments in sane situations
-    return clearTimeout(marker);
-    // if clearTimeout wasn't available but was latter defined
-    if ((cachedClearTimeout === defaultClearTimeout || !cachedClearTimeout) && clearTimeout) {
-        cachedClearTimeout = clearTimeout;
-        return clearTimeout(marker);
-    }
-    try {
-        // when when somebody has screwed with setTimeout but no I.E. maddness
-        return cachedClearTimeout(marker);
-    } catch (e) {
-        try {
-            // When we are in I.E. but the script has been evaled so I.E. doesn't  trust the global object when called normally
-            return cachedClearTimeout.call(null, marker);
-        } catch (e1) {
-            // same as above but when it's a version of I.E. that must have the global object for 'this', hopfully our context correct otherwise it will throw a global error.
-            // Some versions of I.E. have different rules for clearTimeout vs setTimeout
-            return cachedClearTimeout.call(this, marker);
-        }
-    }
-}
-var queue = [];
-var draining = false;
-var currentQueue;
-var queueIndex = -1;
-function cleanUpNextTick() {
-    if (!draining || !currentQueue) return;
-    draining = false;
-    if (currentQueue.length) queue = currentQueue.concat(queue);
-    else queueIndex = -1;
-    if (queue.length) drainQueue();
-}
-function drainQueue() {
-    if (draining) return;
-    var timeout = runTimeout(cleanUpNextTick);
-    draining = true;
-    var len = queue.length;
-    while(len){
-        currentQueue = queue;
-        queue = [];
-        while((++queueIndex) < len)if (currentQueue) currentQueue[queueIndex].run();
-        queueIndex = -1;
-        len = queue.length;
-    }
-    currentQueue = null;
-    draining = false;
-    runClearTimeout(timeout);
-}
-process.nextTick = function(fun) {
-    var args = new Array(arguments.length - 1);
-    if (arguments.length > 1) for(var i = 1; i < arguments.length; i++)args[i - 1] = arguments[i];
-    queue.push(new Item(fun, args));
-    if (queue.length === 1 && !draining) runTimeout(drainQueue);
-};
-// v8 likes predictible objects
-function Item(fun, array) {
-    this.fun = fun;
-    this.array = array;
-}
-Item.prototype.run = function() {
-    this.fun.apply(null, this.array);
-};
-process.title = 'browser';
-process.browser = true;
-process.env = {
-};
-process.argv = [];
-process.version = ''; // empty string to avoid regexp issues
-process.versions = {
-};
-function noop() {
-}
-process.on = noop;
-process.addListener = noop;
-process.once = noop;
-process.off = noop;
-process.removeListener = noop;
-process.removeAllListeners = noop;
-process.emit = noop;
-process.prependListener = noop;
-process.prependOnceListener = noop;
-process.listeners = function(name) {
-    return [];
-};
-process.binding = function(name) {
-    throw new Error('process.binding is not supported');
-};
-process.cwd = function() {
     return '/';
-};
-process.chdir = function(dir) {
-    throw new Error('process.chdir is not supported');
-};
-process.umask = function() {
-    return 0;
-};
+}
+function getBaseURL(url) {
+    return ('' + url).replace(/^((?:https?|file|ftp):\/\/.+)\/[^/]+$/, '$1') + '/';
+} // TODO: Replace uses with `new URL(url).origin` when ie11 is no longer supported.
+function getOrigin(url) {
+    var matches = ('' + url).match(/(https?|file|ftp):\/\/[^/]+/);
+    if (!matches) throw new Error('Origin not found');
+    return matches[0];
+}
+exports.getBundleURL = getBundleURLCached;
+exports.getBaseURL = getBaseURL;
+exports.getOrigin = getOrigin;
 
-},{}],"6GUF5":[function(require,module,exports) {
-'use strict';
-var utils = require('../utils');
-module.exports = function normalizeHeaderName(headers, normalizedName) {
-    utils.forEach(headers, function processHeader(value, name) {
-        if (name !== normalizedName && name.toUpperCase() === normalizedName.toUpperCase()) {
-            headers[normalizedName] = value;
-            delete headers[name];
-        }
-    });
-};
+},{}],"hVWAT":[function(require,module,exports) {
+module.exports = require('./helpers/bundle-url').getBundleURL('3VpAv') + "thedarkknight.6865c054.jpg";
 
-},{"../utils":"hOPY0"}],"3f4N4":[function(require,module,exports) {
-'use strict';
-/**
- * Update an Error with the specified config, error code, and response.
- *
- * @param {Error} error The error to update.
- * @param {Object} config The config.
- * @param {string} [code] The error code (for example, 'ECONNABORTED').
- * @param {Object} [request] The request.
- * @param {Object} [response] The response.
- * @returns {Error} The error.
- */ module.exports = function enhanceError(error, config, code, request, response) {
-    error.config = config;
-    if (code) error.code = code;
-    error.request = request;
-    error.response = response;
-    error.isAxiosError = true;
-    error.toJSON = function toJSON() {
-        return {
-            // Standard
-            message: this.message,
-            name: this.name,
-            // Microsoft
-            description: this.description,
-            number: this.number,
-            // Mozilla
-            fileName: this.fileName,
-            lineNumber: this.lineNumber,
-            columnNumber: this.columnNumber,
-            stack: this.stack,
-            // Axios
-            config: this.config,
-            code: this.code
-        };
-    };
-    return error;
-};
+},{"./helpers/bundle-url":"8YnfL"}],"aGUtc":[function(require,module,exports) {
+module.exports = require('./helpers/bundle-url').getBundleURL('3VpAv') + "girls.832504d7.jpg";
 
-},{}],"4uZQD":[function(require,module,exports) {
-'use strict';
-var utils = require('./../utils');
-var settle = require('./../core/settle');
-var cookies = require('./../helpers/cookies');
-var buildURL = require('./../helpers/buildURL');
-var buildFullPath = require('../core/buildFullPath');
-var parseHeaders = require('./../helpers/parseHeaders');
-var isURLSameOrigin = require('./../helpers/isURLSameOrigin');
-var createError = require('../core/createError');
-module.exports = function xhrAdapter(config) {
-    return new Promise(function dispatchXhrRequest(resolve, reject) {
-        var requestData = config.data;
-        var requestHeaders = config.headers;
-        var responseType = config.responseType;
-        if (utils.isFormData(requestData)) delete requestHeaders['Content-Type']; // Let the browser set it
-        var request = new XMLHttpRequest();
-        // HTTP basic authentication
-        if (config.auth) {
-            var username = config.auth.username || '';
-            var password = config.auth.password ? unescape(encodeURIComponent(config.auth.password)) : '';
-            requestHeaders.Authorization = 'Basic ' + btoa(username + ':' + password);
-        }
-        var fullPath = buildFullPath(config.baseURL, config.url);
-        request.open(config.method.toUpperCase(), buildURL(fullPath, config.params, config.paramsSerializer), true);
-        // Set the request timeout in MS
-        request.timeout = config.timeout;
-        function onloadend() {
-            if (!request) return;
-            // Prepare the response
-            var responseHeaders = 'getAllResponseHeaders' in request ? parseHeaders(request.getAllResponseHeaders()) : null;
-            var responseData = !responseType || responseType === 'text' || responseType === 'json' ? request.responseText : request.response;
-            var response = {
-                data: responseData,
-                status: request.status,
-                statusText: request.statusText,
-                headers: responseHeaders,
-                config: config,
-                request: request
-            };
-            settle(resolve, reject, response);
-            // Clean up request
-            request = null;
-        }
-        if ('onloadend' in request) // Use onloadend if available
-        request.onloadend = onloadend;
-        else // Listen for ready state to emulate onloadend
-        request.onreadystatechange = function handleLoad() {
-            if (!request || request.readyState !== 4) return;
-            // The request errored out and we didn't get a response, this will be
-            // handled by onerror instead
-            // With one exception: request that using file: protocol, most browsers
-            // will return status as 0 even though it's a successful request
-            if (request.status === 0 && !(request.responseURL && request.responseURL.indexOf('file:') === 0)) return;
-            // readystate handler is calling before onerror or ontimeout handlers,
-            // so we should call onloadend on the next 'tick'
-            setTimeout(onloadend);
-        };
-        // Handle browser request cancellation (as opposed to a manual cancellation)
-        request.onabort = function handleAbort() {
-            if (!request) return;
-            reject(createError('Request aborted', config, 'ECONNABORTED', request));
-            // Clean up request
-            request = null;
-        };
-        // Handle low level network errors
-        request.onerror = function handleError() {
-            // Real errors are hidden from us by the browser
-            // onerror should only fire if it's a network error
-            reject(createError('Network Error', config, null, request));
-            // Clean up request
-            request = null;
-        };
-        // Handle timeout
-        request.ontimeout = function handleTimeout() {
-            var timeoutErrorMessage = 'timeout of ' + config.timeout + 'ms exceeded';
-            if (config.timeoutErrorMessage) timeoutErrorMessage = config.timeoutErrorMessage;
-            reject(createError(timeoutErrorMessage, config, config.transitional && config.transitional.clarifyTimeoutError ? 'ETIMEDOUT' : 'ECONNABORTED', request));
-            // Clean up request
-            request = null;
-        };
-        // Add xsrf header
-        // This is only done if running in a standard browser environment.
-        // Specifically not if we're in a web worker, or react-native.
-        if (utils.isStandardBrowserEnv()) {
-            // Add xsrf header
-            var xsrfValue = (config.withCredentials || isURLSameOrigin(fullPath)) && config.xsrfCookieName ? cookies.read(config.xsrfCookieName) : undefined;
-            if (xsrfValue) requestHeaders[config.xsrfHeaderName] = xsrfValue;
-        }
-        // Add headers to the request
-        if ('setRequestHeader' in request) utils.forEach(requestHeaders, function setRequestHeader(val, key) {
-            if (typeof requestData === 'undefined' && key.toLowerCase() === 'content-type') // Remove Content-Type if data is undefined
-            delete requestHeaders[key];
-            else // Otherwise add header to the request
-            request.setRequestHeader(key, val);
-        });
-        // Add withCredentials to request if needed
-        if (!utils.isUndefined(config.withCredentials)) request.withCredentials = !!config.withCredentials;
-        // Add responseType to request if needed
-        if (responseType && responseType !== 'json') request.responseType = config.responseType;
-        // Handle progress if needed
-        if (typeof config.onDownloadProgress === 'function') request.addEventListener('progress', config.onDownloadProgress);
-        // Not all browsers support upload events
-        if (typeof config.onUploadProgress === 'function' && request.upload) request.upload.addEventListener('progress', config.onUploadProgress);
-        if (config.cancelToken) // Handle cancellation
-        config.cancelToken.promise.then(function onCanceled(cancel) {
-            if (!request) return;
-            request.abort();
-            reject(cancel);
-            // Clean up request
-            request = null;
-        });
-        if (!requestData) requestData = null;
-        // Send the request
-        request.send(requestData);
-    });
-};
+},{"./helpers/bundle-url":"8YnfL"}],"hiWMW":[function(require,module,exports) {
+module.exports = require('./helpers/bundle-url').getBundleURL('3VpAv') + "interstellar.34782da6.jpg";
 
-},{"./../utils":"hOPY0","./../core/settle":"ehRY8","./../helpers/cookies":"dRE5q","./../helpers/buildURL":"3Jodf","../core/buildFullPath":"1RLcm","./../helpers/parseHeaders":"9TT83","./../helpers/isURLSameOrigin":"2SCwc","../core/createError":"cfxXs"}],"ehRY8":[function(require,module,exports) {
-'use strict';
-var createError = require('./createError');
-/**
- * Resolve or reject a Promise based on response status.
- *
- * @param {Function} resolve A function that resolves the promise.
- * @param {Function} reject A function that rejects the promise.
- * @param {object} response The response.
- */ module.exports = function settle(resolve, reject, response) {
-    var validateStatus = response.config.validateStatus;
-    if (!response.status || !validateStatus || validateStatus(response.status)) resolve(response);
-    else reject(createError('Request failed with status code ' + response.status, response.config, null, response.request, response));
-};
+},{"./helpers/bundle-url":"8YnfL"}],"giTk3":[function(require,module,exports) {
+module.exports = require('./helpers/bundle-url').getBundleURL('3VpAv') + "silenceofthelambs.8cb995ac.jpg";
 
-},{"./createError":"cfxXs"}],"cfxXs":[function(require,module,exports) {
-'use strict';
-var enhanceError = require('./enhanceError');
-/**
- * Create an Error with the specified message, config, error code, request and response.
- *
- * @param {string} message The error message.
- * @param {Object} config The config.
- * @param {string} [code] The error code (for example, 'ECONNABORTED').
- * @param {Object} [request] The request.
- * @param {Object} [response] The response.
- * @returns {Error} The created error.
- */ module.exports = function createError(message, config, code, request, response) {
-    var error = new Error(message);
-    return enhanceError(error, config, code, request, response);
-};
+},{"./helpers/bundle-url":"8YnfL"}],"87wS2":[function(require,module,exports) {
+module.exports = require('./helpers/bundle-url').getBundleURL('3VpAv') + "theprestige.74ac05c1.jpg";
 
-},{"./enhanceError":"3f4N4"}],"dRE5q":[function(require,module,exports) {
-'use strict';
-var utils = require('./../utils');
-module.exports = utils.isStandardBrowserEnv() ? // Standard browser envs support document.cookie
-(function standardBrowserEnv() {
-    return {
-        write: function write(name, value, expires, path, domain, secure) {
-            var cookie = [];
-            cookie.push(name + '=' + encodeURIComponent(value));
-            if (utils.isNumber(expires)) cookie.push('expires=' + new Date(expires).toGMTString());
-            if (utils.isString(path)) cookie.push('path=' + path);
-            if (utils.isString(domain)) cookie.push('domain=' + domain);
-            if (secure === true) cookie.push('secure');
-            document.cookie = cookie.join('; ');
-        },
-        read: function read(name) {
-            var match = document.cookie.match(new RegExp('(^|;\\s*)(' + name + ')=([^;]*)'));
-            return match ? decodeURIComponent(match[3]) : null;
-        },
-        remove: function remove(name) {
-            this.write(name, '', Date.now() - 86400000);
-        }
-    };
-})() : // Non standard browser env (web workers, react-native) lack needed support.
-(function nonStandardBrowserEnv() {
-    return {
-        write: function write() {
-        },
-        read: function read() {
-            return null;
-        },
-        remove: function remove() {
-        }
-    };
-})();
+},{"./helpers/bundle-url":"8YnfL"}],"5gLy6":[function(require,module,exports) {
+module.exports = require('./helpers/bundle-url').getBundleURL('3VpAv') + "knockedup.2a6644ba.jpg";
 
-},{"./../utils":"hOPY0"}],"1RLcm":[function(require,module,exports) {
-'use strict';
-var isAbsoluteURL = require('../helpers/isAbsoluteURL');
-var combineURLs = require('../helpers/combineURLs');
-/**
- * Creates a new URL by combining the baseURL with the requestedURL,
- * only when the requestedURL is not already an absolute URL.
- * If the requestURL is absolute, this function returns the requestedURL untouched.
- *
- * @param {string} baseURL The base URL
- * @param {string} requestedURL Absolute or relative URL to combine
- * @returns {string} The combined full path
- */ module.exports = function buildFullPath(baseURL, requestedURL) {
-    if (baseURL && !isAbsoluteURL(requestedURL)) return combineURLs(baseURL, requestedURL);
-    return requestedURL;
-};
+},{"./helpers/bundle-url":"8YnfL"}],"lbbeE":[function(require,module,exports) {
+module.exports = require('./helpers/bundle-url').getBundleURL('3VpAv') + "rachelgettingmarried.82bc2a71.jpg";
 
-},{"../helpers/isAbsoluteURL":"8E1N1","../helpers/combineURLs":"e9OEH"}],"8E1N1":[function(require,module,exports) {
-'use strict';
-/**
- * Determines whether the specified URL is absolute
- *
- * @param {string} url The URL to test
- * @returns {boolean} True if the specified URL is absolute, otherwise false
- */ module.exports = function isAbsoluteURL(url) {
-    // A URL is considered absolute if it begins with "<scheme>://" or "//" (protocol-relative URL).
-    // RFC 3986 defines scheme name as a sequence of characters beginning with a letter and followed
-    // by any combination of letters, digits, plus, period, or hyphen.
-    return /^([a-z][a-z\d\+\-\.]*:)?\/\//i.test(url);
-};
+},{"./helpers/bundle-url":"8YnfL"}],"t0Nlf":[function(require,module,exports) {
+module.exports = require('./helpers/bundle-url').getBundleURL('3VpAv') + "blackwidow.4d3a7ad0.jpg";
 
-},{}],"e9OEH":[function(require,module,exports) {
-'use strict';
-/**
- * Creates a new URL by combining the specified URLs
- *
- * @param {string} baseURL The base URL
- * @param {string} relativeURL The relative URL
- * @returns {string} The combined URL
- */ module.exports = function combineURLs(baseURL, relativeURL) {
-    return relativeURL ? baseURL.replace(/\/+$/, '') + '/' + relativeURL.replace(/^\/+/, '') : baseURL;
-};
-
-},{}],"9TT83":[function(require,module,exports) {
-'use strict';
-var utils = require('./../utils');
-// Headers whose duplicates are ignored by node
-// c.f. https://nodejs.org/api/http.html#http_message_headers
-var ignoreDuplicateOf = [
-    'age',
-    'authorization',
-    'content-length',
-    'content-type',
-    'etag',
-    'expires',
-    'from',
-    'host',
-    'if-modified-since',
-    'if-unmodified-since',
-    'last-modified',
-    'location',
-    'max-forwards',
-    'proxy-authorization',
-    'referer',
-    'retry-after',
-    'user-agent'
+},{"./helpers/bundle-url":"8YnfL"}],"9CzHT":[function(require,module,exports) {
+var parcelHelpers = require("@parcel/transformer-js/src/esmodule-helpers.js");
+parcelHelpers.defineInteropFlag(exports);
+var _extends = require("@babel/runtime/helpers/esm/extends");
+var _extendsDefault = parcelHelpers.interopDefault(_extends);
+var _objectWithoutPropertiesLoose = require("@babel/runtime/helpers/esm/objectWithoutPropertiesLoose");
+var _objectWithoutPropertiesLooseDefault = parcelHelpers.interopDefault(_objectWithoutPropertiesLoose);
+var _classnames = require("classnames");
+var _classnamesDefault = parcelHelpers.interopDefault(_classnames);
+var _react = require("react");
+var _reactDefault = parcelHelpers.interopDefault(_react);
+var _themeProvider = require("./ThemeProvider");
+var _safeAnchor = require("./SafeAnchor");
+var _safeAnchorDefault = parcelHelpers.interopDefault(_safeAnchor);
+var _excluded = [
+    "bsPrefix",
+    "variant",
+    "size",
+    "active",
+    "className",
+    "block",
+    "type",
+    "as"
 ];
-/**
- * Parse headers into an object
- *
- * ```
- * Date: Wed, 27 Aug 2014 08:58:49 GMT
- * Content-Type: application/json
- * Connection: keep-alive
- * Transfer-Encoding: chunked
- * ```
- *
- * @param {String} headers Headers needing to be parsed
- * @returns {Object} Headers parsed into an object
- */ module.exports = function parseHeaders(headers) {
-    var parsed = {
-    };
-    var key;
-    var val;
-    var i;
-    if (!headers) return parsed;
-    utils.forEach(headers.split('\n'), function parser(line) {
-        i = line.indexOf(':');
-        key = utils.trim(line.substr(0, i)).toLowerCase();
-        val = utils.trim(line.substr(i + 1));
-        if (key) {
-            if (parsed[key] && ignoreDuplicateOf.indexOf(key) >= 0) return;
-            if (key === 'set-cookie') parsed[key] = (parsed[key] ? parsed[key] : []).concat([
-                val
-            ]);
-            else parsed[key] = parsed[key] ? parsed[key] + ', ' + val : val;
-        }
-    });
-    return parsed;
+var defaultProps = {
+    variant: 'primary',
+    active: false,
+    disabled: false
 };
+var Button = /*#__PURE__*/ _reactDefault.default.forwardRef(function(_ref, ref) {
+    var bsPrefix = _ref.bsPrefix, variant = _ref.variant, size = _ref.size, active = _ref.active, className = _ref.className, block = _ref.block, type = _ref.type, as = _ref.as, props = _objectWithoutPropertiesLooseDefault.default(_ref, _excluded);
+    var prefix = _themeProvider.useBootstrapPrefix(bsPrefix, 'btn');
+    var classes = _classnamesDefault.default(className, prefix, active && 'active', variant && prefix + "-" + variant, block && prefix + "-block", size && prefix + "-" + size);
+    if (props.href) return(/*#__PURE__*/ _reactDefault.default.createElement(_safeAnchorDefault.default, _extendsDefault.default({
+    }, props, {
+        as: as,
+        ref: ref,
+        className: _classnamesDefault.default(classes, props.disabled && 'disabled')
+    })));
+    if (ref) props.ref = ref;
+    if (type) props.type = type;
+    else if (!as) props.type = 'button';
+    var Component = as || 'button';
+    return(/*#__PURE__*/ _reactDefault.default.createElement(Component, _extendsDefault.default({
+    }, props, {
+        className: classes
+    })));
+});
+Button.displayName = 'Button';
+Button.defaultProps = defaultProps;
+exports.default = Button;
 
-},{"./../utils":"hOPY0"}],"2SCwc":[function(require,module,exports) {
-'use strict';
-var utils = require('./../utils');
-module.exports = utils.isStandardBrowserEnv() ? // Standard browser envs have full support of the APIs needed to test
-// whether the request URL is of the same origin as current location.
-(function standardBrowserEnv() {
-    var msie = /(msie|trident)/i.test(navigator.userAgent);
-    var urlParsingNode = document.createElement('a');
-    var originURL;
-    /**
-    * Parse a URL to discover it's components
-    *
-    * @param {String} url The URL to be parsed
-    * @returns {Object}
-    */ function resolveURL(url) {
-        var href = url;
-        if (msie) {
-            // IE needs attribute set twice to normalize properties
-            urlParsingNode.setAttribute('href', href);
-            href = urlParsingNode.href;
+},{"@babel/runtime/helpers/esm/extends":"bKAu6","@babel/runtime/helpers/esm/objectWithoutPropertiesLoose":"3Rubg","classnames":"bOXOh","react":"6TuXu","./ThemeProvider":"eeqfi","./SafeAnchor":"2oMxS","@parcel/transformer-js/src/esmodule-helpers.js":"JacNc"}],"bKAu6":[function(require,module,exports) {
+var parcelHelpers = require("@parcel/transformer-js/src/esmodule-helpers.js");
+parcelHelpers.defineInteropFlag(exports);
+function _extends() {
+    _extends = Object.assign || function(target) {
+        for(var i = 1; i < arguments.length; i++){
+            var source = arguments[i];
+            for(var key in source)if (Object.prototype.hasOwnProperty.call(source, key)) target[key] = source[key];
         }
-        urlParsingNode.setAttribute('href', href);
-        // urlParsingNode provides the UrlUtils interface - http://url.spec.whatwg.org/#urlutils
-        return {
-            href: urlParsingNode.href,
-            protocol: urlParsingNode.protocol ? urlParsingNode.protocol.replace(/:$/, '') : '',
-            host: urlParsingNode.host,
-            search: urlParsingNode.search ? urlParsingNode.search.replace(/^\?/, '') : '',
-            hash: urlParsingNode.hash ? urlParsingNode.hash.replace(/^#/, '') : '',
-            hostname: urlParsingNode.hostname,
-            port: urlParsingNode.port,
-            pathname: urlParsingNode.pathname.charAt(0) === '/' ? urlParsingNode.pathname : '/' + urlParsingNode.pathname
-        };
+        return target;
+    };
+    return _extends.apply(this, arguments);
+}
+exports.default = _extends;
+
+},{"@parcel/transformer-js/src/esmodule-helpers.js":"JacNc"}],"3Rubg":[function(require,module,exports) {
+var parcelHelpers = require("@parcel/transformer-js/src/esmodule-helpers.js");
+parcelHelpers.defineInteropFlag(exports);
+function _objectWithoutPropertiesLoose(source, excluded) {
+    if (source == null) return {
+    };
+    var target = {
+    };
+    var sourceKeys = Object.keys(source);
+    var key, i;
+    for(i = 0; i < sourceKeys.length; i++){
+        key = sourceKeys[i];
+        if (excluded.indexOf(key) >= 0) continue;
+        target[key] = source[key];
     }
-    originURL = resolveURL(window.location.href);
-    /**
-    * Determine if a URL shares the same origin as the current location
-    *
-    * @param {String} requestURL The URL to test
-    * @returns {boolean} True if URL shares the same origin, otherwise false
-    */ return function isURLSameOrigin(requestURL) {
-        var parsed = utils.isString(requestURL) ? resolveURL(requestURL) : requestURL;
-        return parsed.protocol === originURL.protocol && parsed.host === originURL.host;
-    };
-})() : // Non standard browser envs (web workers, react-native) lack needed support.
-(function nonStandardBrowserEnv() {
-    return function isURLSameOrigin() {
-        return true;
-    };
+    return target;
+}
+exports.default = _objectWithoutPropertiesLoose;
+
+},{"@parcel/transformer-js/src/esmodule-helpers.js":"JacNc"}],"bOXOh":[function(require,module,exports) {
+(function() {
+    var hasOwn = {
+    }.hasOwnProperty;
+    function classNames() {
+        var classes = [];
+        for(var i = 0; i < arguments.length; i++){
+            var arg = arguments[i];
+            if (!arg) continue;
+            var argType = typeof arg;
+            if (argType === 'string' || argType === 'number') classes.push(arg);
+            else if (Array.isArray(arg)) {
+                if (arg.length) {
+                    var inner = classNames.apply(null, arg);
+                    if (inner) classes.push(inner);
+                }
+            } else if (argType === 'object') {
+                if (arg.toString === Object.prototype.toString) {
+                    for(var key in arg)if (hasOwn.call(arg, key) && arg[key]) classes.push(key);
+                } else classes.push(arg.toString());
+            }
+        }
+        return classes.join(' ');
+    }
+    if (typeof module !== 'undefined' && module.exports) {
+        classNames.default = classNames;
+        module.exports = classNames;
+    } else if (typeof define === 'function' && typeof define.amd === 'object' && define.amd) // register as 'classnames', consistent with npm package name
+    define('classnames', [], function() {
+        return classNames;
+    });
+    else window.classNames = classNames;
 })();
 
-},{"./../utils":"hOPY0"}],"6KzET":[function(require,module,exports) {
-'use strict';
-module.exports = function isCancel(value) {
-    return !!(value && value.__CANCEL__);
-};
-
-},{}],"8vb7m":[function(require,module,exports) {
-'use strict';
-var utils = require('../utils');
-/**
- * Config-specific merge-function which creates a new config-object
- * by merging two configuration objects together.
- *
- * @param {Object} config1
- * @param {Object} config2
- * @returns {Object} New object resulting from merging config2 to config1
- */ module.exports = function mergeConfig(config1, config2) {
-    // eslint-disable-next-line no-param-reassign
-    config2 = config2 || {
-    };
-    var config = {
-    };
-    var valueFromConfig2Keys = [
-        'url',
-        'method',
-        'data'
-    ];
-    var mergeDeepPropertiesKeys = [
-        'headers',
-        'auth',
-        'proxy',
-        'params'
-    ];
-    var defaultToConfig2Keys = [
-        'baseURL',
-        'transformRequest',
-        'transformResponse',
-        'paramsSerializer',
-        'timeout',
-        'timeoutMessage',
-        'withCredentials',
-        'adapter',
-        'responseType',
-        'xsrfCookieName',
-        'xsrfHeaderName',
-        'onUploadProgress',
-        'onDownloadProgress',
-        'decompress',
-        'maxContentLength',
-        'maxBodyLength',
-        'maxRedirects',
-        'transport',
-        'httpAgent',
-        'httpsAgent',
-        'cancelToken',
-        'socketPath',
-        'responseEncoding'
-    ];
-    var directMergeKeys = [
-        'validateStatus'
-    ];
-    function getMergedValue(target, source) {
-        if (utils.isPlainObject(target) && utils.isPlainObject(source)) return utils.merge(target, source);
-        else if (utils.isPlainObject(source)) return utils.merge({
-        }, source);
-        else if (utils.isArray(source)) return source.slice();
-        return source;
-    }
-    function mergeDeepProperties(prop) {
-        if (!utils.isUndefined(config2[prop])) config[prop] = getMergedValue(config1[prop], config2[prop]);
-        else if (!utils.isUndefined(config1[prop])) config[prop] = getMergedValue(undefined, config1[prop]);
-    }
-    utils.forEach(valueFromConfig2Keys, function valueFromConfig2(prop) {
-        if (!utils.isUndefined(config2[prop])) config[prop] = getMergedValue(undefined, config2[prop]);
-    });
-    utils.forEach(mergeDeepPropertiesKeys, mergeDeepProperties);
-    utils.forEach(defaultToConfig2Keys, function defaultToConfig2(prop) {
-        if (!utils.isUndefined(config2[prop])) config[prop] = getMergedValue(undefined, config2[prop]);
-        else if (!utils.isUndefined(config1[prop])) config[prop] = getMergedValue(undefined, config1[prop]);
-    });
-    utils.forEach(directMergeKeys, function merge(prop) {
-        if (prop in config2) config[prop] = getMergedValue(config1[prop], config2[prop]);
-        else if (prop in config1) config[prop] = getMergedValue(undefined, config1[prop]);
-    });
-    var axiosKeys = valueFromConfig2Keys.concat(mergeDeepPropertiesKeys).concat(defaultToConfig2Keys).concat(directMergeKeys);
-    var otherKeys = Object.keys(config1).concat(Object.keys(config2)).filter(function filterAxiosKeys(key) {
-        return axiosKeys.indexOf(key) === -1;
-    });
-    utils.forEach(otherKeys, mergeDeepProperties);
-    return config;
-};
-
-},{"../utils":"hOPY0"}],"4sigL":[function(require,module,exports) {
-'use strict';
-var pkg = require('./../../package.json');
-var validators = {
-};
-// eslint-disable-next-line func-names
-[
-    'object',
-    'boolean',
-    'number',
-    'function',
-    'string',
-    'symbol'
-].forEach(function(type, i) {
-    validators[type] = function validator(thing) {
-        return typeof thing === type || 'a' + (i < 1 ? 'n ' : ' ') + type;
-    };
+},{}],"eeqfi":[function(require,module,exports) {
+var parcelHelpers = require("@parcel/transformer-js/src/esmodule-helpers.js");
+parcelHelpers.defineInteropFlag(exports);
+parcelHelpers.export(exports, "useBootstrapPrefix", ()=>useBootstrapPrefix
+);
+parcelHelpers.export(exports, "createBootstrapComponent", ()=>createBootstrapComponent
+);
+parcelHelpers.export(exports, "ThemeConsumer", ()=>Consumer
+);
+var _extends = require("@babel/runtime/helpers/esm/extends");
+var _extendsDefault = parcelHelpers.interopDefault(_extends);
+var _react = require("react");
+var _reactDefault = parcelHelpers.interopDefault(_react);
+var ThemeContext = /*#__PURE__*/ _reactDefault.default.createContext({
 });
-var deprecatedWarnings = {
-};
-var currentVerArr = pkg.version.split('.');
-/**
- * Compare package versions
- * @param {string} version
- * @param {string?} thanVersion
- * @returns {boolean}
- */ function isOlderVersion(version, thanVersion) {
-    var pkgVersionArr = thanVersion ? thanVersion.split('.') : currentVerArr;
-    var destVer = version.split('.');
-    for(var i = 0; i < 3; i++){
-        if (pkgVersionArr[i] > destVer[i]) return true;
-        else if (pkgVersionArr[i] < destVer[i]) return false;
-    }
-    return false;
+var Consumer = ThemeContext.Consumer, Provider = ThemeContext.Provider;
+function ThemeProvider(_ref) {
+    var prefixes = _ref.prefixes, children = _ref.children;
+    var copiedPrefixes = _react.useMemo(function() {
+        return _extendsDefault.default({
+        }, prefixes);
+    }, [
+        prefixes
+    ]);
+    return(/*#__PURE__*/ _reactDefault.default.createElement(Provider, {
+        value: copiedPrefixes
+    }, children));
+}
+function useBootstrapPrefix(prefix, defaultPrefix) {
+    var prefixes = _react.useContext(ThemeContext);
+    return prefix || prefixes[defaultPrefix] || defaultPrefix;
+}
+function createBootstrapComponent(Component, opts) {
+    if (typeof opts === 'string') opts = {
+        prefix: opts
+    };
+    var isClassy = Component.prototype && Component.prototype.isReactComponent; // If it's a functional component make sure we don't break it with a ref
+    var _opts = opts, prefix = _opts.prefix, _opts$forwardRefAs = _opts.forwardRefAs, forwardRefAs = _opts$forwardRefAs === void 0 ? isClassy ? 'ref' : 'innerRef' : _opts$forwardRefAs;
+    var Wrapped = /*#__PURE__*/ _reactDefault.default.forwardRef(function(_ref2, ref) {
+        var props = _extendsDefault.default({
+        }, _ref2);
+        props[forwardRefAs] = ref;
+        var bsPrefix = useBootstrapPrefix(props.bsPrefix, prefix);
+        return(/*#__PURE__*/ _reactDefault.default.createElement(Component, _extendsDefault.default({
+        }, props, {
+            bsPrefix: bsPrefix
+        })));
+    });
+    Wrapped.displayName = "Bootstrap(" + (Component.displayName || Component.name) + ")";
+    return Wrapped;
+}
+exports.default = ThemeProvider;
+
+},{"@babel/runtime/helpers/esm/extends":"bKAu6","react":"6TuXu","@parcel/transformer-js/src/esmodule-helpers.js":"JacNc"}],"2oMxS":[function(require,module,exports) {
+var parcelHelpers = require("@parcel/transformer-js/src/esmodule-helpers.js");
+parcelHelpers.defineInteropFlag(exports);
+var _extends = require("@babel/runtime/helpers/esm/extends");
+var _extendsDefault = parcelHelpers.interopDefault(_extends);
+var _objectWithoutPropertiesLoose = require("@babel/runtime/helpers/esm/objectWithoutPropertiesLoose");
+var _objectWithoutPropertiesLooseDefault = parcelHelpers.interopDefault(_objectWithoutPropertiesLoose);
+var _react = require("react");
+var _reactDefault = parcelHelpers.interopDefault(_react);
+var _createChainedFunction = require("./createChainedFunction");
+var _createChainedFunctionDefault = parcelHelpers.interopDefault(_createChainedFunction);
+var _excluded = [
+    "as",
+    "disabled",
+    "onKeyDown"
+];
+function isTrivialHref(href) {
+    return !href || href.trim() === '#';
 }
 /**
- * Transitional option validator
- * @param {function|boolean?} validator
- * @param {string?} version
- * @param {string} message
- * @returns {function}
- */ validators.transitional = function transitional(validator, version, message) {
-    var isDeprecated = version && isOlderVersion(version);
-    function formatMessage(opt, desc) {
-        return '[Axios v' + pkg.version + '] Transitional option \'' + opt + '\'' + desc + (message ? '. ' + message : '');
-    }
-    // eslint-disable-next-line func-names
-    return function(value, opt, opts) {
-        if (validator === false) throw new Error(formatMessage(opt, ' has been removed in ' + version));
-        if (isDeprecated && !deprecatedWarnings[opt]) {
-            deprecatedWarnings[opt] = true;
-            // eslint-disable-next-line no-console
-            console.warn(formatMessage(opt, ' has been deprecated since v' + version + ' and will be removed in the near future'));
+ * There are situations due to browser quirks or Bootstrap CSS where
+ * an anchor tag is needed, when semantically a button tag is the
+ * better choice. SafeAnchor ensures that when an anchor is used like a
+ * button its accessible. It also emulates input `disabled` behavior for
+ * links, which is usually desirable for Buttons, NavItems, DropdownItems, etc.
+ */ var SafeAnchor = /*#__PURE__*/ _reactDefault.default.forwardRef(function(_ref, ref) {
+    var _ref$as = _ref.as, Component = _ref$as === void 0 ? 'a' : _ref$as, disabled = _ref.disabled, onKeyDown = _ref.onKeyDown, props = _objectWithoutPropertiesLooseDefault.default(_ref, _excluded);
+    var handleClick = function handleClick1(event) {
+        var href = props.href, onClick = props.onClick;
+        if (disabled || isTrivialHref(href)) event.preventDefault();
+        if (disabled) {
+            event.stopPropagation();
+            return;
         }
-        return validator ? validator(value, opt, opts) : true;
+        if (onClick) onClick(event);
     };
-};
-/**
- * Assert object's properties type
- * @param {object} options
- * @param {object} schema
- * @param {boolean?} allowUnknown
- */ function assertOptions(options, schema, allowUnknown) {
-    if (typeof options !== 'object') throw new TypeError('options must be an object');
-    var keys = Object.keys(options);
-    var i = keys.length;
-    while((i--) > 0){
-        var opt = keys[i];
-        var validator = schema[opt];
-        if (validator) {
-            var value = options[opt];
-            var result = value === undefined || validator(value, opt, options);
-            if (result !== true) throw new TypeError('option ' + opt + ' must be ' + result);
-            continue;
+    var handleKeyDown = function handleKeyDown1(event) {
+        if (event.key === ' ') {
+            event.preventDefault();
+            handleClick(event);
         }
-        if (allowUnknown !== true) throw Error('Unknown option ' + opt);
+    };
+    if (isTrivialHref(props.href)) {
+        props.role = props.role || 'button'; // we want to make sure there is a href attribute on the node
+        // otherwise, the cursor incorrectly styled (except with role='button')
+        props.href = props.href || '#';
     }
+    if (disabled) {
+        props.tabIndex = -1;
+        props['aria-disabled'] = true;
+    }
+    return(/*#__PURE__*/ _reactDefault.default.createElement(Component, _extendsDefault.default({
+        ref: ref
+    }, props, {
+        onClick: handleClick,
+        onKeyDown: _createChainedFunctionDefault.default(handleKeyDown, onKeyDown)
+    })));
+});
+SafeAnchor.displayName = 'SafeAnchor';
+exports.default = SafeAnchor;
+
+},{"@babel/runtime/helpers/esm/extends":"bKAu6","@babel/runtime/helpers/esm/objectWithoutPropertiesLoose":"3Rubg","react":"6TuXu","./createChainedFunction":"NDbpV","@parcel/transformer-js/src/esmodule-helpers.js":"JacNc"}],"NDbpV":[function(require,module,exports) {
+var parcelHelpers = require("@parcel/transformer-js/src/esmodule-helpers.js");
+parcelHelpers.defineInteropFlag(exports);
+/**
+ * Safe chained function
+ *
+ * Will only create a new function if needed,
+ * otherwise will pass back existing functions or null.
+ *
+ * @param {function} functions to chain
+ * @returns {function|null}
+ */ function createChainedFunction() {
+    for(var _len = arguments.length, funcs = new Array(_len), _key = 0; _key < _len; _key++)funcs[_key] = arguments[_key];
+    return funcs.filter(function(f) {
+        return f != null;
+    }).reduce(function(acc, f) {
+        if (typeof f !== 'function') throw new Error('Invalid Argument Type, must only provide functions, undefined, or null.');
+        if (acc === null) return f;
+        return function chainedFunction() {
+            for(var _len2 = arguments.length, args = new Array(_len2), _key2 = 0; _key2 < _len2; _key2++)args[_key2] = arguments[_key2];
+            // @ts-ignore
+            acc.apply(this, args); // @ts-ignore
+            f.apply(this, args);
+        };
+    }, null);
 }
-module.exports = {
-    isOlderVersion: isOlderVersion,
-    assertOptions: assertOptions,
-    validators: validators
+exports.default = createChainedFunction;
+
+},{"@parcel/transformer-js/src/esmodule-helpers.js":"JacNc"}],"MoOk8":[function(require,module,exports) {
+var parcelHelpers = require("@parcel/transformer-js/src/esmodule-helpers.js");
+parcelHelpers.defineInteropFlag(exports);
+var _extends = require("@babel/runtime/helpers/esm/extends");
+var _extendsDefault = parcelHelpers.interopDefault(_extends);
+var _objectWithoutPropertiesLoose = require("@babel/runtime/helpers/esm/objectWithoutPropertiesLoose");
+var _objectWithoutPropertiesLooseDefault = parcelHelpers.interopDefault(_objectWithoutPropertiesLoose);
+var _classnames = require("classnames");
+var _classnamesDefault = parcelHelpers.interopDefault(_classnames);
+var _react = require("react");
+var _reactDefault = parcelHelpers.interopDefault(_react);
+var _themeProvider = require("./ThemeProvider");
+var _createWithBsPrefix = require("./createWithBsPrefix");
+var _createWithBsPrefixDefault = parcelHelpers.interopDefault(_createWithBsPrefix);
+var _divWithClassName = require("./divWithClassName");
+var _divWithClassNameDefault = parcelHelpers.interopDefault(_divWithClassName);
+var _cardContext = require("./CardContext");
+var _cardContextDefault = parcelHelpers.interopDefault(_cardContext);
+var _cardImg = require("./CardImg");
+var _cardImgDefault = parcelHelpers.interopDefault(_cardImg);
+var _excluded = [
+    "bsPrefix",
+    "className",
+    "bg",
+    "text",
+    "border",
+    "body",
+    "children",
+    "as"
+];
+var DivStyledAsH5 = _divWithClassNameDefault.default('h5');
+var DivStyledAsH6 = _divWithClassNameDefault.default('h6');
+var CardBody = _createWithBsPrefixDefault.default('card-body');
+var CardTitle = _createWithBsPrefixDefault.default('card-title', {
+    Component: DivStyledAsH5
+});
+var CardSubtitle = _createWithBsPrefixDefault.default('card-subtitle', {
+    Component: DivStyledAsH6
+});
+var CardLink = _createWithBsPrefixDefault.default('card-link', {
+    Component: 'a'
+});
+var CardText = _createWithBsPrefixDefault.default('card-text', {
+    Component: 'p'
+});
+var CardHeader = _createWithBsPrefixDefault.default('card-header');
+var CardFooter = _createWithBsPrefixDefault.default('card-footer');
+var CardImgOverlay = _createWithBsPrefixDefault.default('card-img-overlay');
+var defaultProps = {
+    body: false
 };
+var Card = /*#__PURE__*/ _reactDefault.default.forwardRef(function(_ref, ref) {
+    var bsPrefix = _ref.bsPrefix, className = _ref.className, bg = _ref.bg, text = _ref.text, border = _ref.border, body = _ref.body, children = _ref.children, _ref$as = _ref.as, Component = _ref$as === void 0 ? 'div' : _ref$as, props = _objectWithoutPropertiesLooseDefault.default(_ref, _excluded);
+    var prefix = _themeProvider.useBootstrapPrefix(bsPrefix, 'card');
+    var cardContext = _react.useMemo(function() {
+        return {
+            cardHeaderBsPrefix: prefix + "-header"
+        };
+    }, [
+        prefix
+    ]);
+    return(/*#__PURE__*/ _reactDefault.default.createElement(_cardContextDefault.default.Provider, {
+        value: cardContext
+    }, /*#__PURE__*/ _reactDefault.default.createElement(Component, _extendsDefault.default({
+        ref: ref
+    }, props, {
+        className: _classnamesDefault.default(className, prefix, bg && "bg-" + bg, text && "text-" + text, border && "border-" + border)
+    }), body ? /*#__PURE__*/ // @ts-ignore
+    _reactDefault.default.createElement(CardBody, null, children) : children)));
+});
+Card.displayName = 'Card';
+Card.defaultProps = defaultProps;
+Card.Img = _cardImgDefault.default;
+Card.Title = CardTitle;
+Card.Subtitle = CardSubtitle;
+Card.Body = CardBody;
+Card.Link = CardLink;
+Card.Text = CardText;
+Card.Header = CardHeader;
+Card.Footer = CardFooter;
+Card.ImgOverlay = CardImgOverlay;
+exports.default = Card;
 
-},{"./../../package.json":"5vay1"}],"5vay1":[function(require,module,exports) {
-module.exports = JSON.parse("{\"_from\":\"axios\",\"_id\":\"axios@0.21.4\",\"_inBundle\":false,\"_integrity\":\"sha512-ut5vewkiu8jjGBdqpM44XxjuCjq9LAKeHVmoVfHVzy8eHgxxq8SbAVQNovDA8mVi05kP0Ea/n/UzcSHcTJQfNg==\",\"_location\":\"/axios\",\"_phantomChildren\":{},\"_requested\":{\"type\":\"tag\",\"registry\":true,\"raw\":\"axios\",\"name\":\"axios\",\"escapedName\":\"axios\",\"rawSpec\":\"\",\"saveSpec\":null,\"fetchSpec\":\"latest\"},\"_requiredBy\":[\"#USER\",\"/\"],\"_resolved\":\"https://registry.npmjs.org/axios/-/axios-0.21.4.tgz\",\"_shasum\":\"c67b90dc0568e5c1cf2b0b858c43ba28e2eda575\",\"_spec\":\"axios\",\"_where\":\"C:\\\\Users\\\\Ivan\\\\Desktop\\\\CareerFoundry\\\\JavaScript\\\\ServerSideProgramming\\\\myFlix-client\",\"author\":{\"name\":\"Matt Zabriskie\"},\"browser\":{\"./lib/adapters/http.js\":\"./lib/adapters/xhr.js\"},\"bugs\":{\"url\":\"https://github.com/axios/axios/issues\"},\"bundleDependencies\":false,\"bundlesize\":[{\"path\":\"./dist/axios.min.js\",\"threshold\":\"5kB\"}],\"dependencies\":{\"follow-redirects\":\"^1.14.0\"},\"deprecated\":false,\"description\":\"Promise based HTTP client for the browser and node.js\",\"devDependencies\":{\"coveralls\":\"^3.0.0\",\"es6-promise\":\"^4.2.4\",\"grunt\":\"^1.3.0\",\"grunt-banner\":\"^0.6.0\",\"grunt-cli\":\"^1.2.0\",\"grunt-contrib-clean\":\"^1.1.0\",\"grunt-contrib-watch\":\"^1.0.0\",\"grunt-eslint\":\"^23.0.0\",\"grunt-karma\":\"^4.0.0\",\"grunt-mocha-test\":\"^0.13.3\",\"grunt-ts\":\"^6.0.0-beta.19\",\"grunt-webpack\":\"^4.0.2\",\"istanbul-instrumenter-loader\":\"^1.0.0\",\"jasmine-core\":\"^2.4.1\",\"karma\":\"^6.3.2\",\"karma-chrome-launcher\":\"^3.1.0\",\"karma-firefox-launcher\":\"^2.1.0\",\"karma-jasmine\":\"^1.1.1\",\"karma-jasmine-ajax\":\"^0.1.13\",\"karma-safari-launcher\":\"^1.0.0\",\"karma-sauce-launcher\":\"^4.3.6\",\"karma-sinon\":\"^1.0.5\",\"karma-sourcemap-loader\":\"^0.3.8\",\"karma-webpack\":\"^4.0.2\",\"load-grunt-tasks\":\"^3.5.2\",\"minimist\":\"^1.2.0\",\"mocha\":\"^8.2.1\",\"sinon\":\"^4.5.0\",\"terser-webpack-plugin\":\"^4.2.3\",\"typescript\":\"^4.0.5\",\"url-search-params\":\"^0.10.0\",\"webpack\":\"^4.44.2\",\"webpack-dev-server\":\"^3.11.0\"},\"homepage\":\"https://axios-http.com\",\"jsdelivr\":\"dist/axios.min.js\",\"keywords\":[\"xhr\",\"http\",\"ajax\",\"promise\",\"node\"],\"license\":\"MIT\",\"main\":\"index.js\",\"name\":\"axios\",\"repository\":{\"type\":\"git\",\"url\":\"git+https://github.com/axios/axios.git\"},\"scripts\":{\"build\":\"NODE_ENV=production grunt build\",\"coveralls\":\"cat coverage/lcov.info | ./node_modules/coveralls/bin/coveralls.js\",\"examples\":\"node ./examples/server.js\",\"fix\":\"eslint --fix lib/**/*.js\",\"postversion\":\"git push && git push --tags\",\"preversion\":\"npm test\",\"start\":\"node ./sandbox/server.js\",\"test\":\"grunt test\",\"version\":\"npm run build && grunt version && git add -A dist && git add CHANGELOG.md bower.json package.json\"},\"typings\":\"./index.d.ts\",\"unpkg\":\"dist/axios.min.js\",\"version\":\"0.21.4\"}");
-
-},{}],"iGO1D":[function(require,module,exports) {
-'use strict';
-/**
- * A `Cancel` is an object that is thrown when an operation is canceled.
- *
- * @class
- * @param {string=} message The message.
- */ function Cancel(message) {
-    this.message = message;
+},{"@babel/runtime/helpers/esm/extends":"bKAu6","@babel/runtime/helpers/esm/objectWithoutPropertiesLoose":"3Rubg","classnames":"bOXOh","react":"6TuXu","./ThemeProvider":"eeqfi","./createWithBsPrefix":"8AqEH","./divWithClassName":"GBmBH","./CardContext":"9AVwu","./CardImg":"5GKOF","@parcel/transformer-js/src/esmodule-helpers.js":"JacNc"}],"8AqEH":[function(require,module,exports) {
+var parcelHelpers = require("@parcel/transformer-js/src/esmodule-helpers.js");
+parcelHelpers.defineInteropFlag(exports);
+var _extends = require("@babel/runtime/helpers/esm/extends");
+var _extendsDefault = parcelHelpers.interopDefault(_extends);
+var _objectWithoutPropertiesLoose = require("@babel/runtime/helpers/esm/objectWithoutPropertiesLoose");
+var _objectWithoutPropertiesLooseDefault = parcelHelpers.interopDefault(_objectWithoutPropertiesLoose);
+var _classnames = require("classnames");
+var _classnamesDefault = parcelHelpers.interopDefault(_classnames);
+var _camelize = require("dom-helpers/camelize");
+var _camelizeDefault = parcelHelpers.interopDefault(_camelize);
+var _react = require("react");
+var _reactDefault = parcelHelpers.interopDefault(_react);
+var _themeProvider = require("./ThemeProvider");
+var _excluded = [
+    "className",
+    "bsPrefix",
+    "as"
+];
+var pascalCase = function pascalCase1(str) {
+    return str[0].toUpperCase() + _camelizeDefault.default(str).slice(1);
+};
+function createWithBsPrefix(prefix, _temp) {
+    var _ref = _temp === void 0 ? {
+    } : _temp, _ref$displayName = _ref.displayName, displayName = _ref$displayName === void 0 ? pascalCase(prefix) : _ref$displayName, Component = _ref.Component, defaultProps = _ref.defaultProps;
+    var BsComponent = /*#__PURE__*/ _reactDefault.default.forwardRef(function(_ref2, ref) {
+        var className = _ref2.className, bsPrefix = _ref2.bsPrefix, _ref2$as = _ref2.as, Tag = _ref2$as === void 0 ? Component || 'div' : _ref2$as, props = _objectWithoutPropertiesLooseDefault.default(_ref2, _excluded);
+        var resolvedPrefix = _themeProvider.useBootstrapPrefix(bsPrefix, prefix);
+        return(/*#__PURE__*/ _reactDefault.default.createElement(Tag, _extendsDefault.default({
+            ref: ref,
+            className: _classnamesDefault.default(className, resolvedPrefix)
+        }, props)));
+    });
+    BsComponent.defaultProps = defaultProps;
+    BsComponent.displayName = displayName;
+    return BsComponent;
 }
-Cancel.prototype.toString = function toString() {
-    return 'Cancel' + (this.message ? ': ' + this.message : '');
-};
-Cancel.prototype.__CANCEL__ = true;
-module.exports = Cancel;
+exports.default = createWithBsPrefix;
 
-},{}],"6kJtU":[function(require,module,exports) {
-'use strict';
-var Cancel = require('./Cancel');
-/**
- * A `CancelToken` is an object that can be used to request cancellation of an operation.
- *
- * @class
- * @param {Function} executor The executor function.
- */ function CancelToken(executor) {
-    if (typeof executor !== 'function') throw new TypeError('executor must be a function.');
-    var resolvePromise;
-    this.promise = new Promise(function promiseExecutor(resolve) {
-        resolvePromise = resolve;
-    });
-    var token = this;
-    executor(function cancel(message) {
-        if (token.reason) // Cancellation has already been requested
-        return;
-        token.reason = new Cancel(message);
-        resolvePromise(token.reason);
+},{"@babel/runtime/helpers/esm/extends":"bKAu6","@babel/runtime/helpers/esm/objectWithoutPropertiesLoose":"3Rubg","classnames":"bOXOh","dom-helpers/camelize":"aJYM3","react":"6TuXu","./ThemeProvider":"eeqfi","@parcel/transformer-js/src/esmodule-helpers.js":"JacNc"}],"aJYM3":[function(require,module,exports) {
+var parcelHelpers = require("@parcel/transformer-js/src/esmodule-helpers.js");
+parcelHelpers.defineInteropFlag(exports);
+var rHyphen = /-(.)/g;
+function camelize(string) {
+    return string.replace(rHyphen, function(_, chr) {
+        return chr.toUpperCase();
     });
 }
-/**
- * Throws a `Cancel` if cancellation has been requested.
- */ CancelToken.prototype.throwIfRequested = function throwIfRequested() {
-    if (this.reason) throw this.reason;
-};
-/**
- * Returns an object that contains a new `CancelToken` and a function that, when called,
- * cancels the `CancelToken`.
- */ CancelToken.source = function source() {
-    var cancel;
-    var token = new CancelToken(function executor(c) {
-        cancel = c;
-    });
-    return {
-        token: token,
-        cancel: cancel
-    };
-};
-module.exports = CancelToken;
+exports.default = camelize;
 
-},{"./Cancel":"iGO1D"}],"3fmMu":[function(require,module,exports) {
-'use strict';
-/**
- * Syntactic sugar for invoking a function and expanding an array for arguments.
- *
- * Common use case would be to use `Function.prototype.apply`.
- *
- *  ```js
- *  function f(x, y, z) {}
- *  var args = [1, 2, 3];
- *  f.apply(null, args);
- *  ```
- *
- * With `spread` this example can be re-written.
- *
- *  ```js
- *  spread(function(x, y, z) {})([1, 2, 3]);
- *  ```
- *
- * @param {Function} callback
- * @returns {Function}
- */ module.exports = function spread(callback) {
-    return function wrap(arr) {
-        return callback.apply(null, arr);
-    };
+},{"@parcel/transformer-js/src/esmodule-helpers.js":"JacNc"}],"GBmBH":[function(require,module,exports) {
+var parcelHelpers = require("@parcel/transformer-js/src/esmodule-helpers.js");
+parcelHelpers.defineInteropFlag(exports);
+var _extends = require("@babel/runtime/helpers/esm/extends");
+var _extendsDefault = parcelHelpers.interopDefault(_extends);
+var _react = require("react");
+var _reactDefault = parcelHelpers.interopDefault(_react);
+var _classnames = require("classnames");
+var _classnamesDefault = parcelHelpers.interopDefault(_classnames);
+exports.default = function(className) {
+    return(/*#__PURE__*/ _reactDefault.default.forwardRef(function(p, ref) {
+        return(/*#__PURE__*/ _reactDefault.default.createElement("div", _extendsDefault.default({
+        }, p, {
+            ref: ref,
+            className: _classnamesDefault.default(p.className, className)
+        })));
+    }));
 };
 
-},{}],"1NqDP":[function(require,module,exports) {
-'use strict';
-/**
- * Determines whether the payload is an error thrown by Axios
- *
- * @param {*} payload The value to test
- * @returns {boolean} True if the payload is an error thrown by Axios, otherwise false
- */ module.exports = function isAxiosError(payload) {
-    return typeof payload === 'object' && payload.isAxiosError === true;
-};
+},{"@babel/runtime/helpers/esm/extends":"bKAu6","react":"6TuXu","classnames":"bOXOh","@parcel/transformer-js/src/esmodule-helpers.js":"JacNc"}],"9AVwu":[function(require,module,exports) {
+var parcelHelpers = require("@parcel/transformer-js/src/esmodule-helpers.js");
+parcelHelpers.defineInteropFlag(exports);
+var _react = require("react");
+var _reactDefault = parcelHelpers.interopDefault(_react);
+var context = /*#__PURE__*/ _reactDefault.default.createContext(null);
+context.displayName = 'CardContext';
+exports.default = context;
 
-},{}],"cpyQW":[function(require,module,exports) {
+},{"react":"6TuXu","@parcel/transformer-js/src/esmodule-helpers.js":"JacNc"}],"5GKOF":[function(require,module,exports) {
+var parcelHelpers = require("@parcel/transformer-js/src/esmodule-helpers.js");
+parcelHelpers.defineInteropFlag(exports);
+var _extends = require("@babel/runtime/helpers/esm/extends");
+var _extendsDefault = parcelHelpers.interopDefault(_extends);
+var _objectWithoutPropertiesLoose = require("@babel/runtime/helpers/esm/objectWithoutPropertiesLoose");
+var _objectWithoutPropertiesLooseDefault = parcelHelpers.interopDefault(_objectWithoutPropertiesLoose);
+var _classnames = require("classnames");
+var _classnamesDefault = parcelHelpers.interopDefault(_classnames);
+var _react = require("react");
+var _reactDefault = parcelHelpers.interopDefault(_react);
+var _themeProvider = require("./ThemeProvider");
+var _excluded = [
+    "bsPrefix",
+    "className",
+    "variant",
+    "as"
+];
+var defaultProps = {
+    variant: null
+};
+var CardImg = /*#__PURE__*/ _reactDefault.default.forwardRef(function(_ref, ref) {
+    var bsPrefix = _ref.bsPrefix, className = _ref.className, variant = _ref.variant, _ref$as = _ref.as, Component = _ref$as === void 0 ? 'img' : _ref$as, props = _objectWithoutPropertiesLooseDefault.default(_ref, _excluded);
+    var prefix = _themeProvider.useBootstrapPrefix(bsPrefix, 'card-img');
+    return(/*#__PURE__*/ _reactDefault.default.createElement(Component, _extendsDefault.default({
+        ref: ref,
+        className: _classnamesDefault.default(variant ? prefix + "-" + variant : prefix, className)
+    }, props)));
+});
+CardImg.displayName = 'CardImg';
+CardImg.defaultProps = defaultProps;
+exports.default = CardImg;
+
+},{"@babel/runtime/helpers/esm/extends":"bKAu6","@babel/runtime/helpers/esm/objectWithoutPropertiesLoose":"3Rubg","classnames":"bOXOh","react":"6TuXu","./ThemeProvider":"eeqfi","@parcel/transformer-js/src/esmodule-helpers.js":"JacNc"}],"kvL93":[function() {},{}],"cpyQW":[function(require,module,exports) {
 var parcelHelpers = require("@parcel/transformer-js/src/esmodule-helpers.js");
 parcelHelpers.defineInteropFlag(exports);
 parcelHelpers.export(exports, "MemoryRouter", ()=>_reactRouter.MemoryRouter
@@ -29601,196 +26960,1776 @@ module.exports = Array.isArray || function(arr) {
     return Object.prototype.toString.call(arr) == '[object Array]';
 };
 
-},{}],"1kGQ5":[function(require,module,exports) {
-var $parcel$ReactRefreshHelpers$2519 = require("@parcel/transformer-react-refresh-wrap/lib/helpers/helpers.js");
-var prevRefreshReg = window.$RefreshReg$;
-var prevRefreshSig = window.$RefreshSig$;
-$parcel$ReactRefreshHelpers$2519.prelude(module);
+},{}],"jfzb6":[function(require,module,exports) {
+'use strict';
+var reactIs = require('react-is');
+/**
+ * Copyright 2015, Yahoo! Inc.
+ * Copyrights licensed under the New BSD License. See the accompanying LICENSE file for terms.
+ */ var REACT_STATICS = {
+    childContextTypes: true,
+    contextType: true,
+    contextTypes: true,
+    defaultProps: true,
+    displayName: true,
+    getDefaultProps: true,
+    getDerivedStateFromError: true,
+    getDerivedStateFromProps: true,
+    mixins: true,
+    propTypes: true,
+    type: true
+};
+var KNOWN_STATICS = {
+    name: true,
+    length: true,
+    prototype: true,
+    caller: true,
+    callee: true,
+    arguments: true,
+    arity: true
+};
+var FORWARD_REF_STATICS = {
+    '$$typeof': true,
+    render: true,
+    defaultProps: true,
+    displayName: true,
+    propTypes: true
+};
+var MEMO_STATICS = {
+    '$$typeof': true,
+    compare: true,
+    defaultProps: true,
+    displayName: true,
+    propTypes: true,
+    type: true
+};
+var TYPE_STATICS = {
+};
+TYPE_STATICS[reactIs.ForwardRef] = FORWARD_REF_STATICS;
+TYPE_STATICS[reactIs.Memo] = MEMO_STATICS;
+function getStatics(component) {
+    // React v16.11 and below
+    if (reactIs.isMemo(component)) return MEMO_STATICS;
+     // React v16.12 and above
+    return TYPE_STATICS[component['$$typeof']] || REACT_STATICS;
+}
+var defineProperty = Object.defineProperty;
+var getOwnPropertyNames = Object.getOwnPropertyNames;
+var getOwnPropertySymbols = Object.getOwnPropertySymbols;
+var getOwnPropertyDescriptor = Object.getOwnPropertyDescriptor;
+var getPrototypeOf = Object.getPrototypeOf;
+var objectPrototype = Object.prototype;
+function hoistNonReactStatics(targetComponent, sourceComponent, blacklist) {
+    if (typeof sourceComponent !== 'string') {
+        // don't hoist over string (html) components
+        if (objectPrototype) {
+            var inheritedComponent = getPrototypeOf(sourceComponent);
+            if (inheritedComponent && inheritedComponent !== objectPrototype) hoistNonReactStatics(targetComponent, inheritedComponent, blacklist);
+        }
+        var keys = getOwnPropertyNames(sourceComponent);
+        if (getOwnPropertySymbols) keys = keys.concat(getOwnPropertySymbols(sourceComponent));
+        var targetStatics = getStatics(targetComponent);
+        var sourceStatics = getStatics(sourceComponent);
+        for(var i = 0; i < keys.length; ++i){
+            var key = keys[i];
+            if (!KNOWN_STATICS[key] && !(blacklist && blacklist[key]) && !(sourceStatics && sourceStatics[key]) && !(targetStatics && targetStatics[key])) {
+                var descriptor = getOwnPropertyDescriptor(sourceComponent, key);
+                try {
+                    // Avoid failures from read-only properties
+                    defineProperty(targetComponent, key, descriptor);
+                } catch (e) {
+                }
+            }
+        }
+    }
+    return targetComponent;
+}
+module.exports = hoistNonReactStatics;
 
-try {
-var parcelHelpers = require("@parcel/transformer-js/src/esmodule-helpers.js");
-parcelHelpers.defineInteropFlag(exports);
-var _jsxRuntime = require("react/jsx-runtime");
-var _react = require("react");
-var _reactDefault = parcelHelpers.interopDefault(_react);
-var _col = require("react-bootstrap/Col");
-var _colDefault = parcelHelpers.interopDefault(_col);
-var _reactRedux = require("react-redux");
-var _visibilityFilterInput = require("../visibility-filter-input/visibility-filter-input");
-var _visibilityFilterInputDefault = parcelHelpers.interopDefault(_visibilityFilterInput);
-var _movieCard = require("../movie-card/movie-card");
-const mapStateToProps = (state)=>{
-    const { visibilityFilter  } = state;
-    return {
-        visibilityFilter
+},{"react-is":"5wFcP"}],"iYoWk":[function(require,module,exports) {
+module.exports = require('./lib/axios');
+
+},{"./lib/axios":"3QmO2"}],"3QmO2":[function(require,module,exports) {
+'use strict';
+var utils = require('./utils');
+var bind = require('./helpers/bind');
+var Axios = require('./core/Axios');
+var mergeConfig = require('./core/mergeConfig');
+var defaults = require('./defaults');
+/**
+ * Create an instance of Axios
+ *
+ * @param {Object} defaultConfig The default config for the instance
+ * @return {Axios} A new instance of Axios
+ */ function createInstance(defaultConfig) {
+    var context = new Axios(defaultConfig);
+    var instance = bind(Axios.prototype.request, context);
+    // Copy axios.prototype to instance
+    utils.extend(instance, Axios.prototype, context);
+    // Copy context to instance
+    utils.extend(instance, context);
+    return instance;
+}
+// Create the default instance to be exported
+var axios = createInstance(defaults);
+// Expose Axios class to allow class inheritance
+axios.Axios = Axios;
+// Factory for creating new instances
+axios.create = function create(instanceConfig) {
+    return createInstance(mergeConfig(axios.defaults, instanceConfig));
+};
+// Expose Cancel & CancelToken
+axios.Cancel = require('./cancel/Cancel');
+axios.CancelToken = require('./cancel/CancelToken');
+axios.isCancel = require('./cancel/isCancel');
+// Expose all/spread
+axios.all = function all(promises) {
+    return Promise.all(promises);
+};
+axios.spread = require('./helpers/spread');
+// Expose isAxiosError
+axios.isAxiosError = require('./helpers/isAxiosError');
+module.exports = axios;
+// Allow use of default import syntax in TypeScript
+module.exports.default = axios;
+
+},{"./utils":"hOPY0","./helpers/bind":"4bHkG","./core/Axios":"KVzea","./core/mergeConfig":"8vb7m","./defaults":"g96L2","./cancel/Cancel":"iGO1D","./cancel/CancelToken":"6kJtU","./cancel/isCancel":"6KzET","./helpers/spread":"3fmMu","./helpers/isAxiosError":"1NqDP"}],"hOPY0":[function(require,module,exports) {
+'use strict';
+var bind = require('./helpers/bind');
+// utils is a library of generic helper functions non-specific to axios
+var toString = Object.prototype.toString;
+/**
+ * Determine if a value is an Array
+ *
+ * @param {Object} val The value to test
+ * @returns {boolean} True if value is an Array, otherwise false
+ */ function isArray(val) {
+    return toString.call(val) === '[object Array]';
+}
+/**
+ * Determine if a value is undefined
+ *
+ * @param {Object} val The value to test
+ * @returns {boolean} True if the value is undefined, otherwise false
+ */ function isUndefined(val) {
+    return typeof val === 'undefined';
+}
+/**
+ * Determine if a value is a Buffer
+ *
+ * @param {Object} val The value to test
+ * @returns {boolean} True if value is a Buffer, otherwise false
+ */ function isBuffer(val) {
+    return val !== null && !isUndefined(val) && val.constructor !== null && !isUndefined(val.constructor) && typeof val.constructor.isBuffer === 'function' && val.constructor.isBuffer(val);
+}
+/**
+ * Determine if a value is an ArrayBuffer
+ *
+ * @param {Object} val The value to test
+ * @returns {boolean} True if value is an ArrayBuffer, otherwise false
+ */ function isArrayBuffer(val) {
+    return toString.call(val) === '[object ArrayBuffer]';
+}
+/**
+ * Determine if a value is a FormData
+ *
+ * @param {Object} val The value to test
+ * @returns {boolean} True if value is an FormData, otherwise false
+ */ function isFormData(val) {
+    return typeof FormData !== 'undefined' && val instanceof FormData;
+}
+/**
+ * Determine if a value is a view on an ArrayBuffer
+ *
+ * @param {Object} val The value to test
+ * @returns {boolean} True if value is a view on an ArrayBuffer, otherwise false
+ */ function isArrayBufferView(val) {
+    var result;
+    if (typeof ArrayBuffer !== 'undefined' && ArrayBuffer.isView) result = ArrayBuffer.isView(val);
+    else result = val && val.buffer && val.buffer instanceof ArrayBuffer;
+    return result;
+}
+/**
+ * Determine if a value is a String
+ *
+ * @param {Object} val The value to test
+ * @returns {boolean} True if value is a String, otherwise false
+ */ function isString(val) {
+    return typeof val === 'string';
+}
+/**
+ * Determine if a value is a Number
+ *
+ * @param {Object} val The value to test
+ * @returns {boolean} True if value is a Number, otherwise false
+ */ function isNumber(val) {
+    return typeof val === 'number';
+}
+/**
+ * Determine if a value is an Object
+ *
+ * @param {Object} val The value to test
+ * @returns {boolean} True if value is an Object, otherwise false
+ */ function isObject(val) {
+    return val !== null && typeof val === 'object';
+}
+/**
+ * Determine if a value is a plain Object
+ *
+ * @param {Object} val The value to test
+ * @return {boolean} True if value is a plain Object, otherwise false
+ */ function isPlainObject(val) {
+    if (toString.call(val) !== '[object Object]') return false;
+    var prototype = Object.getPrototypeOf(val);
+    return prototype === null || prototype === Object.prototype;
+}
+/**
+ * Determine if a value is a Date
+ *
+ * @param {Object} val The value to test
+ * @returns {boolean} True if value is a Date, otherwise false
+ */ function isDate(val) {
+    return toString.call(val) === '[object Date]';
+}
+/**
+ * Determine if a value is a File
+ *
+ * @param {Object} val The value to test
+ * @returns {boolean} True if value is a File, otherwise false
+ */ function isFile(val) {
+    return toString.call(val) === '[object File]';
+}
+/**
+ * Determine if a value is a Blob
+ *
+ * @param {Object} val The value to test
+ * @returns {boolean} True if value is a Blob, otherwise false
+ */ function isBlob(val) {
+    return toString.call(val) === '[object Blob]';
+}
+/**
+ * Determine if a value is a Function
+ *
+ * @param {Object} val The value to test
+ * @returns {boolean} True if value is a Function, otherwise false
+ */ function isFunction(val) {
+    return toString.call(val) === '[object Function]';
+}
+/**
+ * Determine if a value is a Stream
+ *
+ * @param {Object} val The value to test
+ * @returns {boolean} True if value is a Stream, otherwise false
+ */ function isStream(val) {
+    return isObject(val) && isFunction(val.pipe);
+}
+/**
+ * Determine if a value is a URLSearchParams object
+ *
+ * @param {Object} val The value to test
+ * @returns {boolean} True if value is a URLSearchParams object, otherwise false
+ */ function isURLSearchParams(val) {
+    return typeof URLSearchParams !== 'undefined' && val instanceof URLSearchParams;
+}
+/**
+ * Trim excess whitespace off the beginning and end of a string
+ *
+ * @param {String} str The String to trim
+ * @returns {String} The String freed of excess whitespace
+ */ function trim(str) {
+    return str.trim ? str.trim() : str.replace(/^\s+|\s+$/g, '');
+}
+/**
+ * Determine if we're running in a standard browser environment
+ *
+ * This allows axios to run in a web worker, and react-native.
+ * Both environments support XMLHttpRequest, but not fully standard globals.
+ *
+ * web workers:
+ *  typeof window -> undefined
+ *  typeof document -> undefined
+ *
+ * react-native:
+ *  navigator.product -> 'ReactNative'
+ * nativescript
+ *  navigator.product -> 'NativeScript' or 'NS'
+ */ function isStandardBrowserEnv() {
+    if (typeof navigator !== 'undefined' && (navigator.product === 'ReactNative' || navigator.product === 'NativeScript' || navigator.product === 'NS')) return false;
+    return typeof window !== 'undefined' && typeof document !== 'undefined';
+}
+/**
+ * Iterate over an Array or an Object invoking a function for each item.
+ *
+ * If `obj` is an Array callback will be called passing
+ * the value, index, and complete array for each item.
+ *
+ * If 'obj' is an Object callback will be called passing
+ * the value, key, and complete object for each property.
+ *
+ * @param {Object|Array} obj The object to iterate
+ * @param {Function} fn The callback to invoke for each item
+ */ function forEach(obj, fn) {
+    // Don't bother if no value provided
+    if (obj === null || typeof obj === 'undefined') return;
+    // Force an array if not already something iterable
+    if (typeof obj !== 'object') /*eslint no-param-reassign:0*/ obj = [
+        obj
+    ];
+    if (isArray(obj)) // Iterate over array values
+    for(var i = 0, l = obj.length; i < l; i++)fn.call(null, obj[i], i, obj);
+    else {
+        // Iterate over object keys
+        for(var key in obj)if (Object.prototype.hasOwnProperty.call(obj, key)) fn.call(null, obj[key], key, obj);
+    }
+}
+/**
+ * Accepts varargs expecting each argument to be an object, then
+ * immutably merges the properties of each object and returns result.
+ *
+ * When multiple objects contain the same key the later object in
+ * the arguments list will take precedence.
+ *
+ * Example:
+ *
+ * ```js
+ * var result = merge({foo: 123}, {foo: 456});
+ * console.log(result.foo); // outputs 456
+ * ```
+ *
+ * @param {Object} obj1 Object to merge
+ * @returns {Object} Result of all merge properties
+ */ function merge() {
+    var result = {
+    };
+    function assignValue(val, key) {
+        if (isPlainObject(result[key]) && isPlainObject(val)) result[key] = merge(result[key], val);
+        else if (isPlainObject(val)) result[key] = merge({
+        }, val);
+        else if (isArray(val)) result[key] = val.slice();
+        else result[key] = val;
+    }
+    for(var i = 0, l = arguments.length; i < l; i++)forEach(arguments[i], assignValue);
+    return result;
+}
+/**
+ * Extends object a by mutably adding to it the properties of object b.
+ *
+ * @param {Object} a The object to be extended
+ * @param {Object} b The object to copy properties from
+ * @param {Object} thisArg The object to bind function to
+ * @return {Object} The resulting value of object a
+ */ function extend(a, b, thisArg) {
+    forEach(b, function assignValue(val, key) {
+        if (thisArg && typeof val === 'function') a[key] = bind(val, thisArg);
+        else a[key] = val;
+    });
+    return a;
+}
+/**
+ * Remove byte order marker. This catches EF BB BF (the UTF-8 BOM)
+ *
+ * @param {string} content with BOM
+ * @return {string} content value without BOM
+ */ function stripBOM(content) {
+    if (content.charCodeAt(0) === 65279) content = content.slice(1);
+    return content;
+}
+module.exports = {
+    isArray: isArray,
+    isArrayBuffer: isArrayBuffer,
+    isBuffer: isBuffer,
+    isFormData: isFormData,
+    isArrayBufferView: isArrayBufferView,
+    isString: isString,
+    isNumber: isNumber,
+    isObject: isObject,
+    isPlainObject: isPlainObject,
+    isUndefined: isUndefined,
+    isDate: isDate,
+    isFile: isFile,
+    isBlob: isBlob,
+    isFunction: isFunction,
+    isStream: isStream,
+    isURLSearchParams: isURLSearchParams,
+    isStandardBrowserEnv: isStandardBrowserEnv,
+    forEach: forEach,
+    merge: merge,
+    extend: extend,
+    trim: trim,
+    stripBOM: stripBOM
+};
+
+},{"./helpers/bind":"4bHkG"}],"4bHkG":[function(require,module,exports) {
+'use strict';
+module.exports = function bind(fn, thisArg) {
+    return function wrap() {
+        var args = new Array(arguments.length);
+        for(var i = 0; i < args.length; i++)args[i] = arguments[i];
+        return fn.apply(thisArg, args);
     };
 };
-function MoviesList(props) {
-    const { movies , visibilityFilter  } = props;
-    let filteredMovies = movies;
-    if (visibilityFilter !== '') filteredMovies = movies.filter((m)=>m.Title.toLowerCase().includes(visibilityFilter.toLowerCase())
-    );
-    if (!movies) return(/*#__PURE__*/ _jsxRuntime.jsx("div", {
-        className: "main-view",
-        __source: {
-            fileName: "src/components/movies-list/movies-list.jsx",
-            lineNumber: 21
-        },
-        __self: this
-    }));
-    return(/*#__PURE__*/ _jsxRuntime.jsxs(_jsxRuntime.Fragment, {
-        children: [
-            /*#__PURE__*/ _jsxRuntime.jsx(_colDefault.default, {
-                md: 12,
-                style: {
-                    margin: '1em'
-                },
-                __source: {
-                    fileName: "src/components/movies-list/movies-list.jsx",
-                    lineNumber: 24
-                },
-                __self: this,
-                children: /*#__PURE__*/ _jsxRuntime.jsx(_visibilityFilterInputDefault.default, {
-                    visibilityFilter: visibilityFilter,
-                    __source: {
-                        fileName: "src/components/movies-list/movies-list.jsx",
-                        lineNumber: 25
-                    },
-                    __self: this
-                })
-            }),
-            filteredMovies.map((m)=>/*#__PURE__*/ _jsxRuntime.jsx(_colDefault.default, {
-                    md: 3,
-                    __source: {
-                        fileName: "src/components/movies-list/movies-list.jsx",
-                        lineNumber: 28
-                    },
-                    __self: this,
-                    children: /*#__PURE__*/ _jsxRuntime.jsx(_movieCard.MovieCard, {
-                        movie: m,
-                        __source: {
-                            fileName: "src/components/movies-list/movies-list.jsx",
-                            lineNumber: 29
-                        },
-                        __self: this
-                    })
-                }, m._id)
-            )
-        ]
-    }));
-}
-_c = MoviesList;
-exports.default = _reactRedux.connect(mapStateToProps)(MoviesList);
-var _c;
-$RefreshReg$(_c, "MoviesList");
 
-  $parcel$ReactRefreshHelpers$2519.postlude(module);
-} finally {
-  window.$RefreshReg$ = prevRefreshReg;
-  window.$RefreshSig$ = prevRefreshSig;
+},{}],"KVzea":[function(require,module,exports) {
+'use strict';
+var utils = require('./../utils');
+var buildURL = require('../helpers/buildURL');
+var InterceptorManager = require('./InterceptorManager');
+var dispatchRequest = require('./dispatchRequest');
+var mergeConfig = require('./mergeConfig');
+var validator = require('../helpers/validator');
+var validators = validator.validators;
+/**
+ * Create a new instance of Axios
+ *
+ * @param {Object} instanceConfig The default config for the instance
+ */ function Axios(instanceConfig) {
+    this.defaults = instanceConfig;
+    this.interceptors = {
+        request: new InterceptorManager(),
+        response: new InterceptorManager()
+    };
 }
-},{"react/jsx-runtime":"8xIwr","react":"6TuXu","react-bootstrap/Col":"fbam0","react-redux":"2L0if","../visibility-filter-input/visibility-filter-input":"7ZxGS","../movie-card/movie-card":"6EiBJ","@parcel/transformer-js/src/esmodule-helpers.js":"JacNc","@parcel/transformer-react-refresh-wrap/lib/helpers/helpers.js":"5V79J"}],"fbam0":[function(require,module,exports) {
-var parcelHelpers = require("@parcel/transformer-js/src/esmodule-helpers.js");
-parcelHelpers.defineInteropFlag(exports);
-var _extends = require("@babel/runtime/helpers/esm/extends");
-var _extendsDefault = parcelHelpers.interopDefault(_extends);
-var _objectWithoutPropertiesLoose = require("@babel/runtime/helpers/esm/objectWithoutPropertiesLoose");
-var _objectWithoutPropertiesLooseDefault = parcelHelpers.interopDefault(_objectWithoutPropertiesLoose);
-var _classnames = require("classnames");
-var _classnamesDefault = parcelHelpers.interopDefault(_classnames);
-var _react = require("react");
-var _reactDefault = parcelHelpers.interopDefault(_react);
-var _themeProvider = require("./ThemeProvider");
-var _excluded = [
-    "bsPrefix",
-    "className",
-    "as"
-];
-var DEVICE_SIZES = [
-    'xl',
-    'lg',
-    'md',
-    'sm',
-    'xs'
-];
-var Col = /*#__PURE__*/ _reactDefault.default.forwardRef(function(_ref, ref) {
-    var bsPrefix = _ref.bsPrefix, className = _ref.className, _ref$as = _ref.as, Component = _ref$as === void 0 ? 'div' : _ref$as, props = _objectWithoutPropertiesLooseDefault.default(_ref, _excluded);
-    var prefix = _themeProvider.useBootstrapPrefix(bsPrefix, 'col');
-    var spans = [];
-    var classes = [];
-    DEVICE_SIZES.forEach(function(brkPoint) {
-        var propValue = props[brkPoint];
-        delete props[brkPoint];
-        var span;
-        var offset;
-        var order;
-        if (typeof propValue === 'object' && propValue != null) {
-            var _propValue$span = propValue.span;
-            span = _propValue$span === void 0 ? true : _propValue$span;
-            offset = propValue.offset;
-            order = propValue.order;
-        } else span = propValue;
-        var infix = brkPoint !== 'xs' ? "-" + brkPoint : '';
-        if (span) spans.push(span === true ? "" + prefix + infix : "" + prefix + infix + "-" + span);
-        if (order != null) classes.push("order" + infix + "-" + order);
-        if (offset != null) classes.push("offset" + infix + "-" + offset);
+/**
+ * Dispatch a request
+ *
+ * @param {Object} config The config specific for this request (merged with this.defaults)
+ */ Axios.prototype.request = function request(config) {
+    /*eslint no-param-reassign:0*/ // Allow for axios('example/url'[, config]) a la fetch API
+    if (typeof config === 'string') {
+        config = arguments[1] || {
+        };
+        config.url = arguments[0];
+    } else config = config || {
+    };
+    config = mergeConfig(this.defaults, config);
+    // Set config.method
+    if (config.method) config.method = config.method.toLowerCase();
+    else if (this.defaults.method) config.method = this.defaults.method.toLowerCase();
+    else config.method = 'get';
+    var transitional = config.transitional;
+    if (transitional !== undefined) validator.assertOptions(transitional, {
+        silentJSONParsing: validators.transitional(validators.boolean, '1.0.0'),
+        forcedJSONParsing: validators.transitional(validators.boolean, '1.0.0'),
+        clarifyTimeoutError: validators.transitional(validators.boolean, '1.0.0')
+    }, false);
+    // filter out skipped interceptors
+    var requestInterceptorChain = [];
+    var synchronousRequestInterceptors = true;
+    this.interceptors.request.forEach(function unshiftRequestInterceptors(interceptor) {
+        if (typeof interceptor.runWhen === 'function' && interceptor.runWhen(config) === false) return;
+        synchronousRequestInterceptors = synchronousRequestInterceptors && interceptor.synchronous;
+        requestInterceptorChain.unshift(interceptor.fulfilled, interceptor.rejected);
     });
-    if (!spans.length) spans.push(prefix); // plain 'col'
-    return(/*#__PURE__*/ _reactDefault.default.createElement(Component, _extendsDefault.default({
-    }, props, {
-        ref: ref,
-        className: _classnamesDefault.default.apply(void 0, [
-            className
-        ].concat(spans, classes))
-    })));
+    var responseInterceptorChain = [];
+    this.interceptors.response.forEach(function pushResponseInterceptors(interceptor) {
+        responseInterceptorChain.push(interceptor.fulfilled, interceptor.rejected);
+    });
+    var promise;
+    if (!synchronousRequestInterceptors) {
+        var chain = [
+            dispatchRequest,
+            undefined
+        ];
+        Array.prototype.unshift.apply(chain, requestInterceptorChain);
+        chain = chain.concat(responseInterceptorChain);
+        promise = Promise.resolve(config);
+        while(chain.length)promise = promise.then(chain.shift(), chain.shift());
+        return promise;
+    }
+    var newConfig = config;
+    while(requestInterceptorChain.length){
+        var onFulfilled = requestInterceptorChain.shift();
+        var onRejected = requestInterceptorChain.shift();
+        try {
+            newConfig = onFulfilled(newConfig);
+        } catch (error) {
+            onRejected(error);
+            break;
+        }
+    }
+    try {
+        promise = dispatchRequest(newConfig);
+    } catch (error) {
+        return Promise.reject(error);
+    }
+    while(responseInterceptorChain.length)promise = promise.then(responseInterceptorChain.shift(), responseInterceptorChain.shift());
+    return promise;
+};
+Axios.prototype.getUri = function getUri(config) {
+    config = mergeConfig(this.defaults, config);
+    return buildURL(config.url, config.params, config.paramsSerializer).replace(/^\?/, '');
+};
+// Provide aliases for supported request methods
+utils.forEach([
+    'delete',
+    'get',
+    'head',
+    'options'
+], function forEachMethodNoData(method) {
+    /*eslint func-names:0*/ Axios.prototype[method] = function(url, config) {
+        return this.request(mergeConfig(config || {
+        }, {
+            method: method,
+            url: url,
+            data: (config || {
+            }).data
+        }));
+    };
 });
-Col.displayName = 'Col';
-exports.default = Col;
+utils.forEach([
+    'post',
+    'put',
+    'patch'
+], function forEachMethodWithData(method) {
+    /*eslint func-names:0*/ Axios.prototype[method] = function(url, data, config) {
+        return this.request(mergeConfig(config || {
+        }, {
+            method: method,
+            url: url,
+            data: data
+        }));
+    };
+});
+module.exports = Axios;
 
-},{"@babel/runtime/helpers/esm/extends":"bKAu6","@babel/runtime/helpers/esm/objectWithoutPropertiesLoose":"3Rubg","classnames":"bOXOh","react":"6TuXu","./ThemeProvider":"eeqfi","@parcel/transformer-js/src/esmodule-helpers.js":"JacNc"}],"7ZxGS":[function(require,module,exports) {
-var $parcel$ReactRefreshHelpers$9bc3 = require("@parcel/transformer-react-refresh-wrap/lib/helpers/helpers.js");
+},{"./../utils":"hOPY0","../helpers/buildURL":"3Jodf","./InterceptorManager":"9kkIC","./dispatchRequest":"dmFav","./mergeConfig":"8vb7m","../helpers/validator":"4sigL"}],"3Jodf":[function(require,module,exports) {
+'use strict';
+var utils = require('./../utils');
+function encode(val) {
+    return encodeURIComponent(val).replace(/%3A/gi, ':').replace(/%24/g, '$').replace(/%2C/gi, ',').replace(/%20/g, '+').replace(/%5B/gi, '[').replace(/%5D/gi, ']');
+}
+/**
+ * Build a URL by appending params to the end
+ *
+ * @param {string} url The base of the url (e.g., http://www.google.com)
+ * @param {object} [params] The params to be appended
+ * @returns {string} The formatted url
+ */ module.exports = function buildURL(url, params, paramsSerializer) {
+    /*eslint no-param-reassign:0*/ if (!params) return url;
+    var serializedParams;
+    if (paramsSerializer) serializedParams = paramsSerializer(params);
+    else if (utils.isURLSearchParams(params)) serializedParams = params.toString();
+    else {
+        var parts = [];
+        utils.forEach(params, function serialize(val, key) {
+            if (val === null || typeof val === 'undefined') return;
+            if (utils.isArray(val)) key = key + '[]';
+            else val = [
+                val
+            ];
+            utils.forEach(val, function parseValue(v) {
+                if (utils.isDate(v)) v = v.toISOString();
+                else if (utils.isObject(v)) v = JSON.stringify(v);
+                parts.push(encode(key) + '=' + encode(v));
+            });
+        });
+        serializedParams = parts.join('&');
+    }
+    if (serializedParams) {
+        var hashmarkIndex = url.indexOf('#');
+        if (hashmarkIndex !== -1) url = url.slice(0, hashmarkIndex);
+        url += (url.indexOf('?') === -1 ? '?' : '&') + serializedParams;
+    }
+    return url;
+};
+
+},{"./../utils":"hOPY0"}],"9kkIC":[function(require,module,exports) {
+'use strict';
+var utils = require('./../utils');
+function InterceptorManager() {
+    this.handlers = [];
+}
+/**
+ * Add a new interceptor to the stack
+ *
+ * @param {Function} fulfilled The function to handle `then` for a `Promise`
+ * @param {Function} rejected The function to handle `reject` for a `Promise`
+ *
+ * @return {Number} An ID used to remove interceptor later
+ */ InterceptorManager.prototype.use = function use(fulfilled, rejected, options) {
+    this.handlers.push({
+        fulfilled: fulfilled,
+        rejected: rejected,
+        synchronous: options ? options.synchronous : false,
+        runWhen: options ? options.runWhen : null
+    });
+    return this.handlers.length - 1;
+};
+/**
+ * Remove an interceptor from the stack
+ *
+ * @param {Number} id The ID that was returned by `use`
+ */ InterceptorManager.prototype.eject = function eject(id) {
+    if (this.handlers[id]) this.handlers[id] = null;
+};
+/**
+ * Iterate over all the registered interceptors
+ *
+ * This method is particularly useful for skipping over any
+ * interceptors that may have become `null` calling `eject`.
+ *
+ * @param {Function} fn The function to call for each interceptor
+ */ InterceptorManager.prototype.forEach = function forEach(fn) {
+    utils.forEach(this.handlers, function forEachHandler(h) {
+        if (h !== null) fn(h);
+    });
+};
+module.exports = InterceptorManager;
+
+},{"./../utils":"hOPY0"}],"dmFav":[function(require,module,exports) {
+'use strict';
+var utils = require('./../utils');
+var transformData = require('./transformData');
+var isCancel = require('../cancel/isCancel');
+var defaults = require('../defaults');
+/**
+ * Throws a `Cancel` if cancellation has been requested.
+ */ function throwIfCancellationRequested(config) {
+    if (config.cancelToken) config.cancelToken.throwIfRequested();
+}
+/**
+ * Dispatch a request to the server using the configured adapter.
+ *
+ * @param {object} config The config that is to be used for the request
+ * @returns {Promise} The Promise to be fulfilled
+ */ module.exports = function dispatchRequest(config) {
+    throwIfCancellationRequested(config);
+    // Ensure headers exist
+    config.headers = config.headers || {
+    };
+    // Transform request data
+    config.data = transformData.call(config, config.data, config.headers, config.transformRequest);
+    // Flatten headers
+    config.headers = utils.merge(config.headers.common || {
+    }, config.headers[config.method] || {
+    }, config.headers);
+    utils.forEach([
+        'delete',
+        'get',
+        'head',
+        'post',
+        'put',
+        'patch',
+        'common'
+    ], function cleanHeaderConfig(method) {
+        delete config.headers[method];
+    });
+    var adapter = config.adapter || defaults.adapter;
+    return adapter(config).then(function onAdapterResolution(response) {
+        throwIfCancellationRequested(config);
+        // Transform response data
+        response.data = transformData.call(config, response.data, response.headers, config.transformResponse);
+        return response;
+    }, function onAdapterRejection(reason) {
+        if (!isCancel(reason)) {
+            throwIfCancellationRequested(config);
+            // Transform response data
+            if (reason && reason.response) reason.response.data = transformData.call(config, reason.response.data, reason.response.headers, config.transformResponse);
+        }
+        return Promise.reject(reason);
+    });
+};
+
+},{"./../utils":"hOPY0","./transformData":"57wgh","../cancel/isCancel":"6KzET","../defaults":"g96L2"}],"57wgh":[function(require,module,exports) {
+'use strict';
+var utils = require('./../utils');
+var defaults = require('./../defaults');
+/**
+ * Transform the data for a request or a response
+ *
+ * @param {Object|String} data The data to be transformed
+ * @param {Array} headers The headers for the request or response
+ * @param {Array|Function} fns A single function or Array of functions
+ * @returns {*} The resulting transformed data
+ */ module.exports = function transformData(data, headers, fns) {
+    var context = this || defaults;
+    /*eslint no-param-reassign:0*/ utils.forEach(fns, function transform(fn) {
+        data = fn.call(context, data, headers);
+    });
+    return data;
+};
+
+},{"./../utils":"hOPY0","./../defaults":"g96L2"}],"g96L2":[function(require,module,exports) {
+var process = require("process");
+'use strict';
+var utils = require('./utils');
+var normalizeHeaderName = require('./helpers/normalizeHeaderName');
+var enhanceError = require('./core/enhanceError');
+var DEFAULT_CONTENT_TYPE = {
+    'Content-Type': 'application/x-www-form-urlencoded'
+};
+function setContentTypeIfUnset(headers, value) {
+    if (!utils.isUndefined(headers) && utils.isUndefined(headers['Content-Type'])) headers['Content-Type'] = value;
+}
+function getDefaultAdapter() {
+    var adapter;
+    if (typeof XMLHttpRequest !== 'undefined') // For browsers use XHR adapter
+    adapter = require('./adapters/xhr');
+    else if (typeof process !== 'undefined' && Object.prototype.toString.call(process) === '[object process]') // For node use HTTP adapter
+    adapter = require('./adapters/http');
+    return adapter;
+}
+function stringifySafely(rawValue, parser, encoder) {
+    if (utils.isString(rawValue)) try {
+        (parser || JSON.parse)(rawValue);
+        return utils.trim(rawValue);
+    } catch (e) {
+        if (e.name !== 'SyntaxError') throw e;
+    }
+    return (encoder || JSON.stringify)(rawValue);
+}
+var defaults = {
+    transitional: {
+        silentJSONParsing: true,
+        forcedJSONParsing: true,
+        clarifyTimeoutError: false
+    },
+    adapter: getDefaultAdapter(),
+    transformRequest: [
+        function transformRequest(data, headers) {
+            normalizeHeaderName(headers, 'Accept');
+            normalizeHeaderName(headers, 'Content-Type');
+            if (utils.isFormData(data) || utils.isArrayBuffer(data) || utils.isBuffer(data) || utils.isStream(data) || utils.isFile(data) || utils.isBlob(data)) return data;
+            if (utils.isArrayBufferView(data)) return data.buffer;
+            if (utils.isURLSearchParams(data)) {
+                setContentTypeIfUnset(headers, 'application/x-www-form-urlencoded;charset=utf-8');
+                return data.toString();
+            }
+            if (utils.isObject(data) || headers && headers['Content-Type'] === 'application/json') {
+                setContentTypeIfUnset(headers, 'application/json');
+                return stringifySafely(data);
+            }
+            return data;
+        }
+    ],
+    transformResponse: [
+        function transformResponse(data) {
+            var transitional = this.transitional;
+            var silentJSONParsing = transitional && transitional.silentJSONParsing;
+            var forcedJSONParsing = transitional && transitional.forcedJSONParsing;
+            var strictJSONParsing = !silentJSONParsing && this.responseType === 'json';
+            if (strictJSONParsing || forcedJSONParsing && utils.isString(data) && data.length) try {
+                return JSON.parse(data);
+            } catch (e) {
+                if (strictJSONParsing) {
+                    if (e.name === 'SyntaxError') throw enhanceError(e, this, 'E_JSON_PARSE');
+                    throw e;
+                }
+            }
+            return data;
+        }
+    ],
+    /**
+   * A timeout in milliseconds to abort a request. If set to 0 (default) a
+   * timeout is not created.
+   */ timeout: 0,
+    xsrfCookieName: 'XSRF-TOKEN',
+    xsrfHeaderName: 'X-XSRF-TOKEN',
+    maxContentLength: -1,
+    maxBodyLength: -1,
+    validateStatus: function validateStatus(status) {
+        return status >= 200 && status < 300;
+    }
+};
+defaults.headers = {
+    common: {
+        'Accept': 'application/json, text/plain, */*'
+    }
+};
+utils.forEach([
+    'delete',
+    'get',
+    'head'
+], function forEachMethodNoData(method) {
+    defaults.headers[method] = {
+    };
+});
+utils.forEach([
+    'post',
+    'put',
+    'patch'
+], function forEachMethodWithData(method) {
+    defaults.headers[method] = utils.merge(DEFAULT_CONTENT_TYPE);
+});
+module.exports = defaults;
+
+},{"process":"6Upk8","./utils":"hOPY0","./helpers/normalizeHeaderName":"6GUF5","./core/enhanceError":"3f4N4","./adapters/xhr":"4uZQD","./adapters/http":"4uZQD"}],"6Upk8":[function(require,module,exports) {
+// shim for using process in browser
+var process = module.exports = {
+};
+// cached from whatever global is present so that test runners that stub it
+// don't break things.  But we need to wrap it in a try catch in case it is
+// wrapped in strict mode code which doesn't define any globals.  It's inside a
+// function because try/catches deoptimize in certain engines.
+var cachedSetTimeout;
+var cachedClearTimeout;
+function defaultSetTimout() {
+    throw new Error('setTimeout has not been defined');
+}
+function defaultClearTimeout() {
+    throw new Error('clearTimeout has not been defined');
+}
+(function() {
+    try {
+        if (typeof setTimeout === 'function') cachedSetTimeout = setTimeout;
+        else cachedSetTimeout = defaultSetTimout;
+    } catch (e) {
+        cachedSetTimeout = defaultSetTimout;
+    }
+    try {
+        if (typeof clearTimeout === 'function') cachedClearTimeout = clearTimeout;
+        else cachedClearTimeout = defaultClearTimeout;
+    } catch (e) {
+        cachedClearTimeout = defaultClearTimeout;
+    }
+})();
+function runTimeout(fun) {
+    if (cachedSetTimeout === setTimeout) //normal enviroments in sane situations
+    return setTimeout(fun, 0);
+    // if setTimeout wasn't available but was latter defined
+    if ((cachedSetTimeout === defaultSetTimout || !cachedSetTimeout) && setTimeout) {
+        cachedSetTimeout = setTimeout;
+        return setTimeout(fun, 0);
+    }
+    try {
+        // when when somebody has screwed with setTimeout but no I.E. maddness
+        return cachedSetTimeout(fun, 0);
+    } catch (e) {
+        try {
+            // When we are in I.E. but the script has been evaled so I.E. doesn't trust the global object when called normally
+            return cachedSetTimeout.call(null, fun, 0);
+        } catch (e1) {
+            // same as above but when it's a version of I.E. that must have the global object for 'this', hopfully our context correct otherwise it will throw a global error
+            return cachedSetTimeout.call(this, fun, 0);
+        }
+    }
+}
+function runClearTimeout(marker) {
+    if (cachedClearTimeout === clearTimeout) //normal enviroments in sane situations
+    return clearTimeout(marker);
+    // if clearTimeout wasn't available but was latter defined
+    if ((cachedClearTimeout === defaultClearTimeout || !cachedClearTimeout) && clearTimeout) {
+        cachedClearTimeout = clearTimeout;
+        return clearTimeout(marker);
+    }
+    try {
+        // when when somebody has screwed with setTimeout but no I.E. maddness
+        return cachedClearTimeout(marker);
+    } catch (e) {
+        try {
+            // When we are in I.E. but the script has been evaled so I.E. doesn't  trust the global object when called normally
+            return cachedClearTimeout.call(null, marker);
+        } catch (e1) {
+            // same as above but when it's a version of I.E. that must have the global object for 'this', hopfully our context correct otherwise it will throw a global error.
+            // Some versions of I.E. have different rules for clearTimeout vs setTimeout
+            return cachedClearTimeout.call(this, marker);
+        }
+    }
+}
+var queue = [];
+var draining = false;
+var currentQueue;
+var queueIndex = -1;
+function cleanUpNextTick() {
+    if (!draining || !currentQueue) return;
+    draining = false;
+    if (currentQueue.length) queue = currentQueue.concat(queue);
+    else queueIndex = -1;
+    if (queue.length) drainQueue();
+}
+function drainQueue() {
+    if (draining) return;
+    var timeout = runTimeout(cleanUpNextTick);
+    draining = true;
+    var len = queue.length;
+    while(len){
+        currentQueue = queue;
+        queue = [];
+        while((++queueIndex) < len)if (currentQueue) currentQueue[queueIndex].run();
+        queueIndex = -1;
+        len = queue.length;
+    }
+    currentQueue = null;
+    draining = false;
+    runClearTimeout(timeout);
+}
+process.nextTick = function(fun) {
+    var args = new Array(arguments.length - 1);
+    if (arguments.length > 1) for(var i = 1; i < arguments.length; i++)args[i - 1] = arguments[i];
+    queue.push(new Item(fun, args));
+    if (queue.length === 1 && !draining) runTimeout(drainQueue);
+};
+// v8 likes predictible objects
+function Item(fun, array) {
+    this.fun = fun;
+    this.array = array;
+}
+Item.prototype.run = function() {
+    this.fun.apply(null, this.array);
+};
+process.title = 'browser';
+process.browser = true;
+process.env = {
+};
+process.argv = [];
+process.version = ''; // empty string to avoid regexp issues
+process.versions = {
+};
+function noop() {
+}
+process.on = noop;
+process.addListener = noop;
+process.once = noop;
+process.off = noop;
+process.removeListener = noop;
+process.removeAllListeners = noop;
+process.emit = noop;
+process.prependListener = noop;
+process.prependOnceListener = noop;
+process.listeners = function(name) {
+    return [];
+};
+process.binding = function(name) {
+    throw new Error('process.binding is not supported');
+};
+process.cwd = function() {
+    return '/';
+};
+process.chdir = function(dir) {
+    throw new Error('process.chdir is not supported');
+};
+process.umask = function() {
+    return 0;
+};
+
+},{}],"6GUF5":[function(require,module,exports) {
+'use strict';
+var utils = require('../utils');
+module.exports = function normalizeHeaderName(headers, normalizedName) {
+    utils.forEach(headers, function processHeader(value, name) {
+        if (name !== normalizedName && name.toUpperCase() === normalizedName.toUpperCase()) {
+            headers[normalizedName] = value;
+            delete headers[name];
+        }
+    });
+};
+
+},{"../utils":"hOPY0"}],"3f4N4":[function(require,module,exports) {
+'use strict';
+/**
+ * Update an Error with the specified config, error code, and response.
+ *
+ * @param {Error} error The error to update.
+ * @param {Object} config The config.
+ * @param {string} [code] The error code (for example, 'ECONNABORTED').
+ * @param {Object} [request] The request.
+ * @param {Object} [response] The response.
+ * @returns {Error} The error.
+ */ module.exports = function enhanceError(error, config, code, request, response) {
+    error.config = config;
+    if (code) error.code = code;
+    error.request = request;
+    error.response = response;
+    error.isAxiosError = true;
+    error.toJSON = function toJSON() {
+        return {
+            // Standard
+            message: this.message,
+            name: this.name,
+            // Microsoft
+            description: this.description,
+            number: this.number,
+            // Mozilla
+            fileName: this.fileName,
+            lineNumber: this.lineNumber,
+            columnNumber: this.columnNumber,
+            stack: this.stack,
+            // Axios
+            config: this.config,
+            code: this.code
+        };
+    };
+    return error;
+};
+
+},{}],"4uZQD":[function(require,module,exports) {
+'use strict';
+var utils = require('./../utils');
+var settle = require('./../core/settle');
+var cookies = require('./../helpers/cookies');
+var buildURL = require('./../helpers/buildURL');
+var buildFullPath = require('../core/buildFullPath');
+var parseHeaders = require('./../helpers/parseHeaders');
+var isURLSameOrigin = require('./../helpers/isURLSameOrigin');
+var createError = require('../core/createError');
+module.exports = function xhrAdapter(config) {
+    return new Promise(function dispatchXhrRequest(resolve, reject) {
+        var requestData = config.data;
+        var requestHeaders = config.headers;
+        var responseType = config.responseType;
+        if (utils.isFormData(requestData)) delete requestHeaders['Content-Type']; // Let the browser set it
+        var request = new XMLHttpRequest();
+        // HTTP basic authentication
+        if (config.auth) {
+            var username = config.auth.username || '';
+            var password = config.auth.password ? unescape(encodeURIComponent(config.auth.password)) : '';
+            requestHeaders.Authorization = 'Basic ' + btoa(username + ':' + password);
+        }
+        var fullPath = buildFullPath(config.baseURL, config.url);
+        request.open(config.method.toUpperCase(), buildURL(fullPath, config.params, config.paramsSerializer), true);
+        // Set the request timeout in MS
+        request.timeout = config.timeout;
+        function onloadend() {
+            if (!request) return;
+            // Prepare the response
+            var responseHeaders = 'getAllResponseHeaders' in request ? parseHeaders(request.getAllResponseHeaders()) : null;
+            var responseData = !responseType || responseType === 'text' || responseType === 'json' ? request.responseText : request.response;
+            var response = {
+                data: responseData,
+                status: request.status,
+                statusText: request.statusText,
+                headers: responseHeaders,
+                config: config,
+                request: request
+            };
+            settle(resolve, reject, response);
+            // Clean up request
+            request = null;
+        }
+        if ('onloadend' in request) // Use onloadend if available
+        request.onloadend = onloadend;
+        else // Listen for ready state to emulate onloadend
+        request.onreadystatechange = function handleLoad() {
+            if (!request || request.readyState !== 4) return;
+            // The request errored out and we didn't get a response, this will be
+            // handled by onerror instead
+            // With one exception: request that using file: protocol, most browsers
+            // will return status as 0 even though it's a successful request
+            if (request.status === 0 && !(request.responseURL && request.responseURL.indexOf('file:') === 0)) return;
+            // readystate handler is calling before onerror or ontimeout handlers,
+            // so we should call onloadend on the next 'tick'
+            setTimeout(onloadend);
+        };
+        // Handle browser request cancellation (as opposed to a manual cancellation)
+        request.onabort = function handleAbort() {
+            if (!request) return;
+            reject(createError('Request aborted', config, 'ECONNABORTED', request));
+            // Clean up request
+            request = null;
+        };
+        // Handle low level network errors
+        request.onerror = function handleError() {
+            // Real errors are hidden from us by the browser
+            // onerror should only fire if it's a network error
+            reject(createError('Network Error', config, null, request));
+            // Clean up request
+            request = null;
+        };
+        // Handle timeout
+        request.ontimeout = function handleTimeout() {
+            var timeoutErrorMessage = 'timeout of ' + config.timeout + 'ms exceeded';
+            if (config.timeoutErrorMessage) timeoutErrorMessage = config.timeoutErrorMessage;
+            reject(createError(timeoutErrorMessage, config, config.transitional && config.transitional.clarifyTimeoutError ? 'ETIMEDOUT' : 'ECONNABORTED', request));
+            // Clean up request
+            request = null;
+        };
+        // Add xsrf header
+        // This is only done if running in a standard browser environment.
+        // Specifically not if we're in a web worker, or react-native.
+        if (utils.isStandardBrowserEnv()) {
+            // Add xsrf header
+            var xsrfValue = (config.withCredentials || isURLSameOrigin(fullPath)) && config.xsrfCookieName ? cookies.read(config.xsrfCookieName) : undefined;
+            if (xsrfValue) requestHeaders[config.xsrfHeaderName] = xsrfValue;
+        }
+        // Add headers to the request
+        if ('setRequestHeader' in request) utils.forEach(requestHeaders, function setRequestHeader(val, key) {
+            if (typeof requestData === 'undefined' && key.toLowerCase() === 'content-type') // Remove Content-Type if data is undefined
+            delete requestHeaders[key];
+            else // Otherwise add header to the request
+            request.setRequestHeader(key, val);
+        });
+        // Add withCredentials to request if needed
+        if (!utils.isUndefined(config.withCredentials)) request.withCredentials = !!config.withCredentials;
+        // Add responseType to request if needed
+        if (responseType && responseType !== 'json') request.responseType = config.responseType;
+        // Handle progress if needed
+        if (typeof config.onDownloadProgress === 'function') request.addEventListener('progress', config.onDownloadProgress);
+        // Not all browsers support upload events
+        if (typeof config.onUploadProgress === 'function' && request.upload) request.upload.addEventListener('progress', config.onUploadProgress);
+        if (config.cancelToken) // Handle cancellation
+        config.cancelToken.promise.then(function onCanceled(cancel) {
+            if (!request) return;
+            request.abort();
+            reject(cancel);
+            // Clean up request
+            request = null;
+        });
+        if (!requestData) requestData = null;
+        // Send the request
+        request.send(requestData);
+    });
+};
+
+},{"./../utils":"hOPY0","./../core/settle":"ehRY8","./../helpers/cookies":"dRE5q","./../helpers/buildURL":"3Jodf","../core/buildFullPath":"1RLcm","./../helpers/parseHeaders":"9TT83","./../helpers/isURLSameOrigin":"2SCwc","../core/createError":"cfxXs"}],"ehRY8":[function(require,module,exports) {
+'use strict';
+var createError = require('./createError');
+/**
+ * Resolve or reject a Promise based on response status.
+ *
+ * @param {Function} resolve A function that resolves the promise.
+ * @param {Function} reject A function that rejects the promise.
+ * @param {object} response The response.
+ */ module.exports = function settle(resolve, reject, response) {
+    var validateStatus = response.config.validateStatus;
+    if (!response.status || !validateStatus || validateStatus(response.status)) resolve(response);
+    else reject(createError('Request failed with status code ' + response.status, response.config, null, response.request, response));
+};
+
+},{"./createError":"cfxXs"}],"cfxXs":[function(require,module,exports) {
+'use strict';
+var enhanceError = require('./enhanceError');
+/**
+ * Create an Error with the specified message, config, error code, request and response.
+ *
+ * @param {string} message The error message.
+ * @param {Object} config The config.
+ * @param {string} [code] The error code (for example, 'ECONNABORTED').
+ * @param {Object} [request] The request.
+ * @param {Object} [response] The response.
+ * @returns {Error} The created error.
+ */ module.exports = function createError(message, config, code, request, response) {
+    var error = new Error(message);
+    return enhanceError(error, config, code, request, response);
+};
+
+},{"./enhanceError":"3f4N4"}],"dRE5q":[function(require,module,exports) {
+'use strict';
+var utils = require('./../utils');
+module.exports = utils.isStandardBrowserEnv() ? // Standard browser envs support document.cookie
+(function standardBrowserEnv() {
+    return {
+        write: function write(name, value, expires, path, domain, secure) {
+            var cookie = [];
+            cookie.push(name + '=' + encodeURIComponent(value));
+            if (utils.isNumber(expires)) cookie.push('expires=' + new Date(expires).toGMTString());
+            if (utils.isString(path)) cookie.push('path=' + path);
+            if (utils.isString(domain)) cookie.push('domain=' + domain);
+            if (secure === true) cookie.push('secure');
+            document.cookie = cookie.join('; ');
+        },
+        read: function read(name) {
+            var match = document.cookie.match(new RegExp('(^|;\\s*)(' + name + ')=([^;]*)'));
+            return match ? decodeURIComponent(match[3]) : null;
+        },
+        remove: function remove(name) {
+            this.write(name, '', Date.now() - 86400000);
+        }
+    };
+})() : // Non standard browser env (web workers, react-native) lack needed support.
+(function nonStandardBrowserEnv() {
+    return {
+        write: function write() {
+        },
+        read: function read() {
+            return null;
+        },
+        remove: function remove() {
+        }
+    };
+})();
+
+},{"./../utils":"hOPY0"}],"1RLcm":[function(require,module,exports) {
+'use strict';
+var isAbsoluteURL = require('../helpers/isAbsoluteURL');
+var combineURLs = require('../helpers/combineURLs');
+/**
+ * Creates a new URL by combining the baseURL with the requestedURL,
+ * only when the requestedURL is not already an absolute URL.
+ * If the requestURL is absolute, this function returns the requestedURL untouched.
+ *
+ * @param {string} baseURL The base URL
+ * @param {string} requestedURL Absolute or relative URL to combine
+ * @returns {string} The combined full path
+ */ module.exports = function buildFullPath(baseURL, requestedURL) {
+    if (baseURL && !isAbsoluteURL(requestedURL)) return combineURLs(baseURL, requestedURL);
+    return requestedURL;
+};
+
+},{"../helpers/isAbsoluteURL":"8E1N1","../helpers/combineURLs":"e9OEH"}],"8E1N1":[function(require,module,exports) {
+'use strict';
+/**
+ * Determines whether the specified URL is absolute
+ *
+ * @param {string} url The URL to test
+ * @returns {boolean} True if the specified URL is absolute, otherwise false
+ */ module.exports = function isAbsoluteURL(url) {
+    // A URL is considered absolute if it begins with "<scheme>://" or "//" (protocol-relative URL).
+    // RFC 3986 defines scheme name as a sequence of characters beginning with a letter and followed
+    // by any combination of letters, digits, plus, period, or hyphen.
+    return /^([a-z][a-z\d\+\-\.]*:)?\/\//i.test(url);
+};
+
+},{}],"e9OEH":[function(require,module,exports) {
+'use strict';
+/**
+ * Creates a new URL by combining the specified URLs
+ *
+ * @param {string} baseURL The base URL
+ * @param {string} relativeURL The relative URL
+ * @returns {string} The combined URL
+ */ module.exports = function combineURLs(baseURL, relativeURL) {
+    return relativeURL ? baseURL.replace(/\/+$/, '') + '/' + relativeURL.replace(/^\/+/, '') : baseURL;
+};
+
+},{}],"9TT83":[function(require,module,exports) {
+'use strict';
+var utils = require('./../utils');
+// Headers whose duplicates are ignored by node
+// c.f. https://nodejs.org/api/http.html#http_message_headers
+var ignoreDuplicateOf = [
+    'age',
+    'authorization',
+    'content-length',
+    'content-type',
+    'etag',
+    'expires',
+    'from',
+    'host',
+    'if-modified-since',
+    'if-unmodified-since',
+    'last-modified',
+    'location',
+    'max-forwards',
+    'proxy-authorization',
+    'referer',
+    'retry-after',
+    'user-agent'
+];
+/**
+ * Parse headers into an object
+ *
+ * ```
+ * Date: Wed, 27 Aug 2014 08:58:49 GMT
+ * Content-Type: application/json
+ * Connection: keep-alive
+ * Transfer-Encoding: chunked
+ * ```
+ *
+ * @param {String} headers Headers needing to be parsed
+ * @returns {Object} Headers parsed into an object
+ */ module.exports = function parseHeaders(headers) {
+    var parsed = {
+    };
+    var key;
+    var val;
+    var i;
+    if (!headers) return parsed;
+    utils.forEach(headers.split('\n'), function parser(line) {
+        i = line.indexOf(':');
+        key = utils.trim(line.substr(0, i)).toLowerCase();
+        val = utils.trim(line.substr(i + 1));
+        if (key) {
+            if (parsed[key] && ignoreDuplicateOf.indexOf(key) >= 0) return;
+            if (key === 'set-cookie') parsed[key] = (parsed[key] ? parsed[key] : []).concat([
+                val
+            ]);
+            else parsed[key] = parsed[key] ? parsed[key] + ', ' + val : val;
+        }
+    });
+    return parsed;
+};
+
+},{"./../utils":"hOPY0"}],"2SCwc":[function(require,module,exports) {
+'use strict';
+var utils = require('./../utils');
+module.exports = utils.isStandardBrowserEnv() ? // Standard browser envs have full support of the APIs needed to test
+// whether the request URL is of the same origin as current location.
+(function standardBrowserEnv() {
+    var msie = /(msie|trident)/i.test(navigator.userAgent);
+    var urlParsingNode = document.createElement('a');
+    var originURL;
+    /**
+    * Parse a URL to discover it's components
+    *
+    * @param {String} url The URL to be parsed
+    * @returns {Object}
+    */ function resolveURL(url) {
+        var href = url;
+        if (msie) {
+            // IE needs attribute set twice to normalize properties
+            urlParsingNode.setAttribute('href', href);
+            href = urlParsingNode.href;
+        }
+        urlParsingNode.setAttribute('href', href);
+        // urlParsingNode provides the UrlUtils interface - http://url.spec.whatwg.org/#urlutils
+        return {
+            href: urlParsingNode.href,
+            protocol: urlParsingNode.protocol ? urlParsingNode.protocol.replace(/:$/, '') : '',
+            host: urlParsingNode.host,
+            search: urlParsingNode.search ? urlParsingNode.search.replace(/^\?/, '') : '',
+            hash: urlParsingNode.hash ? urlParsingNode.hash.replace(/^#/, '') : '',
+            hostname: urlParsingNode.hostname,
+            port: urlParsingNode.port,
+            pathname: urlParsingNode.pathname.charAt(0) === '/' ? urlParsingNode.pathname : '/' + urlParsingNode.pathname
+        };
+    }
+    originURL = resolveURL(window.location.href);
+    /**
+    * Determine if a URL shares the same origin as the current location
+    *
+    * @param {String} requestURL The URL to test
+    * @returns {boolean} True if URL shares the same origin, otherwise false
+    */ return function isURLSameOrigin(requestURL) {
+        var parsed = utils.isString(requestURL) ? resolveURL(requestURL) : requestURL;
+        return parsed.protocol === originURL.protocol && parsed.host === originURL.host;
+    };
+})() : // Non standard browser envs (web workers, react-native) lack needed support.
+(function nonStandardBrowserEnv() {
+    return function isURLSameOrigin() {
+        return true;
+    };
+})();
+
+},{"./../utils":"hOPY0"}],"6KzET":[function(require,module,exports) {
+'use strict';
+module.exports = function isCancel(value) {
+    return !!(value && value.__CANCEL__);
+};
+
+},{}],"8vb7m":[function(require,module,exports) {
+'use strict';
+var utils = require('../utils');
+/**
+ * Config-specific merge-function which creates a new config-object
+ * by merging two configuration objects together.
+ *
+ * @param {Object} config1
+ * @param {Object} config2
+ * @returns {Object} New object resulting from merging config2 to config1
+ */ module.exports = function mergeConfig(config1, config2) {
+    // eslint-disable-next-line no-param-reassign
+    config2 = config2 || {
+    };
+    var config = {
+    };
+    var valueFromConfig2Keys = [
+        'url',
+        'method',
+        'data'
+    ];
+    var mergeDeepPropertiesKeys = [
+        'headers',
+        'auth',
+        'proxy',
+        'params'
+    ];
+    var defaultToConfig2Keys = [
+        'baseURL',
+        'transformRequest',
+        'transformResponse',
+        'paramsSerializer',
+        'timeout',
+        'timeoutMessage',
+        'withCredentials',
+        'adapter',
+        'responseType',
+        'xsrfCookieName',
+        'xsrfHeaderName',
+        'onUploadProgress',
+        'onDownloadProgress',
+        'decompress',
+        'maxContentLength',
+        'maxBodyLength',
+        'maxRedirects',
+        'transport',
+        'httpAgent',
+        'httpsAgent',
+        'cancelToken',
+        'socketPath',
+        'responseEncoding'
+    ];
+    var directMergeKeys = [
+        'validateStatus'
+    ];
+    function getMergedValue(target, source) {
+        if (utils.isPlainObject(target) && utils.isPlainObject(source)) return utils.merge(target, source);
+        else if (utils.isPlainObject(source)) return utils.merge({
+        }, source);
+        else if (utils.isArray(source)) return source.slice();
+        return source;
+    }
+    function mergeDeepProperties(prop) {
+        if (!utils.isUndefined(config2[prop])) config[prop] = getMergedValue(config1[prop], config2[prop]);
+        else if (!utils.isUndefined(config1[prop])) config[prop] = getMergedValue(undefined, config1[prop]);
+    }
+    utils.forEach(valueFromConfig2Keys, function valueFromConfig2(prop) {
+        if (!utils.isUndefined(config2[prop])) config[prop] = getMergedValue(undefined, config2[prop]);
+    });
+    utils.forEach(mergeDeepPropertiesKeys, mergeDeepProperties);
+    utils.forEach(defaultToConfig2Keys, function defaultToConfig2(prop) {
+        if (!utils.isUndefined(config2[prop])) config[prop] = getMergedValue(undefined, config2[prop]);
+        else if (!utils.isUndefined(config1[prop])) config[prop] = getMergedValue(undefined, config1[prop]);
+    });
+    utils.forEach(directMergeKeys, function merge(prop) {
+        if (prop in config2) config[prop] = getMergedValue(config1[prop], config2[prop]);
+        else if (prop in config1) config[prop] = getMergedValue(undefined, config1[prop]);
+    });
+    var axiosKeys = valueFromConfig2Keys.concat(mergeDeepPropertiesKeys).concat(defaultToConfig2Keys).concat(directMergeKeys);
+    var otherKeys = Object.keys(config1).concat(Object.keys(config2)).filter(function filterAxiosKeys(key) {
+        return axiosKeys.indexOf(key) === -1;
+    });
+    utils.forEach(otherKeys, mergeDeepProperties);
+    return config;
+};
+
+},{"../utils":"hOPY0"}],"4sigL":[function(require,module,exports) {
+'use strict';
+var pkg = require('./../../package.json');
+var validators = {
+};
+// eslint-disable-next-line func-names
+[
+    'object',
+    'boolean',
+    'number',
+    'function',
+    'string',
+    'symbol'
+].forEach(function(type, i) {
+    validators[type] = function validator(thing) {
+        return typeof thing === type || 'a' + (i < 1 ? 'n ' : ' ') + type;
+    };
+});
+var deprecatedWarnings = {
+};
+var currentVerArr = pkg.version.split('.');
+/**
+ * Compare package versions
+ * @param {string} version
+ * @param {string?} thanVersion
+ * @returns {boolean}
+ */ function isOlderVersion(version, thanVersion) {
+    var pkgVersionArr = thanVersion ? thanVersion.split('.') : currentVerArr;
+    var destVer = version.split('.');
+    for(var i = 0; i < 3; i++){
+        if (pkgVersionArr[i] > destVer[i]) return true;
+        else if (pkgVersionArr[i] < destVer[i]) return false;
+    }
+    return false;
+}
+/**
+ * Transitional option validator
+ * @param {function|boolean?} validator
+ * @param {string?} version
+ * @param {string} message
+ * @returns {function}
+ */ validators.transitional = function transitional(validator, version, message) {
+    var isDeprecated = version && isOlderVersion(version);
+    function formatMessage(opt, desc) {
+        return '[Axios v' + pkg.version + '] Transitional option \'' + opt + '\'' + desc + (message ? '. ' + message : '');
+    }
+    // eslint-disable-next-line func-names
+    return function(value, opt, opts) {
+        if (validator === false) throw new Error(formatMessage(opt, ' has been removed in ' + version));
+        if (isDeprecated && !deprecatedWarnings[opt]) {
+            deprecatedWarnings[opt] = true;
+            // eslint-disable-next-line no-console
+            console.warn(formatMessage(opt, ' has been deprecated since v' + version + ' and will be removed in the near future'));
+        }
+        return validator ? validator(value, opt, opts) : true;
+    };
+};
+/**
+ * Assert object's properties type
+ * @param {object} options
+ * @param {object} schema
+ * @param {boolean?} allowUnknown
+ */ function assertOptions(options, schema, allowUnknown) {
+    if (typeof options !== 'object') throw new TypeError('options must be an object');
+    var keys = Object.keys(options);
+    var i = keys.length;
+    while((i--) > 0){
+        var opt = keys[i];
+        var validator = schema[opt];
+        if (validator) {
+            var value = options[opt];
+            var result = value === undefined || validator(value, opt, options);
+            if (result !== true) throw new TypeError('option ' + opt + ' must be ' + result);
+            continue;
+        }
+        if (allowUnknown !== true) throw Error('Unknown option ' + opt);
+    }
+}
+module.exports = {
+    isOlderVersion: isOlderVersion,
+    assertOptions: assertOptions,
+    validators: validators
+};
+
+},{"./../../package.json":"5vay1"}],"5vay1":[function(require,module,exports) {
+module.exports = JSON.parse("{\"_from\":\"axios\",\"_id\":\"axios@0.21.4\",\"_inBundle\":false,\"_integrity\":\"sha512-ut5vewkiu8jjGBdqpM44XxjuCjq9LAKeHVmoVfHVzy8eHgxxq8SbAVQNovDA8mVi05kP0Ea/n/UzcSHcTJQfNg==\",\"_location\":\"/axios\",\"_phantomChildren\":{},\"_requested\":{\"type\":\"tag\",\"registry\":true,\"raw\":\"axios\",\"name\":\"axios\",\"escapedName\":\"axios\",\"rawSpec\":\"\",\"saveSpec\":null,\"fetchSpec\":\"latest\"},\"_requiredBy\":[\"#USER\",\"/\"],\"_resolved\":\"https://registry.npmjs.org/axios/-/axios-0.21.4.tgz\",\"_shasum\":\"c67b90dc0568e5c1cf2b0b858c43ba28e2eda575\",\"_spec\":\"axios\",\"_where\":\"C:\\\\Users\\\\Ivan\\\\Desktop\\\\CareerFoundry\\\\JavaScript\\\\ServerSideProgramming\\\\myFlix-client\",\"author\":{\"name\":\"Matt Zabriskie\"},\"browser\":{\"./lib/adapters/http.js\":\"./lib/adapters/xhr.js\"},\"bugs\":{\"url\":\"https://github.com/axios/axios/issues\"},\"bundleDependencies\":false,\"bundlesize\":[{\"path\":\"./dist/axios.min.js\",\"threshold\":\"5kB\"}],\"dependencies\":{\"follow-redirects\":\"^1.14.0\"},\"deprecated\":false,\"description\":\"Promise based HTTP client for the browser and node.js\",\"devDependencies\":{\"coveralls\":\"^3.0.0\",\"es6-promise\":\"^4.2.4\",\"grunt\":\"^1.3.0\",\"grunt-banner\":\"^0.6.0\",\"grunt-cli\":\"^1.2.0\",\"grunt-contrib-clean\":\"^1.1.0\",\"grunt-contrib-watch\":\"^1.0.0\",\"grunt-eslint\":\"^23.0.0\",\"grunt-karma\":\"^4.0.0\",\"grunt-mocha-test\":\"^0.13.3\",\"grunt-ts\":\"^6.0.0-beta.19\",\"grunt-webpack\":\"^4.0.2\",\"istanbul-instrumenter-loader\":\"^1.0.0\",\"jasmine-core\":\"^2.4.1\",\"karma\":\"^6.3.2\",\"karma-chrome-launcher\":\"^3.1.0\",\"karma-firefox-launcher\":\"^2.1.0\",\"karma-jasmine\":\"^1.1.1\",\"karma-jasmine-ajax\":\"^0.1.13\",\"karma-safari-launcher\":\"^1.0.0\",\"karma-sauce-launcher\":\"^4.3.6\",\"karma-sinon\":\"^1.0.5\",\"karma-sourcemap-loader\":\"^0.3.8\",\"karma-webpack\":\"^4.0.2\",\"load-grunt-tasks\":\"^3.5.2\",\"minimist\":\"^1.2.0\",\"mocha\":\"^8.2.1\",\"sinon\":\"^4.5.0\",\"terser-webpack-plugin\":\"^4.2.3\",\"typescript\":\"^4.0.5\",\"url-search-params\":\"^0.10.0\",\"webpack\":\"^4.44.2\",\"webpack-dev-server\":\"^3.11.0\"},\"homepage\":\"https://axios-http.com\",\"jsdelivr\":\"dist/axios.min.js\",\"keywords\":[\"xhr\",\"http\",\"ajax\",\"promise\",\"node\"],\"license\":\"MIT\",\"main\":\"index.js\",\"name\":\"axios\",\"repository\":{\"type\":\"git\",\"url\":\"git+https://github.com/axios/axios.git\"},\"scripts\":{\"build\":\"NODE_ENV=production grunt build\",\"coveralls\":\"cat coverage/lcov.info | ./node_modules/coveralls/bin/coveralls.js\",\"examples\":\"node ./examples/server.js\",\"fix\":\"eslint --fix lib/**/*.js\",\"postversion\":\"git push && git push --tags\",\"preversion\":\"npm test\",\"start\":\"node ./sandbox/server.js\",\"test\":\"grunt test\",\"version\":\"npm run build && grunt version && git add -A dist && git add CHANGELOG.md bower.json package.json\"},\"typings\":\"./index.d.ts\",\"unpkg\":\"dist/axios.min.js\",\"version\":\"0.21.4\"}");
+
+},{}],"iGO1D":[function(require,module,exports) {
+'use strict';
+/**
+ * A `Cancel` is an object that is thrown when an operation is canceled.
+ *
+ * @class
+ * @param {string=} message The message.
+ */ function Cancel(message) {
+    this.message = message;
+}
+Cancel.prototype.toString = function toString() {
+    return 'Cancel' + (this.message ? ': ' + this.message : '');
+};
+Cancel.prototype.__CANCEL__ = true;
+module.exports = Cancel;
+
+},{}],"6kJtU":[function(require,module,exports) {
+'use strict';
+var Cancel = require('./Cancel');
+/**
+ * A `CancelToken` is an object that can be used to request cancellation of an operation.
+ *
+ * @class
+ * @param {Function} executor The executor function.
+ */ function CancelToken(executor) {
+    if (typeof executor !== 'function') throw new TypeError('executor must be a function.');
+    var resolvePromise;
+    this.promise = new Promise(function promiseExecutor(resolve) {
+        resolvePromise = resolve;
+    });
+    var token = this;
+    executor(function cancel(message) {
+        if (token.reason) // Cancellation has already been requested
+        return;
+        token.reason = new Cancel(message);
+        resolvePromise(token.reason);
+    });
+}
+/**
+ * Throws a `Cancel` if cancellation has been requested.
+ */ CancelToken.prototype.throwIfRequested = function throwIfRequested() {
+    if (this.reason) throw this.reason;
+};
+/**
+ * Returns an object that contains a new `CancelToken` and a function that, when called,
+ * cancels the `CancelToken`.
+ */ CancelToken.source = function source() {
+    var cancel;
+    var token = new CancelToken(function executor(c) {
+        cancel = c;
+    });
+    return {
+        token: token,
+        cancel: cancel
+    };
+};
+module.exports = CancelToken;
+
+},{"./Cancel":"iGO1D"}],"3fmMu":[function(require,module,exports) {
+'use strict';
+/**
+ * Syntactic sugar for invoking a function and expanding an array for arguments.
+ *
+ * Common use case would be to use `Function.prototype.apply`.
+ *
+ *  ```js
+ *  function f(x, y, z) {}
+ *  var args = [1, 2, 3];
+ *  f.apply(null, args);
+ *  ```
+ *
+ * With `spread` this example can be re-written.
+ *
+ *  ```js
+ *  spread(function(x, y, z) {})([1, 2, 3]);
+ *  ```
+ *
+ * @param {Function} callback
+ * @returns {Function}
+ */ module.exports = function spread(callback) {
+    return function wrap(arr) {
+        return callback.apply(null, arr);
+    };
+};
+
+},{}],"1NqDP":[function(require,module,exports) {
+'use strict';
+/**
+ * Determines whether the payload is an error thrown by Axios
+ *
+ * @param {*} payload The value to test
+ * @returns {boolean} True if the payload is an error thrown by Axios, otherwise false
+ */ module.exports = function isAxiosError(payload) {
+    return typeof payload === 'object' && payload.isAxiosError === true;
+};
+
+},{}],"jk91c":[function(require,module,exports) {
+var $parcel$ReactRefreshHelpers$fb6b = require("@parcel/transformer-react-refresh-wrap/lib/helpers/helpers.js");
 var prevRefreshReg = window.$RefreshReg$;
 var prevRefreshSig = window.$RefreshSig$;
-$parcel$ReactRefreshHelpers$9bc3.prelude(module);
+$parcel$ReactRefreshHelpers$fb6b.prelude(module);
 
 try {
 var parcelHelpers = require("@parcel/transformer-js/src/esmodule-helpers.js");
 parcelHelpers.defineInteropFlag(exports);
+parcelHelpers.export(exports, "LoginView", ()=>LoginView
+);
 var _jsxRuntime = require("react/jsx-runtime");
 var _react = require("react");
 var _reactDefault = parcelHelpers.interopDefault(_react);
-var _reactRedux = require("react-redux");
+var _propTypes = require("prop-types");
+var _propTypesDefault = parcelHelpers.interopDefault(_propTypes);
 var _form = require("react-bootstrap/Form");
 var _formDefault = parcelHelpers.interopDefault(_form);
-var _actions = require("../../actions/actions");
-var _visibilityFilterInputScss = require("./visibility-filter-input.scss");
-function VisibilityFilterInput(props) {
-    return(/*#__PURE__*/ _jsxRuntime.jsx(_formDefault.default.Control, {
-        className: "search-input",
-        onChange: (e)=>props.setFilter(e.target.value)
-        ,
-        value: props.visibilityFilter,
-        placeholder: "search for movies",
+var _button = require("react-bootstrap/Button");
+var _buttonDefault = parcelHelpers.interopDefault(_button);
+var _reactRouterDom = require("react-router-dom");
+var _axios = require("axios");
+var _axiosDefault = parcelHelpers.interopDefault(_axios);
+var _logInViewScss = require("./log-in-view.scss");
+var _s = $RefreshSig$();
+function LoginView(props) {
+    _s();
+    const [username, setUsername] = _react.useState("");
+    const [password, setPassword] = _react.useState("");
+    const handleSubmit = (e)=>{
+        e.preventDefault();
+        /* Send a request to the server for authentication */ _axiosDefault.default.post('https://zanko-my-flix.herokuapp.com/users/login', {
+            Username: username,
+            Password: password
+        }).then((response)=>{
+            const data = response.data;
+            console.log(username + " has logged in!");
+            props.onLoggedIn(data);
+        }).catch((e1)=>{
+            console.log('user and password do not match');
+        });
+    };
+    /* then call props.onLoggedIn(username) */ return(/*#__PURE__*/ _jsxRuntime.jsx("div", {
+        className: "form-container",
         __source: {
-            fileName: "src/components/visibility-filter-input/visibility-filter-input.jsx",
-            lineNumber: 10
+            fileName: "src/components/log-in-view/log-in-view.jsx",
+            lineNumber: 33
         },
-        __self: this
+        __self: this,
+        children: /*#__PURE__*/ _jsxRuntime.jsxs(_formDefault.default, {
+            __source: {
+                fileName: "src/components/log-in-view/log-in-view.jsx",
+                lineNumber: 34
+            },
+            __self: this,
+            children: [
+                /*#__PURE__*/ _jsxRuntime.jsxs(_formDefault.default.Group, {
+                    controlId: "formUsername",
+                    __source: {
+                        fileName: "src/components/log-in-view/log-in-view.jsx",
+                        lineNumber: 35
+                    },
+                    __self: this,
+                    children: [
+                        /*#__PURE__*/ _jsxRuntime.jsx(_formDefault.default.Label, {
+                            className: "label",
+                            __source: {
+                                fileName: "src/components/log-in-view/log-in-view.jsx",
+                                lineNumber: 36
+                            },
+                            __self: this,
+                            children: "Username:"
+                        }),
+                        /*#__PURE__*/ _jsxRuntime.jsx(_formDefault.default.Control, {
+                            type: "text",
+                            onChange: (e)=>setUsername(e.target.value)
+                            ,
+                            __source: {
+                                fileName: "src/components/log-in-view/log-in-view.jsx",
+                                lineNumber: 37
+                            },
+                            __self: this
+                        })
+                    ]
+                }),
+                /*#__PURE__*/ _jsxRuntime.jsxs(_formDefault.default.Group, {
+                    controlId: "formPassword",
+                    __source: {
+                        fileName: "src/components/log-in-view/log-in-view.jsx",
+                        lineNumber: 39
+                    },
+                    __self: this,
+                    children: [
+                        /*#__PURE__*/ _jsxRuntime.jsx(_formDefault.default.Label, {
+                            className: "label",
+                            __source: {
+                                fileName: "src/components/log-in-view/log-in-view.jsx",
+                                lineNumber: 40
+                            },
+                            __self: this,
+                            children: "Password:"
+                        }),
+                        /*#__PURE__*/ _jsxRuntime.jsx(_formDefault.default.Control, {
+                            type: "password",
+                            onChange: (e)=>setPassword(e.target.value)
+                            ,
+                            __source: {
+                                fileName: "src/components/log-in-view/log-in-view.jsx",
+                                lineNumber: 41
+                            },
+                            __self: this
+                        })
+                    ]
+                }),
+                /*#__PURE__*/ _jsxRuntime.jsx(_buttonDefault.default, {
+                    className: "submit-button",
+                    variant: "primary",
+                    type: "submit",
+                    onClick: handleSubmit,
+                    __source: {
+                        fileName: "src/components/log-in-view/log-in-view.jsx",
+                        lineNumber: 43
+                    },
+                    __self: this,
+                    children: "Log In"
+                }),
+                /*#__PURE__*/ _jsxRuntime.jsx(_reactRouterDom.Link, {
+                    to: `/register`,
+                    __source: {
+                        fileName: "src/components/log-in-view/log-in-view.jsx",
+                        lineNumber: 45
+                    },
+                    __self: this,
+                    children: /*#__PURE__*/ _jsxRuntime.jsx("p", {
+                        className: "register-instead",
+                        __source: {
+                            fileName: "src/components/log-in-view/log-in-view.jsx",
+                            lineNumber: 46
+                        },
+                        __self: this,
+                        children: "Register instead"
+                    })
+                })
+            ]
+        })
     }));
 }
-_c = VisibilityFilterInput;
-exports.default = _reactRedux.connect(null, {
-    setFilter: _actions.setFilter
-})(VisibilityFilterInput);
+_s(LoginView, "Lrw7JeD9zj6OUWhT/IH4OIvPKEk=");
+_c = LoginView;
+LoginView.proptypes = {
+    user: _propTypesDefault.default.shape({
+        username: _propTypesDefault.default.string.isRequired,
+        password: _propTypesDefault.default.string.isRequired
+    }),
+    onLoggedIn: _propTypesDefault.default.func.isRequired
+};
 var _c;
-$RefreshReg$(_c, "VisibilityFilterInput");
+$RefreshReg$(_c, "LoginView");
 
-  $parcel$ReactRefreshHelpers$9bc3.postlude(module);
+  $parcel$ReactRefreshHelpers$fb6b.postlude(module);
 } finally {
   window.$RefreshReg$ = prevRefreshReg;
   window.$RefreshSig$ = prevRefreshSig;
 }
-},{"react/jsx-runtime":"8xIwr","react":"6TuXu","react-redux":"2L0if","react-bootstrap/Form":"5ykgY","../../actions/actions":"1Ttfj","./visibility-filter-input.scss":"3ZOIV","@parcel/transformer-js/src/esmodule-helpers.js":"JacNc","@parcel/transformer-react-refresh-wrap/lib/helpers/helpers.js":"5V79J"}],"5ykgY":[function(require,module,exports) {
+},{"react/jsx-runtime":"8xIwr","react":"6TuXu","@parcel/transformer-js/src/esmodule-helpers.js":"JacNc","@parcel/transformer-react-refresh-wrap/lib/helpers/helpers.js":"5V79J","prop-types":"1tgq3","react-bootstrap/Form":"5ykgY","react-bootstrap/Button":"9CzHT","./log-in-view.scss":"hWa0x","axios":"iYoWk","react-router-dom":"cpyQW"}],"5ykgY":[function(require,module,exports) {
 var parcelHelpers = require("@parcel/transformer-js/src/esmodule-helpers.js");
 parcelHelpers.defineInteropFlag(exports);
 var _extends = require("@babel/runtime/helpers/esm/extends");
@@ -30552,7 +29491,65 @@ FormLabel.displayName = 'FormLabel';
 FormLabel.defaultProps = defaultProps;
 exports.default = FormLabel;
 
-},{"@babel/runtime/helpers/esm/extends":"bKAu6","@babel/runtime/helpers/esm/objectWithoutPropertiesLoose":"3Rubg","classnames":"bOXOh","react":"6TuXu","warning":"dbfUS","./Col":"fbam0","./FormContext":"7nyWW","./ThemeProvider":"eeqfi","@parcel/transformer-js/src/esmodule-helpers.js":"JacNc"}],"5jn4s":[function(require,module,exports) {
+},{"@babel/runtime/helpers/esm/extends":"bKAu6","@babel/runtime/helpers/esm/objectWithoutPropertiesLoose":"3Rubg","classnames":"bOXOh","react":"6TuXu","warning":"dbfUS","./Col":"fbam0","./FormContext":"7nyWW","./ThemeProvider":"eeqfi","@parcel/transformer-js/src/esmodule-helpers.js":"JacNc"}],"fbam0":[function(require,module,exports) {
+var parcelHelpers = require("@parcel/transformer-js/src/esmodule-helpers.js");
+parcelHelpers.defineInteropFlag(exports);
+var _extends = require("@babel/runtime/helpers/esm/extends");
+var _extendsDefault = parcelHelpers.interopDefault(_extends);
+var _objectWithoutPropertiesLoose = require("@babel/runtime/helpers/esm/objectWithoutPropertiesLoose");
+var _objectWithoutPropertiesLooseDefault = parcelHelpers.interopDefault(_objectWithoutPropertiesLoose);
+var _classnames = require("classnames");
+var _classnamesDefault = parcelHelpers.interopDefault(_classnames);
+var _react = require("react");
+var _reactDefault = parcelHelpers.interopDefault(_react);
+var _themeProvider = require("./ThemeProvider");
+var _excluded = [
+    "bsPrefix",
+    "className",
+    "as"
+];
+var DEVICE_SIZES = [
+    'xl',
+    'lg',
+    'md',
+    'sm',
+    'xs'
+];
+var Col = /*#__PURE__*/ _reactDefault.default.forwardRef(function(_ref, ref) {
+    var bsPrefix = _ref.bsPrefix, className = _ref.className, _ref$as = _ref.as, Component = _ref$as === void 0 ? 'div' : _ref$as, props = _objectWithoutPropertiesLooseDefault.default(_ref, _excluded);
+    var prefix = _themeProvider.useBootstrapPrefix(bsPrefix, 'col');
+    var spans = [];
+    var classes = [];
+    DEVICE_SIZES.forEach(function(brkPoint) {
+        var propValue = props[brkPoint];
+        delete props[brkPoint];
+        var span;
+        var offset;
+        var order;
+        if (typeof propValue === 'object' && propValue != null) {
+            var _propValue$span = propValue.span;
+            span = _propValue$span === void 0 ? true : _propValue$span;
+            offset = propValue.offset;
+            order = propValue.order;
+        } else span = propValue;
+        var infix = brkPoint !== 'xs' ? "-" + brkPoint : '';
+        if (span) spans.push(span === true ? "" + prefix + infix : "" + prefix + infix + "-" + span);
+        if (order != null) classes.push("order" + infix + "-" + order);
+        if (offset != null) classes.push("offset" + infix + "-" + offset);
+    });
+    if (!spans.length) spans.push(prefix); // plain 'col'
+    return(/*#__PURE__*/ _reactDefault.default.createElement(Component, _extendsDefault.default({
+    }, props, {
+        ref: ref,
+        className: _classnamesDefault.default.apply(void 0, [
+            className
+        ].concat(spans, classes))
+    })));
+});
+Col.displayName = 'Col';
+exports.default = Col;
+
+},{"@babel/runtime/helpers/esm/extends":"bKAu6","@babel/runtime/helpers/esm/objectWithoutPropertiesLoose":"3Rubg","classnames":"bOXOh","react":"6TuXu","./ThemeProvider":"eeqfi","@parcel/transformer-js/src/esmodule-helpers.js":"JacNc"}],"5jn4s":[function(require,module,exports) {
 var parcelHelpers = require("@parcel/transformer-js/src/esmodule-helpers.js");
 parcelHelpers.defineInteropFlag(exports);
 var _extends = require("@babel/runtime/helpers/esm/extends");
@@ -30603,7 +29600,285 @@ Switch.Input = _formCheckDefault.default.Input;
 Switch.Label = _formCheckDefault.default.Label;
 exports.default = Switch;
 
-},{"@babel/runtime/helpers/esm/extends":"bKAu6","react":"6TuXu","./FormCheck":"27gi5","@parcel/transformer-js/src/esmodule-helpers.js":"JacNc"}],"8AqEH":[function(require,module,exports) {
+},{"@babel/runtime/helpers/esm/extends":"bKAu6","react":"6TuXu","./FormCheck":"27gi5","@parcel/transformer-js/src/esmodule-helpers.js":"JacNc"}],"hWa0x":[function() {},{}],"aP2YV":[function(require,module,exports) {
+var $parcel$ReactRefreshHelpers$8dd4 = require("@parcel/transformer-react-refresh-wrap/lib/helpers/helpers.js");
+var prevRefreshReg = window.$RefreshReg$;
+var prevRefreshSig = window.$RefreshSig$;
+$parcel$ReactRefreshHelpers$8dd4.prelude(module);
+
+try {
+var parcelHelpers = require("@parcel/transformer-js/src/esmodule-helpers.js");
+parcelHelpers.defineInteropFlag(exports);
+parcelHelpers.export(exports, "RegistrationView", ()=>RegistrationView
+);
+var _jsxRuntime = require("react/jsx-runtime");
+var _react = require("react");
+var _reactDefault = parcelHelpers.interopDefault(_react);
+var _axios = require("axios");
+var _axiosDefault = parcelHelpers.interopDefault(_axios);
+var _propTypes = require("prop-types");
+var _propTypesDefault = parcelHelpers.interopDefault(_propTypes);
+var _form = require("react-bootstrap/Form");
+var _formDefault = parcelHelpers.interopDefault(_form);
+var _button = require("react-bootstrap/Button");
+var _buttonDefault = parcelHelpers.interopDefault(_button);
+var _reactRouterDom = require("react-router-dom");
+var _registrationViewScss = require("./registration-view.scss");
+var _s = $RefreshSig$();
+function RegistrationView(props) {
+    _s();
+    const [username, setUsername] = _react.useState("");
+    const [password, setPassword] = _react.useState("");
+    const [email, setEmail] = _react.useState("");
+    const [birthday, setBirthdate] = _react.useState("");
+    const [validated, setValidation] = _react.useState(true);
+    const [usernameError, setUsernameError] = _react.useState("");
+    const [passwordError, setPasswordError] = _react.useState("");
+    const [emailError, setEmailError] = _react.useState("");
+    const handleSubmit = (e)=>{
+        e.preventDefault();
+        validation();
+        if (validated) _axiosDefault.default.post('https://zanko-my-flix.herokuapp.com/users', {
+            Username: username,
+            Password: password,
+            Email: email,
+            Birthday: birthday
+        }).then((response)=>{
+            const data = response.data;
+            console.log(data);
+            alert("You have registered an account with the username: " + username);
+            setValidation(false);
+            window.open('/', '_self'); // the second argument '_self' is necessary so that the page will open in the current tab
+        }).catch((e1)=>{
+            console.log('error registering the user');
+        });
+    };
+    /*validate user input before registering user*/ function validation() {
+        const letters = /^[0-9a-zA-Z]+$/;
+        !username.match(letters) ? setUsernameError("*only numbers and letters are valid") : setUsernameError("");
+        username.length < 4 ? setUsernameError("*required, a minimum of 4 characters") : setUsernameError("");
+        password.trim().length < 6 ? setPasswordError("*required, a minimum of 6 characters") : setPasswordError("");
+        !email.includes("@") ? setEmailError("*required, a valid email") : setEmailError("");
+        _axiosDefault.default.patch('https://zanko-my-flix.herokuapp.com/users/check/', {
+            Username: username
+        }).then((response)=>{
+            const data = response.data;
+            String(data) == username + " is already taken" ? setUsernameError("*" + data) : setUsernameError("");
+        }).catch((e)=>{
+            console.log('error registering the user');
+        });
+        emailError == "" && passwordError == "" && usernameError == "" ? setValidation(true) : setValidation(false);
+    }
+    return(/*#__PURE__*/ _jsxRuntime.jsx("div", {
+        className: "form-container",
+        __source: {
+            fileName: "src/components/registration-view/registration-view.jsx",
+            lineNumber: 71
+        },
+        __self: this,
+        children: /*#__PURE__*/ _jsxRuntime.jsxs(_formDefault.default, {
+            __source: {
+                fileName: "src/components/registration-view/registration-view.jsx",
+                lineNumber: 72
+            },
+            __self: this,
+            children: [
+                /*#__PURE__*/ _jsxRuntime.jsxs(_formDefault.default.Group, {
+                    controlId: "formUsername",
+                    __source: {
+                        fileName: "src/components/registration-view/registration-view.jsx",
+                        lineNumber: 73
+                    },
+                    __self: this,
+                    children: [
+                        /*#__PURE__*/ _jsxRuntime.jsx(_formDefault.default.Label, {
+                            className: "label",
+                            __source: {
+                                fileName: "src/components/registration-view/registration-view.jsx",
+                                lineNumber: 74
+                            },
+                            __self: this,
+                            children: "Username:"
+                        }),
+                        /*#__PURE__*/ _jsxRuntime.jsx(_formDefault.default.Control, {
+                            type: "text",
+                            onChange: (e)=>setUsername(e.target.value)
+                            ,
+                            __source: {
+                                fileName: "src/components/registration-view/registration-view.jsx",
+                                lineNumber: 75
+                            },
+                            __self: this
+                        }),
+                        /*#__PURE__*/ _jsxRuntime.jsx("p", {
+                            className: "error",
+                            __source: {
+                                fileName: "src/components/registration-view/registration-view.jsx",
+                                lineNumber: 76
+                            },
+                            __self: this,
+                            children: usernameError
+                        })
+                    ]
+                }),
+                /*#__PURE__*/ _jsxRuntime.jsxs(_formDefault.default.Group, {
+                    controlId: "formPassword",
+                    __source: {
+                        fileName: "src/components/registration-view/registration-view.jsx",
+                        lineNumber: 78
+                    },
+                    __self: this,
+                    children: [
+                        /*#__PURE__*/ _jsxRuntime.jsx(_formDefault.default.Label, {
+                            className: "label",
+                            __source: {
+                                fileName: "src/components/registration-view/registration-view.jsx",
+                                lineNumber: 79
+                            },
+                            __self: this,
+                            children: "Password:"
+                        }),
+                        /*#__PURE__*/ _jsxRuntime.jsx(_formDefault.default.Control, {
+                            type: "password",
+                            onChange: (e)=>setPassword(e.target.value)
+                            ,
+                            __source: {
+                                fileName: "src/components/registration-view/registration-view.jsx",
+                                lineNumber: 80
+                            },
+                            __self: this
+                        }),
+                        /*#__PURE__*/ _jsxRuntime.jsx("p", {
+                            className: "error",
+                            __source: {
+                                fileName: "src/components/registration-view/registration-view.jsx",
+                                lineNumber: 81
+                            },
+                            __self: this,
+                            children: passwordError
+                        })
+                    ]
+                }),
+                /*#__PURE__*/ _jsxRuntime.jsxs(_formDefault.default.Group, {
+                    controlId: "formEmail",
+                    __source: {
+                        fileName: "src/components/registration-view/registration-view.jsx",
+                        lineNumber: 83
+                    },
+                    __self: this,
+                    children: [
+                        /*#__PURE__*/ _jsxRuntime.jsx(_formDefault.default.Label, {
+                            className: "label",
+                            __source: {
+                                fileName: "src/components/registration-view/registration-view.jsx",
+                                lineNumber: 84
+                            },
+                            __self: this,
+                            children: "Email:"
+                        }),
+                        /*#__PURE__*/ _jsxRuntime.jsx(_formDefault.default.Control, {
+                            type: "email",
+                            onChange: (e)=>setEmail(e.target.value)
+                            ,
+                            __source: {
+                                fileName: "src/components/registration-view/registration-view.jsx",
+                                lineNumber: 85
+                            },
+                            __self: this
+                        }),
+                        /*#__PURE__*/ _jsxRuntime.jsx("p", {
+                            className: "error",
+                            __source: {
+                                fileName: "src/components/registration-view/registration-view.jsx",
+                                lineNumber: 86
+                            },
+                            __self: this,
+                            children: emailError
+                        })
+                    ]
+                }),
+                /*#__PURE__*/ _jsxRuntime.jsxs(_formDefault.default.Group, {
+                    controlId: "formBirthdate",
+                    __source: {
+                        fileName: "src/components/registration-view/registration-view.jsx",
+                        lineNumber: 88
+                    },
+                    __self: this,
+                    children: [
+                        /*#__PURE__*/ _jsxRuntime.jsx(_formDefault.default.Label, {
+                            className: "label",
+                            __source: {
+                                fileName: "src/components/registration-view/registration-view.jsx",
+                                lineNumber: 89
+                            },
+                            __self: this,
+                            children: "Birth date:"
+                        }),
+                        /*#__PURE__*/ _jsxRuntime.jsx(_formDefault.default.Control, {
+                            type: "date",
+                            onChange: (e)=>setBirthdate(e.target.value)
+                            ,
+                            __source: {
+                                fileName: "src/components/registration-view/registration-view.jsx",
+                                lineNumber: 90
+                            },
+                            __self: this
+                        })
+                    ]
+                }),
+                /*#__PURE__*/ _jsxRuntime.jsx(_buttonDefault.default, {
+                    className: "register-button",
+                    variant: "primary",
+                    type: "submit",
+                    onClick: handleSubmit,
+                    __source: {
+                        fileName: "src/components/registration-view/registration-view.jsx",
+                        lineNumber: 92
+                    },
+                    __self: this,
+                    children: "Register"
+                }),
+                /*#__PURE__*/ _jsxRuntime.jsx(_reactRouterDom.Link, {
+                    to: `/`,
+                    __source: {
+                        fileName: "src/components/registration-view/registration-view.jsx",
+                        lineNumber: 94
+                    },
+                    __self: this,
+                    children: /*#__PURE__*/ _jsxRuntime.jsx("p", {
+                        className: "login-instead",
+                        variant: "link",
+                        __source: {
+                            fileName: "src/components/registration-view/registration-view.jsx",
+                            lineNumber: 95
+                        },
+                        __self: this,
+                        children: "Login instead"
+                    })
+                })
+            ]
+        })
+    }));
+}
+_s(RegistrationView, "y/c/sWAw7cNCfi7RHzcJSClaXiA=");
+_c = RegistrationView;
+RegistrationView.propTypes = {
+    registerUser: _propTypesDefault.default.shape({
+        username: _propTypesDefault.default.string.isRequired,
+        password: _propTypesDefault.default.string.isRequired,
+        email: _propTypesDefault.default.string.isRequired,
+        birthdate: _propTypesDefault.default.string.isRequired
+    })
+};
+var _c;
+$RefreshReg$(_c, "RegistrationView");
+
+  $parcel$ReactRefreshHelpers$8dd4.postlude(module);
+} finally {
+  window.$RefreshReg$ = prevRefreshReg;
+  window.$RefreshSig$ = prevRefreshSig;
+}
+},{"react/jsx-runtime":"8xIwr","react":"6TuXu","prop-types":"1tgq3","@parcel/transformer-js/src/esmodule-helpers.js":"JacNc","@parcel/transformer-react-refresh-wrap/lib/helpers/helpers.js":"5V79J","react-bootstrap/Form":"5ykgY","react-bootstrap/Button":"9CzHT","./registration-view.scss":"fr9ZP","axios":"iYoWk","react-router-dom":"cpyQW"}],"fr9ZP":[function() {},{}],"c0x1x":[function(require,module,exports) {
 var parcelHelpers = require("@parcel/transformer-js/src/esmodule-helpers.js");
 parcelHelpers.defineInteropFlag(exports);
 var _extends = require("@babel/runtime/helpers/esm/extends");
@@ -30612,601 +29887,709 @@ var _objectWithoutPropertiesLoose = require("@babel/runtime/helpers/esm/objectWi
 var _objectWithoutPropertiesLooseDefault = parcelHelpers.interopDefault(_objectWithoutPropertiesLoose);
 var _classnames = require("classnames");
 var _classnamesDefault = parcelHelpers.interopDefault(_classnames);
-var _camelize = require("dom-helpers/camelize");
-var _camelizeDefault = parcelHelpers.interopDefault(_camelize);
 var _react = require("react");
 var _reactDefault = parcelHelpers.interopDefault(_react);
 var _themeProvider = require("./ThemeProvider");
 var _excluded = [
-    "className",
     "bsPrefix",
+    "className",
+    "noGutters",
     "as"
 ];
-var pascalCase = function pascalCase1(str) {
-    return str[0].toUpperCase() + _camelizeDefault.default(str).slice(1);
+var DEVICE_SIZES = [
+    'xl',
+    'lg',
+    'md',
+    'sm',
+    'xs'
+];
+var defaultProps = {
+    noGutters: false
 };
-function createWithBsPrefix(prefix, _temp) {
-    var _ref = _temp === void 0 ? {
-    } : _temp, _ref$displayName = _ref.displayName, displayName = _ref$displayName === void 0 ? pascalCase(prefix) : _ref$displayName, Component = _ref.Component, defaultProps = _ref.defaultProps;
-    var BsComponent = /*#__PURE__*/ _reactDefault.default.forwardRef(function(_ref2, ref) {
-        var className = _ref2.className, bsPrefix = _ref2.bsPrefix, _ref2$as = _ref2.as, Tag = _ref2$as === void 0 ? Component || 'div' : _ref2$as, props = _objectWithoutPropertiesLooseDefault.default(_ref2, _excluded);
-        var resolvedPrefix = _themeProvider.useBootstrapPrefix(bsPrefix, prefix);
-        return(/*#__PURE__*/ _reactDefault.default.createElement(Tag, _extendsDefault.default({
-            ref: ref,
-            className: _classnamesDefault.default(className, resolvedPrefix)
-        }, props)));
+var Row = /*#__PURE__*/ _reactDefault.default.forwardRef(function(_ref, ref) {
+    var bsPrefix = _ref.bsPrefix, className = _ref.className, noGutters = _ref.noGutters, _ref$as = _ref.as, Component = _ref$as === void 0 ? 'div' : _ref$as, props = _objectWithoutPropertiesLooseDefault.default(_ref, _excluded);
+    var decoratedBsPrefix = _themeProvider.useBootstrapPrefix(bsPrefix, 'row');
+    var sizePrefix = decoratedBsPrefix + "-cols";
+    var classes = [];
+    DEVICE_SIZES.forEach(function(brkPoint) {
+        var propValue = props[brkPoint];
+        delete props[brkPoint];
+        var cols;
+        if (propValue != null && typeof propValue === 'object') cols = propValue.cols;
+        else cols = propValue;
+        var infix = brkPoint !== 'xs' ? "-" + brkPoint : '';
+        if (cols != null) classes.push("" + sizePrefix + infix + "-" + cols);
     });
-    BsComponent.defaultProps = defaultProps;
-    BsComponent.displayName = displayName;
-    return BsComponent;
-}
-exports.default = createWithBsPrefix;
+    return(/*#__PURE__*/ _reactDefault.default.createElement(Component, _extendsDefault.default({
+        ref: ref
+    }, props, {
+        className: _classnamesDefault.default.apply(void 0, [
+            className,
+            decoratedBsPrefix,
+            noGutters && 'no-gutters'
+        ].concat(classes))
+    })));
+});
+Row.displayName = 'Row';
+Row.defaultProps = defaultProps;
+exports.default = Row;
 
-},{"@babel/runtime/helpers/esm/extends":"bKAu6","@babel/runtime/helpers/esm/objectWithoutPropertiesLoose":"3Rubg","classnames":"bOXOh","dom-helpers/camelize":"aJYM3","react":"6TuXu","./ThemeProvider":"eeqfi","@parcel/transformer-js/src/esmodule-helpers.js":"JacNc"}],"aJYM3":[function(require,module,exports) {
-var parcelHelpers = require("@parcel/transformer-js/src/esmodule-helpers.js");
-parcelHelpers.defineInteropFlag(exports);
-var rHyphen = /-(.)/g;
-function camelize(string) {
-    return string.replace(rHyphen, function(_, chr) {
-        return chr.toUpperCase();
-    });
-}
-exports.default = camelize;
-
-},{"@parcel/transformer-js/src/esmodule-helpers.js":"JacNc"}],"3ZOIV":[function() {},{}],"5V79J":[function(require,module,exports) {
-"use strict";
-var Refresh = require('react-refresh/runtime');
-function debounce(func, delay) {
-    var args;
-    var timeout = undefined;
-    return function(args1) {
-        clearTimeout(timeout);
-        timeout = setTimeout(function() {
-            timeout = undefined;
-            func.call(null, args1);
-        }, delay);
-    };
-}
-var enqueueUpdate = debounce(function() {
-    Refresh.performReactRefresh();
-}, 30); // Everthing below is either adapted or copied from
-// https://github.com/facebook/metro/blob/61de16bd1edd7e738dd0311c89555a644023ab2d/packages/metro/src/lib/polyfills/require.js
-// MIT License - Copyright (c) Facebook, Inc. and its affiliates.
-module.exports.prelude = function(module) {
-    window.$RefreshReg$ = function(type, id) {
-        Refresh.register(type, module.id + ' ' + id);
-    };
-    window.$RefreshSig$ = Refresh.createSignatureFunctionForTransform;
-};
-module.exports.postlude = function(module) {
-    if (isReactRefreshBoundary(module.exports)) {
-        registerExportsForReactRefresh(module);
-        if (module.hot) {
-            module.hot.dispose(function(data) {
-                if (Refresh.hasUnrecoverableErrors()) window.location.reload();
-                data.prevExports = module.exports;
-            });
-            module.hot.accept(function(getParents) {
-                var prevExports = module.hot.data.prevExports;
-                var nextExports = module.exports; // Since we just executed the code for it, it's possible
-                // that the new exports make it ineligible for being a boundary.
-                var isNoLongerABoundary = !isReactRefreshBoundary(nextExports); // It can also become ineligible if its exports are incompatible
-                // with the previous exports.
-                // For example, if you add/remove/change exports, we'll want
-                // to re-execute the importing modules, and force those components
-                // to re-render. Similarly, if you convert a class component
-                // to a function, we want to invalidate the boundary.
-                var didInvalidate = shouldInvalidateReactRefreshBoundary(prevExports, nextExports);
-                if (isNoLongerABoundary || didInvalidate) {
-                    // We'll be conservative. The only case in which we won't do a full
-                    // reload is if all parent modules are also refresh boundaries.
-                    // In that case we'll add them to the current queue.
-                    var parents = getParents();
-                    if (parents.length === 0) {
-                        // Looks like we bubbled to the root. Can't recover from that.
-                        window.location.reload();
-                        return;
-                    }
-                    return parents;
-                }
-                enqueueUpdate();
-            });
-        }
-    }
-};
-function isReactRefreshBoundary(exports) {
-    if (Refresh.isLikelyComponentType(exports)) return true;
-    if (exports == null || typeof exports !== 'object') // Exit if we can't iterate over exports.
-    return false;
-    var hasExports = false;
-    var areAllExportsComponents = true;
-    let isESM = '__esModule' in exports;
-    for(var key in exports){
-        hasExports = true;
-        if (key === '__esModule') continue;
-        var desc = Object.getOwnPropertyDescriptor(exports, key);
-        if (desc && desc.get && !isESM) // Don't invoke getters for CJS as they may have side effects.
-        return false;
-        var exportValue = exports[key];
-        if (!Refresh.isLikelyComponentType(exportValue)) areAllExportsComponents = false;
-    }
-    return hasExports && areAllExportsComponents;
-}
-function shouldInvalidateReactRefreshBoundary(prevExports, nextExports) {
-    var prevSignature = getRefreshBoundarySignature(prevExports);
-    var nextSignature = getRefreshBoundarySignature(nextExports);
-    if (prevSignature.length !== nextSignature.length) return true;
-    for(var i = 0; i < nextSignature.length; i++){
-        if (prevSignature[i] !== nextSignature[i]) return true;
-    }
-    return false;
-} // When this signature changes, it's unsafe to stop at this refresh boundary.
-function getRefreshBoundarySignature(exports) {
-    var signature = [];
-    signature.push(Refresh.getFamilyByType(exports));
-    if (exports == null || typeof exports !== 'object') // Exit if we can't iterate over exports.
-    // (This is important for legacy environments.)
-    return signature;
-    let isESM = '__esModule' in exports;
-    for(var key in exports){
-        if (key === '__esModule') continue;
-        var desc = Object.getOwnPropertyDescriptor(exports, key);
-        if (desc && desc.get && !isESM) continue;
-        var exportValue = exports[key];
-        signature.push(key);
-        signature.push(Refresh.getFamilyByType(exportValue));
-    }
-    return signature;
-}
-function registerExportsForReactRefresh(module) {
-    var exports = module.exports, id = module.id;
-    Refresh.register(exports, id + ' %exports%');
-    if (exports == null || typeof exports !== 'object') // Exit if we can't iterate over exports.
-    // (This is important for legacy environments.)
-    return;
-    let isESM = '__esModule' in exports;
-    for(var key in exports){
-        var desc = Object.getOwnPropertyDescriptor(exports, key);
-        if (desc && desc.get && !isESM) continue;
-        var exportValue = exports[key];
-        Refresh.register(exportValue, id + ' %exports% ' + key);
-    }
-}
-
-},{"react-refresh/runtime":"fNmB3"}],"6EiBJ":[function(require,module,exports) {
-var $parcel$ReactRefreshHelpers$4249 = require("@parcel/transformer-react-refresh-wrap/lib/helpers/helpers.js");
+},{"@babel/runtime/helpers/esm/extends":"bKAu6","@babel/runtime/helpers/esm/objectWithoutPropertiesLoose":"3Rubg","classnames":"bOXOh","react":"6TuXu","./ThemeProvider":"eeqfi","@parcel/transformer-js/src/esmodule-helpers.js":"JacNc"}],"jyMAr":[function() {},{}],"LHlOn":[function(require,module,exports) {
+var $parcel$ReactRefreshHelpers$0c85 = require("@parcel/transformer-react-refresh-wrap/lib/helpers/helpers.js");
 var prevRefreshReg = window.$RefreshReg$;
 var prevRefreshSig = window.$RefreshSig$;
-$parcel$ReactRefreshHelpers$4249.prelude(module);
+$parcel$ReactRefreshHelpers$0c85.prelude(module);
 
 try {
 var parcelHelpers = require("@parcel/transformer-js/src/esmodule-helpers.js");
 parcelHelpers.defineInteropFlag(exports);
-parcelHelpers.export(exports, "MovieCard", ()=>MovieCard
+parcelHelpers.export(exports, "GenresView", ()=>GenresView
 );
 var _jsxRuntime = require("react/jsx-runtime");
 var _react = require("react");
 var _reactDefault = parcelHelpers.interopDefault(_react);
 var _propTypes = require("prop-types");
 var _propTypesDefault = parcelHelpers.interopDefault(_propTypes);
-var _card = require("react-bootstrap/Card");
-var _cardDefault = parcelHelpers.interopDefault(_card);
-var _button = require("react-bootstrap/Button");
-var _buttonDefault = parcelHelpers.interopDefault(_button);
-var _reactRouterDom = require("react-router-dom");
-var _inceptionJpg = require("../../public/images/inception.jpg");
-var _thedarkknightJpg = require("../../public/images/thedarkknight.jpg");
-var _girlsJpg = require("../../public/images/girls.jpg");
-var _interstellarJpg = require("../../public/images/interstellar.jpg");
-var _silenceofthelambsJpg = require("../../public/images/silenceofthelambs.jpg");
-var _theprestigeJpg = require("../../public/images/theprestige.jpg");
-var _knockedupJpg = require("../../public/images/knockedup.jpg");
-var _blackwidowJpg = require("../../public/images/blackwidow.jpg");
-var _rachelgettingmarriedJpg = require("../../public/images/rachelgettingmarried.jpg");
-var _movieCardScss = require("./movie-card.scss");
-var _reactBootstrap = require("react-bootstrap");
-class MovieCard extends _reactDefault.default.Component {
+var _genresViewScss = require("./genres-view.scss");
+class GenresView extends _reactDefault.default.Component {
     render() {
-        const { movie  } = this.props;
-        let cardImgUrl = `../../public/images/${movie.ImagePath}`;
-        return(/*#__PURE__*/ _jsxRuntime.jsx(_cardDefault.default, {
+        const { genre , onBackClick  } = this.props;
+        return(/*#__PURE__*/ _jsxRuntime.jsxs("div", {
             __source: {
-                fileName: "src/components/movie-card/movie-card.jsx",
-                lineNumber: 30
+                fileName: "src/components/genres-view/genres-view.jsx",
+                lineNumber: 12
             },
             __self: this,
-            children: /*#__PURE__*/ _jsxRuntime.jsx(_reactRouterDom.Link, {
-                to: `/movies/${movie._id}`,
-                __source: {
-                    fileName: "src/components/movie-card/movie-card.jsx",
-                    lineNumber: 31
-                },
-                __self: this,
-                children: /*#__PURE__*/ _jsxRuntime.jsx(_buttonDefault.default, {
-                    variant: "link",
+            children: [
+                /*#__PURE__*/ _jsxRuntime.jsx("div", {
+                    className: "genre-info-container",
                     __source: {
-                        fileName: "src/components/movie-card/movie-card.jsx",
-                        lineNumber: 32
+                        fileName: "src/components/genres-view/genres-view.jsx",
+                        lineNumber: 13
                     },
                     __self: this,
-                    children: /*#__PURE__*/ _jsxRuntime.jsx(_reactBootstrap.CardImg, {
-                        variant: "top",
-                        src: require(cardImgUrl),
-                        className: "image-styles",
+                    children: /*#__PURE__*/ _jsxRuntime.jsxs("div", {
+                        className: "genre-info",
                         __source: {
-                            fileName: "src/components/movie-card/movie-card.jsx",
-                            lineNumber: 33
+                            fileName: "src/components/genres-view/genres-view.jsx",
+                            lineNumber: 14
                         },
-                        __self: this
+                        __self: this,
+                        children: [
+                            /*#__PURE__*/ _jsxRuntime.jsxs("div", {
+                                __source: {
+                                    fileName: "src/components/genres-view/genres-view.jsx",
+                                    lineNumber: 15
+                                },
+                                __self: this,
+                                children: [
+                                    /*#__PURE__*/ _jsxRuntime.jsx("span", {
+                                        className: "label",
+                                        __source: {
+                                            fileName: "src/components/genres-view/genres-view.jsx",
+                                            lineNumber: 16
+                                        },
+                                        __self: this,
+                                        children: "Genre: "
+                                    }),
+                                    /*#__PURE__*/ _jsxRuntime.jsx("span", {
+                                        className: "value",
+                                        __source: {
+                                            fileName: "src/components/genres-view/genres-view.jsx",
+                                            lineNumber: 17
+                                        },
+                                        __self: this,
+                                        children: genre.Name
+                                    })
+                                ]
+                            }),
+                            /*#__PURE__*/ _jsxRuntime.jsxs("div", {
+                                __source: {
+                                    fileName: "src/components/genres-view/genres-view.jsx",
+                                    lineNumber: 19
+                                },
+                                __self: this,
+                                children: [
+                                    /*#__PURE__*/ _jsxRuntime.jsx("span", {
+                                        className: "label",
+                                        __source: {
+                                            fileName: "src/components/genres-view/genres-view.jsx",
+                                            lineNumber: 20
+                                        },
+                                        __self: this,
+                                        children: "Description: "
+                                    }),
+                                    /*#__PURE__*/ _jsxRuntime.jsx("span", {
+                                        className: "value",
+                                        __source: {
+                                            fileName: "src/components/genres-view/genres-view.jsx",
+                                            lineNumber: 21
+                                        },
+                                        __self: this,
+                                        children: genre.Description
+                                    })
+                                ]
+                            })
+                        ]
+                    })
+                }),
+                /*#__PURE__*/ _jsxRuntime.jsx("div", {
+                    className: "button-container",
+                    __source: {
+                        fileName: "src/components/genres-view/genres-view.jsx",
+                        lineNumber: 25
+                    },
+                    __self: this,
+                    children: /*#__PURE__*/ _jsxRuntime.jsx("button", {
+                        className: "back-button",
+                        onClick: ()=>{
+                            onBackClick(null);
+                        },
+                        __source: {
+                            fileName: "src/components/genres-view/genres-view.jsx",
+                            lineNumber: 26
+                        },
+                        __self: this,
+                        children: "Back"
                     })
                 })
-            })
+            ]
         }));
     }
 }
-MovieCard.proptypes = {
+GenresView.proptypes = {
     movie: _propTypesDefault.default.shape({
-        Title: _propTypesDefault.default.string.isRequired,
-        Description: _propTypesDefault.default.string.isRequired,
-        Genre: _propTypesDefault.default.string.isRequired,
-        Director: _propTypesDefault.default.string.isRequired,
-        ImagePath: _propTypesDefault.default.string.isRequired
+        Genre: _propTypesDefault.default.string.isRequired
     }).isRequired
 };
 
-  $parcel$ReactRefreshHelpers$4249.postlude(module);
+  $parcel$ReactRefreshHelpers$0c85.postlude(module);
 } finally {
   window.$RefreshReg$ = prevRefreshReg;
   window.$RefreshSig$ = prevRefreshSig;
 }
-},{"react/jsx-runtime":"8xIwr","react":"6TuXu","prop-types":"1tgq3","react-bootstrap/Card":"MoOk8","react-bootstrap/Button":"9CzHT","react-router-dom":"cpyQW","../../public/images/inception.jpg":"l6bud","../../public/images/thedarkknight.jpg":"hVWAT","../../public/images/girls.jpg":"aGUtc","../../public/images/interstellar.jpg":"hiWMW","../../public/images/silenceofthelambs.jpg":"giTk3","../../public/images/theprestige.jpg":"87wS2","../../public/images/knockedup.jpg":"5gLy6","../../public/images/blackwidow.jpg":"t0Nlf","../../public/images/rachelgettingmarried.jpg":"lbbeE","./movie-card.scss":"cF5gT","react-bootstrap":"h2YVd","@parcel/transformer-js/src/esmodule-helpers.js":"JacNc","@parcel/transformer-react-refresh-wrap/lib/helpers/helpers.js":"5V79J"}],"MoOk8":[function(require,module,exports) {
+},{"react/jsx-runtime":"8xIwr","react":"6TuXu","prop-types":"1tgq3","@parcel/transformer-js/src/esmodule-helpers.js":"JacNc","@parcel/transformer-react-refresh-wrap/lib/helpers/helpers.js":"5V79J","./genres-view.scss":"hHsOv"}],"hHsOv":[function() {},{}],"ck15y":[function(require,module,exports) {
+var $parcel$ReactRefreshHelpers$f8cc = require("@parcel/transformer-react-refresh-wrap/lib/helpers/helpers.js");
+var prevRefreshReg = window.$RefreshReg$;
+var prevRefreshSig = window.$RefreshSig$;
+$parcel$ReactRefreshHelpers$f8cc.prelude(module);
+
+try {
 var parcelHelpers = require("@parcel/transformer-js/src/esmodule-helpers.js");
 parcelHelpers.defineInteropFlag(exports);
-var _extends = require("@babel/runtime/helpers/esm/extends");
-var _extendsDefault = parcelHelpers.interopDefault(_extends);
-var _objectWithoutPropertiesLoose = require("@babel/runtime/helpers/esm/objectWithoutPropertiesLoose");
-var _objectWithoutPropertiesLooseDefault = parcelHelpers.interopDefault(_objectWithoutPropertiesLoose);
-var _classnames = require("classnames");
-var _classnamesDefault = parcelHelpers.interopDefault(_classnames);
+parcelHelpers.export(exports, "DirectorView", ()=>DirectorView
+);
+var _jsxRuntime = require("react/jsx-runtime");
 var _react = require("react");
 var _reactDefault = parcelHelpers.interopDefault(_react);
-var _themeProvider = require("./ThemeProvider");
-var _createWithBsPrefix = require("./createWithBsPrefix");
-var _createWithBsPrefixDefault = parcelHelpers.interopDefault(_createWithBsPrefix);
-var _divWithClassName = require("./divWithClassName");
-var _divWithClassNameDefault = parcelHelpers.interopDefault(_divWithClassName);
-var _cardContext = require("./CardContext");
-var _cardContextDefault = parcelHelpers.interopDefault(_cardContext);
-var _cardImg = require("./CardImg");
-var _cardImgDefault = parcelHelpers.interopDefault(_cardImg);
-var _excluded = [
-    "bsPrefix",
-    "className",
-    "bg",
-    "text",
-    "border",
-    "body",
-    "children",
-    "as"
-];
-var DivStyledAsH5 = _divWithClassNameDefault.default('h5');
-var DivStyledAsH6 = _divWithClassNameDefault.default('h6');
-var CardBody = _createWithBsPrefixDefault.default('card-body');
-var CardTitle = _createWithBsPrefixDefault.default('card-title', {
-    Component: DivStyledAsH5
-});
-var CardSubtitle = _createWithBsPrefixDefault.default('card-subtitle', {
-    Component: DivStyledAsH6
-});
-var CardLink = _createWithBsPrefixDefault.default('card-link', {
-    Component: 'a'
-});
-var CardText = _createWithBsPrefixDefault.default('card-text', {
-    Component: 'p'
-});
-var CardHeader = _createWithBsPrefixDefault.default('card-header');
-var CardFooter = _createWithBsPrefixDefault.default('card-footer');
-var CardImgOverlay = _createWithBsPrefixDefault.default('card-img-overlay');
-var defaultProps = {
-    body: false
+var _propTypes = require("prop-types");
+var _propTypesDefault = parcelHelpers.interopDefault(_propTypes);
+var _directorViewScss = require("./director-view.scss");
+class DirectorView extends _reactDefault.default.Component {
+    render() {
+        const { director , onBackClick  } = this.props;
+        return(/*#__PURE__*/ _jsxRuntime.jsxs("div", {
+            __source: {
+                fileName: "src/components/director-view/director-view.jsx",
+                lineNumber: 11
+            },
+            __self: this,
+            children: [
+                /*#__PURE__*/ _jsxRuntime.jsx("div", {
+                    className: "director-info-container",
+                    __source: {
+                        fileName: "src/components/director-view/director-view.jsx",
+                        lineNumber: 12
+                    },
+                    __self: this,
+                    children: /*#__PURE__*/ _jsxRuntime.jsxs("div", {
+                        className: "director-info",
+                        __source: {
+                            fileName: "src/components/director-view/director-view.jsx",
+                            lineNumber: 13
+                        },
+                        __self: this,
+                        children: [
+                            /*#__PURE__*/ _jsxRuntime.jsxs("div", {
+                                __source: {
+                                    fileName: "src/components/director-view/director-view.jsx",
+                                    lineNumber: 14
+                                },
+                                __self: this,
+                                children: [
+                                    /*#__PURE__*/ _jsxRuntime.jsx("span", {
+                                        className: "label",
+                                        __source: {
+                                            fileName: "src/components/director-view/director-view.jsx",
+                                            lineNumber: 15
+                                        },
+                                        __self: this,
+                                        children: "Director: "
+                                    }),
+                                    /*#__PURE__*/ _jsxRuntime.jsx("span", {
+                                        className: "value",
+                                        __source: {
+                                            fileName: "src/components/director-view/director-view.jsx",
+                                            lineNumber: 16
+                                        },
+                                        __self: this,
+                                        children: director.Name
+                                    })
+                                ]
+                            }),
+                            /*#__PURE__*/ _jsxRuntime.jsxs("div", {
+                                className: "",
+                                __source: {
+                                    fileName: "src/components/director-view/director-view.jsx",
+                                    lineNumber: 18
+                                },
+                                __self: this,
+                                children: [
+                                    /*#__PURE__*/ _jsxRuntime.jsx("span", {
+                                        className: "label",
+                                        __source: {
+                                            fileName: "src/components/director-view/director-view.jsx",
+                                            lineNumber: 19
+                                        },
+                                        __self: this,
+                                        children: "Bio: "
+                                    }),
+                                    /*#__PURE__*/ _jsxRuntime.jsx("span", {
+                                        className: "value",
+                                        __source: {
+                                            fileName: "src/components/director-view/director-view.jsx",
+                                            lineNumber: 20
+                                        },
+                                        __self: this,
+                                        children: director.Bio
+                                    })
+                                ]
+                            })
+                        ]
+                    })
+                }),
+                /*#__PURE__*/ _jsxRuntime.jsx("div", {
+                    className: "button-container",
+                    __source: {
+                        fileName: "src/components/director-view/director-view.jsx",
+                        lineNumber: 24
+                    },
+                    __self: this,
+                    children: /*#__PURE__*/ _jsxRuntime.jsx("button", {
+                        className: "back-button",
+                        onClick: ()=>{
+                            onBackClick(null);
+                        },
+                        __source: {
+                            fileName: "src/components/director-view/director-view.jsx",
+                            lineNumber: 25
+                        },
+                        __self: this,
+                        children: "Back"
+                    })
+                })
+            ]
+        }));
+    }
+}
+DirectorView.proptypes = {
+    movie: _propTypesDefault.default.shape({
+        Director: _propTypesDefault.default.string.isRequired
+    }).isRequired
 };
-var Card = /*#__PURE__*/ _reactDefault.default.forwardRef(function(_ref, ref) {
-    var bsPrefix = _ref.bsPrefix, className = _ref.className, bg = _ref.bg, text = _ref.text, border = _ref.border, body = _ref.body, children = _ref.children, _ref$as = _ref.as, Component = _ref$as === void 0 ? 'div' : _ref$as, props = _objectWithoutPropertiesLooseDefault.default(_ref, _excluded);
-    var prefix = _themeProvider.useBootstrapPrefix(bsPrefix, 'card');
-    var cardContext = _react.useMemo(function() {
-        return {
-            cardHeaderBsPrefix: prefix + "-header"
+
+  $parcel$ReactRefreshHelpers$f8cc.postlude(module);
+} finally {
+  window.$RefreshReg$ = prevRefreshReg;
+  window.$RefreshSig$ = prevRefreshSig;
+}
+},{"react/jsx-runtime":"8xIwr","react":"6TuXu","prop-types":"1tgq3","@parcel/transformer-js/src/esmodule-helpers.js":"JacNc","@parcel/transformer-react-refresh-wrap/lib/helpers/helpers.js":"5V79J","./director-view.scss":"hWS1b"}],"hWS1b":[function() {},{}],"2LCM5":[function(require,module,exports) {
+var $parcel$ReactRefreshHelpers$5e93 = require("@parcel/transformer-react-refresh-wrap/lib/helpers/helpers.js");
+var prevRefreshReg = window.$RefreshReg$;
+var prevRefreshSig = window.$RefreshSig$;
+$parcel$ReactRefreshHelpers$5e93.prelude(module);
+
+try {
+var parcelHelpers = require("@parcel/transformer-js/src/esmodule-helpers.js");
+parcelHelpers.defineInteropFlag(exports);
+parcelHelpers.export(exports, "UpdateProfileView", ()=>UpdateProfileView
+);
+var _jsxRuntime = require("react/jsx-runtime");
+var _react = require("react");
+var _reactDefault = parcelHelpers.interopDefault(_react);
+var _reactBootstrap = require("react-bootstrap");
+var _propTypes = require("prop-types");
+var _propTypesDefault = parcelHelpers.interopDefault(_propTypes);
+var _axios = require("axios");
+var _axiosDefault = parcelHelpers.interopDefault(_axios);
+var _reactRouterDom = require("react-router-dom");
+var _updateProfileViewScss = require("./update-profile-view.scss");
+class UpdateProfileView extends _reactDefault.default.Component {
+    constructor(){
+        super();
+        this.state = {
+            Username: "",
+            Password: "",
+            Email: "",
+            Birthday: "",
+            PasswordError: "",
+            EmailError: "",
+            BirthdayError: ""
         };
-    }, [
-        prefix
-    ]);
-    return(/*#__PURE__*/ _reactDefault.default.createElement(_cardContextDefault.default.Provider, {
-        value: cardContext
-    }, /*#__PURE__*/ _reactDefault.default.createElement(Component, _extendsDefault.default({
-        ref: ref
-    }, props, {
-        className: _classnamesDefault.default(className, prefix, bg && "bg-" + bg, text && "text-" + text, border && "border-" + border)
-    }), body ? /*#__PURE__*/ // @ts-ignore
-    _reactDefault.default.createElement(CardBody, null, children) : children)));
-});
-Card.displayName = 'Card';
-Card.defaultProps = defaultProps;
-Card.Img = _cardImgDefault.default;
-Card.Title = CardTitle;
-Card.Subtitle = CardSubtitle;
-Card.Body = CardBody;
-Card.Link = CardLink;
-Card.Text = CardText;
-Card.Header = CardHeader;
-Card.Footer = CardFooter;
-Card.ImgOverlay = CardImgOverlay;
-exports.default = Card;
-
-},{"@babel/runtime/helpers/esm/extends":"bKAu6","@babel/runtime/helpers/esm/objectWithoutPropertiesLoose":"3Rubg","classnames":"bOXOh","react":"6TuXu","./ThemeProvider":"eeqfi","./createWithBsPrefix":"8AqEH","./divWithClassName":"GBmBH","./CardContext":"9AVwu","./CardImg":"5GKOF","@parcel/transformer-js/src/esmodule-helpers.js":"JacNc"}],"GBmBH":[function(require,module,exports) {
-var parcelHelpers = require("@parcel/transformer-js/src/esmodule-helpers.js");
-parcelHelpers.defineInteropFlag(exports);
-var _extends = require("@babel/runtime/helpers/esm/extends");
-var _extendsDefault = parcelHelpers.interopDefault(_extends);
-var _react = require("react");
-var _reactDefault = parcelHelpers.interopDefault(_react);
-var _classnames = require("classnames");
-var _classnamesDefault = parcelHelpers.interopDefault(_classnames);
-exports.default = function(className) {
-    return(/*#__PURE__*/ _reactDefault.default.forwardRef(function(p, ref) {
-        return(/*#__PURE__*/ _reactDefault.default.createElement("div", _extendsDefault.default({
-        }, p, {
-            ref: ref,
-            className: _classnamesDefault.default(p.className, className)
-        })));
-    }));
-};
-
-},{"@babel/runtime/helpers/esm/extends":"bKAu6","react":"6TuXu","classnames":"bOXOh","@parcel/transformer-js/src/esmodule-helpers.js":"JacNc"}],"9AVwu":[function(require,module,exports) {
-var parcelHelpers = require("@parcel/transformer-js/src/esmodule-helpers.js");
-parcelHelpers.defineInteropFlag(exports);
-var _react = require("react");
-var _reactDefault = parcelHelpers.interopDefault(_react);
-var context = /*#__PURE__*/ _reactDefault.default.createContext(null);
-context.displayName = 'CardContext';
-exports.default = context;
-
-},{"react":"6TuXu","@parcel/transformer-js/src/esmodule-helpers.js":"JacNc"}],"5GKOF":[function(require,module,exports) {
-var parcelHelpers = require("@parcel/transformer-js/src/esmodule-helpers.js");
-parcelHelpers.defineInteropFlag(exports);
-var _extends = require("@babel/runtime/helpers/esm/extends");
-var _extendsDefault = parcelHelpers.interopDefault(_extends);
-var _objectWithoutPropertiesLoose = require("@babel/runtime/helpers/esm/objectWithoutPropertiesLoose");
-var _objectWithoutPropertiesLooseDefault = parcelHelpers.interopDefault(_objectWithoutPropertiesLoose);
-var _classnames = require("classnames");
-var _classnamesDefault = parcelHelpers.interopDefault(_classnames);
-var _react = require("react");
-var _reactDefault = parcelHelpers.interopDefault(_react);
-var _themeProvider = require("./ThemeProvider");
-var _excluded = [
-    "bsPrefix",
-    "className",
-    "variant",
-    "as"
-];
-var defaultProps = {
-    variant: null
-};
-var CardImg = /*#__PURE__*/ _reactDefault.default.forwardRef(function(_ref, ref) {
-    var bsPrefix = _ref.bsPrefix, className = _ref.className, variant = _ref.variant, _ref$as = _ref.as, Component = _ref$as === void 0 ? 'img' : _ref$as, props = _objectWithoutPropertiesLooseDefault.default(_ref, _excluded);
-    var prefix = _themeProvider.useBootstrapPrefix(bsPrefix, 'card-img');
-    return(/*#__PURE__*/ _reactDefault.default.createElement(Component, _extendsDefault.default({
-        ref: ref,
-        className: _classnamesDefault.default(variant ? prefix + "-" + variant : prefix, className)
-    }, props)));
-});
-CardImg.displayName = 'CardImg';
-CardImg.defaultProps = defaultProps;
-exports.default = CardImg;
-
-},{"@babel/runtime/helpers/esm/extends":"bKAu6","@babel/runtime/helpers/esm/objectWithoutPropertiesLoose":"3Rubg","classnames":"bOXOh","react":"6TuXu","./ThemeProvider":"eeqfi","@parcel/transformer-js/src/esmodule-helpers.js":"JacNc"}],"9CzHT":[function(require,module,exports) {
-var parcelHelpers = require("@parcel/transformer-js/src/esmodule-helpers.js");
-parcelHelpers.defineInteropFlag(exports);
-var _extends = require("@babel/runtime/helpers/esm/extends");
-var _extendsDefault = parcelHelpers.interopDefault(_extends);
-var _objectWithoutPropertiesLoose = require("@babel/runtime/helpers/esm/objectWithoutPropertiesLoose");
-var _objectWithoutPropertiesLooseDefault = parcelHelpers.interopDefault(_objectWithoutPropertiesLoose);
-var _classnames = require("classnames");
-var _classnamesDefault = parcelHelpers.interopDefault(_classnames);
-var _react = require("react");
-var _reactDefault = parcelHelpers.interopDefault(_react);
-var _themeProvider = require("./ThemeProvider");
-var _safeAnchor = require("./SafeAnchor");
-var _safeAnchorDefault = parcelHelpers.interopDefault(_safeAnchor);
-var _excluded = [
-    "bsPrefix",
-    "variant",
-    "size",
-    "active",
-    "className",
-    "block",
-    "type",
-    "as"
-];
-var defaultProps = {
-    variant: 'primary',
-    active: false,
-    disabled: false
-};
-var Button = /*#__PURE__*/ _reactDefault.default.forwardRef(function(_ref, ref) {
-    var bsPrefix = _ref.bsPrefix, variant = _ref.variant, size = _ref.size, active = _ref.active, className = _ref.className, block = _ref.block, type = _ref.type, as = _ref.as, props = _objectWithoutPropertiesLooseDefault.default(_ref, _excluded);
-    var prefix = _themeProvider.useBootstrapPrefix(bsPrefix, 'btn');
-    var classes = _classnamesDefault.default(className, prefix, active && 'active', variant && prefix + "-" + variant, block && prefix + "-block", size && prefix + "-" + size);
-    if (props.href) return(/*#__PURE__*/ _reactDefault.default.createElement(_safeAnchorDefault.default, _extendsDefault.default({
-    }, props, {
-        as: as,
-        ref: ref,
-        className: _classnamesDefault.default(classes, props.disabled && 'disabled')
-    })));
-    if (ref) props.ref = ref;
-    if (type) props.type = type;
-    else if (!as) props.type = 'button';
-    var Component = as || 'button';
-    return(/*#__PURE__*/ _reactDefault.default.createElement(Component, _extendsDefault.default({
-    }, props, {
-        className: classes
-    })));
-});
-Button.displayName = 'Button';
-Button.defaultProps = defaultProps;
-exports.default = Button;
-
-},{"@babel/runtime/helpers/esm/extends":"bKAu6","@babel/runtime/helpers/esm/objectWithoutPropertiesLoose":"3Rubg","classnames":"bOXOh","react":"6TuXu","./ThemeProvider":"eeqfi","./SafeAnchor":"2oMxS","@parcel/transformer-js/src/esmodule-helpers.js":"JacNc"}],"2oMxS":[function(require,module,exports) {
-var parcelHelpers = require("@parcel/transformer-js/src/esmodule-helpers.js");
-parcelHelpers.defineInteropFlag(exports);
-var _extends = require("@babel/runtime/helpers/esm/extends");
-var _extendsDefault = parcelHelpers.interopDefault(_extends);
-var _objectWithoutPropertiesLoose = require("@babel/runtime/helpers/esm/objectWithoutPropertiesLoose");
-var _objectWithoutPropertiesLooseDefault = parcelHelpers.interopDefault(_objectWithoutPropertiesLoose);
-var _react = require("react");
-var _reactDefault = parcelHelpers.interopDefault(_react);
-var _createChainedFunction = require("./createChainedFunction");
-var _createChainedFunctionDefault = parcelHelpers.interopDefault(_createChainedFunction);
-var _excluded = [
-    "as",
-    "disabled",
-    "onKeyDown"
-];
-function isTrivialHref(href) {
-    return !href || href.trim() === '#';
-}
-/**
- * There are situations due to browser quirks or Bootstrap CSS where
- * an anchor tag is needed, when semantically a button tag is the
- * better choice. SafeAnchor ensures that when an anchor is used like a
- * button its accessible. It also emulates input `disabled` behavior for
- * links, which is usually desirable for Buttons, NavItems, DropdownItems, etc.
- */ var SafeAnchor = /*#__PURE__*/ _reactDefault.default.forwardRef(function(_ref, ref) {
-    var _ref$as = _ref.as, Component = _ref$as === void 0 ? 'a' : _ref$as, disabled = _ref.disabled, onKeyDown = _ref.onKeyDown, props = _objectWithoutPropertiesLooseDefault.default(_ref, _excluded);
-    var handleClick = function handleClick1(event) {
-        var href = props.href, onClick = props.onClick;
-        if (disabled || isTrivialHref(href)) event.preventDefault();
-        if (disabled) {
-            event.stopPropagation();
-            return;
-        }
-        if (onClick) onClick(event);
-    };
-    var handleKeyDown = function handleKeyDown1(event) {
-        if (event.key === ' ') {
-            event.preventDefault();
-            handleClick(event);
-        }
-    };
-    if (isTrivialHref(props.href)) {
-        props.role = props.role || 'button'; // we want to make sure there is a href attribute on the node
-        // otherwise, the cursor incorrectly styled (except with role='button')
-        props.href = props.href || '#';
     }
-    if (disabled) {
-        props.tabIndex = -1;
-        props['aria-disabled'] = true;
+    componentDidMount() {
+        let accessToken = localStorage.getItem("token");
+        this.getUser(accessToken);
     }
-    return(/*#__PURE__*/ _reactDefault.default.createElement(Component, _extendsDefault.default({
-        ref: ref
-    }, props, {
-        onClick: handleClick,
-        onKeyDown: _createChainedFunctionDefault.default(handleKeyDown, onKeyDown)
-    })));
-});
-SafeAnchor.displayName = 'SafeAnchor';
-exports.default = SafeAnchor;
-
-},{"@babel/runtime/helpers/esm/extends":"bKAu6","@babel/runtime/helpers/esm/objectWithoutPropertiesLoose":"3Rubg","react":"6TuXu","./createChainedFunction":"NDbpV","@parcel/transformer-js/src/esmodule-helpers.js":"JacNc"}],"NDbpV":[function(require,module,exports) {
-var parcelHelpers = require("@parcel/transformer-js/src/esmodule-helpers.js");
-parcelHelpers.defineInteropFlag(exports);
-/**
- * Safe chained function
- *
- * Will only create a new function if needed,
- * otherwise will pass back existing functions or null.
- *
- * @param {function} functions to chain
- * @returns {function|null}
- */ function createChainedFunction() {
-    for(var _len = arguments.length, funcs = new Array(_len), _key = 0; _key < _len; _key++)funcs[_key] = arguments[_key];
-    return funcs.filter(function(f) {
-        return f != null;
-    }).reduce(function(acc, f) {
-        if (typeof f !== 'function') throw new Error('Invalid Argument Type, must only provide functions, undefined, or null.');
-        if (acc === null) return f;
-        return function chainedFunction() {
-            for(var _len2 = arguments.length, args = new Array(_len2), _key2 = 0; _key2 < _len2; _key2++)args[_key2] = arguments[_key2];
-            // @ts-ignore
-            acc.apply(this, args); // @ts-ignore
-            f.apply(this, args);
+    getUser(accessToken) {
+        let url = 'https://zanko-my-flix.herokuapp.com/users/' + localStorage.getItem('user');
+        _axiosDefault.default.get(url, {
+            headers: {
+                Authorization: `Bearer ${accessToken}`
+            }
+        }).then((response)=>{
+            this.setState({
+                Username: response.data.Username,
+                Password: "",
+                Favorites: response.data.FavoriteMovies,
+                Email: response.data.Email,
+                Birthday: response.data.Birthday
+            });
+        }).catch(function(error) {
+            alert(error.response.data);
+        });
+    }
+    /* Handle form update */ handleUpdate(e) {
+        let accessToken = localStorage.getItem("token");
+        let user = localStorage.getItem("user");
+        let validated = this.formValidation();
+        if (validated) _axiosDefault.default.put(`https://zanko-my-flix.herokuapp.com/users/${user}`, {
+            Username: user,
+            Password: this.state.Password,
+            Email: this.state.Email,
+            Birthday: this.state.Birthday
+        }, {
+            headers: {
+                Authorization: `Bearer ${accessToken}`
+            }
+        }).then((response)=>{
+            const data = response.data;
+            alert(user + " profile has been updated.");
+            window.open(`/users/${this.props.user}`, '_self');
+        }).catch(function(error) {
+            alert(error.response.data);
+        });
+    }
+    /* Form Validation Start */ formValidation() {
+        let PasswordError = {
         };
-    }, null);
+        let EmailError = {
+        };
+        let BirthdayError = {
+        };
+        let isValid = true;
+        if (this.state.Password.trim().length < 5 || this.state.Password === '') {
+            PasswordError.passwordMissing = "You must enter a password at least 6 characters long";
+            isValid = false;
+        }
+        if (!(this.state.Email && this.state.Email.includes(".") && this.state.Email.includes("@"))) {
+            EmailError.emailNotEmail = "You must enter a valid email";
+            isValid = false;
+        }
+        console.log(this.state.Birthday);
+        if (this.state.Birthday === '' || !this.state.Birthday) {
+            BirthdayError.BirthdayEmpty = "You must enter your date of birth";
+            isValid = false;
+        }
+        this.setState({
+            PasswordError: PasswordError,
+            EmailError: EmailError,
+            BirthdayError: BirthdayError
+        });
+        return isValid;
+    }
+    setField(e) {
+        let { name , value  } = e.target;
+        this.setState({
+            [name]: value
+        });
+    }
+    render() {
+        const { onBackClick , onDeregister  } = this.props;
+        const { PasswordError , EmailError , BirthdayError  } = this.state;
+        return(/*#__PURE__*/ _jsxRuntime.jsx("div", {
+            className: "update-profile-parent-container",
+            __source: {
+                fileName: "src/components/update-profile-view/update-profile-view.jsx",
+                lineNumber: 117
+            },
+            __self: this,
+            children: /*#__PURE__*/ _jsxRuntime.jsxs("div", {
+                className: "update-profile-container",
+                __source: {
+                    fileName: "src/components/update-profile-view/update-profile-view.jsx",
+                    lineNumber: 118
+                },
+                __self: this,
+                children: [
+                    /*#__PURE__*/ _jsxRuntime.jsx("div", {
+                        className: "input-container",
+                        __source: {
+                            fileName: "src/components/update-profile-view/update-profile-view.jsx",
+                            lineNumber: 119
+                        },
+                        __self: this,
+                        children: /*#__PURE__*/ _jsxRuntime.jsxs(_reactBootstrap.Form, {
+                            __source: {
+                                fileName: "src/components/update-profile-view/update-profile-view.jsx",
+                                lineNumber: 120
+                            },
+                            __self: this,
+                            children: [
+                                /*#__PURE__*/ _jsxRuntime.jsxs(_reactBootstrap.Form.Group, {
+                                    controlId: "displayUsername",
+                                    __source: {
+                                        fileName: "src/components/update-profile-view/update-profile-view.jsx",
+                                        lineNumber: 121
+                                    },
+                                    __self: this,
+                                    children: [
+                                        /*#__PURE__*/ _jsxRuntime.jsx(_reactBootstrap.Form.Label, {
+                                            __source: {
+                                                fileName: "src/components/update-profile-view/update-profile-view.jsx",
+                                                lineNumber: 122
+                                            },
+                                            __self: this,
+                                            children: "Username"
+                                        }),
+                                        /*#__PURE__*/ _jsxRuntime.jsx(_reactBootstrap.Form.Control, {
+                                            placeholder: `${this.state.Username}`,
+                                            readOnly: true,
+                                            __source: {
+                                                fileName: "src/components/update-profile-view/update-profile-view.jsx",
+                                                lineNumber: 123
+                                            },
+                                            __self: this
+                                        })
+                                    ]
+                                }),
+                                /*#__PURE__*/ _jsxRuntime.jsxs(_reactBootstrap.Form.Group, {
+                                    controlId: "updateEmail",
+                                    __source: {
+                                        fileName: "src/components/update-profile-view/update-profile-view.jsx",
+                                        lineNumber: 125
+                                    },
+                                    __self: this,
+                                    children: [
+                                        /*#__PURE__*/ _jsxRuntime.jsx(_reactBootstrap.Form.Label, {
+                                            __source: {
+                                                fileName: "src/components/update-profile-view/update-profile-view.jsx",
+                                                lineNumber: 126
+                                            },
+                                            __self: this,
+                                            children: "Email"
+                                        }),
+                                        /*#__PURE__*/ _jsxRuntime.jsx(_reactBootstrap.Form.Control, {
+                                            type: "email",
+                                            name: "Email",
+                                            placeholder: `${this.state.Email}`,
+                                            onChange: (e)=>this.setField(e)
+                                            ,
+                                            required: true,
+                                            __source: {
+                                                fileName: "src/components/update-profile-view/update-profile-view.jsx",
+                                                lineNumber: 127
+                                            },
+                                            __self: this
+                                        }),
+                                        Object.keys(EmailError).map((key)=>{
+                                            return(/*#__PURE__*/ _jsxRuntime.jsx("div", {
+                                                className: "error",
+                                                __source: {
+                                                    fileName: "src/components/update-profile-view/update-profile-view.jsx",
+                                                    lineNumber: 130
+                                                },
+                                                __self: this,
+                                                children: EmailError[key]
+                                            }, key));
+                                        })
+                                    ]
+                                }),
+                                /*#__PURE__*/ _jsxRuntime.jsxs(_reactBootstrap.Form.Group, {
+                                    controlId: "updateBirthday",
+                                    __source: {
+                                        fileName: "src/components/update-profile-view/update-profile-view.jsx",
+                                        lineNumber: 136
+                                    },
+                                    __self: this,
+                                    children: [
+                                        /*#__PURE__*/ _jsxRuntime.jsx(_reactBootstrap.Form.Label, {
+                                            __source: {
+                                                fileName: "src/components/update-profile-view/update-profile-view.jsx",
+                                                lineNumber: 137
+                                            },
+                                            __self: this,
+                                            children: "Birthdate"
+                                        }),
+                                        /*#__PURE__*/ _jsxRuntime.jsx(_reactBootstrap.Form.Control, {
+                                            type: "date",
+                                            name: "Birthday",
+                                            placeholder: `${this.state.Birthday}`,
+                                            onChange: (e)=>this.setField(e)
+                                            ,
+                                            required: true,
+                                            __source: {
+                                                fileName: "src/components/update-profile-view/update-profile-view.jsx",
+                                                lineNumber: 138
+                                            },
+                                            __self: this
+                                        }),
+                                        Object.keys(BirthdayError).map((key)=>{
+                                            return(/*#__PURE__*/ _jsxRuntime.jsx("div", {
+                                                className: "error",
+                                                __source: {
+                                                    fileName: "src/components/update-profile-view/update-profile-view.jsx",
+                                                    lineNumber: 141
+                                                },
+                                                __self: this,
+                                                children: BirthdayError[key]
+                                            }, key));
+                                        })
+                                    ]
+                                }),
+                                /*#__PURE__*/ _jsxRuntime.jsxs(_reactBootstrap.Form.Group, {
+                                    controlId: "updatePassword",
+                                    __source: {
+                                        fileName: "src/components/update-profile-view/update-profile-view.jsx",
+                                        lineNumber: 147
+                                    },
+                                    __self: this,
+                                    children: [
+                                        /*#__PURE__*/ _jsxRuntime.jsx(_reactBootstrap.Form.Label, {
+                                            __source: {
+                                                fileName: "src/components/update-profile-view/update-profile-view.jsx",
+                                                lineNumber: 148
+                                            },
+                                            __self: this,
+                                            children: "New Password"
+                                        }),
+                                        /*#__PURE__*/ _jsxRuntime.jsx(_reactBootstrap.Form.Control, {
+                                            type: "password",
+                                            name: "Password",
+                                            placeholder: "",
+                                            onChange: (e)=>this.setField(e)
+                                            ,
+                                            required: true,
+                                            __source: {
+                                                fileName: "src/components/update-profile-view/update-profile-view.jsx",
+                                                lineNumber: 149
+                                            },
+                                            __self: this
+                                        }),
+                                        Object.keys(PasswordError).map((key)=>{
+                                            return(/*#__PURE__*/ _jsxRuntime.jsx("div", {
+                                                className: "error",
+                                                __source: {
+                                                    fileName: "src/components/update-profile-view/update-profile-view.jsx",
+                                                    lineNumber: 152
+                                                },
+                                                __self: this,
+                                                children: PasswordError[key]
+                                            }, key));
+                                        })
+                                    ]
+                                })
+                            ]
+                        })
+                    }),
+                    /*#__PURE__*/ _jsxRuntime.jsx("div", {
+                        __source: {
+                            fileName: "src/components/update-profile-view/update-profile-view.jsx",
+                            lineNumber: 160
+                        },
+                        __self: this,
+                        children: /*#__PURE__*/ _jsxRuntime.jsx("div", {
+                            className: "submit-changes-button",
+                            __source: {
+                                fileName: "src/components/update-profile-view/update-profile-view.jsx",
+                                lineNumber: 161
+                            },
+                            __self: this,
+                            children: /*#__PURE__*/ _jsxRuntime.jsx("button", {
+                                type: "submit",
+                                className: "nav-button",
+                                onClick: ()=>this.handleUpdate()
+                                ,
+                                __source: {
+                                    fileName: "src/components/update-profile-view/update-profile-view.jsx",
+                                    lineNumber: 162
+                                },
+                                __self: this,
+                                children: "Submit Changes"
+                            })
+                        })
+                    }),
+                    /*#__PURE__*/ _jsxRuntime.jsx("div", {
+                        __source: {
+                            fileName: "src/components/update-profile-view/update-profile-view.jsx",
+                            lineNumber: 165
+                        },
+                        __self: this,
+                        children: /*#__PURE__*/ _jsxRuntime.jsxs("div", {
+                            className: "button-container",
+                            __source: {
+                                fileName: "src/components/update-profile-view/update-profile-view.jsx",
+                                lineNumber: 166
+                            },
+                            __self: this,
+                            children: [
+                                /*#__PURE__*/ _jsxRuntime.jsx("button", {
+                                    className: "back-button",
+                                    onClick: ()=>{
+                                        onBackClick(null);
+                                    },
+                                    __source: {
+                                        fileName: "src/components/update-profile-view/update-profile-view.jsx",
+                                        lineNumber: 167
+                                    },
+                                    __self: this,
+                                    children: "Back"
+                                }),
+                                /*#__PURE__*/ _jsxRuntime.jsx("button", {
+                                    className: "delete-button",
+                                    onClick: ()=>{
+                                        onDeregister(this.state.Email);
+                                    },
+                                    __source: {
+                                        fileName: "src/components/update-profile-view/update-profile-view.jsx",
+                                        lineNumber: 168
+                                    },
+                                    __self: this,
+                                    children: "Delete Account"
+                                })
+                            ]
+                        })
+                    })
+                ]
+            })
+        }));
+    }
 }
-exports.default = createChainedFunction;
-
-},{"@parcel/transformer-js/src/esmodule-helpers.js":"JacNc"}],"l6bud":[function(require,module,exports) {
-module.exports = require('./helpers/bundle-url').getBundleURL('3VpAv') + "inception.bd178984.jpg";
-
-},{"./helpers/bundle-url":"8YnfL"}],"8YnfL":[function(require,module,exports) {
-"use strict";
-var bundleURL = {
+UpdateProfileView.propTypes = {
+    users: _propTypesDefault.default.shape({
+        Username: _propTypesDefault.default.string,
+        Email: _propTypesDefault.default.string.isRequired,
+        Password: _propTypesDefault.default.string.isRequired,
+        Birthday: _propTypesDefault.default.string
+    })
 };
-function getBundleURLCached(id) {
-    var value = bundleURL[id];
-    if (!value) {
-        value = getBundleURL();
-        bundleURL[id] = value;
-    }
-    return value;
+
+  $parcel$ReactRefreshHelpers$5e93.postlude(module);
+} finally {
+  window.$RefreshReg$ = prevRefreshReg;
+  window.$RefreshSig$ = prevRefreshSig;
 }
-function getBundleURL() {
-    try {
-        throw new Error();
-    } catch (err) {
-        var matches = ('' + err.stack).match(/(https?|file|ftp):\/\/[^)\n]+/g);
-        if (matches) // The first two stack frames will be this function and getBundleURLCached.
-        // Use the 3rd one, which will be a runtime in the original bundle.
-        return getBaseURL(matches[2]);
-    }
-    return '/';
-}
-function getBaseURL(url) {
-    return ('' + url).replace(/^((?:https?|file|ftp):\/\/.+)\/[^/]+$/, '$1') + '/';
-} // TODO: Replace uses with `new URL(url).origin` when ie11 is no longer supported.
-function getOrigin(url) {
-    var matches = ('' + url).match(/(https?|file|ftp):\/\/[^/]+/);
-    if (!matches) throw new Error('Origin not found');
-    return matches[0];
-}
-exports.getBundleURL = getBundleURLCached;
-exports.getBaseURL = getBaseURL;
-exports.getOrigin = getOrigin;
-
-},{}],"hVWAT":[function(require,module,exports) {
-module.exports = require('./helpers/bundle-url').getBundleURL('3VpAv') + "thedarkknight.6865c054.jpg";
-
-},{"./helpers/bundle-url":"8YnfL"}],"aGUtc":[function(require,module,exports) {
-module.exports = require('./helpers/bundle-url').getBundleURL('3VpAv') + "girls.832504d7.jpg";
-
-},{"./helpers/bundle-url":"8YnfL"}],"hiWMW":[function(require,module,exports) {
-module.exports = require('./helpers/bundle-url').getBundleURL('3VpAv') + "interstellar.34782da6.jpg";
-
-},{"./helpers/bundle-url":"8YnfL"}],"giTk3":[function(require,module,exports) {
-module.exports = require('./helpers/bundle-url').getBundleURL('3VpAv') + "silenceofthelambs.8cb995ac.jpg";
-
-},{"./helpers/bundle-url":"8YnfL"}],"87wS2":[function(require,module,exports) {
-module.exports = require('./helpers/bundle-url').getBundleURL('3VpAv') + "theprestige.74ac05c1.jpg";
-
-},{"./helpers/bundle-url":"8YnfL"}],"5gLy6":[function(require,module,exports) {
-module.exports = require('./helpers/bundle-url').getBundleURL('3VpAv') + "knockedup.2a6644ba.jpg";
-
-},{"./helpers/bundle-url":"8YnfL"}],"t0Nlf":[function(require,module,exports) {
-module.exports = require('./helpers/bundle-url').getBundleURL('3VpAv') + "blackwidow.4d3a7ad0.jpg";
-
-},{"./helpers/bundle-url":"8YnfL"}],"lbbeE":[function(require,module,exports) {
-module.exports = require('./helpers/bundle-url').getBundleURL('3VpAv') + "rachelgettingmarried.82bc2a71.jpg";
-
-},{"./helpers/bundle-url":"8YnfL"}],"cF5gT":[function() {},{}],"h2YVd":[function(require,module,exports) {
+},{"react/jsx-runtime":"8xIwr","react":"6TuXu","react-bootstrap":"h2YVd","prop-types":"1tgq3","axios":"iYoWk","react-router-dom":"cpyQW","./update-profile-view.scss":"fEnUy","@parcel/transformer-js/src/esmodule-helpers.js":"JacNc","@parcel/transformer-react-refresh-wrap/lib/helpers/helpers.js":"5V79J"}],"h2YVd":[function(require,module,exports) {
 var parcelHelpers = require("@parcel/transformer-js/src/esmodule-helpers.js");
 parcelHelpers.defineInteropFlag(exports);
 parcelHelpers.export(exports, "Accordion", ()=>_accordionDefault.default
@@ -37789,7 +37172,42 @@ DropdownButton.displayName = 'DropdownButton';
 DropdownButton.propTypes = propTypes;
 exports.default = DropdownButton;
 
-},{"@babel/runtime/helpers/esm/extends":"bKAu6","@babel/runtime/helpers/esm/objectWithoutPropertiesLoose":"3Rubg","react":"6TuXu","prop-types":"1tgq3","./Dropdown":"j2597","./DropdownToggle":"fMXXT","./DropdownMenu":"eG3pG","@parcel/transformer-js/src/esmodule-helpers.js":"JacNc"}],"kKVYG":[function(require,module,exports) {
+},{"@babel/runtime/helpers/esm/extends":"bKAu6","@babel/runtime/helpers/esm/objectWithoutPropertiesLoose":"3Rubg","react":"6TuXu","prop-types":"1tgq3","./Dropdown":"j2597","./DropdownToggle":"fMXXT","./DropdownMenu":"eG3pG","@parcel/transformer-js/src/esmodule-helpers.js":"JacNc"}],"2PRIq":[function(require,module,exports) {
+var parcelHelpers = require("@parcel/transformer-js/src/esmodule-helpers.js");
+parcelHelpers.defineInteropFlag(exports);
+var _extends = require("@babel/runtime/helpers/esm/extends");
+var _extendsDefault = parcelHelpers.interopDefault(_extends);
+var _objectWithoutPropertiesLoose = require("@babel/runtime/helpers/esm/objectWithoutPropertiesLoose");
+var _objectWithoutPropertiesLooseDefault = parcelHelpers.interopDefault(_objectWithoutPropertiesLoose);
+var _classnames = require("classnames");
+var _classnamesDefault = parcelHelpers.interopDefault(_classnames);
+var _react = require("react");
+var _reactDefault = parcelHelpers.interopDefault(_react);
+var _themeProvider = require("./ThemeProvider");
+var _excluded = [
+    "bsPrefix",
+    "fluid",
+    "as",
+    "className"
+];
+var defaultProps = {
+    fluid: false
+};
+var Container = /*#__PURE__*/ _reactDefault.default.forwardRef(function(_ref, ref) {
+    var bsPrefix = _ref.bsPrefix, fluid = _ref.fluid, _ref$as = _ref.as, Component = _ref$as === void 0 ? 'div' : _ref$as, className = _ref.className, props = _objectWithoutPropertiesLooseDefault.default(_ref, _excluded);
+    var prefix = _themeProvider.useBootstrapPrefix(bsPrefix, 'container');
+    var suffix = typeof fluid === 'string' ? "-" + fluid : '-fluid';
+    return(/*#__PURE__*/ _reactDefault.default.createElement(Component, _extendsDefault.default({
+        ref: ref
+    }, props, {
+        className: _classnamesDefault.default(className, fluid ? "" + prefix + suffix : prefix)
+    })));
+});
+Container.displayName = 'Container';
+Container.defaultProps = defaultProps;
+exports.default = Container;
+
+},{"@babel/runtime/helpers/esm/extends":"bKAu6","@babel/runtime/helpers/esm/objectWithoutPropertiesLoose":"3Rubg","classnames":"bOXOh","react":"6TuXu","./ThemeProvider":"eeqfi","@parcel/transformer-js/src/esmodule-helpers.js":"JacNc"}],"kKVYG":[function(require,module,exports) {
 var parcelHelpers = require("@parcel/transformer-js/src/esmodule-helpers.js");
 parcelHelpers.defineInteropFlag(exports);
 parcelHelpers.export(exports, "propTypes", ()=>propTypes
@@ -40771,62 +40189,6 @@ var ResponsiveEmbed = /*#__PURE__*/ _reactDefault.default.forwardRef(function(_r
 ResponsiveEmbed.defaultProps = defaultProps;
 exports.default = ResponsiveEmbed;
 
-},{"@babel/runtime/helpers/esm/extends":"bKAu6","@babel/runtime/helpers/esm/objectWithoutPropertiesLoose":"3Rubg","classnames":"bOXOh","react":"6TuXu","./ThemeProvider":"eeqfi","@parcel/transformer-js/src/esmodule-helpers.js":"JacNc"}],"c0x1x":[function(require,module,exports) {
-var parcelHelpers = require("@parcel/transformer-js/src/esmodule-helpers.js");
-parcelHelpers.defineInteropFlag(exports);
-var _extends = require("@babel/runtime/helpers/esm/extends");
-var _extendsDefault = parcelHelpers.interopDefault(_extends);
-var _objectWithoutPropertiesLoose = require("@babel/runtime/helpers/esm/objectWithoutPropertiesLoose");
-var _objectWithoutPropertiesLooseDefault = parcelHelpers.interopDefault(_objectWithoutPropertiesLoose);
-var _classnames = require("classnames");
-var _classnamesDefault = parcelHelpers.interopDefault(_classnames);
-var _react = require("react");
-var _reactDefault = parcelHelpers.interopDefault(_react);
-var _themeProvider = require("./ThemeProvider");
-var _excluded = [
-    "bsPrefix",
-    "className",
-    "noGutters",
-    "as"
-];
-var DEVICE_SIZES = [
-    'xl',
-    'lg',
-    'md',
-    'sm',
-    'xs'
-];
-var defaultProps = {
-    noGutters: false
-};
-var Row = /*#__PURE__*/ _reactDefault.default.forwardRef(function(_ref, ref) {
-    var bsPrefix = _ref.bsPrefix, className = _ref.className, noGutters = _ref.noGutters, _ref$as = _ref.as, Component = _ref$as === void 0 ? 'div' : _ref$as, props = _objectWithoutPropertiesLooseDefault.default(_ref, _excluded);
-    var decoratedBsPrefix = _themeProvider.useBootstrapPrefix(bsPrefix, 'row');
-    var sizePrefix = decoratedBsPrefix + "-cols";
-    var classes = [];
-    DEVICE_SIZES.forEach(function(brkPoint) {
-        var propValue = props[brkPoint];
-        delete props[brkPoint];
-        var cols;
-        if (propValue != null && typeof propValue === 'object') cols = propValue.cols;
-        else cols = propValue;
-        var infix = brkPoint !== 'xs' ? "-" + brkPoint : '';
-        if (cols != null) classes.push("" + sizePrefix + infix + "-" + cols);
-    });
-    return(/*#__PURE__*/ _reactDefault.default.createElement(Component, _extendsDefault.default({
-        ref: ref
-    }, props, {
-        className: _classnamesDefault.default.apply(void 0, [
-            className,
-            decoratedBsPrefix,
-            noGutters && 'no-gutters'
-        ].concat(classes))
-    })));
-});
-Row.displayName = 'Row';
-Row.defaultProps = defaultProps;
-exports.default = Row;
-
 },{"@babel/runtime/helpers/esm/extends":"bKAu6","@babel/runtime/helpers/esm/objectWithoutPropertiesLoose":"3Rubg","classnames":"bOXOh","react":"6TuXu","./ThemeProvider":"eeqfi","@parcel/transformer-js/src/esmodule-helpers.js":"JacNc"}],"jgNtX":[function(require,module,exports) {
 var parcelHelpers = require("@parcel/transformer-js/src/esmodule-helpers.js");
 parcelHelpers.defineInteropFlag(exports);
@@ -41643,1443 +41005,7 @@ Tooltip.defaultProps = defaultProps;
 Tooltip.displayName = 'Tooltip';
 exports.default = Tooltip;
 
-},{"@babel/runtime/helpers/esm/extends":"bKAu6","@babel/runtime/helpers/esm/objectWithoutPropertiesLoose":"3Rubg","classnames":"bOXOh","react":"6TuXu","prop-types-extra/lib/isRequiredForA11y":"1p075","./ThemeProvider":"eeqfi","@parcel/transformer-js/src/esmodule-helpers.js":"JacNc"}],"ikZdr":[function(require,module,exports) {
-var $parcel$ReactRefreshHelpers$3741 = require("@parcel/transformer-react-refresh-wrap/lib/helpers/helpers.js");
-var prevRefreshReg = window.$RefreshReg$;
-var prevRefreshSig = window.$RefreshSig$;
-$parcel$ReactRefreshHelpers$3741.prelude(module);
-
-try {
-var parcelHelpers = require("@parcel/transformer-js/src/esmodule-helpers.js");
-parcelHelpers.defineInteropFlag(exports);
-parcelHelpers.export(exports, "MovieView", ()=>MovieView
-);
-var _jsxRuntime = require("react/jsx-runtime");
-var _react = require("react");
-var _reactDefault = parcelHelpers.interopDefault(_react);
-var _propTypes = require("prop-types");
-var _propTypesDefault = parcelHelpers.interopDefault(_propTypes);
-var _button = require("react-bootstrap/Button");
-var _buttonDefault = parcelHelpers.interopDefault(_button);
-var _card = require("react-bootstrap/Card");
-var _cardDefault = parcelHelpers.interopDefault(_card);
-var _axios = require("axios");
-var _axiosDefault = parcelHelpers.interopDefault(_axios);
-var _reactRouterDom = require("react-router-dom");
-var _inceptionJpg = require("../../public/images/inception.jpg");
-var _thedarkknightJpg = require("../../public/images/thedarkknight.jpg");
-var _girlsJpg = require("../../public/images/girls.jpg");
-var _interstellarJpg = require("../../public/images/interstellar.jpg");
-var _silenceofthelambsJpg = require("../../public/images/silenceofthelambs.jpg");
-var _theprestigeJpg = require("../../public/images/theprestige.jpg");
-var _knockedupJpg = require("../../public/images/knockedup.jpg");
-var _blackwidowJpg = require("../../public/images/blackwidow.jpg");
-var _rachelgettingmarriedJpg = require("../../public/images/rachelgettingmarried.jpg");
-var _movieViewScss = require("./movie-view.scss");
-class MovieView extends _reactDefault.default.Component {
-    constructor(){
-        super();
-        this.state = {
-            Username: "",
-            Favorites: []
-        };
-    }
-    componentDidMount() {
-        let accessToken = localStorage.getItem("token");
-        this.setState({
-            Username: localStorage.getItem("user")
-        });
-        this.getUsersFavorites(accessToken);
-    }
-    getUsersFavorites(accessToken) {
-        const user = localStorage.getItem("user");
-        _axiosDefault.default.get(`https://zanko-my-flix.herokuapp.com/users/${user}/favorites`, {
-            headers: {
-                Authorization: `Bearer ${accessToken}`
-            }
-        }).then((response)=>{
-            this.setState({
-                Favorites: response.data
-            });
-        }).catch(function(error) {
-            alert(error.response.data);
-        });
-    }
-    addToFavorites(movieID) {
-        const token = localStorage.getItem("token");
-        const user = localStorage.getItem("user");
-        _axiosDefault.default.post(`https://zanko-my-flix.herokuapp.com/users/${user}/movies/${movieID}`, {
-        }, {
-            headers: {
-                Authorization: `Bearer ${token}`
-            }
-        }).then((response)=>{
-            this.setState({
-                Favorites: response.data.FavoriteMovies
-            });
-        }).catch(function(error) {
-            alert(error.response.data);
-        });
-    }
-    removeFromFavorites(movieID) {
-        const token = localStorage.getItem("token");
-        const user = localStorage.getItem("user");
-        _axiosDefault.default.delete(`https://zanko-my-flix.herokuapp.com/users/${user}/movies/${movieID}`, {
-            headers: {
-                Authorization: `Bearer ${token}`
-            }
-        }).then((response)=>{
-            this.setState({
-                Favorites: response.data.FavoriteMovies
-            });
-        }).catch(function(error) {
-            alert(error.response.data);
-        });
-    }
-    render() {
-        const { movie , onBackClick  } = this.props;
-        let imageUrl = require('../../public/images/' + movie.ImagePath);
-        return(/*#__PURE__*/ _jsxRuntime.jsxs("div", {
-            className: "movie-view",
-            __source: {
-                fileName: "src/components/movie-view/movie-view.jsx",
-                lineNumber: 94
-            },
-            __self: this,
-            children: [
-                /*#__PURE__*/ _jsxRuntime.jsxs("div", {
-                    className: "poster-and-button-container",
-                    __source: {
-                        fileName: "src/components/movie-view/movie-view.jsx",
-                        lineNumber: 95
-                    },
-                    __self: this,
-                    children: [
-                        /*#__PURE__*/ _jsxRuntime.jsx("div", {
-                            className: "movie-poster-container",
-                            __source: {
-                                fileName: "src/components/movie-view/movie-view.jsx",
-                                lineNumber: 96
-                            },
-                            __self: this,
-                            children: /*#__PURE__*/ _jsxRuntime.jsx("img", {
-                                className: "movie-poster",
-                                src: imageUrl,
-                                __source: {
-                                    fileName: "src/components/movie-view/movie-view.jsx",
-                                    lineNumber: 97
-                                },
-                                __self: this
-                            })
-                        }),
-                        this.state.Favorites.includes(movie._id) ? /*#__PURE__*/ _jsxRuntime.jsx("button", {
-                            className: "favorites-button remove-from-favorites-button",
-                            onClick: ()=>{
-                                this.removeFromFavorites(movie._id);
-                            },
-                            __source: {
-                                fileName: "src/components/movie-view/movie-view.jsx",
-                                lineNumber: 100
-                            },
-                            __self: this,
-                            children: "Remove from Favorites"
-                        }) : /*#__PURE__*/ _jsxRuntime.jsx("button", {
-                            className: "favorites-button",
-                            onClick: ()=>{
-                                this.addToFavorites(movie._id);
-                            },
-                            __source: {
-                                fileName: "src/components/movie-view/movie-view.jsx",
-                                lineNumber: 102
-                            },
-                            __self: this,
-                            children: "Add to Favorites"
-                        })
-                    ]
-                }),
-                /*#__PURE__*/ _jsxRuntime.jsx("div", {
-                    className: "movie-info-container",
-                    __source: {
-                        fileName: "src/components/movie-view/movie-view.jsx",
-                        lineNumber: 105
-                    },
-                    __self: this,
-                    children: /*#__PURE__*/ _jsxRuntime.jsxs("div", {
-                        className: "movie-info",
-                        __source: {
-                            fileName: "src/components/movie-view/movie-view.jsx",
-                            lineNumber: 106
-                        },
-                        __self: this,
-                        children: [
-                            /*#__PURE__*/ _jsxRuntime.jsxs("div", {
-                                className: "movie-title",
-                                __source: {
-                                    fileName: "src/components/movie-view/movie-view.jsx",
-                                    lineNumber: 107
-                                },
-                                __self: this,
-                                children: [
-                                    /*#__PURE__*/ _jsxRuntime.jsx("span", {
-                                        className: "label",
-                                        __source: {
-                                            fileName: "src/components/movie-view/movie-view.jsx",
-                                            lineNumber: 108
-                                        },
-                                        __self: this,
-                                        children: "Title: "
-                                    }),
-                                    /*#__PURE__*/ _jsxRuntime.jsx("span", {
-                                        className: "value",
-                                        __source: {
-                                            fileName: "src/components/movie-view/movie-view.jsx",
-                                            lineNumber: 109
-                                        },
-                                        __self: this,
-                                        children: movie.Title
-                                    })
-                                ]
-                            }),
-                            /*#__PURE__*/ _jsxRuntime.jsxs("div", {
-                                className: "movie-description",
-                                __source: {
-                                    fileName: "src/components/movie-view/movie-view.jsx",
-                                    lineNumber: 111
-                                },
-                                __self: this,
-                                children: [
-                                    /*#__PURE__*/ _jsxRuntime.jsx("span", {
-                                        className: "label",
-                                        __source: {
-                                            fileName: "src/components/movie-view/movie-view.jsx",
-                                            lineNumber: 112
-                                        },
-                                        __self: this,
-                                        children: "Description: "
-                                    }),
-                                    /*#__PURE__*/ _jsxRuntime.jsx("span", {
-                                        className: "value",
-                                        __source: {
-                                            fileName: "src/components/movie-view/movie-view.jsx",
-                                            lineNumber: 113
-                                        },
-                                        __self: this,
-                                        children: movie.Description
-                                    })
-                                ]
-                            }),
-                            /*#__PURE__*/ _jsxRuntime.jsxs("div", {
-                                className: "link-container",
-                                __source: {
-                                    fileName: "src/components/movie-view/movie-view.jsx",
-                                    lineNumber: 115
-                                },
-                                __self: this,
-                                children: [
-                                    /*#__PURE__*/ _jsxRuntime.jsx(_reactRouterDom.Link, {
-                                        to: `/genres/${movie.Genre.Name}`,
-                                        __source: {
-                                            fileName: "src/components/movie-view/movie-view.jsx",
-                                            lineNumber: 116
-                                        },
-                                        __self: this,
-                                        children: /*#__PURE__*/ _jsxRuntime.jsx(_buttonDefault.default, {
-                                            variant: "link",
-                                            __source: {
-                                                fileName: "src/components/movie-view/movie-view.jsx",
-                                                lineNumber: 117
-                                            },
-                                            __self: this,
-                                            children: "Genre"
-                                        })
-                                    }),
-                                    /*#__PURE__*/ _jsxRuntime.jsx("div", {
-                                        className: "spacer",
-                                        __source: {
-                                            fileName: "src/components/movie-view/movie-view.jsx",
-                                            lineNumber: 119
-                                        },
-                                        __self: this
-                                    }),
-                                    /*#__PURE__*/ _jsxRuntime.jsx(_reactRouterDom.Link, {
-                                        to: `/directors/${movie.Director.Name}`,
-                                        __source: {
-                                            fileName: "src/components/movie-view/movie-view.jsx",
-                                            lineNumber: 120
-                                        },
-                                        __self: this,
-                                        children: /*#__PURE__*/ _jsxRuntime.jsx(_buttonDefault.default, {
-                                            variant: "link",
-                                            __source: {
-                                                fileName: "src/components/movie-view/movie-view.jsx",
-                                                lineNumber: 121
-                                            },
-                                            __self: this,
-                                            children: "Director"
-                                        })
-                                    })
-                                ]
-                            })
-                        ]
-                    })
-                }),
-                /*#__PURE__*/ _jsxRuntime.jsxs("div", {
-                    className: "button-container",
-                    __source: {
-                        fileName: "src/components/movie-view/movie-view.jsx",
-                        lineNumber: 126
-                    },
-                    __self: this,
-                    children: [
-                        /*#__PURE__*/ _jsxRuntime.jsx("button", {
-                            className: "back-button",
-                            onClick: ()=>{
-                                onBackClick(null);
-                            },
-                            __source: {
-                                fileName: "src/components/movie-view/movie-view.jsx",
-                                lineNumber: 127
-                            },
-                            __self: this,
-                            children: "Back"
-                        }),
-                        /*#__PURE__*/ _jsxRuntime.jsx(_reactRouterDom.Link, {
-                            to: '/users/' + this.state.Username,
-                            __source: {
-                                fileName: "src/components/movie-view/movie-view.jsx",
-                                lineNumber: 128
-                            },
-                            __self: this,
-                            children: /*#__PURE__*/ _jsxRuntime.jsx("button", {
-                                className: "nav-button",
-                                __source: {
-                                    fileName: "src/components/movie-view/movie-view.jsx",
-                                    lineNumber: 129
-                                },
-                                __self: this,
-                                children: "Profile"
-                            })
-                        })
-                    ]
-                })
-            ]
-        }));
-    }
-}
-MovieView.proptypes = {
-    movie: _propTypesDefault.default.shape({
-        Title: _propTypesDefault.default.string.isRequired,
-        Description: _propTypesDefault.default.string.isRequired,
-        Genre: _propTypesDefault.default.string.isRequired,
-        Director: _propTypesDefault.default.string.isRequired,
-        ImagePath: _propTypesDefault.default.string.isRequired
-    }).isRequired,
-    onBackClick: _propTypesDefault.default.func.isRequired
-};
-
-  $parcel$ReactRefreshHelpers$3741.postlude(module);
-} finally {
-  window.$RefreshReg$ = prevRefreshReg;
-  window.$RefreshSig$ = prevRefreshSig;
-}
-},{"react/jsx-runtime":"8xIwr","react":"6TuXu","prop-types":"1tgq3","react-bootstrap/Button":"9CzHT","react-bootstrap/Card":"MoOk8","axios":"iYoWk","react-router-dom":"cpyQW","../../public/images/inception.jpg":"l6bud","../../public/images/thedarkknight.jpg":"hVWAT","../../public/images/girls.jpg":"aGUtc","../../public/images/interstellar.jpg":"hiWMW","../../public/images/silenceofthelambs.jpg":"giTk3","../../public/images/theprestige.jpg":"87wS2","../../public/images/knockedup.jpg":"5gLy6","../../public/images/blackwidow.jpg":"t0Nlf","../../public/images/rachelgettingmarried.jpg":"lbbeE","./movie-view.scss":"kvL93","@parcel/transformer-js/src/esmodule-helpers.js":"JacNc","@parcel/transformer-react-refresh-wrap/lib/helpers/helpers.js":"5V79J"}],"kvL93":[function() {},{}],"LHlOn":[function(require,module,exports) {
-var $parcel$ReactRefreshHelpers$0c85 = require("@parcel/transformer-react-refresh-wrap/lib/helpers/helpers.js");
-var prevRefreshReg = window.$RefreshReg$;
-var prevRefreshSig = window.$RefreshSig$;
-$parcel$ReactRefreshHelpers$0c85.prelude(module);
-
-try {
-var parcelHelpers = require("@parcel/transformer-js/src/esmodule-helpers.js");
-parcelHelpers.defineInteropFlag(exports);
-parcelHelpers.export(exports, "GenresView", ()=>GenresView
-);
-var _jsxRuntime = require("react/jsx-runtime");
-var _react = require("react");
-var _reactDefault = parcelHelpers.interopDefault(_react);
-var _propTypes = require("prop-types");
-var _propTypesDefault = parcelHelpers.interopDefault(_propTypes);
-var _genresViewScss = require("./genres-view.scss");
-class GenresView extends _reactDefault.default.Component {
-    render() {
-        const { genre , onBackClick  } = this.props;
-        return(/*#__PURE__*/ _jsxRuntime.jsxs("div", {
-            __source: {
-                fileName: "src/components/genres-view/genres-view.jsx",
-                lineNumber: 12
-            },
-            __self: this,
-            children: [
-                /*#__PURE__*/ _jsxRuntime.jsx("div", {
-                    className: "genre-info-container",
-                    __source: {
-                        fileName: "src/components/genres-view/genres-view.jsx",
-                        lineNumber: 13
-                    },
-                    __self: this,
-                    children: /*#__PURE__*/ _jsxRuntime.jsxs("div", {
-                        className: "genre-info",
-                        __source: {
-                            fileName: "src/components/genres-view/genres-view.jsx",
-                            lineNumber: 14
-                        },
-                        __self: this,
-                        children: [
-                            /*#__PURE__*/ _jsxRuntime.jsxs("div", {
-                                __source: {
-                                    fileName: "src/components/genres-view/genres-view.jsx",
-                                    lineNumber: 15
-                                },
-                                __self: this,
-                                children: [
-                                    /*#__PURE__*/ _jsxRuntime.jsx("span", {
-                                        className: "label",
-                                        __source: {
-                                            fileName: "src/components/genres-view/genres-view.jsx",
-                                            lineNumber: 16
-                                        },
-                                        __self: this,
-                                        children: "Genre: "
-                                    }),
-                                    /*#__PURE__*/ _jsxRuntime.jsx("span", {
-                                        className: "value",
-                                        __source: {
-                                            fileName: "src/components/genres-view/genres-view.jsx",
-                                            lineNumber: 17
-                                        },
-                                        __self: this,
-                                        children: genre.Name
-                                    })
-                                ]
-                            }),
-                            /*#__PURE__*/ _jsxRuntime.jsxs("div", {
-                                __source: {
-                                    fileName: "src/components/genres-view/genres-view.jsx",
-                                    lineNumber: 19
-                                },
-                                __self: this,
-                                children: [
-                                    /*#__PURE__*/ _jsxRuntime.jsx("span", {
-                                        className: "label",
-                                        __source: {
-                                            fileName: "src/components/genres-view/genres-view.jsx",
-                                            lineNumber: 20
-                                        },
-                                        __self: this,
-                                        children: "Description: "
-                                    }),
-                                    /*#__PURE__*/ _jsxRuntime.jsx("span", {
-                                        className: "value",
-                                        __source: {
-                                            fileName: "src/components/genres-view/genres-view.jsx",
-                                            lineNumber: 21
-                                        },
-                                        __self: this,
-                                        children: genre.Description
-                                    })
-                                ]
-                            })
-                        ]
-                    })
-                }),
-                /*#__PURE__*/ _jsxRuntime.jsx("div", {
-                    className: "button-container",
-                    __source: {
-                        fileName: "src/components/genres-view/genres-view.jsx",
-                        lineNumber: 25
-                    },
-                    __self: this,
-                    children: /*#__PURE__*/ _jsxRuntime.jsx("button", {
-                        className: "back-button",
-                        onClick: ()=>{
-                            onBackClick(null);
-                        },
-                        __source: {
-                            fileName: "src/components/genres-view/genres-view.jsx",
-                            lineNumber: 26
-                        },
-                        __self: this,
-                        children: "Back"
-                    })
-                })
-            ]
-        }));
-    }
-}
-GenresView.proptypes = {
-    movie: _propTypesDefault.default.shape({
-        Genre: _propTypesDefault.default.string.isRequired
-    }).isRequired
-};
-
-  $parcel$ReactRefreshHelpers$0c85.postlude(module);
-} finally {
-  window.$RefreshReg$ = prevRefreshReg;
-  window.$RefreshSig$ = prevRefreshSig;
-}
-},{"react/jsx-runtime":"8xIwr","react":"6TuXu","prop-types":"1tgq3","./genres-view.scss":"hHsOv","@parcel/transformer-js/src/esmodule-helpers.js":"JacNc","@parcel/transformer-react-refresh-wrap/lib/helpers/helpers.js":"5V79J"}],"hHsOv":[function() {},{}],"ck15y":[function(require,module,exports) {
-var $parcel$ReactRefreshHelpers$f8cc = require("@parcel/transformer-react-refresh-wrap/lib/helpers/helpers.js");
-var prevRefreshReg = window.$RefreshReg$;
-var prevRefreshSig = window.$RefreshSig$;
-$parcel$ReactRefreshHelpers$f8cc.prelude(module);
-
-try {
-var parcelHelpers = require("@parcel/transformer-js/src/esmodule-helpers.js");
-parcelHelpers.defineInteropFlag(exports);
-parcelHelpers.export(exports, "DirectorView", ()=>DirectorView
-);
-var _jsxRuntime = require("react/jsx-runtime");
-var _react = require("react");
-var _reactDefault = parcelHelpers.interopDefault(_react);
-var _propTypes = require("prop-types");
-var _propTypesDefault = parcelHelpers.interopDefault(_propTypes);
-var _directorViewScss = require("./director-view.scss");
-class DirectorView extends _reactDefault.default.Component {
-    render() {
-        const { director , onBackClick  } = this.props;
-        return(/*#__PURE__*/ _jsxRuntime.jsxs("div", {
-            __source: {
-                fileName: "src/components/director-view/director-view.jsx",
-                lineNumber: 11
-            },
-            __self: this,
-            children: [
-                /*#__PURE__*/ _jsxRuntime.jsx("div", {
-                    className: "director-info-container",
-                    __source: {
-                        fileName: "src/components/director-view/director-view.jsx",
-                        lineNumber: 12
-                    },
-                    __self: this,
-                    children: /*#__PURE__*/ _jsxRuntime.jsxs("div", {
-                        className: "director-info",
-                        __source: {
-                            fileName: "src/components/director-view/director-view.jsx",
-                            lineNumber: 13
-                        },
-                        __self: this,
-                        children: [
-                            /*#__PURE__*/ _jsxRuntime.jsxs("div", {
-                                __source: {
-                                    fileName: "src/components/director-view/director-view.jsx",
-                                    lineNumber: 14
-                                },
-                                __self: this,
-                                children: [
-                                    /*#__PURE__*/ _jsxRuntime.jsx("span", {
-                                        className: "label",
-                                        __source: {
-                                            fileName: "src/components/director-view/director-view.jsx",
-                                            lineNumber: 15
-                                        },
-                                        __self: this,
-                                        children: "Director: "
-                                    }),
-                                    /*#__PURE__*/ _jsxRuntime.jsx("span", {
-                                        className: "value",
-                                        __source: {
-                                            fileName: "src/components/director-view/director-view.jsx",
-                                            lineNumber: 16
-                                        },
-                                        __self: this,
-                                        children: director.Name
-                                    })
-                                ]
-                            }),
-                            /*#__PURE__*/ _jsxRuntime.jsxs("div", {
-                                className: "",
-                                __source: {
-                                    fileName: "src/components/director-view/director-view.jsx",
-                                    lineNumber: 18
-                                },
-                                __self: this,
-                                children: [
-                                    /*#__PURE__*/ _jsxRuntime.jsx("span", {
-                                        className: "label",
-                                        __source: {
-                                            fileName: "src/components/director-view/director-view.jsx",
-                                            lineNumber: 19
-                                        },
-                                        __self: this,
-                                        children: "Bio: "
-                                    }),
-                                    /*#__PURE__*/ _jsxRuntime.jsx("span", {
-                                        className: "value",
-                                        __source: {
-                                            fileName: "src/components/director-view/director-view.jsx",
-                                            lineNumber: 20
-                                        },
-                                        __self: this,
-                                        children: director.Bio
-                                    })
-                                ]
-                            })
-                        ]
-                    })
-                }),
-                /*#__PURE__*/ _jsxRuntime.jsx("div", {
-                    className: "button-container",
-                    __source: {
-                        fileName: "src/components/director-view/director-view.jsx",
-                        lineNumber: 24
-                    },
-                    __self: this,
-                    children: /*#__PURE__*/ _jsxRuntime.jsx("button", {
-                        className: "back-button",
-                        onClick: ()=>{
-                            onBackClick(null);
-                        },
-                        __source: {
-                            fileName: "src/components/director-view/director-view.jsx",
-                            lineNumber: 25
-                        },
-                        __self: this,
-                        children: "Back"
-                    })
-                })
-            ]
-        }));
-    }
-}
-DirectorView.proptypes = {
-    movie: _propTypesDefault.default.shape({
-        Director: _propTypesDefault.default.string.isRequired
-    }).isRequired
-};
-
-  $parcel$ReactRefreshHelpers$f8cc.postlude(module);
-} finally {
-  window.$RefreshReg$ = prevRefreshReg;
-  window.$RefreshSig$ = prevRefreshSig;
-}
-},{"react/jsx-runtime":"8xIwr","react":"6TuXu","prop-types":"1tgq3","./director-view.scss":"hWS1b","@parcel/transformer-js/src/esmodule-helpers.js":"JacNc","@parcel/transformer-react-refresh-wrap/lib/helpers/helpers.js":"5V79J"}],"hWS1b":[function() {},{}],"jk91c":[function(require,module,exports) {
-var $parcel$ReactRefreshHelpers$fb6b = require("@parcel/transformer-react-refresh-wrap/lib/helpers/helpers.js");
-var prevRefreshReg = window.$RefreshReg$;
-var prevRefreshSig = window.$RefreshSig$;
-$parcel$ReactRefreshHelpers$fb6b.prelude(module);
-
-try {
-var parcelHelpers = require("@parcel/transformer-js/src/esmodule-helpers.js");
-parcelHelpers.defineInteropFlag(exports);
-parcelHelpers.export(exports, "LoginView", ()=>LoginView
-);
-var _jsxRuntime = require("react/jsx-runtime");
-var _react = require("react");
-var _reactDefault = parcelHelpers.interopDefault(_react);
-var _propTypes = require("prop-types");
-var _propTypesDefault = parcelHelpers.interopDefault(_propTypes);
-var _form = require("react-bootstrap/Form");
-var _formDefault = parcelHelpers.interopDefault(_form);
-var _button = require("react-bootstrap/Button");
-var _buttonDefault = parcelHelpers.interopDefault(_button);
-var _reactRouterDom = require("react-router-dom");
-var _axios = require("axios");
-var _axiosDefault = parcelHelpers.interopDefault(_axios);
-var _logInViewScss = require("./log-in-view.scss");
-var _s = $RefreshSig$();
-function LoginView(props) {
-    _s();
-    const [username, setUsername] = _react.useState("");
-    const [password, setPassword] = _react.useState("");
-    const handleSubmit = (e)=>{
-        e.preventDefault();
-        /* Send a request to the server for authentication */ _axiosDefault.default.post('https://zanko-my-flix.herokuapp.com/users/login', {
-            Username: username,
-            Password: password
-        }).then((response)=>{
-            const data = response.data;
-            console.log(username + " has logged in!");
-            props.onLoggedIn(data);
-        }).catch((e1)=>{
-            console.log('user and password do not match');
-        });
-    };
-    /* then call props.onLoggedIn(username) */ return(/*#__PURE__*/ _jsxRuntime.jsx("div", {
-        className: "form-container",
-        __source: {
-            fileName: "src/components/log-in-view/log-in-view.jsx",
-            lineNumber: 33
-        },
-        __self: this,
-        children: /*#__PURE__*/ _jsxRuntime.jsxs(_formDefault.default, {
-            __source: {
-                fileName: "src/components/log-in-view/log-in-view.jsx",
-                lineNumber: 34
-            },
-            __self: this,
-            children: [
-                /*#__PURE__*/ _jsxRuntime.jsxs(_formDefault.default.Group, {
-                    controlId: "formUsername",
-                    __source: {
-                        fileName: "src/components/log-in-view/log-in-view.jsx",
-                        lineNumber: 35
-                    },
-                    __self: this,
-                    children: [
-                        /*#__PURE__*/ _jsxRuntime.jsx(_formDefault.default.Label, {
-                            className: "label",
-                            __source: {
-                                fileName: "src/components/log-in-view/log-in-view.jsx",
-                                lineNumber: 36
-                            },
-                            __self: this,
-                            children: "Username:"
-                        }),
-                        /*#__PURE__*/ _jsxRuntime.jsx(_formDefault.default.Control, {
-                            type: "text",
-                            onChange: (e)=>setUsername(e.target.value)
-                            ,
-                            __source: {
-                                fileName: "src/components/log-in-view/log-in-view.jsx",
-                                lineNumber: 37
-                            },
-                            __self: this
-                        })
-                    ]
-                }),
-                /*#__PURE__*/ _jsxRuntime.jsxs(_formDefault.default.Group, {
-                    controlId: "formPassword",
-                    __source: {
-                        fileName: "src/components/log-in-view/log-in-view.jsx",
-                        lineNumber: 39
-                    },
-                    __self: this,
-                    children: [
-                        /*#__PURE__*/ _jsxRuntime.jsx(_formDefault.default.Label, {
-                            className: "label",
-                            __source: {
-                                fileName: "src/components/log-in-view/log-in-view.jsx",
-                                lineNumber: 40
-                            },
-                            __self: this,
-                            children: "Password:"
-                        }),
-                        /*#__PURE__*/ _jsxRuntime.jsx(_formDefault.default.Control, {
-                            type: "password",
-                            onChange: (e)=>setPassword(e.target.value)
-                            ,
-                            __source: {
-                                fileName: "src/components/log-in-view/log-in-view.jsx",
-                                lineNumber: 41
-                            },
-                            __self: this
-                        })
-                    ]
-                }),
-                /*#__PURE__*/ _jsxRuntime.jsx(_buttonDefault.default, {
-                    className: "submit-button",
-                    variant: "primary",
-                    type: "submit",
-                    onClick: handleSubmit,
-                    __source: {
-                        fileName: "src/components/log-in-view/log-in-view.jsx",
-                        lineNumber: 43
-                    },
-                    __self: this,
-                    children: "Log In"
-                }),
-                /*#__PURE__*/ _jsxRuntime.jsx(_reactRouterDom.Link, {
-                    to: `/register`,
-                    __source: {
-                        fileName: "src/components/log-in-view/log-in-view.jsx",
-                        lineNumber: 45
-                    },
-                    __self: this,
-                    children: /*#__PURE__*/ _jsxRuntime.jsx("p", {
-                        className: "register-instead",
-                        __source: {
-                            fileName: "src/components/log-in-view/log-in-view.jsx",
-                            lineNumber: 46
-                        },
-                        __self: this,
-                        children: "Register instead"
-                    })
-                })
-            ]
-        })
-    }));
-}
-_s(LoginView, "Lrw7JeD9zj6OUWhT/IH4OIvPKEk=");
-_c = LoginView;
-LoginView.proptypes = {
-    user: _propTypesDefault.default.shape({
-        username: _propTypesDefault.default.string.isRequired,
-        password: _propTypesDefault.default.string.isRequired
-    }),
-    onLoggedIn: _propTypesDefault.default.func.isRequired
-};
-var _c;
-$RefreshReg$(_c, "LoginView");
-
-  $parcel$ReactRefreshHelpers$fb6b.postlude(module);
-} finally {
-  window.$RefreshReg$ = prevRefreshReg;
-  window.$RefreshSig$ = prevRefreshSig;
-}
-},{"react/jsx-runtime":"8xIwr","react":"6TuXu","prop-types":"1tgq3","react-bootstrap/Form":"5ykgY","react-bootstrap/Button":"9CzHT","react-router-dom":"cpyQW","axios":"iYoWk","./log-in-view.scss":"hWa0x","@parcel/transformer-js/src/esmodule-helpers.js":"JacNc","@parcel/transformer-react-refresh-wrap/lib/helpers/helpers.js":"5V79J"}],"hWa0x":[function() {},{}],"aP2YV":[function(require,module,exports) {
-var $parcel$ReactRefreshHelpers$8dd4 = require("@parcel/transformer-react-refresh-wrap/lib/helpers/helpers.js");
-var prevRefreshReg = window.$RefreshReg$;
-var prevRefreshSig = window.$RefreshSig$;
-$parcel$ReactRefreshHelpers$8dd4.prelude(module);
-
-try {
-var parcelHelpers = require("@parcel/transformer-js/src/esmodule-helpers.js");
-parcelHelpers.defineInteropFlag(exports);
-parcelHelpers.export(exports, "RegistrationView", ()=>RegistrationView
-);
-var _jsxRuntime = require("react/jsx-runtime");
-var _react = require("react");
-var _reactDefault = parcelHelpers.interopDefault(_react);
-var _axios = require("axios");
-var _axiosDefault = parcelHelpers.interopDefault(_axios);
-var _propTypes = require("prop-types");
-var _propTypesDefault = parcelHelpers.interopDefault(_propTypes);
-var _form = require("react-bootstrap/Form");
-var _formDefault = parcelHelpers.interopDefault(_form);
-var _button = require("react-bootstrap/Button");
-var _buttonDefault = parcelHelpers.interopDefault(_button);
-var _reactRouterDom = require("react-router-dom");
-var _registrationViewScss = require("./registration-view.scss");
-var _s = $RefreshSig$();
-function RegistrationView(props) {
-    _s();
-    const [username, setUsername] = _react.useState("");
-    const [password, setPassword] = _react.useState("");
-    const [email, setEmail] = _react.useState("");
-    const [birthday, setBirthdate] = _react.useState("");
-    const [validated, setValidation] = _react.useState(true);
-    const [usernameError, setUsernameError] = _react.useState("");
-    const [passwordError, setPasswordError] = _react.useState("");
-    const [emailError, setEmailError] = _react.useState("");
-    const handleSubmit = (e)=>{
-        e.preventDefault();
-        validation();
-        if (validated) _axiosDefault.default.post('https://zanko-my-flix.herokuapp.com/users', {
-            Username: username,
-            Password: password,
-            Email: email,
-            Birthday: birthday
-        }).then((response)=>{
-            const data = response.data;
-            console.log(data);
-            alert("You have registered an account with the username: " + username);
-            setValidation(false);
-            window.open('/', '_self'); // the second argument '_self' is necessary so that the page will open in the current tab
-        }).catch((e1)=>{
-            console.log('error registering the user');
-        });
-    };
-    /*validate user input before registering user*/ function validation() {
-        const letters = /^[0-9a-zA-Z]+$/;
-        !username.match(letters) ? setUsernameError("*only numbers and letters are valid") : setUsernameError("");
-        username.length < 4 ? setUsernameError("*required, a minimum of 4 characters") : setUsernameError("");
-        password.trim().length < 6 ? setPasswordError("*required, a minimum of 6 characters") : setPasswordError("");
-        !email.includes("@") ? setEmailError("*required, a valid email") : setEmailError("");
-        _axiosDefault.default.patch('https://zanko-my-flix.herokuapp.com/users/check/', {
-            Username: username
-        }).then((response)=>{
-            const data = response.data;
-            String(data) == username + " is already taken" ? setUsernameError("*" + data) : setUsernameError("");
-        }).catch((e)=>{
-            console.log('error registering the user');
-        });
-        emailError == "" && passwordError == "" && usernameError == "" ? setValidation(true) : setValidation(false);
-    }
-    return(/*#__PURE__*/ _jsxRuntime.jsx("div", {
-        className: "form-container",
-        __source: {
-            fileName: "src/components/registration-view/registration-view.jsx",
-            lineNumber: 71
-        },
-        __self: this,
-        children: /*#__PURE__*/ _jsxRuntime.jsxs(_formDefault.default, {
-            __source: {
-                fileName: "src/components/registration-view/registration-view.jsx",
-                lineNumber: 72
-            },
-            __self: this,
-            children: [
-                /*#__PURE__*/ _jsxRuntime.jsxs(_formDefault.default.Group, {
-                    controlId: "formUsername",
-                    __source: {
-                        fileName: "src/components/registration-view/registration-view.jsx",
-                        lineNumber: 73
-                    },
-                    __self: this,
-                    children: [
-                        /*#__PURE__*/ _jsxRuntime.jsx(_formDefault.default.Label, {
-                            className: "label",
-                            __source: {
-                                fileName: "src/components/registration-view/registration-view.jsx",
-                                lineNumber: 74
-                            },
-                            __self: this,
-                            children: "Username:"
-                        }),
-                        /*#__PURE__*/ _jsxRuntime.jsx(_formDefault.default.Control, {
-                            type: "text",
-                            onChange: (e)=>setUsername(e.target.value)
-                            ,
-                            __source: {
-                                fileName: "src/components/registration-view/registration-view.jsx",
-                                lineNumber: 75
-                            },
-                            __self: this
-                        }),
-                        /*#__PURE__*/ _jsxRuntime.jsx("p", {
-                            className: "error",
-                            __source: {
-                                fileName: "src/components/registration-view/registration-view.jsx",
-                                lineNumber: 76
-                            },
-                            __self: this,
-                            children: usernameError
-                        })
-                    ]
-                }),
-                /*#__PURE__*/ _jsxRuntime.jsxs(_formDefault.default.Group, {
-                    controlId: "formPassword",
-                    __source: {
-                        fileName: "src/components/registration-view/registration-view.jsx",
-                        lineNumber: 78
-                    },
-                    __self: this,
-                    children: [
-                        /*#__PURE__*/ _jsxRuntime.jsx(_formDefault.default.Label, {
-                            className: "label",
-                            __source: {
-                                fileName: "src/components/registration-view/registration-view.jsx",
-                                lineNumber: 79
-                            },
-                            __self: this,
-                            children: "Password:"
-                        }),
-                        /*#__PURE__*/ _jsxRuntime.jsx(_formDefault.default.Control, {
-                            type: "password",
-                            onChange: (e)=>setPassword(e.target.value)
-                            ,
-                            __source: {
-                                fileName: "src/components/registration-view/registration-view.jsx",
-                                lineNumber: 80
-                            },
-                            __self: this
-                        }),
-                        /*#__PURE__*/ _jsxRuntime.jsx("p", {
-                            className: "error",
-                            __source: {
-                                fileName: "src/components/registration-view/registration-view.jsx",
-                                lineNumber: 81
-                            },
-                            __self: this,
-                            children: passwordError
-                        })
-                    ]
-                }),
-                /*#__PURE__*/ _jsxRuntime.jsxs(_formDefault.default.Group, {
-                    controlId: "formEmail",
-                    __source: {
-                        fileName: "src/components/registration-view/registration-view.jsx",
-                        lineNumber: 83
-                    },
-                    __self: this,
-                    children: [
-                        /*#__PURE__*/ _jsxRuntime.jsx(_formDefault.default.Label, {
-                            className: "label",
-                            __source: {
-                                fileName: "src/components/registration-view/registration-view.jsx",
-                                lineNumber: 84
-                            },
-                            __self: this,
-                            children: "Email:"
-                        }),
-                        /*#__PURE__*/ _jsxRuntime.jsx(_formDefault.default.Control, {
-                            type: "email",
-                            onChange: (e)=>setEmail(e.target.value)
-                            ,
-                            __source: {
-                                fileName: "src/components/registration-view/registration-view.jsx",
-                                lineNumber: 85
-                            },
-                            __self: this
-                        }),
-                        /*#__PURE__*/ _jsxRuntime.jsx("p", {
-                            className: "error",
-                            __source: {
-                                fileName: "src/components/registration-view/registration-view.jsx",
-                                lineNumber: 86
-                            },
-                            __self: this,
-                            children: emailError
-                        })
-                    ]
-                }),
-                /*#__PURE__*/ _jsxRuntime.jsxs(_formDefault.default.Group, {
-                    controlId: "formBirthdate",
-                    __source: {
-                        fileName: "src/components/registration-view/registration-view.jsx",
-                        lineNumber: 88
-                    },
-                    __self: this,
-                    children: [
-                        /*#__PURE__*/ _jsxRuntime.jsx(_formDefault.default.Label, {
-                            className: "label",
-                            __source: {
-                                fileName: "src/components/registration-view/registration-view.jsx",
-                                lineNumber: 89
-                            },
-                            __self: this,
-                            children: "Birth date:"
-                        }),
-                        /*#__PURE__*/ _jsxRuntime.jsx(_formDefault.default.Control, {
-                            type: "date",
-                            onChange: (e)=>setBirthdate(e.target.value)
-                            ,
-                            __source: {
-                                fileName: "src/components/registration-view/registration-view.jsx",
-                                lineNumber: 90
-                            },
-                            __self: this
-                        })
-                    ]
-                }),
-                /*#__PURE__*/ _jsxRuntime.jsx(_buttonDefault.default, {
-                    className: "register-button",
-                    variant: "primary",
-                    type: "submit",
-                    onClick: handleSubmit,
-                    __source: {
-                        fileName: "src/components/registration-view/registration-view.jsx",
-                        lineNumber: 92
-                    },
-                    __self: this,
-                    children: "Register"
-                }),
-                /*#__PURE__*/ _jsxRuntime.jsx(_reactRouterDom.Link, {
-                    to: `/`,
-                    __source: {
-                        fileName: "src/components/registration-view/registration-view.jsx",
-                        lineNumber: 94
-                    },
-                    __self: this,
-                    children: /*#__PURE__*/ _jsxRuntime.jsx("p", {
-                        className: "login-instead",
-                        variant: "link",
-                        __source: {
-                            fileName: "src/components/registration-view/registration-view.jsx",
-                            lineNumber: 95
-                        },
-                        __self: this,
-                        children: "Login instead"
-                    })
-                })
-            ]
-        })
-    }));
-}
-_s(RegistrationView, "y/c/sWAw7cNCfi7RHzcJSClaXiA=");
-_c = RegistrationView;
-RegistrationView.propTypes = {
-    registerUser: _propTypesDefault.default.shape({
-        username: _propTypesDefault.default.string.isRequired,
-        password: _propTypesDefault.default.string.isRequired,
-        email: _propTypesDefault.default.string.isRequired,
-        birthdate: _propTypesDefault.default.string.isRequired
-    })
-};
-var _c;
-$RefreshReg$(_c, "RegistrationView");
-
-  $parcel$ReactRefreshHelpers$8dd4.postlude(module);
-} finally {
-  window.$RefreshReg$ = prevRefreshReg;
-  window.$RefreshSig$ = prevRefreshSig;
-}
-},{"react/jsx-runtime":"8xIwr","react":"6TuXu","axios":"iYoWk","prop-types":"1tgq3","react-bootstrap/Form":"5ykgY","react-bootstrap/Button":"9CzHT","react-router-dom":"cpyQW","./registration-view.scss":"fr9ZP","@parcel/transformer-js/src/esmodule-helpers.js":"JacNc","@parcel/transformer-react-refresh-wrap/lib/helpers/helpers.js":"5V79J"}],"fr9ZP":[function() {},{}],"2LCM5":[function(require,module,exports) {
-var $parcel$ReactRefreshHelpers$5e93 = require("@parcel/transformer-react-refresh-wrap/lib/helpers/helpers.js");
-var prevRefreshReg = window.$RefreshReg$;
-var prevRefreshSig = window.$RefreshSig$;
-$parcel$ReactRefreshHelpers$5e93.prelude(module);
-
-try {
-var parcelHelpers = require("@parcel/transformer-js/src/esmodule-helpers.js");
-parcelHelpers.defineInteropFlag(exports);
-parcelHelpers.export(exports, "UpdateProfileView", ()=>UpdateProfileView
-);
-var _jsxRuntime = require("react/jsx-runtime");
-var _react = require("react");
-var _reactDefault = parcelHelpers.interopDefault(_react);
-var _reactBootstrap = require("react-bootstrap");
-var _propTypes = require("prop-types");
-var _propTypesDefault = parcelHelpers.interopDefault(_propTypes);
-var _axios = require("axios");
-var _axiosDefault = parcelHelpers.interopDefault(_axios);
-var _reactRouterDom = require("react-router-dom");
-var _updateProfileViewScss = require("./update-profile-view.scss");
-class UpdateProfileView extends _reactDefault.default.Component {
-    constructor(){
-        super();
-        this.state = {
-            Username: "",
-            Password: "",
-            Email: "",
-            Birthday: "",
-            PasswordError: "",
-            EmailError: "",
-            BirthdayError: ""
-        };
-    }
-    componentDidMount() {
-        let accessToken = localStorage.getItem("token");
-        this.getUser(accessToken);
-    }
-    getUser(accessToken) {
-        let url = 'https://zanko-my-flix.herokuapp.com/users/' + localStorage.getItem('user');
-        _axiosDefault.default.get(url, {
-            headers: {
-                Authorization: `Bearer ${accessToken}`
-            }
-        }).then((response)=>{
-            this.setState({
-                Username: response.data.Username,
-                Password: "",
-                Favorites: response.data.FavoriteMovies,
-                Email: response.data.Email,
-                Birthday: response.data.Birthday
-            });
-        }).catch(function(error) {
-            alert(error.response.data);
-        });
-    }
-    /* Handle form update */ handleUpdate(e) {
-        let accessToken = localStorage.getItem("token");
-        let user = localStorage.getItem("user");
-        let validated = this.formValidation();
-        if (validated) _axiosDefault.default.put(`https://zanko-my-flix.herokuapp.com/users/${user}`, {
-            Username: user,
-            Password: this.state.Password,
-            Email: this.state.Email,
-            Birthday: this.state.Birthday
-        }, {
-            headers: {
-                Authorization: `Bearer ${accessToken}`
-            }
-        }).then((response)=>{
-            const data = response.data;
-            alert(user + " profile has been updated.");
-            window.open(`/users/${this.props.user}`, '_self');
-        }).catch(function(error) {
-            alert(error.response.data);
-        });
-    }
-    /* Form Validation Start */ formValidation() {
-        let PasswordError = {
-        };
-        let EmailError = {
-        };
-        let BirthdayError = {
-        };
-        let isValid = true;
-        if (this.state.Password.trim().length < 5 || this.state.Password === '') {
-            PasswordError.passwordMissing = "You must enter a password at least 6 characters long";
-            isValid = false;
-        }
-        if (!(this.state.Email && this.state.Email.includes(".") && this.state.Email.includes("@"))) {
-            EmailError.emailNotEmail = "You must enter a valid email";
-            isValid = false;
-        }
-        console.log(this.state.Birthday);
-        if (this.state.Birthday === '' || !this.state.Birthday) {
-            BirthdayError.BirthdayEmpty = "You must enter your date of birth";
-            isValid = false;
-        }
-        this.setState({
-            PasswordError: PasswordError,
-            EmailError: EmailError,
-            BirthdayError: BirthdayError
-        });
-        return isValid;
-    }
-    setField(e) {
-        let { name , value  } = e.target;
-        this.setState({
-            [name]: value
-        });
-    }
-    render() {
-        const { onBackClick , onDeregister  } = this.props;
-        const { PasswordError , EmailError , BirthdayError  } = this.state;
-        return(/*#__PURE__*/ _jsxRuntime.jsx("div", {
-            className: "update-profile-parent-container",
-            __source: {
-                fileName: "src/components/update-profile-view/update-profile-view.jsx",
-                lineNumber: 117
-            },
-            __self: this,
-            children: /*#__PURE__*/ _jsxRuntime.jsxs("div", {
-                className: "update-profile-container",
-                __source: {
-                    fileName: "src/components/update-profile-view/update-profile-view.jsx",
-                    lineNumber: 118
-                },
-                __self: this,
-                children: [
-                    /*#__PURE__*/ _jsxRuntime.jsx("div", {
-                        className: "input-container",
-                        __source: {
-                            fileName: "src/components/update-profile-view/update-profile-view.jsx",
-                            lineNumber: 119
-                        },
-                        __self: this,
-                        children: /*#__PURE__*/ _jsxRuntime.jsxs(_reactBootstrap.Form, {
-                            __source: {
-                                fileName: "src/components/update-profile-view/update-profile-view.jsx",
-                                lineNumber: 120
-                            },
-                            __self: this,
-                            children: [
-                                /*#__PURE__*/ _jsxRuntime.jsxs(_reactBootstrap.Form.Group, {
-                                    controlId: "displayUsername",
-                                    __source: {
-                                        fileName: "src/components/update-profile-view/update-profile-view.jsx",
-                                        lineNumber: 121
-                                    },
-                                    __self: this,
-                                    children: [
-                                        /*#__PURE__*/ _jsxRuntime.jsx(_reactBootstrap.Form.Label, {
-                                            __source: {
-                                                fileName: "src/components/update-profile-view/update-profile-view.jsx",
-                                                lineNumber: 122
-                                            },
-                                            __self: this,
-                                            children: "Username"
-                                        }),
-                                        /*#__PURE__*/ _jsxRuntime.jsx(_reactBootstrap.Form.Control, {
-                                            placeholder: `${this.state.Username}`,
-                                            readOnly: true,
-                                            __source: {
-                                                fileName: "src/components/update-profile-view/update-profile-view.jsx",
-                                                lineNumber: 123
-                                            },
-                                            __self: this
-                                        })
-                                    ]
-                                }),
-                                /*#__PURE__*/ _jsxRuntime.jsxs(_reactBootstrap.Form.Group, {
-                                    controlId: "updateEmail",
-                                    __source: {
-                                        fileName: "src/components/update-profile-view/update-profile-view.jsx",
-                                        lineNumber: 125
-                                    },
-                                    __self: this,
-                                    children: [
-                                        /*#__PURE__*/ _jsxRuntime.jsx(_reactBootstrap.Form.Label, {
-                                            __source: {
-                                                fileName: "src/components/update-profile-view/update-profile-view.jsx",
-                                                lineNumber: 126
-                                            },
-                                            __self: this,
-                                            children: "Email"
-                                        }),
-                                        /*#__PURE__*/ _jsxRuntime.jsx(_reactBootstrap.Form.Control, {
-                                            type: "email",
-                                            name: "Email",
-                                            placeholder: `${this.state.Email}`,
-                                            onChange: (e)=>this.setField(e)
-                                            ,
-                                            required: true,
-                                            __source: {
-                                                fileName: "src/components/update-profile-view/update-profile-view.jsx",
-                                                lineNumber: 127
-                                            },
-                                            __self: this
-                                        }),
-                                        Object.keys(EmailError).map((key)=>{
-                                            return(/*#__PURE__*/ _jsxRuntime.jsx("div", {
-                                                className: "error",
-                                                __source: {
-                                                    fileName: "src/components/update-profile-view/update-profile-view.jsx",
-                                                    lineNumber: 130
-                                                },
-                                                __self: this,
-                                                children: EmailError[key]
-                                            }, key));
-                                        })
-                                    ]
-                                }),
-                                /*#__PURE__*/ _jsxRuntime.jsxs(_reactBootstrap.Form.Group, {
-                                    controlId: "updateBirthday",
-                                    __source: {
-                                        fileName: "src/components/update-profile-view/update-profile-view.jsx",
-                                        lineNumber: 136
-                                    },
-                                    __self: this,
-                                    children: [
-                                        /*#__PURE__*/ _jsxRuntime.jsx(_reactBootstrap.Form.Label, {
-                                            __source: {
-                                                fileName: "src/components/update-profile-view/update-profile-view.jsx",
-                                                lineNumber: 137
-                                            },
-                                            __self: this,
-                                            children: "Birthdate"
-                                        }),
-                                        /*#__PURE__*/ _jsxRuntime.jsx(_reactBootstrap.Form.Control, {
-                                            type: "date",
-                                            name: "Birthday",
-                                            placeholder: `${this.state.Birthday}`,
-                                            onChange: (e)=>this.setField(e)
-                                            ,
-                                            required: true,
-                                            __source: {
-                                                fileName: "src/components/update-profile-view/update-profile-view.jsx",
-                                                lineNumber: 138
-                                            },
-                                            __self: this
-                                        }),
-                                        Object.keys(BirthdayError).map((key)=>{
-                                            return(/*#__PURE__*/ _jsxRuntime.jsx("div", {
-                                                className: "error",
-                                                __source: {
-                                                    fileName: "src/components/update-profile-view/update-profile-view.jsx",
-                                                    lineNumber: 141
-                                                },
-                                                __self: this,
-                                                children: BirthdayError[key]
-                                            }, key));
-                                        })
-                                    ]
-                                }),
-                                /*#__PURE__*/ _jsxRuntime.jsxs(_reactBootstrap.Form.Group, {
-                                    controlId: "updatePassword",
-                                    __source: {
-                                        fileName: "src/components/update-profile-view/update-profile-view.jsx",
-                                        lineNumber: 147
-                                    },
-                                    __self: this,
-                                    children: [
-                                        /*#__PURE__*/ _jsxRuntime.jsx(_reactBootstrap.Form.Label, {
-                                            __source: {
-                                                fileName: "src/components/update-profile-view/update-profile-view.jsx",
-                                                lineNumber: 148
-                                            },
-                                            __self: this,
-                                            children: "New Password"
-                                        }),
-                                        /*#__PURE__*/ _jsxRuntime.jsx(_reactBootstrap.Form.Control, {
-                                            type: "password",
-                                            name: "Password",
-                                            placeholder: "",
-                                            onChange: (e)=>this.setField(e)
-                                            ,
-                                            required: true,
-                                            __source: {
-                                                fileName: "src/components/update-profile-view/update-profile-view.jsx",
-                                                lineNumber: 149
-                                            },
-                                            __self: this
-                                        }),
-                                        Object.keys(PasswordError).map((key)=>{
-                                            return(/*#__PURE__*/ _jsxRuntime.jsx("div", {
-                                                className: "error",
-                                                __source: {
-                                                    fileName: "src/components/update-profile-view/update-profile-view.jsx",
-                                                    lineNumber: 152
-                                                },
-                                                __self: this,
-                                                children: PasswordError[key]
-                                            }, key));
-                                        })
-                                    ]
-                                })
-                            ]
-                        })
-                    }),
-                    /*#__PURE__*/ _jsxRuntime.jsx("div", {
-                        __source: {
-                            fileName: "src/components/update-profile-view/update-profile-view.jsx",
-                            lineNumber: 160
-                        },
-                        __self: this,
-                        children: /*#__PURE__*/ _jsxRuntime.jsx("div", {
-                            className: "submit-changes-button",
-                            __source: {
-                                fileName: "src/components/update-profile-view/update-profile-view.jsx",
-                                lineNumber: 161
-                            },
-                            __self: this,
-                            children: /*#__PURE__*/ _jsxRuntime.jsx("button", {
-                                type: "submit",
-                                className: "nav-button",
-                                onClick: ()=>this.handleUpdate()
-                                ,
-                                __source: {
-                                    fileName: "src/components/update-profile-view/update-profile-view.jsx",
-                                    lineNumber: 162
-                                },
-                                __self: this,
-                                children: "Submit Changes"
-                            })
-                        })
-                    }),
-                    /*#__PURE__*/ _jsxRuntime.jsx("div", {
-                        __source: {
-                            fileName: "src/components/update-profile-view/update-profile-view.jsx",
-                            lineNumber: 165
-                        },
-                        __self: this,
-                        children: /*#__PURE__*/ _jsxRuntime.jsxs("div", {
-                            className: "button-container",
-                            __source: {
-                                fileName: "src/components/update-profile-view/update-profile-view.jsx",
-                                lineNumber: 166
-                            },
-                            __self: this,
-                            children: [
-                                /*#__PURE__*/ _jsxRuntime.jsx("button", {
-                                    className: "back-button",
-                                    onClick: ()=>{
-                                        onBackClick(null);
-                                    },
-                                    __source: {
-                                        fileName: "src/components/update-profile-view/update-profile-view.jsx",
-                                        lineNumber: 167
-                                    },
-                                    __self: this,
-                                    children: "Back"
-                                }),
-                                /*#__PURE__*/ _jsxRuntime.jsx("button", {
-                                    className: "delete-button",
-                                    onClick: ()=>{
-                                        onDeregister(this.state.Email);
-                                    },
-                                    __source: {
-                                        fileName: "src/components/update-profile-view/update-profile-view.jsx",
-                                        lineNumber: 168
-                                    },
-                                    __self: this,
-                                    children: "Delete Account"
-                                })
-                            ]
-                        })
-                    })
-                ]
-            })
-        }));
-    }
-}
-UpdateProfileView.propTypes = {
-    users: _propTypesDefault.default.shape({
-        Username: _propTypesDefault.default.string,
-        Email: _propTypesDefault.default.string.isRequired,
-        Password: _propTypesDefault.default.string.isRequired,
-        Birthday: _propTypesDefault.default.string
-    })
-};
-
-  $parcel$ReactRefreshHelpers$5e93.postlude(module);
-} finally {
-  window.$RefreshReg$ = prevRefreshReg;
-  window.$RefreshSig$ = prevRefreshSig;
-}
-},{"react/jsx-runtime":"8xIwr","react":"6TuXu","react-bootstrap":"h2YVd","prop-types":"1tgq3","axios":"iYoWk","react-router-dom":"cpyQW","./update-profile-view.scss":"fEnUy","@parcel/transformer-js/src/esmodule-helpers.js":"JacNc","@parcel/transformer-react-refresh-wrap/lib/helpers/helpers.js":"5V79J"}],"fEnUy":[function() {},{}],"2E7Aw":[function(require,module,exports) {
+},{"@babel/runtime/helpers/esm/extends":"bKAu6","@babel/runtime/helpers/esm/objectWithoutPropertiesLoose":"3Rubg","classnames":"bOXOh","react":"6TuXu","prop-types-extra/lib/isRequiredForA11y":"1p075","./ThemeProvider":"eeqfi","@parcel/transformer-js/src/esmodule-helpers.js":"JacNc"}],"fEnUy":[function() {},{}],"2E7Aw":[function(require,module,exports) {
 var $parcel$ReactRefreshHelpers$58c6 = require("@parcel/transformer-react-refresh-wrap/lib/helpers/helpers.js");
 var prevRefreshReg = window.$RefreshReg$;
 var prevRefreshSig = window.$RefreshSig$;
@@ -43373,6 +41299,2080 @@ ProfileView.propTypes = {
   window.$RefreshReg$ = prevRefreshReg;
   window.$RefreshSig$ = prevRefreshSig;
 }
-},{"react/jsx-runtime":"8xIwr","react":"6TuXu","react-bootstrap":"h2YVd","prop-types":"1tgq3","axios":"iYoWk","react-router-dom":"cpyQW","./profile-view.scss":"gb0ga","@parcel/transformer-js/src/esmodule-helpers.js":"JacNc","@parcel/transformer-react-refresh-wrap/lib/helpers/helpers.js":"5V79J"}],"gb0ga":[function() {},{}],"jyMAr":[function() {},{}],"jUTZ8":[function() {},{}]},["2rAXy","6a0zu","dLPEP"], "dLPEP", "parcelRequireaec4")
+},{"react/jsx-runtime":"8xIwr","react":"6TuXu","react-bootstrap":"h2YVd","prop-types":"1tgq3","axios":"iYoWk","react-router-dom":"cpyQW","./profile-view.scss":"gb0ga","@parcel/transformer-js/src/esmodule-helpers.js":"JacNc","@parcel/transformer-react-refresh-wrap/lib/helpers/helpers.js":"5V79J"}],"gb0ga":[function() {},{}],"2L0if":[function(require,module,exports) {
+var parcelHelpers = require("@parcel/transformer-js/src/esmodule-helpers.js");
+parcelHelpers.defineInteropFlag(exports);
+parcelHelpers.export(exports, "batch", ()=>_reactBatchedUpdates.unstable_batchedUpdates
+);
+var _reactBatchedUpdates = require("./utils/reactBatchedUpdates");
+var _batch = require("./utils/batch"); // Enable batched updates in our subscriptions for use
+var _exports = require("./exports");
+parcelHelpers.exportAll(_exports, exports);
+// with standard React renderers (ReactDOM, React Native)
+_batch.setBatch(_reactBatchedUpdates.unstable_batchedUpdates);
+
+},{"./exports":"amFLd","./utils/reactBatchedUpdates":"kaP8a","./utils/batch":"2g3ZY","@parcel/transformer-js/src/esmodule-helpers.js":"JacNc"}],"amFLd":[function(require,module,exports) {
+var parcelHelpers = require("@parcel/transformer-js/src/esmodule-helpers.js");
+parcelHelpers.defineInteropFlag(exports);
+parcelHelpers.export(exports, "Provider", ()=>_providerDefault.default
+);
+parcelHelpers.export(exports, "connectAdvanced", ()=>_connectAdvancedDefault.default
+);
+parcelHelpers.export(exports, "ReactReduxContext", ()=>_context.ReactReduxContext
+);
+parcelHelpers.export(exports, "connect", ()=>_connectDefault.default
+);
+parcelHelpers.export(exports, "useDispatch", ()=>_useDispatch.useDispatch
+);
+parcelHelpers.export(exports, "createDispatchHook", ()=>_useDispatch.createDispatchHook
+);
+parcelHelpers.export(exports, "useSelector", ()=>_useSelector.useSelector
+);
+parcelHelpers.export(exports, "createSelectorHook", ()=>_useSelector.createSelectorHook
+);
+parcelHelpers.export(exports, "useStore", ()=>_useStore.useStore
+);
+parcelHelpers.export(exports, "createStoreHook", ()=>_useStore.createStoreHook
+);
+parcelHelpers.export(exports, "shallowEqual", ()=>_shallowEqualDefault.default
+);
+var _provider = require("./components/Provider");
+var _providerDefault = parcelHelpers.interopDefault(_provider);
+var _connectAdvanced = require("./components/connectAdvanced");
+var _connectAdvancedDefault = parcelHelpers.interopDefault(_connectAdvanced);
+var _context = require("./components/Context");
+var _connect = require("./connect/connect");
+var _connectDefault = parcelHelpers.interopDefault(_connect);
+var _useDispatch = require("./hooks/useDispatch");
+var _useSelector = require("./hooks/useSelector");
+var _useStore = require("./hooks/useStore");
+var _shallowEqual = require("./utils/shallowEqual");
+var _shallowEqualDefault = parcelHelpers.interopDefault(_shallowEqual);
+
+},{"./components/Provider":"efEZ1","./components/connectAdvanced":"5cRBV","./components/Context":"gT1Jg","./connect/connect":"9zpXe","./hooks/useDispatch":"2CDvn","./hooks/useSelector":"27k1i","./hooks/useStore":"fDPAT","./utils/shallowEqual":"leLul","@parcel/transformer-js/src/esmodule-helpers.js":"JacNc"}],"efEZ1":[function(require,module,exports) {
+var parcelHelpers = require("@parcel/transformer-js/src/esmodule-helpers.js");
+parcelHelpers.defineInteropFlag(exports);
+var _react = require("react");
+var _reactDefault = parcelHelpers.interopDefault(_react);
+var _propTypes = require("prop-types");
+var _propTypesDefault = parcelHelpers.interopDefault(_propTypes);
+var _context = require("./Context");
+var _subscription = require("../utils/Subscription");
+var _useIsomorphicLayoutEffect = require("../utils/useIsomorphicLayoutEffect");
+function Provider(_ref) {
+    var store = _ref.store, context = _ref.context, children = _ref.children;
+    var contextValue = _react.useMemo(function() {
+        var subscription = _subscription.createSubscription(store);
+        subscription.onStateChange = subscription.notifyNestedSubs;
+        return {
+            store: store,
+            subscription: subscription
+        };
+    }, [
+        store
+    ]);
+    var previousState = _react.useMemo(function() {
+        return store.getState();
+    }, [
+        store
+    ]);
+    _useIsomorphicLayoutEffect.useIsomorphicLayoutEffect(function() {
+        var subscription = contextValue.subscription;
+        subscription.trySubscribe();
+        if (previousState !== store.getState()) subscription.notifyNestedSubs();
+        return function() {
+            subscription.tryUnsubscribe();
+            subscription.onStateChange = null;
+        };
+    }, [
+        contextValue,
+        previousState
+    ]);
+    var Context = context || _context.ReactReduxContext;
+    return(/*#__PURE__*/ _reactDefault.default.createElement(Context.Provider, {
+        value: contextValue
+    }, children));
+}
+Provider.propTypes = {
+    store: _propTypesDefault.default.shape({
+        subscribe: _propTypesDefault.default.func.isRequired,
+        dispatch: _propTypesDefault.default.func.isRequired,
+        getState: _propTypesDefault.default.func.isRequired
+    }),
+    context: _propTypesDefault.default.object,
+    children: _propTypesDefault.default.any
+};
+exports.default = Provider;
+
+},{"react":"6TuXu","prop-types":"1tgq3","./Context":"gT1Jg","../utils/Subscription":"6rtcC","../utils/useIsomorphicLayoutEffect":"2TWoQ","@parcel/transformer-js/src/esmodule-helpers.js":"JacNc"}],"gT1Jg":[function(require,module,exports) {
+var parcelHelpers = require("@parcel/transformer-js/src/esmodule-helpers.js");
+parcelHelpers.defineInteropFlag(exports);
+parcelHelpers.export(exports, "ReactReduxContext", ()=>ReactReduxContext
+);
+var _react = require("react");
+var _reactDefault = parcelHelpers.interopDefault(_react);
+var ReactReduxContext = /*#__PURE__*/ _reactDefault.default.createContext(null);
+ReactReduxContext.displayName = 'ReactRedux';
+exports.default = ReactReduxContext;
+
+},{"react":"6TuXu","@parcel/transformer-js/src/esmodule-helpers.js":"JacNc"}],"6rtcC":[function(require,module,exports) {
+var parcelHelpers = require("@parcel/transformer-js/src/esmodule-helpers.js");
+parcelHelpers.defineInteropFlag(exports);
+parcelHelpers.export(exports, "createSubscription", ()=>createSubscription
+);
+var _batch = require("./batch"); // encapsulates the subscription logic for connecting a component to the redux store, as
+// well as nesting subscriptions of descendant components, so that we can ensure the
+// ancestor components re-render before descendants
+function createListenerCollection() {
+    var batch = _batch.getBatch();
+    var first = null;
+    var last = null;
+    return {
+        clear: function clear() {
+            first = null;
+            last = null;
+        },
+        notify: function notify() {
+            batch(function() {
+                var listener = first;
+                while(listener){
+                    listener.callback();
+                    listener = listener.next;
+                }
+            });
+        },
+        get: function get() {
+            var listeners = [];
+            var listener = first;
+            while(listener){
+                listeners.push(listener);
+                listener = listener.next;
+            }
+            return listeners;
+        },
+        subscribe: function subscribe(callback) {
+            var isSubscribed = true;
+            var listener = last = {
+                callback: callback,
+                next: null,
+                prev: last
+            };
+            if (listener.prev) listener.prev.next = listener;
+            else first = listener;
+            return function unsubscribe() {
+                if (!isSubscribed || first === null) return;
+                isSubscribed = false;
+                if (listener.next) listener.next.prev = listener.prev;
+                else last = listener.prev;
+                if (listener.prev) listener.prev.next = listener.next;
+                else first = listener.next;
+            };
+        }
+    };
+}
+var nullListeners = {
+    notify: function notify() {
+    },
+    get: function get() {
+        return [];
+    }
+};
+function createSubscription(store, parentSub) {
+    var unsubscribe;
+    var listeners = nullListeners;
+    function addNestedSub(listener) {
+        trySubscribe();
+        return listeners.subscribe(listener);
+    }
+    function notifyNestedSubs() {
+        listeners.notify();
+    }
+    function handleChangeWrapper() {
+        if (subscription.onStateChange) subscription.onStateChange();
+    }
+    function isSubscribed() {
+        return Boolean(unsubscribe);
+    }
+    function trySubscribe() {
+        if (!unsubscribe) {
+            unsubscribe = parentSub ? parentSub.addNestedSub(handleChangeWrapper) : store.subscribe(handleChangeWrapper);
+            listeners = createListenerCollection();
+        }
+    }
+    function tryUnsubscribe() {
+        if (unsubscribe) {
+            unsubscribe();
+            unsubscribe = undefined;
+            listeners.clear();
+            listeners = nullListeners;
+        }
+    }
+    var subscription = {
+        addNestedSub: addNestedSub,
+        notifyNestedSubs: notifyNestedSubs,
+        handleChangeWrapper: handleChangeWrapper,
+        isSubscribed: isSubscribed,
+        trySubscribe: trySubscribe,
+        tryUnsubscribe: tryUnsubscribe,
+        getListeners: function getListeners() {
+            return listeners;
+        }
+    };
+    return subscription;
+}
+
+},{"./batch":"2g3ZY","@parcel/transformer-js/src/esmodule-helpers.js":"JacNc"}],"2g3ZY":[function(require,module,exports) {
+var parcelHelpers = require("@parcel/transformer-js/src/esmodule-helpers.js");
+parcelHelpers.defineInteropFlag(exports);
+parcelHelpers.export(exports, "setBatch", ()=>setBatch
+);
+parcelHelpers.export(exports, "getBatch", ()=>getBatch
+);
+// Default to a dummy "batch" implementation that just runs the callback
+function defaultNoopBatch(callback) {
+    callback();
+}
+var batch = defaultNoopBatch; // Allow injecting another batching function later
+var setBatch = function setBatch1(newBatch) {
+    return batch = newBatch;
+}; // Supply a getter just to skip dealing with ESM bindings
+var getBatch = function getBatch1() {
+    return batch;
+};
+
+},{"@parcel/transformer-js/src/esmodule-helpers.js":"JacNc"}],"2TWoQ":[function(require,module,exports) {
+var parcelHelpers = require("@parcel/transformer-js/src/esmodule-helpers.js");
+parcelHelpers.defineInteropFlag(exports);
+parcelHelpers.export(exports, "useIsomorphicLayoutEffect", ()=>useIsomorphicLayoutEffect
+);
+var _react = require("react"); // React currently throws a warning when using useLayoutEffect on the server.
+var useIsomorphicLayoutEffect = typeof window !== 'undefined' && typeof window.document !== 'undefined' && typeof window.document.createElement !== 'undefined' ? _react.useLayoutEffect : _react.useEffect;
+
+},{"react":"6TuXu","@parcel/transformer-js/src/esmodule-helpers.js":"JacNc"}],"5cRBV":[function(require,module,exports) {
+var parcelHelpers = require("@parcel/transformer-js/src/esmodule-helpers.js");
+parcelHelpers.defineInteropFlag(exports);
+var _extends = require("@babel/runtime/helpers/esm/extends");
+var _extendsDefault = parcelHelpers.interopDefault(_extends);
+var _objectWithoutPropertiesLoose = require("@babel/runtime/helpers/esm/objectWithoutPropertiesLoose");
+var _objectWithoutPropertiesLooseDefault = parcelHelpers.interopDefault(_objectWithoutPropertiesLoose);
+var _hoistNonReactStatics = require("hoist-non-react-statics");
+var _hoistNonReactStaticsDefault = parcelHelpers.interopDefault(_hoistNonReactStatics);
+var _react = require("react");
+var _reactDefault = parcelHelpers.interopDefault(_react);
+var _reactIs = require("react-is");
+var _subscription = require("../utils/Subscription");
+var _useIsomorphicLayoutEffect = require("../utils/useIsomorphicLayoutEffect");
+var _context = require("./Context"); // Define some constant arrays just to avoid re-creating these
+var _excluded = [
+    "getDisplayName",
+    "methodName",
+    "renderCountProp",
+    "shouldHandleStateChanges",
+    "storeKey",
+    "withRef",
+    "forwardRef",
+    "context"
+], _excluded2 = [
+    "reactReduxForwardedRef"
+];
+var EMPTY_ARRAY = [];
+var NO_SUBSCRIPTION_ARRAY = [
+    null,
+    null
+];
+var stringifyComponent = function stringifyComponent1(Comp) {
+    try {
+        return JSON.stringify(Comp);
+    } catch (err) {
+        return String(Comp);
+    }
+};
+function storeStateUpdatesReducer(state, action) {
+    var updateCount = state[1];
+    return [
+        action.payload,
+        updateCount + 1
+    ];
+}
+function useIsomorphicLayoutEffectWithArgs(effectFunc, effectArgs, dependencies) {
+    _useIsomorphicLayoutEffect.useIsomorphicLayoutEffect(function() {
+        return effectFunc.apply(void 0, effectArgs);
+    }, dependencies);
+}
+function captureWrapperProps(lastWrapperProps, lastChildProps, renderIsScheduled, wrapperProps, actualChildProps, childPropsFromStoreUpdate, notifyNestedSubs) {
+    // We want to capture the wrapper props and child props we used for later comparisons
+    lastWrapperProps.current = wrapperProps;
+    lastChildProps.current = actualChildProps;
+    renderIsScheduled.current = false; // If the render was from a store update, clear out that reference and cascade the subscriber update
+    if (childPropsFromStoreUpdate.current) {
+        childPropsFromStoreUpdate.current = null;
+        notifyNestedSubs();
+    }
+}
+function subscribeUpdates(shouldHandleStateChanges, store, subscription, childPropsSelector, lastWrapperProps, lastChildProps, renderIsScheduled, childPropsFromStoreUpdate, notifyNestedSubs, forceComponentUpdateDispatch) {
+    // If we're not subscribed to the store, nothing to do here
+    if (!shouldHandleStateChanges) return; // Capture values for checking if and when this component unmounts
+    var didUnsubscribe = false;
+    var lastThrownError = null; // We'll run this callback every time a store subscription update propagates to this component
+    var checkForUpdates = function checkForUpdates1() {
+        if (didUnsubscribe) // Don't run stale listeners.
+        // Redux doesn't guarantee unsubscriptions happen until next dispatch.
+        return;
+        var latestStoreState = store.getState();
+        var newChildProps, error;
+        try {
+            // Actually run the selector with the most recent store state and wrapper props
+            // to determine what the child props should be
+            newChildProps = childPropsSelector(latestStoreState, lastWrapperProps.current);
+        } catch (e) {
+            error = e;
+            lastThrownError = e;
+        }
+        if (!error) lastThrownError = null;
+         // If the child props haven't changed, nothing to do here - cascade the subscription update
+        if (newChildProps === lastChildProps.current) {
+            if (!renderIsScheduled.current) notifyNestedSubs();
+        } else {
+            // Save references to the new child props.  Note that we track the "child props from store update"
+            // as a ref instead of a useState/useReducer because we need a way to determine if that value has
+            // been processed.  If this went into useState/useReducer, we couldn't clear out the value without
+            // forcing another re-render, which we don't want.
+            lastChildProps.current = newChildProps;
+            childPropsFromStoreUpdate.current = newChildProps;
+            renderIsScheduled.current = true; // If the child props _did_ change (or we caught an error), this wrapper component needs to re-render
+            forceComponentUpdateDispatch({
+                type: 'STORE_UPDATED',
+                payload: {
+                    error: error
+                }
+            });
+        }
+    }; // Actually subscribe to the nearest connected ancestor (or store)
+    subscription.onStateChange = checkForUpdates;
+    subscription.trySubscribe(); // Pull data from the store after first render in case the store has
+    // changed since we began.
+    checkForUpdates();
+    var unsubscribeWrapper = function unsubscribeWrapper1() {
+        didUnsubscribe = true;
+        subscription.tryUnsubscribe();
+        subscription.onStateChange = null;
+        if (lastThrownError) // It's possible that we caught an error due to a bad mapState function, but the
+        // parent re-rendered without this component and we're about to unmount.
+        // This shouldn't happen as long as we do top-down subscriptions correctly, but
+        // if we ever do those wrong, this throw will surface the error in our tests.
+        // In that case, throw the error from here so it doesn't get lost.
+        throw lastThrownError;
+    };
+    return unsubscribeWrapper;
+}
+var initStateUpdates = function initStateUpdates1() {
+    return [
+        null,
+        0
+    ];
+};
+function connectAdvanced(/*
+  selectorFactory is a func that is responsible for returning the selector function used to
+  compute new props from state, props, and dispatch. For example:
+      export default connectAdvanced((dispatch, options) => (state, props) => ({
+      thing: state.things[props.thingId],
+      saveThing: fields => dispatch(actionCreators.saveThing(props.thingId, fields)),
+    }))(YourComponent)
+    Access to dispatch is provided to the factory so selectorFactories can bind actionCreators
+  outside of their selector as an optimization. Options passed to connectAdvanced are passed to
+  the selectorFactory, along with displayName and WrappedComponent, as the second argument.
+    Note that selectorFactory is responsible for all caching/memoization of inbound and outbound
+  props. Do not use connectAdvanced directly without memoizing results between calls to your
+  selector, otherwise the Connect component will re-render on every state or props change.
+*/ selectorFactory, _ref) {
+    if (_ref === void 0) _ref = {
+    };
+    var _ref2 = _ref, _ref2$getDisplayName = _ref2.getDisplayName, getDisplayName = _ref2$getDisplayName === void 0 ? function(name) {
+        return "ConnectAdvanced(" + name + ")";
+    } : _ref2$getDisplayName, _ref2$methodName = _ref2.methodName, methodName = _ref2$methodName === void 0 ? 'connectAdvanced' : _ref2$methodName, _ref2$renderCountProp = _ref2.renderCountProp, renderCountProp = _ref2$renderCountProp === void 0 ? undefined : _ref2$renderCountProp, _ref2$shouldHandleSta = _ref2.shouldHandleStateChanges, shouldHandleStateChanges = _ref2$shouldHandleSta === void 0 ? true : _ref2$shouldHandleSta, _ref2$storeKey = _ref2.storeKey, storeKey = _ref2$storeKey === void 0 ? 'store' : _ref2$storeKey, _ref2$withRef = _ref2.withRef, withRef = _ref2$withRef === void 0 ? false : _ref2$withRef, _ref2$forwardRef = _ref2.forwardRef, forwardRef = _ref2$forwardRef === void 0 ? false : _ref2$forwardRef, _ref2$context = _ref2.context, context = _ref2$context === void 0 ? _context.ReactReduxContext : _ref2$context, connectOptions = _objectWithoutPropertiesLooseDefault.default(_ref2, _excluded);
+    if (renderCountProp !== undefined) throw new Error("renderCountProp is removed. render counting is built into the latest React Dev Tools profiling extension");
+    if (withRef) throw new Error('withRef is removed. To access the wrapped instance, use a ref on the connected component');
+    var customStoreWarningMessage = "To use a custom Redux store for specific components, create a custom React context with React.createContext(), and pass the context object to React Redux's Provider and specific components like: <Provider context={MyContext}><ConnectedComponent context={MyContext} /></Provider>. You may also pass a {context : MyContext} option to connect";
+    if (storeKey !== 'store') throw new Error('storeKey has been removed and does not do anything. ' + customStoreWarningMessage);
+    var Context = context;
+    return function wrapWithConnect(WrappedComponent) {
+        if (!_reactIs.isValidElementType(WrappedComponent)) throw new Error("You must pass a component to the function returned by " + (methodName + ". Instead received " + stringifyComponent(WrappedComponent)));
+        var wrappedComponentName = WrappedComponent.displayName || WrappedComponent.name || 'Component';
+        var displayName = getDisplayName(wrappedComponentName);
+        var selectorFactoryOptions = _extendsDefault.default({
+        }, connectOptions, {
+            getDisplayName: getDisplayName,
+            methodName: methodName,
+            renderCountProp: renderCountProp,
+            shouldHandleStateChanges: shouldHandleStateChanges,
+            storeKey: storeKey,
+            displayName: displayName,
+            wrappedComponentName: wrappedComponentName,
+            WrappedComponent: WrappedComponent
+        });
+        var pure = connectOptions.pure;
+        function createChildSelector(store) {
+            return selectorFactory(store.dispatch, selectorFactoryOptions);
+        } // If we aren't running in "pure" mode, we don't want to memoize values.
+        // To avoid conditionally calling hooks, we fall back to a tiny wrapper
+        // that just executes the given callback immediately.
+        var usePureOnlyMemo = pure ? _react.useMemo : function(callback) {
+            return callback();
+        };
+        function ConnectFunction(props) {
+            var _useMemo = _react.useMemo(function() {
+                // Distinguish between actual "data" props that were passed to the wrapper component,
+                // and values needed to control behavior (forwarded refs, alternate context instances).
+                // To maintain the wrapperProps object reference, memoize this destructuring.
+                var reactReduxForwardedRef = props.reactReduxForwardedRef, wrapperProps = _objectWithoutPropertiesLooseDefault.default(props, _excluded2);
+                return [
+                    props.context,
+                    reactReduxForwardedRef,
+                    wrapperProps
+                ];
+            }, [
+                props
+            ]), propsContext = _useMemo[0], reactReduxForwardedRef = _useMemo[1], wrapperProps = _useMemo[2];
+            var ContextToUse = _react.useMemo(function() {
+                // Users may optionally pass in a custom context instance to use instead of our ReactReduxContext.
+                // Memoize the check that determines which context instance we should use.
+                return propsContext && propsContext.Consumer && _reactIs.isContextConsumer(/*#__PURE__*/ _reactDefault.default.createElement(propsContext.Consumer, null)) ? propsContext : Context;
+            }, [
+                propsContext,
+                Context
+            ]); // Retrieve the store and ancestor subscription via context, if available
+            var contextValue = _react.useContext(ContextToUse); // The store _must_ exist as either a prop or in context.
+            // We'll check to see if it _looks_ like a Redux store first.
+            // This allows us to pass through a `store` prop that is just a plain value.
+            var didStoreComeFromProps = Boolean(props.store) && Boolean(props.store.getState) && Boolean(props.store.dispatch);
+            var didStoreComeFromContext = Boolean(contextValue) && Boolean(contextValue.store);
+            if (!didStoreComeFromProps && !didStoreComeFromContext) throw new Error("Could not find \"store\" in the context of " + ("\"" + displayName + "\". Either wrap the root component in a <Provider>, ") + "or pass a custom React context provider to <Provider> and the corresponding " + ("React context consumer to " + displayName + " in connect options."));
+             // Based on the previous check, one of these must be true
+            var store = didStoreComeFromProps ? props.store : contextValue.store;
+            var childPropsSelector = _react.useMemo(function() {
+                // The child props selector needs the store reference as an input.
+                // Re-create this selector whenever the store changes.
+                return createChildSelector(store);
+            }, [
+                store
+            ]);
+            var _useMemo2 = _react.useMemo(function() {
+                if (!shouldHandleStateChanges) return NO_SUBSCRIPTION_ARRAY; // This Subscription's source should match where store came from: props vs. context. A component
+                // connected to the store via props shouldn't use subscription from context, or vice versa.
+                // This Subscription's source should match where store came from: props vs. context. A component
+                // connected to the store via props shouldn't use subscription from context, or vice versa.
+                var subscription = _subscription.createSubscription(store, didStoreComeFromProps ? null : contextValue.subscription); // `notifyNestedSubs` is duplicated to handle the case where the component is unmounted in
+                // the middle of the notification loop, where `subscription` will then be null. This can
+                // probably be avoided if Subscription's listeners logic is changed to not call listeners
+                // that have been unsubscribed in the  middle of the notification loop.
+                // `notifyNestedSubs` is duplicated to handle the case where the component is unmounted in
+                // the middle of the notification loop, where `subscription` will then be null. This can
+                // probably be avoided if Subscription's listeners logic is changed to not call listeners
+                // that have been unsubscribed in the  middle of the notification loop.
+                var notifyNestedSubs = subscription.notifyNestedSubs.bind(subscription);
+                return [
+                    subscription,
+                    notifyNestedSubs
+                ];
+            }, [
+                store,
+                didStoreComeFromProps,
+                contextValue
+            ]), subscription = _useMemo2[0], notifyNestedSubs = _useMemo2[1]; // Determine what {store, subscription} value should be put into nested context, if necessary,
+            // and memoize that value to avoid unnecessary context updates.
+            var overriddenContextValue = _react.useMemo(function() {
+                if (didStoreComeFromProps) // This component is directly subscribed to a store from props.
+                // We don't want descendants reading from this store - pass down whatever
+                // the existing context value is from the nearest connected ancestor.
+                return contextValue;
+                 // Otherwise, put this component's subscription instance into context, so that
+                // connected descendants won't update until after this component is done
+                return _extendsDefault.default({
+                }, contextValue, {
+                    subscription: subscription
+                });
+            }, [
+                didStoreComeFromProps,
+                contextValue,
+                subscription
+            ]); // We need to force this wrapper component to re-render whenever a Redux store update
+            // causes a change to the calculated child component props (or we caught an error in mapState)
+            var _useReducer = _react.useReducer(storeStateUpdatesReducer, EMPTY_ARRAY, initStateUpdates), _useReducer$ = _useReducer[0], previousStateUpdateResult = _useReducer$[0], forceComponentUpdateDispatch = _useReducer[1]; // Propagate any mapState/mapDispatch errors upwards
+            if (previousStateUpdateResult && previousStateUpdateResult.error) throw previousStateUpdateResult.error;
+             // Set up refs to coordinate values between the subscription effect and the render logic
+            var lastChildProps = _react.useRef();
+            var lastWrapperProps = _react.useRef(wrapperProps);
+            var childPropsFromStoreUpdate = _react.useRef();
+            var renderIsScheduled = _react.useRef(false);
+            var actualChildProps = usePureOnlyMemo(function() {
+                // Tricky logic here:
+                // - This render may have been triggered by a Redux store update that produced new child props
+                // - However, we may have gotten new wrapper props after that
+                // If we have new child props, and the same wrapper props, we know we should use the new child props as-is.
+                // But, if we have new wrapper props, those might change the child props, so we have to recalculate things.
+                // So, we'll use the child props from store update only if the wrapper props are the same as last time.
+                if (childPropsFromStoreUpdate.current && wrapperProps === lastWrapperProps.current) return childPropsFromStoreUpdate.current;
+                 // TODO We're reading the store directly in render() here. Bad idea?
+                // This will likely cause Bad Things (TM) to happen in Concurrent Mode.
+                // Note that we do this because on renders _not_ caused by store updates, we need the latest store state
+                // to determine what the child props should be.
+                return childPropsSelector(store.getState(), wrapperProps);
+            }, [
+                store,
+                previousStateUpdateResult,
+                wrapperProps
+            ]); // We need this to execute synchronously every time we re-render. However, React warns
+            // about useLayoutEffect in SSR, so we try to detect environment and fall back to
+            // just useEffect instead to avoid the warning, since neither will run anyway.
+            useIsomorphicLayoutEffectWithArgs(captureWrapperProps, [
+                lastWrapperProps,
+                lastChildProps,
+                renderIsScheduled,
+                wrapperProps,
+                actualChildProps,
+                childPropsFromStoreUpdate,
+                notifyNestedSubs
+            ]); // Our re-subscribe logic only runs when the store/subscription setup changes
+            useIsomorphicLayoutEffectWithArgs(subscribeUpdates, [
+                shouldHandleStateChanges,
+                store,
+                subscription,
+                childPropsSelector,
+                lastWrapperProps,
+                lastChildProps,
+                renderIsScheduled,
+                childPropsFromStoreUpdate,
+                notifyNestedSubs,
+                forceComponentUpdateDispatch
+            ], [
+                store,
+                subscription,
+                childPropsSelector
+            ]); // Now that all that's done, we can finally try to actually render the child component.
+            // We memoize the elements for the rendered child component as an optimization.
+            var renderedWrappedComponent = _react.useMemo(function() {
+                return(/*#__PURE__*/ _reactDefault.default.createElement(WrappedComponent, _extendsDefault.default({
+                }, actualChildProps, {
+                    ref: reactReduxForwardedRef
+                })));
+            }, [
+                reactReduxForwardedRef,
+                WrappedComponent,
+                actualChildProps
+            ]); // If React sees the exact same element reference as last time, it bails out of re-rendering
+            // that child, same as if it was wrapped in React.memo() or returned false from shouldComponentUpdate.
+            var renderedChild = _react.useMemo(function() {
+                if (shouldHandleStateChanges) // If this component is subscribed to store updates, we need to pass its own
+                // subscription instance down to our descendants. That means rendering the same
+                // Context instance, and putting a different value into the context.
+                return(/*#__PURE__*/ _reactDefault.default.createElement(ContextToUse.Provider, {
+                    value: overriddenContextValue
+                }, renderedWrappedComponent));
+                return renderedWrappedComponent;
+            }, [
+                ContextToUse,
+                renderedWrappedComponent,
+                overriddenContextValue
+            ]);
+            return renderedChild;
+        } // If we're in "pure" mode, ensure our wrapper component only re-renders when incoming props have changed.
+        var Connect = pure ? _reactDefault.default.memo(ConnectFunction) : ConnectFunction;
+        Connect.WrappedComponent = WrappedComponent;
+        Connect.displayName = ConnectFunction.displayName = displayName;
+        if (forwardRef) {
+            var forwarded = _reactDefault.default.forwardRef(function forwardConnectRef(props, ref) {
+                return(/*#__PURE__*/ _reactDefault.default.createElement(Connect, _extendsDefault.default({
+                }, props, {
+                    reactReduxForwardedRef: ref
+                })));
+            });
+            forwarded.displayName = displayName;
+            forwarded.WrappedComponent = WrappedComponent;
+            return _hoistNonReactStaticsDefault.default(forwarded, WrappedComponent);
+        }
+        return _hoistNonReactStaticsDefault.default(Connect, WrappedComponent);
+    };
+}
+exports.default = connectAdvanced;
+
+},{"@babel/runtime/helpers/esm/extends":"bKAu6","@babel/runtime/helpers/esm/objectWithoutPropertiesLoose":"3Rubg","hoist-non-react-statics":"jfzb6","react":"6TuXu","react-is":"5wFcP","../utils/Subscription":"6rtcC","../utils/useIsomorphicLayoutEffect":"2TWoQ","./Context":"gT1Jg","@parcel/transformer-js/src/esmodule-helpers.js":"JacNc"}],"9zpXe":[function(require,module,exports) {
+var parcelHelpers = require("@parcel/transformer-js/src/esmodule-helpers.js");
+parcelHelpers.defineInteropFlag(exports);
+// different options opens up some testing and extensibility scenarios
+parcelHelpers.export(exports, "createConnect", ()=>createConnect
+);
+var _extends = require("@babel/runtime/helpers/esm/extends");
+var _extendsDefault = parcelHelpers.interopDefault(_extends);
+var _objectWithoutPropertiesLoose = require("@babel/runtime/helpers/esm/objectWithoutPropertiesLoose");
+var _objectWithoutPropertiesLooseDefault = parcelHelpers.interopDefault(_objectWithoutPropertiesLoose);
+var _connectAdvanced = require("../components/connectAdvanced");
+var _connectAdvancedDefault = parcelHelpers.interopDefault(_connectAdvanced);
+var _shallowEqual = require("../utils/shallowEqual");
+var _shallowEqualDefault = parcelHelpers.interopDefault(_shallowEqual);
+var _mapDispatchToProps = require("./mapDispatchToProps");
+var _mapDispatchToPropsDefault = parcelHelpers.interopDefault(_mapDispatchToProps);
+var _mapStateToProps = require("./mapStateToProps");
+var _mapStateToPropsDefault = parcelHelpers.interopDefault(_mapStateToProps);
+var _mergeProps = require("./mergeProps");
+var _mergePropsDefault = parcelHelpers.interopDefault(_mergeProps);
+var _selectorFactory = require("./selectorFactory");
+var _selectorFactoryDefault = parcelHelpers.interopDefault(_selectorFactory);
+var _excluded = [
+    "pure",
+    "areStatesEqual",
+    "areOwnPropsEqual",
+    "areStatePropsEqual",
+    "areMergedPropsEqual"
+];
+/*
+  connect is a facade over connectAdvanced. It turns its args into a compatible
+  selectorFactory, which has the signature:
+
+    (dispatch, options) => (nextState, nextOwnProps) => nextFinalProps
+  
+  connect passes its args to connectAdvanced as options, which will in turn pass them to
+  selectorFactory each time a Connect component instance is instantiated or hot reloaded.
+
+  selectorFactory returns a final props selector from its mapStateToProps,
+  mapStateToPropsFactories, mapDispatchToProps, mapDispatchToPropsFactories, mergeProps,
+  mergePropsFactories, and pure args.
+
+  The resulting final props selector is called by the Connect component instance whenever
+  it receives new props or store state.
+ */ function match(arg, factories, name) {
+    for(var i = factories.length - 1; i >= 0; i--){
+        var result = factories[i](arg);
+        if (result) return result;
+    }
+    return function(dispatch, options) {
+        throw new Error("Invalid value of type " + typeof arg + " for " + name + " argument when connecting component " + options.wrappedComponentName + ".");
+    };
+}
+function strictEqual(a, b) {
+    return a === b;
+} // createConnect with default args builds the 'official' connect behavior. Calling it with
+function createConnect(_temp) {
+    var _ref = _temp === void 0 ? {
+    } : _temp, _ref$connectHOC = _ref.connectHOC, connectHOC = _ref$connectHOC === void 0 ? _connectAdvancedDefault.default : _ref$connectHOC, _ref$mapStateToPropsF = _ref.mapStateToPropsFactories, mapStateToPropsFactories = _ref$mapStateToPropsF === void 0 ? _mapStateToPropsDefault.default : _ref$mapStateToPropsF, _ref$mapDispatchToPro = _ref.mapDispatchToPropsFactories, mapDispatchToPropsFactories = _ref$mapDispatchToPro === void 0 ? _mapDispatchToPropsDefault.default : _ref$mapDispatchToPro, _ref$mergePropsFactor = _ref.mergePropsFactories, mergePropsFactories = _ref$mergePropsFactor === void 0 ? _mergePropsDefault.default : _ref$mergePropsFactor, _ref$selectorFactory = _ref.selectorFactory, selectorFactory = _ref$selectorFactory === void 0 ? _selectorFactoryDefault.default : _ref$selectorFactory;
+    return function connect(mapStateToProps, mapDispatchToProps, mergeProps, _ref2) {
+        if (_ref2 === void 0) _ref2 = {
+        };
+        var _ref3 = _ref2, _ref3$pure = _ref3.pure, pure = _ref3$pure === void 0 ? true : _ref3$pure, _ref3$areStatesEqual = _ref3.areStatesEqual, areStatesEqual = _ref3$areStatesEqual === void 0 ? strictEqual : _ref3$areStatesEqual, _ref3$areOwnPropsEqua = _ref3.areOwnPropsEqual, areOwnPropsEqual = _ref3$areOwnPropsEqua === void 0 ? _shallowEqualDefault.default : _ref3$areOwnPropsEqua, _ref3$areStatePropsEq = _ref3.areStatePropsEqual, areStatePropsEqual = _ref3$areStatePropsEq === void 0 ? _shallowEqualDefault.default : _ref3$areStatePropsEq, _ref3$areMergedPropsE = _ref3.areMergedPropsEqual, areMergedPropsEqual = _ref3$areMergedPropsE === void 0 ? _shallowEqualDefault.default : _ref3$areMergedPropsE, extraOptions = _objectWithoutPropertiesLooseDefault.default(_ref3, _excluded);
+        var initMapStateToProps = match(mapStateToProps, mapStateToPropsFactories, 'mapStateToProps');
+        var initMapDispatchToProps = match(mapDispatchToProps, mapDispatchToPropsFactories, 'mapDispatchToProps');
+        var initMergeProps = match(mergeProps, mergePropsFactories, 'mergeProps');
+        return connectHOC(selectorFactory, _extendsDefault.default({
+            // used in error messages
+            methodName: 'connect',
+            // used to compute Connect's displayName from the wrapped component's displayName.
+            getDisplayName: function getDisplayName(name) {
+                return "Connect(" + name + ")";
+            },
+            // if mapStateToProps is falsy, the Connect component doesn't subscribe to store state changes
+            shouldHandleStateChanges: Boolean(mapStateToProps),
+            // passed through to selectorFactory
+            initMapStateToProps: initMapStateToProps,
+            initMapDispatchToProps: initMapDispatchToProps,
+            initMergeProps: initMergeProps,
+            pure: pure,
+            areStatesEqual: areStatesEqual,
+            areOwnPropsEqual: areOwnPropsEqual,
+            areStatePropsEqual: areStatePropsEqual,
+            areMergedPropsEqual: areMergedPropsEqual
+        }, extraOptions));
+    };
+}
+exports.default = /*#__PURE__*/ createConnect();
+
+},{"@babel/runtime/helpers/esm/extends":"bKAu6","@babel/runtime/helpers/esm/objectWithoutPropertiesLoose":"3Rubg","../components/connectAdvanced":"5cRBV","../utils/shallowEqual":"leLul","./mapDispatchToProps":"5WOJW","./mapStateToProps":"fi6QF","./mergeProps":"j48TE","./selectorFactory":"2XZ1a","@parcel/transformer-js/src/esmodule-helpers.js":"JacNc"}],"leLul":[function(require,module,exports) {
+var parcelHelpers = require("@parcel/transformer-js/src/esmodule-helpers.js");
+parcelHelpers.defineInteropFlag(exports);
+function is(x, y) {
+    if (x === y) return x !== 0 || y !== 0 || 1 / x === 1 / y;
+    else return x !== x && y !== y;
+}
+function shallowEqual(objA, objB) {
+    if (is(objA, objB)) return true;
+    if (typeof objA !== 'object' || objA === null || typeof objB !== 'object' || objB === null) return false;
+    var keysA = Object.keys(objA);
+    var keysB = Object.keys(objB);
+    if (keysA.length !== keysB.length) return false;
+    for(var i = 0; i < keysA.length; i++){
+        if (!Object.prototype.hasOwnProperty.call(objB, keysA[i]) || !is(objA[keysA[i]], objB[keysA[i]])) return false;
+    }
+    return true;
+}
+exports.default = shallowEqual;
+
+},{"@parcel/transformer-js/src/esmodule-helpers.js":"JacNc"}],"5WOJW":[function(require,module,exports) {
+var parcelHelpers = require("@parcel/transformer-js/src/esmodule-helpers.js");
+parcelHelpers.defineInteropFlag(exports);
+parcelHelpers.export(exports, "whenMapDispatchToPropsIsFunction", ()=>whenMapDispatchToPropsIsFunction
+);
+parcelHelpers.export(exports, "whenMapDispatchToPropsIsMissing", ()=>whenMapDispatchToPropsIsMissing
+);
+parcelHelpers.export(exports, "whenMapDispatchToPropsIsObject", ()=>whenMapDispatchToPropsIsObject
+);
+var _bindActionCreators = require("../utils/bindActionCreators");
+var _bindActionCreatorsDefault = parcelHelpers.interopDefault(_bindActionCreators);
+var _wrapMapToProps = require("./wrapMapToProps");
+function whenMapDispatchToPropsIsFunction(mapDispatchToProps) {
+    return typeof mapDispatchToProps === 'function' ? _wrapMapToProps.wrapMapToPropsFunc(mapDispatchToProps, 'mapDispatchToProps') : undefined;
+}
+function whenMapDispatchToPropsIsMissing(mapDispatchToProps) {
+    return !mapDispatchToProps ? _wrapMapToProps.wrapMapToPropsConstant(function(dispatch) {
+        return {
+            dispatch: dispatch
+        };
+    }) : undefined;
+}
+function whenMapDispatchToPropsIsObject(mapDispatchToProps) {
+    return mapDispatchToProps && typeof mapDispatchToProps === 'object' ? _wrapMapToProps.wrapMapToPropsConstant(function(dispatch) {
+        return _bindActionCreatorsDefault.default(mapDispatchToProps, dispatch);
+    }) : undefined;
+}
+exports.default = [
+    whenMapDispatchToPropsIsFunction,
+    whenMapDispatchToPropsIsMissing,
+    whenMapDispatchToPropsIsObject
+];
+
+},{"../utils/bindActionCreators":"dTgYQ","./wrapMapToProps":"cK0KG","@parcel/transformer-js/src/esmodule-helpers.js":"JacNc"}],"dTgYQ":[function(require,module,exports) {
+var parcelHelpers = require("@parcel/transformer-js/src/esmodule-helpers.js");
+parcelHelpers.defineInteropFlag(exports);
+function bindActionCreators(actionCreators, dispatch) {
+    var boundActionCreators = {
+    };
+    var _loop = function _loop1(key) {
+        var actionCreator = actionCreators[key];
+        if (typeof actionCreator === 'function') boundActionCreators[key] = function() {
+            return dispatch(actionCreator.apply(void 0, arguments));
+        };
+    };
+    for(var key in actionCreators)_loop(key);
+    return boundActionCreators;
+}
+exports.default = bindActionCreators;
+
+},{"@parcel/transformer-js/src/esmodule-helpers.js":"JacNc"}],"cK0KG":[function(require,module,exports) {
+var parcelHelpers = require("@parcel/transformer-js/src/esmodule-helpers.js");
+parcelHelpers.defineInteropFlag(exports);
+parcelHelpers.export(exports, "wrapMapToPropsConstant", ()=>wrapMapToPropsConstant
+) // dependsOnOwnProps is used by createMapToPropsProxy to determine whether to pass props as args
+;
+// to the mapToProps function being wrapped. It is also used by makePurePropsSelector to determine
+// whether mapToProps needs to be invoked when props have changed.
+//
+// A length of one signals that mapToProps does not depend on props from the parent component.
+// A length of zero is assumed to mean mapToProps is getting args via arguments or ...args and
+// therefore not reporting its length accurately..
+parcelHelpers.export(exports, "getDependsOnOwnProps", ()=>getDependsOnOwnProps
+) // Used by whenMapStateToPropsIsFunction and whenMapDispatchToPropsIsFunction,
+;
+// this function wraps mapToProps in a proxy function which does several things:
+//
+//  * Detects whether the mapToProps function being called depends on props, which
+//    is used by selectorFactory to decide if it should reinvoke on props changes.
+//
+//  * On first call, handles mapToProps if returns another function, and treats that
+//    new function as the true mapToProps for subsequent calls.
+//
+//  * On first call, verifies the first result is a plain object, in order to warn
+//    the developer that their mapToProps function is not returning a valid result.
+//
+parcelHelpers.export(exports, "wrapMapToPropsFunc", ()=>wrapMapToPropsFunc
+);
+var _verifyPlainObject = require("../utils/verifyPlainObject");
+var _verifyPlainObjectDefault = parcelHelpers.interopDefault(_verifyPlainObject);
+function wrapMapToPropsConstant(getConstant) {
+    return function initConstantSelector(dispatch, options) {
+        var constant = getConstant(dispatch, options);
+        function constantSelector() {
+            return constant;
+        }
+        constantSelector.dependsOnOwnProps = false;
+        return constantSelector;
+    };
+}
+function getDependsOnOwnProps(mapToProps) {
+    return mapToProps.dependsOnOwnProps !== null && mapToProps.dependsOnOwnProps !== undefined ? Boolean(mapToProps.dependsOnOwnProps) : mapToProps.length !== 1;
+}
+function wrapMapToPropsFunc(mapToProps, methodName) {
+    return function initProxySelector(dispatch, _ref) {
+        var displayName = _ref.displayName;
+        var proxy = function mapToPropsProxy(stateOrDispatch, ownProps) {
+            return proxy.dependsOnOwnProps ? proxy.mapToProps(stateOrDispatch, ownProps) : proxy.mapToProps(stateOrDispatch);
+        }; // allow detectFactoryAndVerify to get ownProps
+        proxy.dependsOnOwnProps = true;
+        proxy.mapToProps = function detectFactoryAndVerify(stateOrDispatch, ownProps) {
+            proxy.mapToProps = mapToProps;
+            proxy.dependsOnOwnProps = getDependsOnOwnProps(mapToProps);
+            var props = proxy(stateOrDispatch, ownProps);
+            if (typeof props === 'function') {
+                proxy.mapToProps = props;
+                proxy.dependsOnOwnProps = getDependsOnOwnProps(props);
+                props = proxy(stateOrDispatch, ownProps);
+            }
+            _verifyPlainObjectDefault.default(props, displayName, methodName);
+            return props;
+        };
+        return proxy;
+    };
+}
+
+},{"../utils/verifyPlainObject":"8txK0","@parcel/transformer-js/src/esmodule-helpers.js":"JacNc"}],"8txK0":[function(require,module,exports) {
+var parcelHelpers = require("@parcel/transformer-js/src/esmodule-helpers.js");
+parcelHelpers.defineInteropFlag(exports);
+var _isPlainObject = require("./isPlainObject");
+var _isPlainObjectDefault = parcelHelpers.interopDefault(_isPlainObject);
+var _warning = require("./warning");
+var _warningDefault = parcelHelpers.interopDefault(_warning);
+function verifyPlainObject(value, displayName, methodName) {
+    if (!_isPlainObjectDefault.default(value)) _warningDefault.default(methodName + "() in " + displayName + " must return a plain object. Instead received " + value + ".");
+}
+exports.default = verifyPlainObject;
+
+},{"./isPlainObject":"awooc","./warning":"fl0jd","@parcel/transformer-js/src/esmodule-helpers.js":"JacNc"}],"awooc":[function(require,module,exports) {
+var parcelHelpers = require("@parcel/transformer-js/src/esmodule-helpers.js");
+parcelHelpers.defineInteropFlag(exports);
+function isPlainObject(obj) {
+    if (typeof obj !== 'object' || obj === null) return false;
+    var proto = Object.getPrototypeOf(obj);
+    if (proto === null) return true;
+    var baseProto = proto;
+    while(Object.getPrototypeOf(baseProto) !== null)baseProto = Object.getPrototypeOf(baseProto);
+    return proto === baseProto;
+}
+exports.default = isPlainObject;
+
+},{"@parcel/transformer-js/src/esmodule-helpers.js":"JacNc"}],"fl0jd":[function(require,module,exports) {
+var parcelHelpers = require("@parcel/transformer-js/src/esmodule-helpers.js");
+parcelHelpers.defineInteropFlag(exports);
+function warning(message) {
+    /* eslint-disable no-console */ if (typeof console !== 'undefined' && typeof console.error === 'function') console.error(message);
+    /* eslint-enable no-console */ try {
+        // This error was thrown as a convenience so that if you enable
+        // "break on all exceptions" in your console,
+        // it would pause the execution at this line.
+        throw new Error(message);
+    /* eslint-disable no-empty */ } catch (e) {
+    }
+/* eslint-enable no-empty */ }
+exports.default = warning;
+
+},{"@parcel/transformer-js/src/esmodule-helpers.js":"JacNc"}],"fi6QF":[function(require,module,exports) {
+var parcelHelpers = require("@parcel/transformer-js/src/esmodule-helpers.js");
+parcelHelpers.defineInteropFlag(exports);
+parcelHelpers.export(exports, "whenMapStateToPropsIsFunction", ()=>whenMapStateToPropsIsFunction
+);
+parcelHelpers.export(exports, "whenMapStateToPropsIsMissing", ()=>whenMapStateToPropsIsMissing
+);
+var _wrapMapToProps = require("./wrapMapToProps");
+function whenMapStateToPropsIsFunction(mapStateToProps) {
+    return typeof mapStateToProps === 'function' ? _wrapMapToProps.wrapMapToPropsFunc(mapStateToProps, 'mapStateToProps') : undefined;
+}
+function whenMapStateToPropsIsMissing(mapStateToProps) {
+    return !mapStateToProps ? _wrapMapToProps.wrapMapToPropsConstant(function() {
+        return {
+        };
+    }) : undefined;
+}
+exports.default = [
+    whenMapStateToPropsIsFunction,
+    whenMapStateToPropsIsMissing
+];
+
+},{"./wrapMapToProps":"cK0KG","@parcel/transformer-js/src/esmodule-helpers.js":"JacNc"}],"j48TE":[function(require,module,exports) {
+var parcelHelpers = require("@parcel/transformer-js/src/esmodule-helpers.js");
+parcelHelpers.defineInteropFlag(exports);
+parcelHelpers.export(exports, "defaultMergeProps", ()=>defaultMergeProps
+);
+parcelHelpers.export(exports, "wrapMergePropsFunc", ()=>wrapMergePropsFunc
+);
+parcelHelpers.export(exports, "whenMergePropsIsFunction", ()=>whenMergePropsIsFunction
+);
+parcelHelpers.export(exports, "whenMergePropsIsOmitted", ()=>whenMergePropsIsOmitted
+);
+var _extends = require("@babel/runtime/helpers/esm/extends");
+var _extendsDefault = parcelHelpers.interopDefault(_extends);
+var _verifyPlainObject = require("../utils/verifyPlainObject");
+var _verifyPlainObjectDefault = parcelHelpers.interopDefault(_verifyPlainObject);
+function defaultMergeProps(stateProps, dispatchProps, ownProps) {
+    return _extendsDefault.default({
+    }, ownProps, stateProps, dispatchProps);
+}
+function wrapMergePropsFunc(mergeProps) {
+    return function initMergePropsProxy(dispatch, _ref) {
+        var displayName = _ref.displayName, pure = _ref.pure, areMergedPropsEqual = _ref.areMergedPropsEqual;
+        var hasRunOnce = false;
+        var mergedProps;
+        return function mergePropsProxy(stateProps, dispatchProps, ownProps) {
+            var nextMergedProps = mergeProps(stateProps, dispatchProps, ownProps);
+            if (hasRunOnce) {
+                if (!pure || !areMergedPropsEqual(nextMergedProps, mergedProps)) mergedProps = nextMergedProps;
+            } else {
+                hasRunOnce = true;
+                mergedProps = nextMergedProps;
+                _verifyPlainObjectDefault.default(mergedProps, displayName, 'mergeProps');
+            }
+            return mergedProps;
+        };
+    };
+}
+function whenMergePropsIsFunction(mergeProps) {
+    return typeof mergeProps === 'function' ? wrapMergePropsFunc(mergeProps) : undefined;
+}
+function whenMergePropsIsOmitted(mergeProps) {
+    return !mergeProps ? function() {
+        return defaultMergeProps;
+    } : undefined;
+}
+exports.default = [
+    whenMergePropsIsFunction,
+    whenMergePropsIsOmitted
+];
+
+},{"@babel/runtime/helpers/esm/extends":"bKAu6","../utils/verifyPlainObject":"8txK0","@parcel/transformer-js/src/esmodule-helpers.js":"JacNc"}],"2XZ1a":[function(require,module,exports) {
+var parcelHelpers = require("@parcel/transformer-js/src/esmodule-helpers.js");
+parcelHelpers.defineInteropFlag(exports);
+parcelHelpers.export(exports, "impureFinalPropsSelectorFactory", ()=>impureFinalPropsSelectorFactory
+);
+parcelHelpers.export(exports, "pureFinalPropsSelectorFactory", ()=>pureFinalPropsSelectorFactory
+) // TODO: Add more comments
+;
+var _objectWithoutPropertiesLoose = require("@babel/runtime/helpers/esm/objectWithoutPropertiesLoose");
+var _objectWithoutPropertiesLooseDefault = parcelHelpers.interopDefault(_objectWithoutPropertiesLoose);
+var _verifySubselectors = require("./verifySubselectors");
+var _verifySubselectorsDefault = parcelHelpers.interopDefault(_verifySubselectors);
+var _excluded = [
+    "initMapStateToProps",
+    "initMapDispatchToProps",
+    "initMergeProps"
+];
+function impureFinalPropsSelectorFactory(mapStateToProps, mapDispatchToProps, mergeProps, dispatch) {
+    return function impureFinalPropsSelector(state, ownProps) {
+        return mergeProps(mapStateToProps(state, ownProps), mapDispatchToProps(dispatch, ownProps), ownProps);
+    };
+}
+function pureFinalPropsSelectorFactory(mapStateToProps, mapDispatchToProps, mergeProps, dispatch, _ref) {
+    var areStatesEqual = _ref.areStatesEqual, areOwnPropsEqual = _ref.areOwnPropsEqual, areStatePropsEqual = _ref.areStatePropsEqual;
+    var hasRunAtLeastOnce = false;
+    var state;
+    var ownProps;
+    var stateProps;
+    var dispatchProps;
+    var mergedProps;
+    function handleFirstCall(firstState, firstOwnProps) {
+        state = firstState;
+        ownProps = firstOwnProps;
+        stateProps = mapStateToProps(state, ownProps);
+        dispatchProps = mapDispatchToProps(dispatch, ownProps);
+        mergedProps = mergeProps(stateProps, dispatchProps, ownProps);
+        hasRunAtLeastOnce = true;
+        return mergedProps;
+    }
+    function handleNewPropsAndNewState() {
+        stateProps = mapStateToProps(state, ownProps);
+        if (mapDispatchToProps.dependsOnOwnProps) dispatchProps = mapDispatchToProps(dispatch, ownProps);
+        mergedProps = mergeProps(stateProps, dispatchProps, ownProps);
+        return mergedProps;
+    }
+    function handleNewProps() {
+        if (mapStateToProps.dependsOnOwnProps) stateProps = mapStateToProps(state, ownProps);
+        if (mapDispatchToProps.dependsOnOwnProps) dispatchProps = mapDispatchToProps(dispatch, ownProps);
+        mergedProps = mergeProps(stateProps, dispatchProps, ownProps);
+        return mergedProps;
+    }
+    function handleNewState() {
+        var nextStateProps = mapStateToProps(state, ownProps);
+        var statePropsChanged = !areStatePropsEqual(nextStateProps, stateProps);
+        stateProps = nextStateProps;
+        if (statePropsChanged) mergedProps = mergeProps(stateProps, dispatchProps, ownProps);
+        return mergedProps;
+    }
+    function handleSubsequentCalls(nextState, nextOwnProps) {
+        var propsChanged = !areOwnPropsEqual(nextOwnProps, ownProps);
+        var stateChanged = !areStatesEqual(nextState, state);
+        state = nextState;
+        ownProps = nextOwnProps;
+        if (propsChanged && stateChanged) return handleNewPropsAndNewState();
+        if (propsChanged) return handleNewProps();
+        if (stateChanged) return handleNewState();
+        return mergedProps;
+    }
+    return function pureFinalPropsSelector(nextState, nextOwnProps) {
+        return hasRunAtLeastOnce ? handleSubsequentCalls(nextState, nextOwnProps) : handleFirstCall(nextState, nextOwnProps);
+    };
+}
+function finalPropsSelectorFactory(dispatch, _ref2) {
+    var initMapStateToProps = _ref2.initMapStateToProps, initMapDispatchToProps = _ref2.initMapDispatchToProps, initMergeProps = _ref2.initMergeProps, options = _objectWithoutPropertiesLooseDefault.default(_ref2, _excluded);
+    var mapStateToProps = initMapStateToProps(dispatch, options);
+    var mapDispatchToProps = initMapDispatchToProps(dispatch, options);
+    var mergeProps = initMergeProps(dispatch, options);
+    _verifySubselectorsDefault.default(mapStateToProps, mapDispatchToProps, mergeProps, options.displayName);
+    var selectorFactory = options.pure ? pureFinalPropsSelectorFactory : impureFinalPropsSelectorFactory;
+    return selectorFactory(mapStateToProps, mapDispatchToProps, mergeProps, dispatch, options);
+}
+exports.default = finalPropsSelectorFactory;
+
+},{"@babel/runtime/helpers/esm/objectWithoutPropertiesLoose":"3Rubg","./verifySubselectors":"lInRo","@parcel/transformer-js/src/esmodule-helpers.js":"JacNc"}],"lInRo":[function(require,module,exports) {
+var parcelHelpers = require("@parcel/transformer-js/src/esmodule-helpers.js");
+parcelHelpers.defineInteropFlag(exports);
+var _warning = require("../utils/warning");
+var _warningDefault = parcelHelpers.interopDefault(_warning);
+function verify(selector, methodName, displayName) {
+    if (!selector) throw new Error("Unexpected value for " + methodName + " in " + displayName + ".");
+    else if (methodName === 'mapStateToProps' || methodName === 'mapDispatchToProps') {
+        if (!Object.prototype.hasOwnProperty.call(selector, 'dependsOnOwnProps')) _warningDefault.default("The selector for " + methodName + " of " + displayName + " did not specify a value for dependsOnOwnProps.");
+    }
+}
+function verifySubselectors(mapStateToProps, mapDispatchToProps, mergeProps, displayName) {
+    verify(mapStateToProps, 'mapStateToProps', displayName);
+    verify(mapDispatchToProps, 'mapDispatchToProps', displayName);
+    verify(mergeProps, 'mergeProps', displayName);
+}
+exports.default = verifySubselectors;
+
+},{"../utils/warning":"fl0jd","@parcel/transformer-js/src/esmodule-helpers.js":"JacNc"}],"2CDvn":[function(require,module,exports) {
+var parcelHelpers = require("@parcel/transformer-js/src/esmodule-helpers.js");
+parcelHelpers.defineInteropFlag(exports);
+/**
+ * Hook factory, which creates a `useDispatch` hook bound to a given context.
+ *
+ * @param {React.Context} [context=ReactReduxContext] Context passed to your `<Provider>`.
+ * @returns {Function} A `useDispatch` hook bound to the specified context.
+ */ parcelHelpers.export(exports, "createDispatchHook", ()=>createDispatchHook
+);
+parcelHelpers.export(exports, "useDispatch", ()=>useDispatch
+);
+var _context = require("../components/Context");
+var _useStore = require("./useStore");
+function createDispatchHook(context) {
+    if (context === void 0) context = _context.ReactReduxContext;
+    var useStore = context === _context.ReactReduxContext ? _useStore.useStore : _useStore.createStoreHook(context);
+    return function useDispatch() {
+        var store = useStore();
+        return store.dispatch;
+    };
+}
+var useDispatch = /*#__PURE__*/ createDispatchHook();
+
+},{"../components/Context":"gT1Jg","./useStore":"fDPAT","@parcel/transformer-js/src/esmodule-helpers.js":"JacNc"}],"fDPAT":[function(require,module,exports) {
+var parcelHelpers = require("@parcel/transformer-js/src/esmodule-helpers.js");
+parcelHelpers.defineInteropFlag(exports);
+/**
+ * Hook factory, which creates a `useStore` hook bound to a given context.
+ *
+ * @param {React.Context} [context=ReactReduxContext] Context passed to your `<Provider>`.
+ * @returns {Function} A `useStore` hook bound to the specified context.
+ */ parcelHelpers.export(exports, "createStoreHook", ()=>createStoreHook
+);
+parcelHelpers.export(exports, "useStore", ()=>useStore
+);
+var _react = require("react");
+var _context = require("../components/Context");
+var _useReduxContext = require("./useReduxContext");
+function createStoreHook(context) {
+    if (context === void 0) context = _context.ReactReduxContext;
+    var useReduxContext = context === _context.ReactReduxContext ? _useReduxContext.useReduxContext : function() {
+        return _react.useContext(context);
+    };
+    return function useStore() {
+        var _useReduxContext1 = useReduxContext(), store = _useReduxContext1.store;
+        return store;
+    };
+}
+var useStore = /*#__PURE__*/ createStoreHook();
+
+},{"react":"6TuXu","../components/Context":"gT1Jg","./useReduxContext":"516XC","@parcel/transformer-js/src/esmodule-helpers.js":"JacNc"}],"516XC":[function(require,module,exports) {
+var parcelHelpers = require("@parcel/transformer-js/src/esmodule-helpers.js");
+parcelHelpers.defineInteropFlag(exports);
+/**
+ * A hook to access the value of the `ReactReduxContext`. This is a low-level
+ * hook that you should usually not need to call directly.
+ *
+ * @returns {any} the value of the `ReactReduxContext`
+ *
+ * @example
+ *
+ * import React from 'react'
+ * import { useReduxContext } from 'react-redux'
+ *
+ * export const CounterComponent = ({ value }) => {
+ *   const { store } = useReduxContext()
+ *   return <div>{store.getState()}</div>
+ * }
+ */ parcelHelpers.export(exports, "useReduxContext", ()=>useReduxContext
+);
+var _react = require("react");
+var _context = require("../components/Context");
+function useReduxContext() {
+    var contextValue = _react.useContext(_context.ReactReduxContext);
+    if (!contextValue) throw new Error('could not find react-redux context value; please ensure the component is wrapped in a <Provider>');
+    return contextValue;
+}
+
+},{"react":"6TuXu","../components/Context":"gT1Jg","@parcel/transformer-js/src/esmodule-helpers.js":"JacNc"}],"27k1i":[function(require,module,exports) {
+var parcelHelpers = require("@parcel/transformer-js/src/esmodule-helpers.js");
+parcelHelpers.defineInteropFlag(exports);
+/**
+ * Hook factory, which creates a `useSelector` hook bound to a given context.
+ *
+ * @param {React.Context} [context=ReactReduxContext] Context passed to your `<Provider>`.
+ * @returns {Function} A `useSelector` hook bound to the specified context.
+ */ parcelHelpers.export(exports, "createSelectorHook", ()=>createSelectorHook
+);
+parcelHelpers.export(exports, "useSelector", ()=>useSelector
+);
+var _react = require("react");
+var _useReduxContext = require("./useReduxContext");
+var _subscription = require("../utils/Subscription");
+var _useIsomorphicLayoutEffect = require("../utils/useIsomorphicLayoutEffect");
+var _context = require("../components/Context");
+var refEquality = function refEquality1(a, b) {
+    return a === b;
+};
+function useSelectorWithStoreAndSubscription(selector, equalityFn, store, contextSub) {
+    var _useReducer = _react.useReducer(function(s) {
+        return s + 1;
+    }, 0), forceRender = _useReducer[1];
+    var subscription = _react.useMemo(function() {
+        return _subscription.createSubscription(store, contextSub);
+    }, [
+        store,
+        contextSub
+    ]);
+    var latestSubscriptionCallbackError = _react.useRef();
+    var latestSelector = _react.useRef();
+    var latestStoreState = _react.useRef();
+    var latestSelectedState = _react.useRef();
+    var storeState = store.getState();
+    var selectedState;
+    try {
+        if (selector !== latestSelector.current || storeState !== latestStoreState.current || latestSubscriptionCallbackError.current) {
+            var newSelectedState = selector(storeState); // ensure latest selected state is reused so that a custom equality function can result in identical references
+            if (latestSelectedState.current === undefined || !equalityFn(newSelectedState, latestSelectedState.current)) selectedState = newSelectedState;
+            else selectedState = latestSelectedState.current;
+        } else selectedState = latestSelectedState.current;
+    } catch (err) {
+        if (latestSubscriptionCallbackError.current) err.message += "\nThe error may be correlated with this previous error:\n" + latestSubscriptionCallbackError.current.stack + "\n\n";
+        throw err;
+    }
+    _useIsomorphicLayoutEffect.useIsomorphicLayoutEffect(function() {
+        latestSelector.current = selector;
+        latestStoreState.current = storeState;
+        latestSelectedState.current = selectedState;
+        latestSubscriptionCallbackError.current = undefined;
+    });
+    _useIsomorphicLayoutEffect.useIsomorphicLayoutEffect(function() {
+        function checkForUpdates() {
+            try {
+                var newStoreState = store.getState(); // Avoid calling selector multiple times if the store's state has not changed
+                if (newStoreState === latestStoreState.current) return;
+                var _newSelectedState = latestSelector.current(newStoreState);
+                if (equalityFn(_newSelectedState, latestSelectedState.current)) return;
+                latestSelectedState.current = _newSelectedState;
+                latestStoreState.current = newStoreState;
+            } catch (err) {
+                // we ignore all errors here, since when the component
+                // is re-rendered, the selectors are called again, and
+                // will throw again, if neither props nor store state
+                // changed
+                latestSubscriptionCallbackError.current = err;
+            }
+            forceRender();
+        }
+        subscription.onStateChange = checkForUpdates;
+        subscription.trySubscribe();
+        checkForUpdates();
+        return function() {
+            return subscription.tryUnsubscribe();
+        };
+    }, [
+        store,
+        subscription
+    ]);
+    return selectedState;
+}
+function createSelectorHook(context) {
+    if (context === void 0) context = _context.ReactReduxContext;
+    var useReduxContext = context === _context.ReactReduxContext ? _useReduxContext.useReduxContext : function() {
+        return _react.useContext(context);
+    };
+    return function useSelector(selector, equalityFn) {
+        if (equalityFn === void 0) equalityFn = refEquality;
+        if (!selector) throw new Error("You must pass a selector to useSelector");
+        if (typeof selector !== 'function') throw new Error("You must pass a function as a selector to useSelector");
+        if (typeof equalityFn !== 'function') throw new Error("You must pass a function as an equality function to useSelector");
+        var _useReduxContext1 = useReduxContext(), store = _useReduxContext1.store, contextSub = _useReduxContext1.subscription;
+        var selectedState = useSelectorWithStoreAndSubscription(selector, equalityFn, store, contextSub);
+        _react.useDebugValue(selectedState);
+        return selectedState;
+    };
+}
+var useSelector = /*#__PURE__*/ createSelectorHook();
+
+},{"react":"6TuXu","./useReduxContext":"516XC","../utils/Subscription":"6rtcC","../utils/useIsomorphicLayoutEffect":"2TWoQ","../components/Context":"gT1Jg","@parcel/transformer-js/src/esmodule-helpers.js":"JacNc"}],"kaP8a":[function(require,module,exports) {
+var parcelHelpers = require("@parcel/transformer-js/src/esmodule-helpers.js");
+parcelHelpers.defineInteropFlag(exports);
+/* eslint-disable import/no-unresolved */ parcelHelpers.export(exports, "unstable_batchedUpdates", ()=>_reactDom.unstable_batchedUpdates
+);
+var _reactDom = require("react-dom");
+
+},{"react-dom":"gkWJK","@parcel/transformer-js/src/esmodule-helpers.js":"JacNc"}],"1Ttfj":[function(require,module,exports) {
+var parcelHelpers = require("@parcel/transformer-js/src/esmodule-helpers.js");
+parcelHelpers.defineInteropFlag(exports);
+parcelHelpers.export(exports, "SET_MOVIES", ()=>SET_MOVIES
+);
+parcelHelpers.export(exports, "SET_FILTER", ()=>SET_FILTER
+);
+parcelHelpers.export(exports, "SET_USER", ()=>SET_USER
+);
+parcelHelpers.export(exports, "setMovies", ()=>setMovies
+);
+parcelHelpers.export(exports, "setFilter", ()=>setFilter
+);
+parcelHelpers.export(exports, "setUser", ()=>setUser
+);
+const SET_MOVIES = 'SET_MOVIES';
+const SET_FILTER = 'SET_FILTER';
+const SET_USER = 'SET_USER';
+function setMovies(value) {
+    return {
+        type: SET_MOVIES,
+        value
+    };
+}
+function setFilter(value) {
+    return {
+        type: SET_FILTER,
+        value
+    };
+}
+function setUser(value) {
+    return {
+        type: SET_USER,
+        value
+    };
+}
+
+},{"@parcel/transformer-js/src/esmodule-helpers.js":"JacNc"}],"1kGQ5":[function(require,module,exports) {
+var $parcel$ReactRefreshHelpers$2519 = require("@parcel/transformer-react-refresh-wrap/lib/helpers/helpers.js");
+var prevRefreshReg = window.$RefreshReg$;
+var prevRefreshSig = window.$RefreshSig$;
+$parcel$ReactRefreshHelpers$2519.prelude(module);
+
+try {
+var parcelHelpers = require("@parcel/transformer-js/src/esmodule-helpers.js");
+parcelHelpers.defineInteropFlag(exports);
+var _jsxRuntime = require("react/jsx-runtime");
+var _react = require("react");
+var _reactDefault = parcelHelpers.interopDefault(_react);
+var _col = require("react-bootstrap/Col");
+var _colDefault = parcelHelpers.interopDefault(_col);
+var _reactRedux = require("react-redux");
+var _visibilityFilterInput = require("../visibility-filter-input/visibility-filter-input");
+var _visibilityFilterInputDefault = parcelHelpers.interopDefault(_visibilityFilterInput);
+var _movieCard = require("../movie-card/movie-card");
+const mapStateToProps = (state)=>{
+    const { visibilityFilter  } = state;
+    return {
+        visibilityFilter
+    };
+};
+function MoviesList(props) {
+    const { movies , visibilityFilter  } = props;
+    let filteredMovies = movies;
+    if (visibilityFilter !== '') filteredMovies = movies.filter((m)=>m.Title.toLowerCase().includes(visibilityFilter.toLowerCase())
+    );
+    if (!movies) return(/*#__PURE__*/ _jsxRuntime.jsx("div", {
+        className: "main-view",
+        __source: {
+            fileName: "src/components/movies-list/movies-list.jsx",
+            lineNumber: 21
+        },
+        __self: this
+    }));
+    return(/*#__PURE__*/ _jsxRuntime.jsxs(_jsxRuntime.Fragment, {
+        children: [
+            /*#__PURE__*/ _jsxRuntime.jsx(_colDefault.default, {
+                md: 12,
+                style: {
+                    margin: '1em'
+                },
+                __source: {
+                    fileName: "src/components/movies-list/movies-list.jsx",
+                    lineNumber: 24
+                },
+                __self: this,
+                children: /*#__PURE__*/ _jsxRuntime.jsx(_visibilityFilterInputDefault.default, {
+                    visibilityFilter: visibilityFilter,
+                    __source: {
+                        fileName: "src/components/movies-list/movies-list.jsx",
+                        lineNumber: 25
+                    },
+                    __self: this
+                })
+            }),
+            filteredMovies.map((m)=>/*#__PURE__*/ _jsxRuntime.jsx(_colDefault.default, {
+                    md: 3,
+                    __source: {
+                        fileName: "src/components/movies-list/movies-list.jsx",
+                        lineNumber: 28
+                    },
+                    __self: this,
+                    children: /*#__PURE__*/ _jsxRuntime.jsx(_movieCard.MovieCard, {
+                        movie: m,
+                        __source: {
+                            fileName: "src/components/movies-list/movies-list.jsx",
+                            lineNumber: 29
+                        },
+                        __self: this
+                    })
+                }, m._id)
+            )
+        ]
+    }));
+}
+_c = MoviesList;
+exports.default = _reactRedux.connect(mapStateToProps)(MoviesList);
+var _c;
+$RefreshReg$(_c, "MoviesList");
+
+  $parcel$ReactRefreshHelpers$2519.postlude(module);
+} finally {
+  window.$RefreshReg$ = prevRefreshReg;
+  window.$RefreshSig$ = prevRefreshSig;
+}
+},{"react/jsx-runtime":"8xIwr","react":"6TuXu","react-bootstrap/Col":"fbam0","react-redux":"2L0if","../visibility-filter-input/visibility-filter-input":"7ZxGS","../movie-card/movie-card":"6EiBJ","@parcel/transformer-js/src/esmodule-helpers.js":"JacNc","@parcel/transformer-react-refresh-wrap/lib/helpers/helpers.js":"5V79J"}],"7ZxGS":[function(require,module,exports) {
+var $parcel$ReactRefreshHelpers$9bc3 = require("@parcel/transformer-react-refresh-wrap/lib/helpers/helpers.js");
+var prevRefreshReg = window.$RefreshReg$;
+var prevRefreshSig = window.$RefreshSig$;
+$parcel$ReactRefreshHelpers$9bc3.prelude(module);
+
+try {
+var parcelHelpers = require("@parcel/transformer-js/src/esmodule-helpers.js");
+parcelHelpers.defineInteropFlag(exports);
+var _jsxRuntime = require("react/jsx-runtime");
+var _react = require("react");
+var _reactDefault = parcelHelpers.interopDefault(_react);
+var _reactRedux = require("react-redux");
+var _form = require("react-bootstrap/Form");
+var _formDefault = parcelHelpers.interopDefault(_form);
+var _actions = require("../../actions/actions");
+var _visibilityFilterInputScss = require("./visibility-filter-input.scss");
+function VisibilityFilterInput(props) {
+    return(/*#__PURE__*/ _jsxRuntime.jsx(_formDefault.default.Control, {
+        className: "search-input",
+        onChange: (e)=>props.setFilter(e.target.value)
+        ,
+        value: props.visibilityFilter,
+        placeholder: "search for movies",
+        __source: {
+            fileName: "src/components/visibility-filter-input/visibility-filter-input.jsx",
+            lineNumber: 10
+        },
+        __self: this
+    }));
+}
+_c = VisibilityFilterInput;
+exports.default = _reactRedux.connect(null, {
+    setFilter: _actions.setFilter
+})(VisibilityFilterInput);
+var _c;
+$RefreshReg$(_c, "VisibilityFilterInput");
+
+  $parcel$ReactRefreshHelpers$9bc3.postlude(module);
+} finally {
+  window.$RefreshReg$ = prevRefreshReg;
+  window.$RefreshSig$ = prevRefreshSig;
+}
+},{"react/jsx-runtime":"8xIwr","react":"6TuXu","react-redux":"2L0if","react-bootstrap/Form":"5ykgY","../../actions/actions":"1Ttfj","@parcel/transformer-js/src/esmodule-helpers.js":"JacNc","@parcel/transformer-react-refresh-wrap/lib/helpers/helpers.js":"5V79J","./visibility-filter-input.scss":"3ZOIV"}],"3ZOIV":[function() {},{}],"6EiBJ":[function(require,module,exports) {
+var $parcel$ReactRefreshHelpers$4249 = require("@parcel/transformer-react-refresh-wrap/lib/helpers/helpers.js");
+var prevRefreshReg = window.$RefreshReg$;
+var prevRefreshSig = window.$RefreshSig$;
+$parcel$ReactRefreshHelpers$4249.prelude(module);
+
+try {
+var parcelHelpers = require("@parcel/transformer-js/src/esmodule-helpers.js");
+parcelHelpers.defineInteropFlag(exports);
+parcelHelpers.export(exports, "MovieCard", ()=>MovieCard
+);
+var _jsxRuntime = require("react/jsx-runtime");
+var _react = require("react");
+var _reactDefault = parcelHelpers.interopDefault(_react);
+var _propTypes = require("prop-types");
+var _propTypesDefault = parcelHelpers.interopDefault(_propTypes);
+var _card = require("react-bootstrap/Card");
+var _cardDefault = parcelHelpers.interopDefault(_card);
+var _button = require("react-bootstrap/Button");
+var _buttonDefault = parcelHelpers.interopDefault(_button);
+var _reactRouterDom = require("react-router-dom");
+var _inceptionJpg = require("../../public/images/inception.jpg");
+var _thedarkknightJpg = require("../../public/images/thedarkknight.jpg");
+var _girlsJpg = require("../../public/images/girls.jpg");
+var _interstellarJpg = require("../../public/images/interstellar.jpg");
+var _silenceofthelambsJpg = require("../../public/images/silenceofthelambs.jpg");
+var _theprestigeJpg = require("../../public/images/theprestige.jpg");
+var _knockedupJpg = require("../../public/images/knockedup.jpg");
+var _blackwidowJpg = require("../../public/images/blackwidow.jpg");
+var _rachelgettingmarriedJpg = require("../../public/images/rachelgettingmarried.jpg");
+var _movieCardScss = require("./movie-card.scss");
+var _reactBootstrap = require("react-bootstrap");
+class MovieCard extends _reactDefault.default.Component {
+    render() {
+        const { movie  } = this.props;
+        let cardImgUrl = `../../public/images/${movie.ImagePath}`;
+        return(/*#__PURE__*/ _jsxRuntime.jsx(_cardDefault.default, {
+            __source: {
+                fileName: "src/components/movie-card/movie-card.jsx",
+                lineNumber: 30
+            },
+            __self: this,
+            children: /*#__PURE__*/ _jsxRuntime.jsx(_reactRouterDom.Link, {
+                to: `/movies/${movie._id}`,
+                __source: {
+                    fileName: "src/components/movie-card/movie-card.jsx",
+                    lineNumber: 31
+                },
+                __self: this,
+                children: /*#__PURE__*/ _jsxRuntime.jsx(_buttonDefault.default, {
+                    variant: "link",
+                    __source: {
+                        fileName: "src/components/movie-card/movie-card.jsx",
+                        lineNumber: 32
+                    },
+                    __self: this,
+                    children: /*#__PURE__*/ _jsxRuntime.jsx(_reactBootstrap.CardImg, {
+                        variant: "top",
+                        src: require(cardImgUrl),
+                        className: "image-styles",
+                        __source: {
+                            fileName: "src/components/movie-card/movie-card.jsx",
+                            lineNumber: 33
+                        },
+                        __self: this
+                    })
+                })
+            })
+        }));
+    }
+}
+MovieCard.proptypes = {
+    movie: _propTypesDefault.default.shape({
+        Title: _propTypesDefault.default.string.isRequired,
+        Description: _propTypesDefault.default.string.isRequired,
+        Genre: _propTypesDefault.default.string.isRequired,
+        Director: _propTypesDefault.default.string.isRequired,
+        ImagePath: _propTypesDefault.default.string.isRequired
+    }).isRequired
+};
+
+  $parcel$ReactRefreshHelpers$4249.postlude(module);
+} finally {
+  window.$RefreshReg$ = prevRefreshReg;
+  window.$RefreshSig$ = prevRefreshSig;
+}
+},{"react/jsx-runtime":"8xIwr","prop-types":"1tgq3","react-bootstrap/Card":"MoOk8","react-bootstrap/Button":"9CzHT","react-router-dom":"cpyQW","./movie-card.scss":"cF5gT","@parcel/transformer-js/src/esmodule-helpers.js":"JacNc","@parcel/transformer-react-refresh-wrap/lib/helpers/helpers.js":"5V79J","../../public/images/inception.jpg":"l6bud","../../public/images/thedarkknight.jpg":"hVWAT","../../public/images/girls.jpg":"aGUtc","../../public/images/interstellar.jpg":"hiWMW","../../public/images/silenceofthelambs.jpg":"giTk3","../../public/images/theprestige.jpg":"87wS2","../../public/images/knockedup.jpg":"5gLy6","../../public/images/blackwidow.jpg":"t0Nlf","../../public/images/rachelgettingmarried.jpg":"lbbeE","react":"6TuXu","react-bootstrap":"h2YVd"}],"cF5gT":[function() {},{}],"4d0QS":[function(require,module,exports) {
+var parcelHelpers = require("@parcel/transformer-js/src/esmodule-helpers.js");
+parcelHelpers.defineInteropFlag(exports);
+parcelHelpers.export(exports, "__DO_NOT_USE__ActionTypes", ()=>ActionTypes
+);
+parcelHelpers.export(exports, "applyMiddleware", ()=>applyMiddleware
+);
+parcelHelpers.export(exports, "bindActionCreators", ()=>bindActionCreators
+);
+parcelHelpers.export(exports, "combineReducers", ()=>combineReducers
+);
+parcelHelpers.export(exports, "compose", ()=>compose
+);
+parcelHelpers.export(exports, "createStore", ()=>createStore
+);
+var _objectSpread2 = require("@babel/runtime/helpers/esm/objectSpread2");
+var _objectSpread2Default = parcelHelpers.interopDefault(_objectSpread2);
+/**
+ * Adapted from React: https://github.com/facebook/react/blob/master/packages/shared/formatProdErrorMessage.js
+ *
+ * Do not require this module directly! Use normal throw error calls. These messages will be replaced with error codes
+ * during build.
+ * @param {number} code
+ */ function formatProdErrorMessage(code) {
+    return "Minified Redux error #" + code + "; visit https://redux.js.org/Errors?code=" + code + " for the full message or " + 'use the non-minified dev environment for full errors. ';
+}
+// Inlined version of the `symbol-observable` polyfill
+var $$observable = function() {
+    return typeof Symbol === 'function' && Symbol.observable || '@@observable';
+}();
+/**
+ * These are private action types reserved by Redux.
+ * For any unknown actions, you must return the current state.
+ * If the current state is undefined, you must return the initial state.
+ * Do not reference these action types directly in your code.
+ */ var randomString = function randomString1() {
+    return Math.random().toString(36).substring(7).split('').join('.');
+};
+var ActionTypes = {
+    INIT: "@@redux/INIT" + randomString(),
+    REPLACE: "@@redux/REPLACE" + randomString(),
+    PROBE_UNKNOWN_ACTION: function PROBE_UNKNOWN_ACTION() {
+        return "@@redux/PROBE_UNKNOWN_ACTION" + randomString();
+    }
+};
+/**
+ * @param {any} obj The object to inspect.
+ * @returns {boolean} True if the argument appears to be a plain object.
+ */ function isPlainObject(obj) {
+    if (typeof obj !== 'object' || obj === null) return false;
+    var proto = obj;
+    while(Object.getPrototypeOf(proto) !== null)proto = Object.getPrototypeOf(proto);
+    return Object.getPrototypeOf(obj) === proto;
+}
+// Inlined / shortened version of `kindOf` from https://github.com/jonschlinkert/kind-of
+function miniKindOf(val) {
+    if (val === void 0) return 'undefined';
+    if (val === null) return 'null';
+    var type = typeof val;
+    switch(type){
+        case 'boolean':
+        case 'string':
+        case 'number':
+        case 'symbol':
+        case 'function':
+            return type;
+    }
+    if (Array.isArray(val)) return 'array';
+    if (isDate(val)) return 'date';
+    if (isError(val)) return 'error';
+    var constructorName = ctorName(val);
+    switch(constructorName){
+        case 'Symbol':
+        case 'Promise':
+        case 'WeakMap':
+        case 'WeakSet':
+        case 'Map':
+        case 'Set':
+            return constructorName;
+    } // other
+    return type.slice(8, -1).toLowerCase().replace(/\s/g, '');
+}
+function ctorName(val) {
+    return typeof val.constructor === 'function' ? val.constructor.name : null;
+}
+function isError(val) {
+    return val instanceof Error || typeof val.message === 'string' && val.constructor && typeof val.constructor.stackTraceLimit === 'number';
+}
+function isDate(val) {
+    if (val instanceof Date) return true;
+    return typeof val.toDateString === 'function' && typeof val.getDate === 'function' && typeof val.setDate === 'function';
+}
+function kindOf(val) {
+    var typeOfVal = typeof val;
+    typeOfVal = miniKindOf(val);
+    return typeOfVal;
+}
+/**
+ * Creates a Redux store that holds the state tree.
+ * The only way to change the data in the store is to call `dispatch()` on it.
+ *
+ * There should only be a single store in your app. To specify how different
+ * parts of the state tree respond to actions, you may combine several reducers
+ * into a single reducer function by using `combineReducers`.
+ *
+ * @param {Function} reducer A function that returns the next state tree, given
+ * the current state tree and the action to handle.
+ *
+ * @param {any} [preloadedState] The initial state. You may optionally specify it
+ * to hydrate the state from the server in universal apps, or to restore a
+ * previously serialized user session.
+ * If you use `combineReducers` to produce the root reducer function, this must be
+ * an object with the same shape as `combineReducers` keys.
+ *
+ * @param {Function} [enhancer] The store enhancer. You may optionally specify it
+ * to enhance the store with third-party capabilities such as middleware,
+ * time travel, persistence, etc. The only store enhancer that ships with Redux
+ * is `applyMiddleware()`.
+ *
+ * @returns {Store} A Redux store that lets you read the state, dispatch actions
+ * and subscribe to changes.
+ */ function createStore(reducer, preloadedState, enhancer) {
+    var _ref2;
+    if (typeof preloadedState === 'function' && typeof enhancer === 'function' || typeof enhancer === 'function' && typeof arguments[3] === 'function') throw new Error("It looks like you are passing several store enhancers to createStore(). This is not supported. Instead, compose them together to a single function. See https://redux.js.org/tutorials/fundamentals/part-4-store#creating-a-store-with-enhancers for an example.");
+    if (typeof preloadedState === 'function' && typeof enhancer === 'undefined') {
+        enhancer = preloadedState;
+        preloadedState = undefined;
+    }
+    if (typeof enhancer !== 'undefined') {
+        if (typeof enhancer !== 'function') throw new Error("Expected the enhancer to be a function. Instead, received: '" + kindOf(enhancer) + "'");
+        return enhancer(createStore)(reducer, preloadedState);
+    }
+    if (typeof reducer !== 'function') throw new Error("Expected the root reducer to be a function. Instead, received: '" + kindOf(reducer) + "'");
+    var currentReducer = reducer;
+    var currentState = preloadedState;
+    var currentListeners = [];
+    var nextListeners = currentListeners;
+    var isDispatching = false;
+    /**
+   * This makes a shallow copy of currentListeners so we can use
+   * nextListeners as a temporary list while dispatching.
+   *
+   * This prevents any bugs around consumers calling
+   * subscribe/unsubscribe in the middle of a dispatch.
+   */ function ensureCanMutateNextListeners() {
+        if (nextListeners === currentListeners) nextListeners = currentListeners.slice();
+    }
+    /**
+   * Reads the state tree managed by the store.
+   *
+   * @returns {any} The current state tree of your application.
+   */ function getState() {
+        if (isDispatching) throw new Error("You may not call store.getState() while the reducer is executing. The reducer has already received the state as an argument. Pass it down from the top reducer instead of reading it from the store.");
+        return currentState;
+    }
+    /**
+   * Adds a change listener. It will be called any time an action is dispatched,
+   * and some part of the state tree may potentially have changed. You may then
+   * call `getState()` to read the current state tree inside the callback.
+   *
+   * You may call `dispatch()` from a change listener, with the following
+   * caveats:
+   *
+   * 1. The subscriptions are snapshotted just before every `dispatch()` call.
+   * If you subscribe or unsubscribe while the listeners are being invoked, this
+   * will not have any effect on the `dispatch()` that is currently in progress.
+   * However, the next `dispatch()` call, whether nested or not, will use a more
+   * recent snapshot of the subscription list.
+   *
+   * 2. The listener should not expect to see all state changes, as the state
+   * might have been updated multiple times during a nested `dispatch()` before
+   * the listener is called. It is, however, guaranteed that all subscribers
+   * registered before the `dispatch()` started will be called with the latest
+   * state by the time it exits.
+   *
+   * @param {Function} listener A callback to be invoked on every dispatch.
+   * @returns {Function} A function to remove this change listener.
+   */ function subscribe(listener) {
+        if (typeof listener !== 'function') throw new Error("Expected the listener to be a function. Instead, received: '" + kindOf(listener) + "'");
+        if (isDispatching) throw new Error("You may not call store.subscribe() while the reducer is executing. If you would like to be notified after the store has been updated, subscribe from a component and invoke store.getState() in the callback to access the latest state. See https://redux.js.org/api/store#subscribelistener for more details.");
+        var isSubscribed = true;
+        ensureCanMutateNextListeners();
+        nextListeners.push(listener);
+        return function unsubscribe() {
+            if (!isSubscribed) return;
+            if (isDispatching) throw new Error("You may not unsubscribe from a store listener while the reducer is executing. See https://redux.js.org/api/store#subscribelistener for more details.");
+            isSubscribed = false;
+            ensureCanMutateNextListeners();
+            var index = nextListeners.indexOf(listener);
+            nextListeners.splice(index, 1);
+            currentListeners = null;
+        };
+    }
+    /**
+   * Dispatches an action. It is the only way to trigger a state change.
+   *
+   * The `reducer` function, used to create the store, will be called with the
+   * current state tree and the given `action`. Its return value will
+   * be considered the **next** state of the tree, and the change listeners
+   * will be notified.
+   *
+   * The base implementation only supports plain object actions. If you want to
+   * dispatch a Promise, an Observable, a thunk, or something else, you need to
+   * wrap your store creating function into the corresponding middleware. For
+   * example, see the documentation for the `redux-thunk` package. Even the
+   * middleware will eventually dispatch plain object actions using this method.
+   *
+   * @param {Object} action A plain object representing “what changed”. It is
+   * a good idea to keep actions serializable so you can record and replay user
+   * sessions, or use the time travelling `redux-devtools`. An action must have
+   * a `type` property which may not be `undefined`. It is a good idea to use
+   * string constants for action types.
+   *
+   * @returns {Object} For convenience, the same action object you dispatched.
+   *
+   * Note that, if you use a custom middleware, it may wrap `dispatch()` to
+   * return something else (for example, a Promise you can await).
+   */ function dispatch(action) {
+        if (!isPlainObject(action)) throw new Error("Actions must be plain objects. Instead, the actual type was: '" + kindOf(action) + "'. You may need to add middleware to your store setup to handle dispatching other values, such as 'redux-thunk' to handle dispatching functions. See https://redux.js.org/tutorials/fundamentals/part-4-store#middleware and https://redux.js.org/tutorials/fundamentals/part-6-async-logic#using-the-redux-thunk-middleware for examples.");
+        if (typeof action.type === 'undefined') throw new Error('Actions may not have an undefined "type" property. You may have misspelled an action type string constant.');
+        if (isDispatching) throw new Error('Reducers may not dispatch actions.');
+        try {
+            isDispatching = true;
+            currentState = currentReducer(currentState, action);
+        } finally{
+            isDispatching = false;
+        }
+        var listeners = currentListeners = nextListeners;
+        for(var i = 0; i < listeners.length; i++){
+            var listener = listeners[i];
+            listener();
+        }
+        return action;
+    }
+    /**
+   * Replaces the reducer currently used by the store to calculate the state.
+   *
+   * You might need this if your app implements code splitting and you want to
+   * load some of the reducers dynamically. You might also need this if you
+   * implement a hot reloading mechanism for Redux.
+   *
+   * @param {Function} nextReducer The reducer for the store to use instead.
+   * @returns {void}
+   */ function replaceReducer(nextReducer) {
+        if (typeof nextReducer !== 'function') throw new Error("Expected the nextReducer to be a function. Instead, received: '" + kindOf(nextReducer));
+        currentReducer = nextReducer; // This action has a similiar effect to ActionTypes.INIT.
+        // Any reducers that existed in both the new and old rootReducer
+        // will receive the previous state. This effectively populates
+        // the new state tree with any relevant data from the old one.
+        dispatch({
+            type: ActionTypes.REPLACE
+        });
+    }
+    /**
+   * Interoperability point for observable/reactive libraries.
+   * @returns {observable} A minimal observable of state changes.
+   * For more information, see the observable proposal:
+   * https://github.com/tc39/proposal-observable
+   */ function observable() {
+        var _ref;
+        var outerSubscribe = subscribe;
+        return _ref = {
+            /**
+       * The minimal observable subscription method.
+       * @param {Object} observer Any object that can be used as an observer.
+       * The observer object should have a `next` method.
+       * @returns {subscription} An object with an `unsubscribe` method that can
+       * be used to unsubscribe the observable from the store, and prevent further
+       * emission of values from the observable.
+       */ subscribe: function subscribe1(observer) {
+                if (typeof observer !== 'object' || observer === null) throw new Error("Expected the observer to be an object. Instead, received: '" + kindOf(observer) + "'");
+                function observeState() {
+                    if (observer.next) observer.next(getState());
+                }
+                observeState();
+                var unsubscribe = outerSubscribe(observeState);
+                return {
+                    unsubscribe: unsubscribe
+                };
+            }
+        }, _ref[$$observable] = function() {
+            return this;
+        }, _ref;
+    } // When a store is created, an "INIT" action is dispatched so that every
+    // reducer returns their initial state. This effectively populates
+    // the initial state tree.
+    dispatch({
+        type: ActionTypes.INIT
+    });
+    return _ref2 = {
+        dispatch: dispatch,
+        subscribe: subscribe,
+        getState: getState,
+        replaceReducer: replaceReducer
+    }, _ref2[$$observable] = observable, _ref2;
+}
+/**
+ * Prints a warning in the console if it exists.
+ *
+ * @param {String} message The warning message.
+ * @returns {void}
+ */ function warning(message) {
+    /* eslint-disable no-console */ if (typeof console !== 'undefined' && typeof console.error === 'function') console.error(message);
+    /* eslint-enable no-console */ try {
+        // This error was thrown as a convenience so that if you enable
+        // "break on all exceptions" in your console,
+        // it would pause the execution at this line.
+        throw new Error(message);
+    } catch (e) {
+    } // eslint-disable-line no-empty
+}
+function getUnexpectedStateShapeWarningMessage(inputState, reducers, action, unexpectedKeyCache) {
+    var reducerKeys = Object.keys(reducers);
+    var argumentName = action && action.type === ActionTypes.INIT ? 'preloadedState argument passed to createStore' : 'previous state received by the reducer';
+    if (reducerKeys.length === 0) return "Store does not have a valid reducer. Make sure the argument passed to combineReducers is an object whose values are reducers.";
+    if (!isPlainObject(inputState)) return "The " + argumentName + " has unexpected type of \"" + kindOf(inputState) + "\". Expected argument to be an object with the following " + ("keys: \"" + reducerKeys.join('", "') + "\"");
+    var unexpectedKeys = Object.keys(inputState).filter(function(key) {
+        return !reducers.hasOwnProperty(key) && !unexpectedKeyCache[key];
+    });
+    unexpectedKeys.forEach(function(key) {
+        unexpectedKeyCache[key] = true;
+    });
+    if (action && action.type === ActionTypes.REPLACE) return;
+    if (unexpectedKeys.length > 0) return "Unexpected " + (unexpectedKeys.length > 1 ? 'keys' : 'key') + " " + ("\"" + unexpectedKeys.join('", "') + "\" found in " + argumentName + ". ") + "Expected to find one of the known reducer keys instead: " + ("\"" + reducerKeys.join('", "') + "\". Unexpected keys will be ignored.");
+}
+function assertReducerShape(reducers) {
+    Object.keys(reducers).forEach(function(key) {
+        var reducer = reducers[key];
+        var initialState = reducer(undefined, {
+            type: ActionTypes.INIT
+        });
+        if (typeof initialState === 'undefined') throw new Error("The slice reducer for key \"" + key + "\" returned undefined during initialization. " + "If the state passed to the reducer is undefined, you must " + "explicitly return the initial state. The initial state may " + "not be undefined. If you don't want to set a value for this reducer, " + "you can use null instead of undefined.");
+        if (typeof reducer(undefined, {
+            type: ActionTypes.PROBE_UNKNOWN_ACTION()
+        }) === 'undefined') throw new Error("The slice reducer for key \"" + key + "\" returned undefined when probed with a random type. " + ("Don't try to handle '" + ActionTypes.INIT + "' or other actions in \"redux/*\" ") + "namespace. They are considered private. Instead, you must return the " + "current state for any unknown actions, unless it is undefined, " + "in which case you must return the initial state, regardless of the " + "action type. The initial state may not be undefined, but can be null.");
+    });
+}
+/**
+ * Turns an object whose values are different reducer functions, into a single
+ * reducer function. It will call every child reducer, and gather their results
+ * into a single state object, whose keys correspond to the keys of the passed
+ * reducer functions.
+ *
+ * @param {Object} reducers An object whose values correspond to different
+ * reducer functions that need to be combined into one. One handy way to obtain
+ * it is to use ES6 `import * as reducers` syntax. The reducers may never return
+ * undefined for any action. Instead, they should return their initial state
+ * if the state passed to them was undefined, and the current state for any
+ * unrecognized action.
+ *
+ * @returns {Function} A reducer function that invokes every reducer inside the
+ * passed object, and builds a state object with the same shape.
+ */ function combineReducers(reducers) {
+    var reducerKeys = Object.keys(reducers);
+    var finalReducers = {
+    };
+    for(var i = 0; i < reducerKeys.length; i++){
+        var key = reducerKeys[i];
+        if (typeof reducers[key] === 'undefined') warning("No reducer provided for key \"" + key + "\"");
+        if (typeof reducers[key] === 'function') finalReducers[key] = reducers[key];
+    }
+    var finalReducerKeys = Object.keys(finalReducers); // This is used to make sure we don't warn about the same
+    // keys multiple times.
+    var unexpectedKeyCache;
+    unexpectedKeyCache = {
+    };
+    var shapeAssertionError;
+    try {
+        assertReducerShape(finalReducers);
+    } catch (e) {
+        shapeAssertionError = e;
+    }
+    return function combination(state, action) {
+        if (state === void 0) state = {
+        };
+        if (shapeAssertionError) throw shapeAssertionError;
+        var warningMessage = getUnexpectedStateShapeWarningMessage(state, finalReducers, action, unexpectedKeyCache);
+        if (warningMessage) warning(warningMessage);
+        var hasChanged = false;
+        var nextState = {
+        };
+        for(var _i = 0; _i < finalReducerKeys.length; _i++){
+            var _key = finalReducerKeys[_i];
+            var reducer = finalReducers[_key];
+            var previousStateForKey = state[_key];
+            var nextStateForKey = reducer(previousStateForKey, action);
+            if (typeof nextStateForKey === 'undefined') {
+                var actionType = action && action.type;
+                throw new Error("When called with an action of type " + (actionType ? "\"" + String(actionType) + "\"" : '(unknown type)') + ", the slice reducer for key \"" + _key + "\" returned undefined. " + "To ignore an action, you must explicitly return the previous state. " + "If you want this reducer to hold no value, you can return null instead of undefined.");
+            }
+            nextState[_key] = nextStateForKey;
+            hasChanged = hasChanged || nextStateForKey !== previousStateForKey;
+        }
+        hasChanged = hasChanged || finalReducerKeys.length !== Object.keys(state).length;
+        return hasChanged ? nextState : state;
+    };
+}
+function bindActionCreator(actionCreator, dispatch) {
+    return function() {
+        return dispatch(actionCreator.apply(this, arguments));
+    };
+}
+/**
+ * Turns an object whose values are action creators, into an object with the
+ * same keys, but with every function wrapped into a `dispatch` call so they
+ * may be invoked directly. This is just a convenience method, as you can call
+ * `store.dispatch(MyActionCreators.doSomething())` yourself just fine.
+ *
+ * For convenience, you can also pass an action creator as the first argument,
+ * and get a dispatch wrapped function in return.
+ *
+ * @param {Function|Object} actionCreators An object whose values are action
+ * creator functions. One handy way to obtain it is to use ES6 `import * as`
+ * syntax. You may also pass a single function.
+ *
+ * @param {Function} dispatch The `dispatch` function available on your Redux
+ * store.
+ *
+ * @returns {Function|Object} The object mimicking the original object, but with
+ * every action creator wrapped into the `dispatch` call. If you passed a
+ * function as `actionCreators`, the return value will also be a single
+ * function.
+ */ function bindActionCreators(actionCreators, dispatch) {
+    if (typeof actionCreators === 'function') return bindActionCreator(actionCreators, dispatch);
+    if (typeof actionCreators !== 'object' || actionCreators === null) throw new Error("bindActionCreators expected an object or a function, but instead received: '" + kindOf(actionCreators) + "'. " + "Did you write \"import ActionCreators from\" instead of \"import * as ActionCreators from\"?");
+    var boundActionCreators = {
+    };
+    for(var key in actionCreators){
+        var actionCreator = actionCreators[key];
+        if (typeof actionCreator === 'function') boundActionCreators[key] = bindActionCreator(actionCreator, dispatch);
+    }
+    return boundActionCreators;
+}
+/**
+ * Composes single-argument functions from right to left. The rightmost
+ * function can take multiple arguments as it provides the signature for
+ * the resulting composite function.
+ *
+ * @param {...Function} funcs The functions to compose.
+ * @returns {Function} A function obtained by composing the argument functions
+ * from right to left. For example, compose(f, g, h) is identical to doing
+ * (...args) => f(g(h(...args))).
+ */ function compose() {
+    for(var _len = arguments.length, funcs = new Array(_len), _key = 0; _key < _len; _key++)funcs[_key] = arguments[_key];
+    if (funcs.length === 0) return function(arg) {
+        return arg;
+    };
+    if (funcs.length === 1) return funcs[0];
+    return funcs.reduce(function(a, b) {
+        return function() {
+            return a(b.apply(void 0, arguments));
+        };
+    });
+}
+/**
+ * Creates a store enhancer that applies middleware to the dispatch method
+ * of the Redux store. This is handy for a variety of tasks, such as expressing
+ * asynchronous actions in a concise manner, or logging every action payload.
+ *
+ * See `redux-thunk` package as an example of the Redux middleware.
+ *
+ * Because middleware is potentially asynchronous, this should be the first
+ * store enhancer in the composition chain.
+ *
+ * Note that each middleware will be given the `dispatch` and `getState` functions
+ * as named arguments.
+ *
+ * @param {...Function} middlewares The middleware chain to be applied.
+ * @returns {Function} A store enhancer applying the middleware.
+ */ function applyMiddleware() {
+    for(var _len = arguments.length, middlewares = new Array(_len), _key = 0; _key < _len; _key++)middlewares[_key] = arguments[_key];
+    return function(createStore1) {
+        return function() {
+            var store = createStore1.apply(void 0, arguments);
+            var _dispatch = function dispatch() {
+                throw new Error("Dispatching while constructing your middleware is not allowed. Other middleware would not be applied to this dispatch.");
+            };
+            var middlewareAPI = {
+                getState: store.getState,
+                dispatch: function dispatch1() {
+                    return _dispatch.apply(void 0, arguments);
+                }
+            };
+            var chain = middlewares.map(function(middleware) {
+                return middleware(middlewareAPI);
+            });
+            _dispatch = compose.apply(void 0, chain)(store.dispatch);
+            return _objectSpread2Default.default(_objectSpread2Default.default({
+            }, store), {
+            }, {
+                dispatch: _dispatch
+            });
+        };
+    };
+}
+/*
+ * This is a dummy function to check if the function name has been altered by minification.
+ * If the function has been minified and NODE_ENV !== 'production', warn the user.
+ */ function isCrushed() {
+}
+if (typeof isCrushed.name === 'string' && isCrushed.name !== 'isCrushed') warning("You are currently using minified code outside of NODE_ENV === \"production\". This means that you are running a slower development build of Redux. You can use loose-envify (https://github.com/zertosh/loose-envify) for browserify or setting mode to production in webpack (https://webpack.js.org/concepts/mode/) to ensure you have the correct code for your production build.");
+
+},{"@babel/runtime/helpers/esm/objectSpread2":"bSD1u","@parcel/transformer-js/src/esmodule-helpers.js":"JacNc"}],"bSD1u":[function(require,module,exports) {
+var parcelHelpers = require("@parcel/transformer-js/src/esmodule-helpers.js");
+parcelHelpers.defineInteropFlag(exports);
+var _definePropertyJs = require("./defineProperty.js");
+var _definePropertyJsDefault = parcelHelpers.interopDefault(_definePropertyJs);
+function ownKeys(object, enumerableOnly) {
+    var keys = Object.keys(object);
+    if (Object.getOwnPropertySymbols) {
+        var symbols = Object.getOwnPropertySymbols(object);
+        if (enumerableOnly) symbols = symbols.filter(function(sym) {
+            return Object.getOwnPropertyDescriptor(object, sym).enumerable;
+        });
+        keys.push.apply(keys, symbols);
+    }
+    return keys;
+}
+function _objectSpread2(target) {
+    for(var i = 1; i < arguments.length; i++){
+        var source = arguments[i] != null ? arguments[i] : {
+        };
+        if (i % 2) ownKeys(Object(source), true).forEach(function(key) {
+            _definePropertyJsDefault.default(target, key, source[key]);
+        });
+        else if (Object.getOwnPropertyDescriptors) Object.defineProperties(target, Object.getOwnPropertyDescriptors(source));
+        else ownKeys(Object(source)).forEach(function(key) {
+            Object.defineProperty(target, key, Object.getOwnPropertyDescriptor(source, key));
+        });
+    }
+    return target;
+}
+exports.default = _objectSpread2;
+
+},{"./defineProperty.js":"7s3FO","@parcel/transformer-js/src/esmodule-helpers.js":"JacNc"}],"7s3FO":[function(require,module,exports) {
+var parcelHelpers = require("@parcel/transformer-js/src/esmodule-helpers.js");
+parcelHelpers.defineInteropFlag(exports);
+function _defineProperty(obj, key, value) {
+    if (key in obj) Object.defineProperty(obj, key, {
+        value: value,
+        enumerable: true,
+        configurable: true,
+        writable: true
+    });
+    else obj[key] = value;
+    return obj;
+}
+exports.default = _defineProperty;
+
+},{"@parcel/transformer-js/src/esmodule-helpers.js":"JacNc"}],"btgQW":[function(require,module,exports) {
+var parcelHelpers = require("@parcel/transformer-js/src/esmodule-helpers.js");
+parcelHelpers.defineInteropFlag(exports);
+var _redux = require("redux");
+var _actions = require("../actions/actions");
+function visibilityFilter(state = '', action) {
+    switch(action.type){
+        case _actions.SET_FILTER:
+            return action.value;
+        default:
+            return state;
+    }
+}
+function movies(state = [], action) {
+    switch(action.type){
+        case _actions.SET_MOVIES:
+            return action.value;
+        default:
+            return state;
+    }
+}
+function user(state = null, action) {
+    switch(action.type){
+        case _actions.SET_USER:
+            return action.value;
+        default:
+            return state;
+    }
+}
+const moviesApp = _redux.combineReducers({
+    visibilityFilter,
+    movies,
+    user
+});
+exports.default = moviesApp;
+
+},{"redux":"4d0QS","../actions/actions":"1Ttfj","@parcel/transformer-js/src/esmodule-helpers.js":"JacNc"}],"8GWVf":[function(require,module,exports) {
+'use strict';
+var compose = require('redux').compose;
+exports.__esModule = true;
+exports.composeWithDevTools = typeof window !== 'undefined' && window.__REDUX_DEVTOOLS_EXTENSION_COMPOSE__ ? window.__REDUX_DEVTOOLS_EXTENSION_COMPOSE__ : function() {
+    if (arguments.length === 0) return undefined;
+    if (typeof arguments[0] === 'object') return compose;
+    return compose.apply(null, arguments);
+};
+exports.devToolsEnhancer = typeof window !== 'undefined' && window.__REDUX_DEVTOOLS_EXTENSION__ ? window.__REDUX_DEVTOOLS_EXTENSION__ : function() {
+    return function(noop) {
+        return noop;
+    };
+};
+
+},{"redux":"4d0QS"}]},["2rAXy","6a0zu","dLPEP"], "dLPEP", "parcelRequireaec4")
 
 //# sourceMappingURL=index.6701a6e1.js.map
