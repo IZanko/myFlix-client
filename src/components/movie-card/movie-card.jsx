@@ -16,6 +16,7 @@ import "../../public/images/blackwidow.jpg";
 import "../../public/images/rachelgettingmarried.jpg";
 
 import "./movie-card.scss"
+import { CardImg } from "react-bootstrap";
 
 export class MovieCard extends React.Component {
 
@@ -23,13 +24,13 @@ export class MovieCard extends React.Component {
 
   render() {
     const { movie } = this.props;
-    let cardImageUrl = require('../../public/images/' + movie.ImagePath);
+    let cardImgUrl = require(`../../public/images/${movie.ImagePath}`);
 
     return (
       <Card >
         <Link to={`/movies/${movie._id}`}>
           <Button variant="link">
-            <Card.Img variant="top" src={cardImageUrl} className="image-styles" />
+            <CardImg variant="top" src={cardImgUrl} className="image-styles" />
           </Button>
         </Link>
       </Card>
