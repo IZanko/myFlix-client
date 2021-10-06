@@ -1,0 +1,8 @@
+.search-input.form-control {
+  width: 30%;
+}
+@media screen and (max-width: 426px){
+  .search-input.form-control {
+    width: 60%;
+  }
+}
