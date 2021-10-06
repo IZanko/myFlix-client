@@ -399,9 +399,14 @@ button.btn.btn-link {
     height: 570px;
   }
 }
-@media screen and (max-width: 376px) {
+@media screen and (max-width: 426px) {
   .image-styles {
-    height: 495px;
+    height: 565px;
+  }
+}
+@media screen and (max-width: 321px) {
+  .image-styles {
+    height: 410px;
   }
 }
 /*# sourceMappingURL=index.caa67093.css.map */
