@@ -4,7 +4,7 @@
   "description": "client version on myFlix",
   "scripts": {
     "start": "parcel src/index.html",
-    "build": "parcel build src/index.html"
+    "build": "gh-pages -d parcel build src/index.html"
   },
   "repository": {
     "type": "git",
