@@ -1,0 +1,91 @@
+/*Title and Description bolded*/
+span.label {
+  font-weight: 700;
+}
+/*text size set to 20px*/
+.value, .label, .btn.btn-link {
+  font-size: 20px;
+}
+
+/*add inline block between genre and director links*/
+.spacer {
+  display: inline-block;
+  width: 10px;
+}
+.movie-info-container {
+  padding-top: 10px;
+}
+/*movie info background visuals*/
+.movie-info {
+  background-color: #ffffff;
+  padding: 15px;
+  width: fit-content;
+}
+
+.back-button, .nav-button {
+  background-color: #ffffff; /* white */
+  border: none;
+  color: #414896;;
+  padding: 15px 32px;
+  text-align: center;
+  text-decoration: none;
+  display: inline-block;
+  font-size: 20px;
+  font-weight: bold;
+}
+.nav-button {
+  background-color: #007bfe; 
+  color: white;
+}
+div.movie-poster-container {
+  padding-top: 20px;
+  padding-bottom: 10px;
+  width: 260px;
+}
+.button-container {
+  padding-top: 20px;
+  display: flex;
+  gap: 30px;
+}
+.movie-poster, .back-button, .movie-info, .nav-button, .favorites-button {
+  box-shadow: 15px 15px 10px rgb(51, 49, 85);
+  border-radius: 15px;
+}
+.movie-poster {
+  width: 100%;
+}
+
+.movie-view {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.back-button:hover, .nav-button:hover, .favorites-button:hover {
+  cursor: pointer;
+  box-shadow: 5px 5px 2px rgb(51, 49, 85);
+  opacity: .70;
+  transition: .5s;
+}
+.favorites-button:focus {
+  outline: none;
+  opacity: 1;
+}
+.favorites-button {
+  background-color: #007bfe;
+  border-radius: 20px;
+  width: 100%;
+  padding: 6px 6px;
+  font-size: 18px;
+  font-weight: 500;
+  color: white;
+}
+.remove-from-favorites-button {
+  background-color: #fe6100;
+}
+
+@media screen and ( max-width: 425px) {
+  div.movie-poster-container {
+    width: 200px;
+  }
+}

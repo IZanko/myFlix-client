@@ -1,0 +1,48 @@
+Form {
+  display: flex;
+  flex-direction: column;
+  align-content: center;
+  justify-self: center;
+  width: 80%;
+}
+.form-container {
+  display: grid;
+  align-self: center;
+  padding-top:15%;
+}
+
+.error {
+  color: orange;
+}
+
+button.register-button {
+  box-shadow: 10px 10px 10px rgb(51, 49, 85);
+  font-size: 20px;
+}
+label.form-label {
+  color: white;
+  font-size: 35px;
+}
+.register-button:hover {
+  cursor: pointer;
+  box-shadow: 5px 5px 2px rgb(51, 49, 85);
+  transition: .5s;
+}
+.login-instead{
+color: white;
+padding-top: 15px;
+font-size: 18px;
+}
+.login-instead:hover {
+  text-decoration: underline;
+}
+
+
+@media screen and (min-width: 300px) {
+  Form {
+    width: 300px;
+  }
+  label.form-label {
+    font-size: 25px;
+  }
+}
