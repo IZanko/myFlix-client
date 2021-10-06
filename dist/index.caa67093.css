@@ -355,6 +355,12 @@ label.form-label {
 .search-input.form-control {
   width: 30%;
 }
+
+@media screen and (max-width: 426px) {
+  .search-input.form-control {
+    width: 60%;
+  }
+}
 .image-styles {
   width: 300px;
   height: 400px;
@@ -386,6 +392,16 @@ button.btn.btn-link {
 @media screen and (max-width: 768px) {
   .image-styles {
     height: fit-content;
+  }
+}
+@media screen and (max-width: 426px) {
+  .image-styles {
+    height: 570px;
+  }
+}
+@media screen and (max-width: 376px) {
+  .image-styles {
+    height: 495px;
   }
 }
 /*# sourceMappingURL=index.caa67093.css.map */

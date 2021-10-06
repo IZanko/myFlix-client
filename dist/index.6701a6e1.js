@@ -23019,9 +23019,6 @@ class MainView extends _reactDefault.default.Component {
                                     onLoggedIn: (user1)=>this.onLoggedIn(user1)
                                 })
                             }));
-                            if (movies.length === 0) return(/*#__PURE__*/ _jsxRuntime.jsx("div", {
-                                className: "main-view"
-                            }));
                             return(/*#__PURE__*/ _jsxRuntime.jsx(_moviesListDefault.default, {
                                 movies: movies
                             }));
@@ -23046,7 +23043,7 @@ class MainView extends _reactDefault.default.Component {
                         },
                         __source: {
                             fileName: "src/components/main-view/main-view.jsx",
-                            lineNumber: 113
+                            lineNumber: 112
                         },
                         __self: this
                     }),
@@ -23068,7 +23065,7 @@ class MainView extends _reactDefault.default.Component {
                         },
                         __source: {
                             fileName: "src/components/main-view/main-view.jsx",
-                            lineNumber: 119
+                            lineNumber: 118
                         },
                         __self: this
                     }),
@@ -23094,7 +23091,7 @@ class MainView extends _reactDefault.default.Component {
                         },
                         __source: {
                             fileName: "src/components/main-view/main-view.jsx",
-                            lineNumber: 127
+                            lineNumber: 126
                         },
                         __self: this
                     }),
@@ -23120,7 +23117,7 @@ class MainView extends _reactDefault.default.Component {
                         },
                         __source: {
                             fileName: "src/components/main-view/main-view.jsx",
-                            lineNumber: 137
+                            lineNumber: 136
                         },
                         __self: this
                     }),
@@ -23144,7 +23141,7 @@ class MainView extends _reactDefault.default.Component {
                         },
                         __source: {
                             fileName: "src/components/main-view/main-view.jsx",
-                            lineNumber: 147
+                            lineNumber: 146
                         },
                         __self: this
                     }),
@@ -23172,7 +23169,7 @@ class MainView extends _reactDefault.default.Component {
                         },
                         __source: {
                             fileName: "src/components/main-view/main-view.jsx",
-                            lineNumber: 159
+                            lineNumber: 158
                         },
                         __self: this
                     })
@@ -30278,7 +30275,7 @@ class UpdateProfileView extends _reactDefault.default.Component {
         }).then((response)=>{
             const data = response.data;
             alert(user + " profile has been updated.");
-            window.open('{`/users/${this.props.user}`}', '_self');
+            window.open(`/users/${this.props.user}`, '_self');
         }).catch(function(error) {
             alert(error.response.data);
         });

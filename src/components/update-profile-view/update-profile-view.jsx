@@ -64,7 +64,7 @@ export class UpdateProfileView extends React.Component {
         .then((response) => {
           const data = response.data;
           alert(user + " profile has been updated.");
-          window.open('{`/users/${this.props.user}`}', '_self');
+          window.open(`/users/${this.props.user}`, '_self');
         })
         .catch(function (error) {
           alert(error.response.data);

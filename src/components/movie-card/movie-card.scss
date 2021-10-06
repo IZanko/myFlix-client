@@ -32,3 +32,13 @@ button.btn.btn-link {
     height: fit-content;
   }
 }
+@media screen and (max-width: 426px){
+  .image-styles {
+    height: 570px;
+  }
+}
+@media screen and (max-width: 376px){
+  .image-styles {
+    height: 495px;
+  }
+}
