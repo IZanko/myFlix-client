@@ -24,13 +24,13 @@ export class MovieCard extends React.Component {
 
   render() {
     const { movie } = this.props;
-    let cardImgUrl = require(`../../public/images/${movie.ImagePath}`);
+    let cardImgUrl = `../../public/images/${movie.ImagePath}`;
 
     return (
       <Card >
         <Link to={`/movies/${movie._id}`}>
           <Button variant="link">
-            <CardImg variant="top" src={cardImgUrl} className="image-styles" />
+            <CardImg variant="top" src={require(cardImgUrl)} className="image-styles" />
           </Button>
         </Link>
       </Card>

@@ -23533,7 +23533,7 @@ MovieView.proptypes = {
   window.$RefreshReg$ = prevRefreshReg;
   window.$RefreshSig$ = prevRefreshSig;
 }
-},{"react/jsx-runtime":"8xIwr","react":"6TuXu","@parcel/transformer-js/src/esmodule-helpers.js":"JacNc","@parcel/transformer-react-refresh-wrap/lib/helpers/helpers.js":"5V79J","prop-types":"1tgq3","react-bootstrap/Button":"9CzHT","react-bootstrap/Card":"MoOk8","./movie-view.scss":"kvL93","react-router-dom":"cpyQW","axios":"iYoWk","../../public/images/inception.jpg":"l6bud","../../public/images/thedarkknight.jpg":"hVWAT","../../public/images/girls.jpg":"aGUtc","../../public/images/interstellar.jpg":"hiWMW","../../public/images/silenceofthelambs.jpg":"giTk3","../../public/images/theprestige.jpg":"87wS2","../../public/images/knockedup.jpg":"5gLy6","../../public/images/blackwidow.jpg":"t0Nlf","../../public/images/rachelgettingmarried.jpg":"lbbeE"}],"1tgq3":[function(require,module,exports) {
+},{"react/jsx-runtime":"8xIwr","react":"6TuXu","@parcel/transformer-js/src/esmodule-helpers.js":"JacNc","@parcel/transformer-react-refresh-wrap/lib/helpers/helpers.js":"5V79J","prop-types":"1tgq3","../../public/images/inception.jpg":"l6bud","../../public/images/thedarkknight.jpg":"hVWAT","../../public/images/girls.jpg":"aGUtc","../../public/images/interstellar.jpg":"hiWMW","../../public/images/silenceofthelambs.jpg":"giTk3","../../public/images/theprestige.jpg":"87wS2","../../public/images/knockedup.jpg":"5gLy6","../../public/images/rachelgettingmarried.jpg":"lbbeE","../../public/images/blackwidow.jpg":"t0Nlf","react-bootstrap/Button":"9CzHT","react-bootstrap/Card":"MoOk8","./movie-view.scss":"kvL93","react-router-dom":"cpyQW","axios":"iYoWk"}],"1tgq3":[function(require,module,exports) {
 var ReactIs = require('react-is');
 // By explicitly using `prop-types` you are opting into new development behavior.
 // http://fb.me/prop-types-in-prod
@@ -24212,7 +24212,69 @@ printWarning = function(text) {
 };
 module.exports = checkPropTypes;
 
-},{"./lib/ReactPropTypesSecret":"lYuBM"}],"9CzHT":[function(require,module,exports) {
+},{"./lib/ReactPropTypesSecret":"lYuBM"}],"l6bud":[function(require,module,exports) {
+module.exports = require('./helpers/bundle-url').getBundleURL('3VpAv') + "inception.bd178984.jpg";
+
+},{"./helpers/bundle-url":"8YnfL"}],"8YnfL":[function(require,module,exports) {
+"use strict";
+var bundleURL = {
+};
+function getBundleURLCached(id) {
+    var value = bundleURL[id];
+    if (!value) {
+        value = getBundleURL();
+        bundleURL[id] = value;
+    }
+    return value;
+}
+function getBundleURL() {
+    try {
+        throw new Error();
+    } catch (err) {
+        var matches = ('' + err.stack).match(/(https?|file|ftp):\/\/[^)\n]+/g);
+        if (matches) // The first two stack frames will be this function and getBundleURLCached.
+        // Use the 3rd one, which will be a runtime in the original bundle.
+        return getBaseURL(matches[2]);
+    }
+    return '/';
+}
+function getBaseURL(url) {
+    return ('' + url).replace(/^((?:https?|file|ftp):\/\/.+)\/[^/]+$/, '$1') + '/';
+} // TODO: Replace uses with `new URL(url).origin` when ie11 is no longer supported.
+function getOrigin(url) {
+    var matches = ('' + url).match(/(https?|file|ftp):\/\/[^/]+/);
+    if (!matches) throw new Error('Origin not found');
+    return matches[0];
+}
+exports.getBundleURL = getBundleURLCached;
+exports.getBaseURL = getBaseURL;
+exports.getOrigin = getOrigin;
+
+},{}],"hVWAT":[function(require,module,exports) {
+module.exports = require('./helpers/bundle-url').getBundleURL('3VpAv') + "thedarkknight.6865c054.jpg";
+
+},{"./helpers/bundle-url":"8YnfL"}],"aGUtc":[function(require,module,exports) {
+module.exports = require('./helpers/bundle-url').getBundleURL('3VpAv') + "girls.832504d7.jpg";
+
+},{"./helpers/bundle-url":"8YnfL"}],"hiWMW":[function(require,module,exports) {
+module.exports = require('./helpers/bundle-url').getBundleURL('3VpAv') + "interstellar.34782da6.jpg";
+
+},{"./helpers/bundle-url":"8YnfL"}],"giTk3":[function(require,module,exports) {
+module.exports = require('./helpers/bundle-url').getBundleURL('3VpAv') + "silenceofthelambs.8cb995ac.jpg";
+
+},{"./helpers/bundle-url":"8YnfL"}],"87wS2":[function(require,module,exports) {
+module.exports = require('./helpers/bundle-url').getBundleURL('3VpAv') + "theprestige.74ac05c1.jpg";
+
+},{"./helpers/bundle-url":"8YnfL"}],"5gLy6":[function(require,module,exports) {
+module.exports = require('./helpers/bundle-url').getBundleURL('3VpAv') + "knockedup.2a6644ba.jpg";
+
+},{"./helpers/bundle-url":"8YnfL"}],"lbbeE":[function(require,module,exports) {
+module.exports = require('./helpers/bundle-url').getBundleURL('3VpAv') + "rachelgettingmarried.82bc2a71.jpg";
+
+},{"./helpers/bundle-url":"8YnfL"}],"t0Nlf":[function(require,module,exports) {
+module.exports = require('./helpers/bundle-url').getBundleURL('3VpAv') + "blackwidow.4d3a7ad0.jpg";
+
+},{"./helpers/bundle-url":"8YnfL"}],"9CzHT":[function(require,module,exports) {
 var parcelHelpers = require("@parcel/transformer-js/src/esmodule-helpers.js");
 parcelHelpers.defineInteropFlag(exports);
 var _extends = require("@babel/runtime/helpers/esm/extends");
@@ -28503,69 +28565,7 @@ module.exports = CancelToken;
     return typeof payload === 'object' && payload.isAxiosError === true;
 };
 
-},{}],"l6bud":[function(require,module,exports) {
-module.exports = require('./helpers/bundle-url').getBundleURL('3VpAv') + "inception.bd178984.jpg";
-
-},{"./helpers/bundle-url":"8YnfL"}],"8YnfL":[function(require,module,exports) {
-"use strict";
-var bundleURL = {
-};
-function getBundleURLCached(id) {
-    var value = bundleURL[id];
-    if (!value) {
-        value = getBundleURL();
-        bundleURL[id] = value;
-    }
-    return value;
-}
-function getBundleURL() {
-    try {
-        throw new Error();
-    } catch (err) {
-        var matches = ('' + err.stack).match(/(https?|file|ftp):\/\/[^)\n]+/g);
-        if (matches) // The first two stack frames will be this function and getBundleURLCached.
-        // Use the 3rd one, which will be a runtime in the original bundle.
-        return getBaseURL(matches[2]);
-    }
-    return '/';
-}
-function getBaseURL(url) {
-    return ('' + url).replace(/^((?:https?|file|ftp):\/\/.+)\/[^/]+$/, '$1') + '/';
-} // TODO: Replace uses with `new URL(url).origin` when ie11 is no longer supported.
-function getOrigin(url) {
-    var matches = ('' + url).match(/(https?|file|ftp):\/\/[^/]+/);
-    if (!matches) throw new Error('Origin not found');
-    return matches[0];
-}
-exports.getBundleURL = getBundleURLCached;
-exports.getBaseURL = getBaseURL;
-exports.getOrigin = getOrigin;
-
-},{}],"hVWAT":[function(require,module,exports) {
-module.exports = require('./helpers/bundle-url').getBundleURL('3VpAv') + "thedarkknight.6865c054.jpg";
-
-},{"./helpers/bundle-url":"8YnfL"}],"aGUtc":[function(require,module,exports) {
-module.exports = require('./helpers/bundle-url').getBundleURL('3VpAv') + "girls.832504d7.jpg";
-
-},{"./helpers/bundle-url":"8YnfL"}],"hiWMW":[function(require,module,exports) {
-module.exports = require('./helpers/bundle-url').getBundleURL('3VpAv') + "interstellar.34782da6.jpg";
-
-},{"./helpers/bundle-url":"8YnfL"}],"giTk3":[function(require,module,exports) {
-module.exports = require('./helpers/bundle-url').getBundleURL('3VpAv') + "silenceofthelambs.8cb995ac.jpg";
-
-},{"./helpers/bundle-url":"8YnfL"}],"87wS2":[function(require,module,exports) {
-module.exports = require('./helpers/bundle-url').getBundleURL('3VpAv') + "theprestige.74ac05c1.jpg";
-
-},{"./helpers/bundle-url":"8YnfL"}],"5gLy6":[function(require,module,exports) {
-module.exports = require('./helpers/bundle-url').getBundleURL('3VpAv') + "knockedup.2a6644ba.jpg";
-
-},{"./helpers/bundle-url":"8YnfL"}],"t0Nlf":[function(require,module,exports) {
-module.exports = require('./helpers/bundle-url').getBundleURL('3VpAv') + "blackwidow.4d3a7ad0.jpg";
-
-},{"./helpers/bundle-url":"8YnfL"}],"lbbeE":[function(require,module,exports) {
-module.exports = require('./helpers/bundle-url').getBundleURL('3VpAv') + "rachelgettingmarried.82bc2a71.jpg";
-
-},{"./helpers/bundle-url":"8YnfL"}],"jk91c":[function(require,module,exports) {
+},{}],"jk91c":[function(require,module,exports) {
 var $parcel$ReactRefreshHelpers$fb6b = require("@parcel/transformer-react-refresh-wrap/lib/helpers/helpers.js");
 var prevRefreshReg = window.$RefreshReg$;
 var prevRefreshSig = window.$RefreshSig$;
@@ -42722,7 +42722,7 @@ var _reactBootstrap = require("react-bootstrap");
 class MovieCard extends _reactDefault.default.Component {
     render() {
         const { movie  } = this.props;
-        let cardImgUrl = require(`../../public/images/${movie.ImagePath}`);
+        let cardImgUrl = `../../public/images/${movie.ImagePath}`;
         return(/*#__PURE__*/ _jsxRuntime.jsx(_cardDefault.default, {
             __source: {
                 fileName: "src/components/movie-card/movie-card.jsx",
@@ -42745,7 +42745,7 @@ class MovieCard extends _reactDefault.default.Component {
                     __self: this,
                     children: /*#__PURE__*/ _jsxRuntime.jsx(_reactBootstrap.CardImg, {
                         variant: "top",
-                        src: cardImgUrl,
+                        src: require(cardImgUrl),
                         className: "image-styles",
                         __source: {
                             fileName: "src/components/movie-card/movie-card.jsx",
@@ -42773,7 +42773,7 @@ MovieCard.proptypes = {
   window.$RefreshReg$ = prevRefreshReg;
   window.$RefreshSig$ = prevRefreshSig;
 }
-},{"react/jsx-runtime":"8xIwr","react":"6TuXu","prop-types":"1tgq3","react-bootstrap/Card":"MoOk8","react-bootstrap/Button":"9CzHT","react-router-dom":"cpyQW","./movie-card.scss":"cF5gT","@parcel/transformer-js/src/esmodule-helpers.js":"JacNc","@parcel/transformer-react-refresh-wrap/lib/helpers/helpers.js":"5V79J","react-bootstrap":"h2YVd","../../public/images/inception.jpg":"l6bud","../../public/images/thedarkknight.jpg":"hVWAT","../../public/images/girls.jpg":"aGUtc","../../public/images/interstellar.jpg":"hiWMW","../../public/images/silenceofthelambs.jpg":"giTk3","../../public/images/theprestige.jpg":"87wS2","../../public/images/knockedup.jpg":"5gLy6","../../public/images/blackwidow.jpg":"t0Nlf","../../public/images/rachelgettingmarried.jpg":"lbbeE"}],"cF5gT":[function() {},{}],"4d0QS":[function(require,module,exports) {
+},{"react/jsx-runtime":"8xIwr","prop-types":"1tgq3","react-bootstrap/Card":"MoOk8","react-bootstrap/Button":"9CzHT","react-router-dom":"cpyQW","./movie-card.scss":"cF5gT","@parcel/transformer-js/src/esmodule-helpers.js":"JacNc","@parcel/transformer-react-refresh-wrap/lib/helpers/helpers.js":"5V79J","../../public/images/inception.jpg":"l6bud","../../public/images/thedarkknight.jpg":"hVWAT","../../public/images/girls.jpg":"aGUtc","../../public/images/interstellar.jpg":"hiWMW","../../public/images/silenceofthelambs.jpg":"giTk3","../../public/images/theprestige.jpg":"87wS2","../../public/images/knockedup.jpg":"5gLy6","../../public/images/blackwidow.jpg":"t0Nlf","../../public/images/rachelgettingmarried.jpg":"lbbeE","react":"6TuXu","react-bootstrap":"h2YVd"}],"cF5gT":[function() {},{}],"4d0QS":[function(require,module,exports) {
 var parcelHelpers = require("@parcel/transformer-js/src/esmodule-helpers.js");
 parcelHelpers.defineInteropFlag(exports);
 parcelHelpers.export(exports, "__DO_NOT_USE__ActionTypes", ()=>ActionTypes
