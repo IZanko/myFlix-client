@@ -36,7 +36,6 @@ export function RegistrationView(props) {
         .catch(e => {
           console.log('error registering the user')
         });
-      props.onRegistration(username);
     };
   }
 
