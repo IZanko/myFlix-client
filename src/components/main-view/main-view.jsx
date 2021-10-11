@@ -30,6 +30,7 @@ import "./main-view.scss";
 class MainView extends React.Component {
 
   componentDidMount() {
+    window.localStorage.clear();
     let accessToken = localStorage.getItem('token');
     if (accessToken !== null) {
       this.props.setUser(localStorage.getItem('user'));
