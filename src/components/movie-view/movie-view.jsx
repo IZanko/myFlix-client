@@ -6,17 +6,9 @@ import axios from 'axios';
 
 import { Link } from "react-router-dom";
 
-import "../../public/images/inception.jpg";
-import "../../public/images/thedarkknight.jpg";
-import "../../public/images/girls.jpg";
-import "../../public/images/interstellar.jpg";
-import "../../public/images/silenceofthelambs.jpg";
-import "../../public/images/theprestige.jpg";
-import "../../public/images/knockedup.jpg";
-import "../../public/images/blackwidow.jpg";
-import "../../public/images/rachelgettingmarried.jpg";
 
-import "./movie-view.scss"
+
+import "./movie-view.scss";
 
 
 export class MovieView extends React.Component {
@@ -87,14 +79,13 @@ export class MovieView extends React.Component {
 
   render() {
     const { movie, onBackClick } = this.props;
-    let imageUrl = require('../../public/images/' + movie.ImagePath);
 
 
     return (
       <div className="movie-view">
         <div className="poster-and-button-container">
           <div className="movie-poster-container">
-            <img className="movie-poster" src={imageUrl} />
+            <img className="movie-poster" src={`/${movie.ImagePath}`} />
           </div>
           {this.state.Favorites.includes(movie._id) ? (
             <button className="favorites-button remove-from-favorites-button" onClick={() => { this.removeFromFavorites(movie._id) }} >Remove from Favorites</button>

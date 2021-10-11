@@ -3,4 +3,409 @@ body {
   height: max-content;
 }
 
+.search-input.form-control {
+  width: 30%;
+}
+
+@media screen and (max-width: 426px) {
+  .search-input.form-control {
+    width: 60%;
+  }
+}
+.image-styles {
+  width: 142%;
+  object-fit: cover;
+  box-shadow: 15px 15px 10px #333155;
+}
+
+.image-styles:hover {
+  cursor: pointer;
+  box-shadow: 5px 5px 2px #333155;
+  transition: 0.5s;
+  opacity: 0.9;
+}
+
+button.btn.btn-link {
+  padding: 0px;
+}
+
+@media screen and (max-width: 1200px) {
+  .image-styles {
+    width: 118%;
+  }
+}
+@media screen and (max-width: 1000px) {
+  .image-styles {
+    width: 100%;
+  }
+}
+@media screen and (max-width: 426px) {
+  .image-styles {
+    width: 218%;
+  }
+}
+@media screen and (max-width: 375px) {
+  .image-styles {
+    width: 190%;
+  }
+}
+@media screen and (max-width: 320px) {
+  .image-styles {
+    width: 160%;
+  }
+}
+/*Title and Description bolded*/
+span.label {
+  font-weight: 700;
+}
+
+/*text size set to 20px*/
+.value, .label, .btn.btn-link {
+  font-size: 20px;
+}
+
+/*add inline block between genre and director links*/
+.spacer {
+  display: inline-block;
+  width: 10px;
+}
+
+.movie-info-container {
+  padding-top: 10px;
+}
+
+/*movie info background visuals*/
+.movie-info {
+  background-color: #ffffff;
+  padding: 15px;
+  width: fit-content;
+}
+
+.back-button, .nav-button {
+  background-color: #ffffff;
+  /* white */
+  border: none;
+  color: #414896;
+  padding: 15px 32px;
+  text-align: center;
+  text-decoration: none;
+  display: inline-block;
+  font-size: 20px;
+  font-weight: bold;
+}
+
+.nav-button {
+  background-color: #007bfe;
+  color: white;
+}
+
+div.movie-poster-container {
+  padding-top: 20px;
+  padding-bottom: 10px;
+  width: 260px;
+}
+
+.button-container {
+  padding-top: 20px;
+  display: flex;
+  gap: 30px;
+}
+
+.movie-poster, .back-button, .movie-info, .nav-button, .favorites-button {
+  box-shadow: 15px 15px 10px #333155;
+  border-radius: 15px;
+}
+
+.movie-poster {
+  width: 100%;
+}
+
+.movie-view {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.back-button:hover, .nav-button:hover, .favorites-button:hover {
+  cursor: pointer;
+  box-shadow: 5px 5px 2px #333155;
+  opacity: 0.7;
+  transition: 0.5s;
+}
+
+.favorites-button:focus {
+  outline: none;
+  opacity: 1;
+}
+
+.favorites-button {
+  background-color: #007bfe;
+  border-radius: 20px;
+  width: 100%;
+  padding: 6px 6px;
+  font-size: 18px;
+  font-weight: 500;
+  color: white;
+}
+
+.remove-from-favorites-button {
+  background-color: #fe6100;
+}
+
+@media screen and (max-width: 425px) {
+  div.movie-poster-container {
+    width: 200px;
+  }
+}
+.genre-info {
+  font-size: 20px;
+  background-color: #ffffff;
+  padding: 15px;
+  border-radius: 15px;
+  width: fit-content;
+  box-shadow: 15px 15px 10px #333155;
+}
+
+.genre-info-container {
+  padding: 20px 0px 0px 0px;
+}
+.director-info {
+  font-size: 20px;
+  background-color: #ffffff;
+  padding: 15px;
+  border-radius: 15px;
+  width: fit-content;
+  box-shadow: 15px 15px 10px #333155;
+}
+
+.director-info-container {
+  padding: 20px 0px 0px 0px;
+}
+form {
+  display: flex;
+  flex-direction: column;
+  align-content: center;
+  justify-self: center;
+}
+
+.form-container {
+  display: grid;
+  align-self: center;
+  padding-top: 15%;
+}
+
+button.submit-button {
+  box-shadow: 10px 10px 10px #333155;
+  font-size: 20px;
+  padding: 6px 20px;
+}
+
+.submit-button:hover {
+  cursor: pointer;
+  box-shadow: 5px 5px 2px #333155;
+  transition: 0.5s;
+}
+
+.register-instead {
+  color: white;
+  padding-top: 15px;
+  font-size: 18px;
+}
+
+.register-instead:hover {
+  text-decoration: underline;
+}
+Form {
+  display: flex;
+  flex-direction: column;
+  align-content: center;
+  justify-self: center;
+  width: 80%;
+}
+
+.form-container {
+  display: grid;
+  align-self: center;
+  padding-top: 15%;
+}
+
+.error {
+  color: orange;
+}
+
+button.register-button {
+  box-shadow: 10px 10px 10px #333155;
+  font-size: 20px;
+}
+
+label.form-label {
+  color: white;
+  font-size: 35px;
+}
+
+.register-button:hover {
+  cursor: pointer;
+  box-shadow: 5px 5px 2px #333155;
+  transition: 0.5s;
+}
+
+.login-instead {
+  color: white;
+  padding-top: 15px;
+  font-size: 18px;
+}
+
+.login-instead:hover {
+  text-decoration: underline;
+}
+
+@media screen and (min-width: 300px) {
+  Form {
+    width: 300px;
+  }
+
+  label.form-label {
+    font-size: 25px;
+  }
+}
+.label-profile {
+  font-weight: 700;
+  font-size: 20px;
+}
+
+.value-profile {
+  font-weight: normal;
+  font-size: 20px;
+}
+
+.error {
+  color: #fe6100;
+}
+
+.profile-info-container {
+  padding: 20px 0px;
+}
+
+.profile-info {
+  background-color: #ffffff;
+  padding: 15px;
+  width: fit-content;
+  box-shadow: 15px 15px 10px #333155;
+  border-radius: 15px;
+}
+
+.update-profile-parent-container {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+}
+
+.update-profile-container {
+  padding: 20px 0px;
+}
+
+.submit-changes-button, .input-container {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+}
+
+.delete-button {
+  box-shadow: 15px 15px 10px #333155;
+  border-radius: 15px;
+  background-color: #fe6100;
+  color: white;
+  border: none;
+  padding: 15px 32px;
+  text-align: center;
+  text-decoration: none;
+  display: inline-block;
+  font-size: 20px;
+  font-weight: bold;
+}
+
+.delete-button:hover {
+  cursor: pointer;
+  box-shadow: 5px 5px 2px #333155;
+  opacity: 0.7;
+  transition: 0.5s;
+}
+
+.delete-button:focus {
+  outline: none;
+  opacity: 1;
+}
+.label-profile {
+  font-weight: 700;
+  font-size: 20px;
+}
+
+.value-profile {
+  font-weight: normal;
+  font-size: 20px;
+}
+
+.error {
+  color: #fe6100;
+}
+
+.profile-info-container {
+  padding: 20px 0px;
+}
+
+.profile-container {
+  padding: 20px 0px;
+}
+
+.profile-parent-container {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+}
+
+.profile-info {
+  background-color: #ffffff;
+  padding: 15px;
+  width: fit-content;
+  box-shadow: 15px 15px 10px #333155;
+  border-radius: 15px;
+}
+
+.update-button-container {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+}
+
+.update-button {
+  box-shadow: 0px 0px 0px #333155;
+}
+
+.update-button:hover {
+  cursor: pointer;
+  box-shadow: 5px 5px 2px #333155 inset;
+  opacity: 0.8;
+  transition: 0.5s;
+}
+
+@media screen and (max-width: 500px) {
+  Form {
+    width: 300px;
+  }
+
+  .nav-button, .delete-button, .back-button {
+    padding: 10px 20px;
+  }
+}
+.movie-card-column {
+  padding: 10px;
+  text-align: center;
+}
+
+.col-md-3 {
+  padding: 10px;
+}
+.app-container {
+  background-color: #414896;
+}
 /*# sourceMappingURL=index.34cb295e.css.map */
