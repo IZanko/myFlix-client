@@ -29,14 +29,32 @@ import "./main-view.scss";
 
 class MainView extends React.Component {
 
+
   componentDidMount() {
-    window.localStorage.clear();
+
+
     let accessToken = localStorage.getItem('token');
+
     if (accessToken !== null) {
       this.props.setUser(localStorage.getItem('user'));
+      /*Load movie data */
       this.getMovies(accessToken);
-    }
+
+      /*Check if username saved in localStorage matches a username in the database, if no match, clear localStorage*/
+      axios.patch('https://zanko-my-flix.herokuapp.com/users/check/', {
+        Username: this.props.user,
+      }
+      )
+        .then(response => {
+          const data = response.data;
+          String(data) == (this.props.user + " is already taken") ? '' : window.localStorage.clear();
+        })
+        .catch(e => {
+          console.log(e);
+        });
+    } else { this.onLoggedOut() }
   }
+
 
   /*When a movie is clicked, this function is invoked and updates the state of the `selectedMovie` *property to that movie*/
   setSelectedMovie(newSelectedMovie) {

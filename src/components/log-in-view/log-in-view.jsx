@@ -23,7 +23,7 @@ export function LoginView(props) {
         props.onLoggedIn(data);
       })
       .catch(e => {
-        console.log('user and password do not match')
+        alert('user and password do not match');
       });
   };
   /* then call props.onLoggedIn(username) */
